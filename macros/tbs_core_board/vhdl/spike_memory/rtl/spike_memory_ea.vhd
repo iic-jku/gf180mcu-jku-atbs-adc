@@ -41,8 +41,8 @@ architecture rtl of spike_memory is
 constant RAM_DEPTH	    : natural := 2**ADDR_BITWIDTH;
 constant N_TX           : natural := natural(ceil(real(DATA_BITWIDTH) / 8.0)); -- 8 bit packages per b_data
 constant READ_DELAY     : natural := natural(ceil(real(DATA_BITWIDTH) / 8.0)) + 1; -- clocks from read enabling to valid data at output port 
-constant MEMORY_SELECT  : natural := 1; -- 0... Shift Register, 1... dual RAM IP
-constant MEMORY_RESET   : natural := 1; -- 0... Asynchronous Reset, 1... Synchronous Reset (only with dual RAM IP)
+constant MEMORY_SELECT  : natural := 0; -- 0... Shift Register, 1... dual RAM IP
+constant MEMORY_RESET   : natural := 0; -- 0... Asynchronous Reset, 1... Synchronous Reset (only with dual RAM IP)
 
 -- Types
 type T_SRG is array(RAM_DEPTH - 1 downto 0) of std_ulogic_vector(DATA_BITWIDTH - 1 downto 0);
