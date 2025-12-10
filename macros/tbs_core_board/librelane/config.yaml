@@ -36,8 +36,8 @@ GND_NETS: ["VSS"]
 VERILOG_POWER_DEFINE: "USE_POWER_PINS"
 
 # Clock
-CLOCK_PORT: clk
-CLOCK_NET: clk
+CLOCK_PORT: clock_i
+CLOCK_NET: clock_i
 CLOCK_PERIOD: 125 # in ns = ~8MHz
 
 # SDC files
