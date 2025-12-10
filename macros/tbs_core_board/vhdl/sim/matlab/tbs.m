@@ -32,7 +32,7 @@ end
 debounce_counter_max = f_clk * debounce_counter_time;
 
 % DAC BITWIDTH
-dac_bitwidth = 8; % 8 / 10
+dac_bitwidth = 10; % 8 / 10
 
 % "Virtual" DAC resolution = ld(2^dac_bitwidth / tbs_min_delta_steps) for TBS
 % "Virtual" DAC resolution does not influence ATBS.

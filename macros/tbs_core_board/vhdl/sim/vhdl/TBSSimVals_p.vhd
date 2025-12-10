@@ -27,7 +27,7 @@ package TBSSimVals is
 
   -- TBS CONSTANTS
   -- ===================================================== 
-  constant MAX_CLIPPING_VALUE : natural := 255; 
+  constant MAX_CLIPPING_VALUE : natural := 1023; 
   constant MIN_CLIPPING_VALUE : natural := 0; 
   -- ===================================================== 
 
@@ -36,7 +36,7 @@ package TBSSimVals is
   constant D_MAX_LIM : natural := 2; 
   constant D_MIN_LIM : natural := 2; 
   constant WEYLSD_BITS : natural := natural(ceil(log2(real(2 * (D_MAX_LIM + 1))))); 
-  constant DELTA_STEPS_BITWIDTH : natural := 8; 
+  constant DELTA_STEPS_BITWIDTH : natural := 10; 
   -- ===================================================== 
 
   -- TIME MEASUREMENT CONSTANTS
@@ -48,13 +48,13 @@ package TBSSimVals is
   -- DAC CONSTANTS
   -- ===================================================== 
   constant DAC_SETTLING_CLKS : natural := 80; 
-  constant DAC_BITWIDTH : natural := 8; 
+  constant DAC_BITWIDTH : natural := 10; 
   -- ===================================================== 
 
   -- PWM CONSTANTS
   -- ===================================================== 
-  constant PWM_COUNTER_BITWIDTH : natural := 8; 
-  constant PWM_COUNTER_MAX : natural := 256; 
+  constant PWM_COUNTER_BITWIDTH : natural := 10; 
+  constant PWM_COUNTER_MAX : natural := 1024; 
   -- ===================================================== 
 
   -- ANALOG TRIGGER CONSTANTS
