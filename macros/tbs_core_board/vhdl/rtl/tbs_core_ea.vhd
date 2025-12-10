@@ -25,12 +25,12 @@ entity tbs_core is
 		-- MAIN CONSTANTS
     CLK_FREQ                    : natural;
     MAIN_COUNTER_BITWIDTH       : natural;
-		MAIN_COUNTER_MAX	          : natural;
+		MAIN_COUNTER_MAX	    : natural;
     DEBOUNCER_BITWIDTH          : natural;
-		DEBOUNCER_MAX			          : natural;
+		DEBOUNCER_MAX			: natural;
     -- COMPARATOR INPUT CONSTANTS
-    N_FF	                      : natural;
-		N_CHANNELS	                : natural;
+    N_FF	                    : natural;
+		N_CHANNELS	            : natural;
     -- TBS CONSTANTS
     MAX_CLIPPING_VALUE          : natural;
     MIN_CLIPPING_VALUE          : natural;
@@ -40,8 +40,8 @@ entity tbs_core is
     WEYLSD_BITS                 : natural;
     DELTA_STEPS_BITWIDTH        : natural;
     -- TIME MEASUREMENT CONSTANTS
-    TIME_COUNTER_BITWIDTH	      : natural;
-		TIME_COUNTER_MAX	          : natural;
+    TIME_COUNTER_BITWIDTH	    : natural;
+		TIME_COUNTER_MAX	    : natural;
     -- DAC CONSTANTS
     DAC_SETTLING_CLKS           : natural;
     DAC_BITWIDTH                : natural;
@@ -52,8 +52,8 @@ entity tbs_core is
     SC_NOC_COUNTER_BITWIDTH     : natural;
     SC_NOC_COUNTER_MAX          : natural;
     -- MEMORY CONSTANTS
-    ADDR_BITWIDTH		            : natural;
-		DATA_BITWIDTH		            : natural;
+    ADDR_BITWIDTH		        : natural;
+		DATA_BITWIDTH		    : natural;
     -- UART CONSTANTS
     UART_BAUD_COUNTER_BITWIDTH  : natural;
     UART_BAUD_COUNTER_MAX       : natural;
@@ -61,11 +61,11 @@ entity tbs_core is
 	);
 	port(
     -- INPUTS
-    clock_i				            : in std_ulogic;
-    reset_btn_i				        : in std_ulogic;
+    clock_i				      : in std_ulogic;
+    reset_btn_i				  : in std_ulogic;
     -- Comparators
-    comp_upper_i		          : in std_ulogic; -- Output of comparator of upper threshold
-    comp_lower_i		          : in std_ulogic; -- Output of comparator of lower threshold
+    comp_upper_i		      : in std_ulogic; -- Output of comparator of upper threshold
+    comp_lower_i		      : in std_ulogic; -- Output of comparator of lower threshold
     -- AWG Trigger
     trigger_start_sampling_i  : in std_ulogic; -- Coming from AWG Trigger
     -- Switches for different modes
@@ -82,7 +82,7 @@ entity tbs_core is
     select_comparator_type_i  : in std_ulogic; -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     -- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
     ecg_lod_p_i               : in std_ulogic;
-    ecg_lod_n_i				        : in std_ulogic;
+    ecg_lod_n_i				  : in std_ulogic;
     
     -- OUTPUTS
     -- Input Signal Select Switch
@@ -108,8 +108,8 @@ entity tbs_core is
     sc_noc_1_o                : out std_ulogic;
     sc_noc_2_o                : out std_ulogic;
     -- UART
-    uart_rx_i      			      : in std_ulogic;
-    uart_tx_o      			      : out std_ulogic
+    uart_rx_i      			  : in std_ulogic;
+    uart_tx_o      			  : out std_ulogic
 	);
 end entity tbs_core;
 
