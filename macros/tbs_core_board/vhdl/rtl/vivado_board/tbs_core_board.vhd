@@ -53,7 +53,9 @@ entity tbs_core_board is
     dac_wr_upper_o            : out std_ulogic; -- active LOW
     dac_wr_lower_o            : out std_ulogic; -- active LOW
     dac_upper_o	              :	out std_ulogic_vector(DAC_BITWIDTH - 1 downto 0);
+    dac_pwm_upper_o           : out std_ulogic;
     dac_lower_o	              :	out std_ulogic_vector(DAC_BITWIDTH - 1 downto 0);
+    dac_pwm_lower_o           : out std_ulogic;
     -- LEDs
     idle_led_o                : out std_ulogic;	-- D1: '1'... Lights up, if Main FSM is in idle state!
     overflow_led_o            : out std_ulogic;	-- D2: '1'... Lights up, if FIFO is full!
@@ -135,9 +137,12 @@ begin
     -- TIME MEASUREMENT CONSTANTS
     TIME_COUNTER_BITWIDTH	      => TIME_COUNTER_BITWIDTH,
 		TIME_COUNTER_MAX	          => TIME_COUNTER_MAX,
-    -- DAC CONSTANTS
+    -- Parallel DAC CONSTANTS
     DAC_SETTLING_CLKS           => DAC_SETTLING_CLKS,
     DAC_BITWIDTH                => DAC_BITWIDTH,
+    -- PWM DAC CONSTANTS
+    PWM_COUNTER_BITWIDTH        => PWM_COUNTER_BITWIDTH,
+    PWM_COUNTER_MAX             => PWM_COUNTER_MAX,
     -- ANALOG TRIGGER CONSTANTS
     TRIGGER_COUNTER_BITWIDTH    => TRIGGER_COUNTER_BITWIDTH,
     TRIGGER_COUNTER_MAX         => TRIGGER_COUNTER_MAX,
@@ -189,7 +194,9 @@ begin
     dac_wr_upper_o            => dac_wr_upper_o,
     dac_wr_lower_o            => dac_wr_lower_o,
     dac_upper_o	              => dac_upper_o,
+    dac_pwm_upper_o           => dac_pwm_upper_o,
     dac_lower_o	              => dac_lower_o,
+    dac_pwm_lower_o           => dac_pwm_lower_o,
     -- LEDs
     idle_led_o                => idle_led_o,        -- LEDR0
     overflow_led_o            => overflow_led_o,    -- LEDR1

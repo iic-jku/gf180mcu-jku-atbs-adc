@@ -25,12 +25,12 @@ entity tbs_core is
 		-- MAIN CONSTANTS
     CLK_FREQ                    : natural;
     MAIN_COUNTER_BITWIDTH       : natural;
-		MAIN_COUNTER_MAX	    : natural;
+		MAIN_COUNTER_MAX	          : natural;
     DEBOUNCER_BITWIDTH          : natural;
-		DEBOUNCER_MAX			: natural;
+		DEBOUNCER_MAX			          : natural;
     -- COMPARATOR INPUT CONSTANTS
-    N_FF	                    : natural;
-		N_CHANNELS	            : natural;
+    N_FF	                      : natural;
+		N_CHANNELS	                : natural;
     -- TBS CONSTANTS
     MAX_CLIPPING_VALUE          : natural;
     MIN_CLIPPING_VALUE          : natural;
@@ -40,11 +40,14 @@ entity tbs_core is
     WEYLSD_BITS                 : natural;
     DELTA_STEPS_BITWIDTH        : natural;
     -- TIME MEASUREMENT CONSTANTS
-    TIME_COUNTER_BITWIDTH	    : natural;
-		TIME_COUNTER_MAX	    : natural;
+    TIME_COUNTER_BITWIDTH	      : natural;
+		TIME_COUNTER_MAX	          : natural;
     -- DAC CONSTANTS
     DAC_SETTLING_CLKS           : natural;
     DAC_BITWIDTH                : natural;
+    -- PWM DAC CONSTANTS
+    PWM_COUNTER_BITWIDTH        : natural;
+    PWM_COUNTER_MAX             : natural;
     -- ANALOG TRIGGER CONSTANTS
     TRIGGER_COUNTER_BITWIDTH    : natural;
     TRIGGER_COUNTER_MAX         : natural;
@@ -52,8 +55,8 @@ entity tbs_core is
     SC_NOC_COUNTER_BITWIDTH     : natural;
     SC_NOC_COUNTER_MAX          : natural;
     -- MEMORY CONSTANTS
-    ADDR_BITWIDTH		        : natural;
-		DATA_BITWIDTH		    : natural;
+    ADDR_BITWIDTH		            : natural;
+		DATA_BITWIDTH		            : natural;
     -- UART CONSTANTS
     UART_BAUD_COUNTER_BITWIDTH  : natural;
     UART_BAUD_COUNTER_MAX       : natural;
@@ -61,11 +64,11 @@ entity tbs_core is
 	);
 	port(
     -- INPUTS
-    clock_i				      : in std_ulogic;
-    reset_btn_i				  : in std_ulogic;
+    clock_i				            : in std_ulogic;
+    reset_btn_i				        : in std_ulogic;
     -- Comparators
-    comp_upper_i		      : in std_ulogic; -- Output of comparator of upper threshold
-    comp_lower_i		      : in std_ulogic; -- Output of comparator of lower threshold
+    comp_upper_i		          : in std_ulogic; -- Output of comparator of upper threshold
+    comp_lower_i		          : in std_ulogic; -- Output of comparator of lower threshold
     -- AWG Trigger
     trigger_start_sampling_i  : in std_ulogic; -- Coming from AWG Trigger
     -- Switches for different modes
@@ -82,7 +85,7 @@ entity tbs_core is
     select_comparator_type_i  : in std_ulogic; -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     -- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
     ecg_lod_p_i               : in std_ulogic;
-    ecg_lod_n_i				  : in std_ulogic;
+    ecg_lod_n_i				        : in std_ulogic;
     
     -- OUTPUTS
     -- Input Signal Select Switch
@@ -96,7 +99,9 @@ entity tbs_core is
     dac_wr_upper_o            : out std_ulogic; -- active LOW
     dac_wr_lower_o            : out std_ulogic; -- active LOW
     dac_upper_o	              :	out std_ulogic_vector(DAC_BITWIDTH - 1 downto 0);
+    dac_pwm_upper_o           : out std_ulogic;
     dac_lower_o	              :	out std_ulogic_vector(DAC_BITWIDTH - 1 downto 0);
+    dac_pwm_lower_o           : out std_ulogic;
     -- LEDs
     idle_led_o                : out std_ulogic;	-- LEDR0: '1'... Lights up, if Main FSM is in idle state!
     overflow_led_o            : out std_ulogic;	-- LEDR1: '1'... Lights up, if FIFO is full!
@@ -108,8 +113,8 @@ entity tbs_core is
     sc_noc_1_o                : out std_ulogic;
     sc_noc_2_o                : out std_ulogic;
     -- UART
-    uart_rx_i      			  : in std_ulogic;
-    uart_tx_o      			  : out std_ulogic
+    uart_rx_i      			      : in std_ulogic;
+    uart_tx_o      			      : out std_ulogic
 	);
 end entity tbs_core;
 
@@ -278,6 +283,7 @@ signal dac_pd_upper   : std_ulogic;
 signal dac_wr_upper   : std_ulogic;
 signal dac_clr_upper  : std_ulogic;
 signal dac_upper	    : std_ulogic_vector(DAC_BITWIDTH - 1 downto 0);
+signal dac_pwm_upper  : std_ulogic;
 
 signal direction_lower          : std_ulogic; -- DOWN(0), UP(1)
 signal update_dac_lower_strb    : std_ulogic;
@@ -287,6 +293,7 @@ signal dac_pd_lower   : std_ulogic;
 signal dac_wr_lower   : std_ulogic;
 signal dac_clr_lower  : std_ulogic;
 signal dac_lower	    : std_ulogic_vector(DAC_BITWIDTH - 1 downto 0);  
+signal dac_pwm_lower  : std_ulogic;
 
 -- STORAGE & SHIFT (MUX, D-FF, ENABLE BEHAVIOUR) SECTION
 -- =====================================================
@@ -734,6 +741,22 @@ begin
   update_dac_upper_strb <= delta_steps_upper_strb or dac_init_strb;
 	-- =====================================================
   
+  -- Embed PWM (Upper DAC)
+	pwm_0: entity pwm_modulator(rtl)
+  generic map(
+    PWM_COUNTER_BITWIDTH  => PWM_COUNTER_BITWIDTH,
+    PWM_COUNTER_MAX       => PWM_COUNTER_MAX
+	)
+	port map(
+		clock_i       => clock_i,
+		reset_i	      => reset_entity,
+    enable_i      => enable_analog,
+    on_cnt_val_i  => dac_counter_value_upper,
+    
+		pwm_o         => dac_pwm_upper
+	);
+  -- =====================================================
+  
   -- Embed DAC1-Control entity (Lower DAC)
 	dac_control_1: entity dac_control(rtl)
   generic map(
@@ -768,6 +791,22 @@ begin
   
   update_dac_lower_strb <= delta_steps_lower_strb or dac_init_strb;
 	-- =====================================================
+  
+  -- Embed PWM (Lower DAC)
+	pwm_1: entity pwm_modulator(rtl)
+  generic map(
+    PWM_COUNTER_BITWIDTH  => PWM_COUNTER_BITWIDTH,
+    PWM_COUNTER_MAX       => PWM_COUNTER_MAX
+	)
+	port map(
+		clock_i       => clock_i,
+		reset_i	      => reset_entity,
+    enable_i      => enable_analog,
+    on_cnt_val_i  => dac_counter_value_lower,
+    
+		pwm_o         => dac_pwm_lower
+	);
+  -- =====================================================
   
   
   -- =====================================================
@@ -1512,7 +1551,9 @@ begin
   dac_wr_upper_o  <= dac_wr_upper;
   dac_wr_lower_o  <= dac_wr_lower;
   dac_upper_o	    <= dac_upper;
+  dac_pwm_upper_o	<= dac_pwm_upper;
   dac_lower_o     <= dac_lower;
+  dac_pwm_lower_o	<= dac_pwm_lower;
   
   -- Analog Trigger
   analog_trigger_o <= analog_trigger;
