@@ -1,7 +1,7 @@
 -- =====================================================
 -- Master's Thesis: Threshold-Based Sampling ASIC with FOSS tools.
 -- Author: Simon Dorrer
--- Last Modified: 08.10.2024
+-- Last Modified: 10.10.2024
 -- Description: This .vhd file implements the board wrapper of the threshold-based sampling entity.
 -- =====================================================
 
@@ -25,24 +25,22 @@ entity tbs_core_board is
 	port(
     -- INPUTS
     clock_i				            : in std_ulogic;
-    reset_n_i				          : in std_ulogic;
+    reset_n_i				          : in std_ulogic; -- S2
     -- Comparators
     comp_upper_i		          : in std_ulogic; -- Output of comparator of upper threshold
     comp_lower_i		          : in std_ulogic; -- Output of comparator of lower threshold
     -- AWG Trigger
     trigger_start_sampling_i  : in std_ulogic; -- Coming from AWG Trigger
     -- Switches for different modes
-    trigger_start_mode_i      : in std_ulogic; -- SW0: Start sampling directly(0), Start sampling on trigger(1)
-    adaptive_mode_i           : in std_ulogic; -- SW1: TBS(0), ATBS(1)
-    control_mode_i            : in std_ulogic; -- SW2: Switches(0), UART(1)
-    -- Switch for Input Signal Select Switch
-    signal_select_in_i        : in std_ulogic; -- SW3: ECG(0), BNC(1)
+    trigger_start_mode_i      : in std_ulogic; -- S1_1: Start sampling directly(0), Start sampling on trigger(1)
+    adaptive_mode_i           : in std_ulogic; -- S1_2: TBS(0), ATBS(1)
+    control_mode_i            : in std_ulogic; -- S1_3: Switches(0), UART(1)
+	-- Switch for Input Signal Select Switch
+    signal_select_in_i        : in std_ulogic; -- S1_4: ECG(0), BNC(1)
     -- Enable Switch for Input Signal Select Switch, Amp. and DAC.
-    enable_i                  : in std_ulogic; -- SW4: Disable(0), Enable(1)
+    enable_i                  : in std_ulogic; -- S1_5: Disable(0), Enable(1)
     -- Select TBS delta steps --> enables virtual DAC resolution
-    select_tbs_delta_steps_i  : in std_ulogic; -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    -- Select Comparator Type (CT/DT comparator)
-    select_comparator_type_i  : in std_ulogic; -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
+    select_tbs_delta_steps_i  : in std_ulogic; -- S1_6: full DAC resolution(0), "virtual" DAC resolution(1)
     -- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
     ecg_lod_p_i               : in std_ulogic;
     ecg_lod_n_i				        : in std_ulogic;
@@ -61,10 +59,10 @@ entity tbs_core_board is
     dac_upper_o	              :	out std_ulogic_vector(DAC_BITWIDTH - 1 downto 0);
     dac_lower_o	              :	out std_ulogic_vector(DAC_BITWIDTH - 1 downto 0);
     -- LEDs
-    idle_led_o                : out std_ulogic;	-- LED0: '1'... Lights up, if Main FSM is in idle state!
-    overflow_led_o            : out std_ulogic;	-- LED1: '1'... Lights up, if FIFO is full!
-    underflow_led_o           : out std_ulogic;	-- LED2: '1'... Lights up, if FIFO is empty!
-    ecg_led_o                 : out std_ulogic;	-- LED3: '1'... Lights up, if ECG electrodes are connected!
+    idle_led_o                : out std_ulogic;	-- D1: '1'... Lights up, if Main FSM is in idle state!
+    overflow_led_o            : out std_ulogic;	-- D2: '1'... Lights up, if FIFO is full!
+    underflow_led_o           : out std_ulogic;	-- D3: '1'... Lights up, if FIFO is empty!
+    ecg_led_o                 : out std_ulogic;	-- D4: '1'... Lights up, if ECG electrodes are connected!
     -- Analog Trigger
     analog_trigger_o          : out std_ulogic;
     -- Switched Capacitor Non-Overlapping Clock Generator
@@ -79,11 +77,25 @@ end entity tbs_core_board;
 architecture rtl of tbs_core_board is
 
 -- Inverted Logic for reset input ('1' not pressed, '0' pressed)
-signal reset 		: std_ulogic;
+signal reset 		  : std_ulogic;
+
+signal trigger_start_mode 		: std_ulogic;
+signal adaptive_mode 		    : std_ulogic;
+signal control_mode 		    : std_ulogic;
+signal signal_select_in 		: std_ulogic;
+signal enable 					: std_ulogic;
+signal select_tbs_delta_steps 	: std_ulogic;
 
 begin
 	-- Inverting Input Logic
 	reset <= not reset_n_i;
+  
+  trigger_start_mode <= not trigger_start_mode_i;
+  adaptive_mode <= not adaptive_mode_i;
+  control_mode <= not control_mode_i;
+  signal_select_in <= not signal_select_in_i;
+  enable <= not enable_i;
+  select_tbs_delta_steps <= not select_tbs_delta_steps_i;
 	
 	-- Embed Adaptive Threshold Based Sampling
 	tbs_core_0: entity tbs_core(rtl)
@@ -127,28 +139,28 @@ begin
 	)
 	port map(
     -- INPUTS
-    clock_i				            => clock_i,
-    reset_btn_i				        => reset,
+    clock_i				      => clock_i,
+    reset_btn_i				  => reset,                     -- S2
     -- Comparators
-    comp_upper_i		          => comp_upper_i,
-    comp_lower_i		          => comp_lower_i,
+    comp_upper_i		      => comp_upper_i,
+    comp_lower_i		      => comp_lower_i,
     -- AWG Trigger
     trigger_start_sampling_i  => trigger_start_sampling_i,  -- Coming from AWG Trigger
     -- Switches for different modes
-    trigger_start_mode_i      => trigger_start_mode_i,      -- SW0: Start sampling directly(0), Start sampling on trigger(1)
-    adaptive_mode_i           => adaptive_mode_i,           -- SW1: TBS(0), ATBS(1)
-    control_mode_i            => control_mode_i,            -- SW2: Switches(0), UART(1)
+    trigger_start_mode_i      => trigger_start_mode,        -- S1_1: Start sampling directly(0), Start sampling on trigger(1)
+    adaptive_mode_i           => adaptive_mode,             -- S1_2: TBS(0), ATBS(1)
+    control_mode_i            => control_mode,              -- S1_3: Switches(0), UART(1)
     -- Switch for Input Signal Select Switch
-    signal_select_in_i        => signal_select_in_i,        -- SW3: ECG(0), BNC(1)
+    signal_select_in_i        => signal_select_in,          -- S1_4: ECG(0), BNC(1)
     -- Enable Switch for Input Signal Select Switch, Amp. and DAC.
-    enable_i                  => enable_i,                  -- SW4: Disable(0), Enable(1)
+    enable_i                  => enable,                    -- S1_5: Disable(0), Enable(1)
     -- Select TBS delta steps --> enables virtual DAC resolution
-    select_tbs_delta_steps_i  => select_tbs_delta_steps_i,  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
+    select_tbs_delta_steps_i  => select_tbs_delta_steps,    -- S1_6: full DAC resolution(0), "virtual" DAC resolution(1)
     -- Select Comparator Type (CT/DT comparator)
-    select_comparator_type_i  => select_comparator_type_i,  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
+    select_comparator_type_i  => '0',                       -- Modeling CT comparator(0), Modeling DT comparator(1)
     -- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
     ecg_lod_p_i               => ecg_lod_p_i,
-    ecg_lod_n_i				        => ecg_lod_n_i,
+    ecg_lod_n_i				  => ecg_lod_n_i,
     
     -- OUTPUTS
     -- Input Signal Select Switch
