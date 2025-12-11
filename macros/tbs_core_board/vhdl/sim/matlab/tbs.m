@@ -55,10 +55,10 @@ dac_settling_clks = round(dac_settling_time * f_clk);
 delta_steps_bitwidth = dac_bitwidth;
 
 % Clipping of DAC Voltage (should be symmetric to dc_offset)
-VDD = 5.0; % V
+VDD = 3.3; % V
 VSS = 0; % V
 dc_offset = (VDD - VSS) / 2; % V
-delta_v = 2.5; % V (full scale)
+delta_v = 1.65; % V (full scale)
 % delta_v = 0.85; % V (0.8V - 2.5V)
 % Symmetrical Clipping
 max_clipping_voltage = dc_offset + delta_v; % V
