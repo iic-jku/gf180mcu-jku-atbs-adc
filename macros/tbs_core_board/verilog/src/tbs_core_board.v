@@ -7407,38 +7407,44 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_8
       n1137 <= next_select_tbs_delta_steps_uart;
 endmodule
 
-module tbs_core_board
-  (input  clock_i,
-   input  reset_n_i,
-   input  comp_upper_i,
-   input  comp_lower_i,
-   input  trigger_start_sampling_i,
-   input  trigger_start_mode_i,
-   input  adaptive_mode_i,
-   input  control_mode_i,
-   input  signal_select_in_i,
-   input  enable_i,
-   input  select_tbs_delta_steps_i,
-   input  ecg_lod_p_i,
-   input  ecg_lod_n_i,
-   output signal_select_en_o,
-   output signal_select_in_o,
-   output amp_sdn_o,
-   output dac_pd_o,
-   output dac_clr_o,
-   output dac_wr_upper_o,
-   output dac_wr_lower_o,
-   output [9:0] dac_upper_o,
-   output [9:0] dac_lower_o,
-   output idle_led_o,
-   output overflow_led_o,
-   output underflow_led_o,
-   output ecg_led_o,
-   output analog_trigger_o,
-   output sc_noc_1_o,
-   output sc_noc_2_o,
-   input  uart_rx_i,
-   output uart_tx_o);
+module tbs_core_board(
+	// VDD / VSS
+	`ifdef USE_POWER_PINS
+	inout  wire VDD,
+	inout  wire VSS,
+	`endif
+	input  clock_i,
+	input  reset_n_i,
+	input  comp_upper_i,
+	input  comp_lower_i,
+	input  trigger_start_sampling_i,
+	input  trigger_start_mode_i,
+	input  adaptive_mode_i,
+	input  control_mode_i,
+	input  signal_select_in_i,
+	input  enable_i,
+	input  select_tbs_delta_steps_i,
+	input  ecg_lod_p_i,
+	input  ecg_lod_n_i,
+	output signal_select_en_o,
+	output signal_select_in_o,
+	output amp_sdn_o,
+	output dac_pd_o,
+	output dac_clr_o,
+	output dac_wr_upper_o,
+	output dac_wr_lower_o,
+	output [9:0] dac_upper_o,
+	output [9:0] dac_lower_o,
+	output idle_led_o,
+	output overflow_led_o,
+	output underflow_led_o,
+	output ecg_led_o,
+	output analog_trigger_o,
+	output sc_noc_1_o,
+	output sc_noc_2_o,
+	input  uart_rx_i,
+	output uart_tx_o
+);
   wire reset;
   wire trigger_start_mode;
   wire adaptive_mode;
