@@ -2,10 +2,12 @@
 FP_SIZING: absolute
 DIE_AREA: [0, 0, 3932, 2531]
 CORE_AREA: [442, 442, 3490, 2089]
+# NETTO_AREA = 3000um x 1600um
 
 VERILOG_DEFINES: ["SLOT_1X0P5"]
 
 # Specify the pad instances for the padring
+# left to right
 PAD_SOUTH: [
     clk_pad,
     rst_n_pad,
@@ -37,6 +39,7 @@ PAD_SOUTH: [
     "bidir\\[17\\].pad"
 ]
 
+# bottom to top
 PAD_EAST: [
     "dvss_pads\\[2\\].pad",
     "dvdd_pads\\[2\\].pad",
@@ -54,6 +57,7 @@ PAD_EAST: [
     "dvdd_pads\\[3\\].pad"
 ]
 
+# left to right
 PAD_NORTH: [
     "bidir\\[45\\].pad",
     "bidir\\[44\\].pad",
@@ -85,7 +89,7 @@ PAD_NORTH: [
     "bidir\\[26\\].pad"
 ]
 
-
+# bottom to top
 PAD_WEST: [
     "dvss_pads\\[7\\].pad",
     "dvdd_pads\\[7\\].pad",

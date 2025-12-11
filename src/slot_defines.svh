@@ -31,9 +31,9 @@
 `define NUM_DVSS_PADS 8
 
 // Signal pads
-`define NUM_INPUT_PADS 4
-`define NUM_BIDIR_PADS 46
-`define NUM_ANALOG_PADS 4
+`define NUM_INPUT_PADS 12	// without 1 x clock and 1 x reset
+`define NUM_BIDIR_PADS 42	// 5 x unused
+`define NUM_ANALOG_PADS 0
 
 `endif
 
