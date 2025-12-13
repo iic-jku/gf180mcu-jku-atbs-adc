@@ -23,7 +23,7 @@ ANALOG_TRIGGER_RTL=${ANALOG_TRIGGER_RTL:-../../vhdl/analog_trigger/rtl}
 DAC_CONTROL_RTL=${DAC_CONTROL_RTL:-../../vhdl/dac_control/rtl}
 DEBOUNCER_RTL=${DEBOUNCER_RTL:-../../vhdl/debouncer/rtl}
 MEMORY2UART_RTL=${MEMORY2UART_RTL:-../../vhdl/memory2uart/rtl}
-PWM_RTL=${PWM_RTL:-../../vhdl/pwm_modulator/rtl}
+PWM_MODULATOR_RTL=${PWM_MODULATOR_RTL:-../../vhdl/pwm_modulator/rtl}
 SC_NOC_GENERATOR_RTL=${SC_NOC_GENERATOR_RTL:-../../vhdl/sc_noc_generator/rtl}
 SPIKE_DETECTOR_RTL=${SPIKE_DETECTOR_RTL:-../../vhdl/spike_detector/rtl}
 SPIKE_ENCODER_RTL=${SPIKE_ENCODER_RTL:-../../vhdl/spike_encoder/rtl}
@@ -52,7 +52,7 @@ ghdl -a --std=93c --work=TBS --workdir=build -Pbuild \
   "$ANALOG_TRIGGER_RTL"/analog_trigger_ea.vhd \
   "$DAC_CONTROL_RTL"/dac_control_ea.vhd \
   "$MEMORY2UART_RTL"/memory2uart_ea.vhd \
-  "$PWM_RTL"/pwm_modulator_ea.vhd \
+  "$PWM_MODULATOR_RTL"/pwm_modulator_ea.vhd \
   "$SC_NOC_GENERATOR_RTL"/sc_noc_generator_ea.vhd \
   "$SPIKE_DETECTOR_RTL"/spike_detector_ea.vhd \
   "$SPIKE_ENCODER_RTL"/spike_encoder_ea.vhd \

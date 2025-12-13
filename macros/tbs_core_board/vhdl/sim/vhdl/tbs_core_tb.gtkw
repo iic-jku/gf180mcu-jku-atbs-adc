@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Fri Nov 29 20:38:47 2024
+[*] Sat Dec 13 12:18:41 2025
 [*]
-[dumpfile] "/foss/designs/tbs_core/sim/vhdl/tbs_core_tb/tbs_core_tb.vcd"
-[dumpfile_mtime] "Fri Nov 29 20:38:05 2024"
-[dumpfile_size] 4207284
-[savefile] "/foss/designs/tbs_core/sim/vhdl/tbs_core_tb/tbs_core_tb.gtkw"
+[dumpfile] "/foss/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sim/vhdl/tbs_core_tb.vcd"
+[dumpfile_mtime] "Sat Dec 13 12:14:36 2025"
+[dumpfile_size] 1392547829
+[savefile] "/foss/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sim/vhdl/tbs_core_tb.gtkw"
 [timestart] 0
 [size] 1920 1009
 [pos] 0 23
-*-36.069729 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*-44.514523 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 [markername] AA
 [markername] BB
 [markername] CC
@@ -36,12 +36,11 @@
 [markername] XX
 [markername] YY
 [markername] ZZ
-[treeopen] tbs_core_tb.
-[sst_width] 276
+[sst_width] 297
 [signals_width] 366
 [sst_expanded] 1
 [sst_vpaned_height] 293
-@200
+@201
 -INPUTS
 @28
 tbs_core_tb.dut_tbs.clock_i
@@ -70,8 +69,6 @@ tbs_core_tb.dut_tbs.comp_upper_sync
 tbs_core_tb.dut_tbs.comp_lower_sync
 @200
 -MAIN COUNTER
-@24
-tbs_core_tb.dut_tbs.main_counter_value[21:0]
 @28
 tbs_core_tb.dut_tbs.reset_main_counter_strb
 @200
@@ -94,17 +91,11 @@ tbs_core_tb.dut_tbs.increasing_en
 tbs_core_tb.dut_tbs.decreasing_en
 tbs_core_tb.dut_tbs.tbs_increasing_en
 tbs_core_tb.dut_tbs.tbs_decreasing_en
-tbs_core_tb.dut_tbs.adaptive_increasing_en
-tbs_core_tb.dut_tbs.adaptive_decreasing_en
 @200
 -COM Path
-@24
-tbs_core_tb.dut_tbs.curr_time[15:0]
-tbs_core_tb.dut_tbs.encoded_spike[16:0]
 @28
 tbs_core_tb.dut_tbs.encoded_spike_strb
 @24
-tbs_core_tb.dut_tbs.b_data[16:0]
 tbs_core_tb.dut_tbs.tx_data[7:0]
 @200
 -UART/SWITCH CONTROL
@@ -118,21 +109,8 @@ tbs_core_tb.dut_tbs.analog_trigger_period_adj_uart[7:0]
 tbs_core_tb.dut_tbs.analog_trigger_duty_cycle_adj_uart[7:0]
 @28
 tbs_core_tb.dut_tbs.next_sc_noc_generator_uart
-@24
-tbs_core_tb.dut_tbs.sc_noc_generator_period_adj_uart[19:0]
-tbs_core_tb.dut_tbs.sc_noc_generator_duty_cycle_adj_uart[19:0]
-tbs_core_tb.dut_tbs.sc_noc_generator_overlap_adj_uart[19:0]
-@28
 tbs_core_tb.dut_tbs.baudrate_uart
-@24
-tbs_core_tb.dut_tbs.baudrate_adj_uart[9:0]
-@28
 tbs_core_tb.dut_tbs.tbs_virtual_delta_steps_uart
-@24
-tbs_core_tb.dut_tbs.tbs_virtual_delta_steps_adj_uart[7:0]
-tbs_core_tb.dut_tbs.tbs_delta_steps_upper[7:0]
-tbs_core_tb.dut_tbs.tbs_delta_steps_lower[7:0]
-@28
 tbs_core_tb.dut_tbs.input_changed_strb
 tbs_core_tb.dut_tbs.input_changed_reset_strb
 tbs_core_tb.dut_tbs.uart_changed_strb
@@ -150,12 +128,26 @@ tbs_core_tb.dut_tbs.signal_select_in_o
 tbs_core_tb.dut_tbs.amp_sdn_o
 tbs_core_tb.dut_tbs.dac_pd_o
 tbs_core_tb.dut_tbs.dac_clr_o
+tbs_core_tb.dut_tbs.dac_pwm_upper_o
+tbs_core_tb.dut_tbs.dac_pwm_lower_o
 tbs_core_tb.dut_tbs.dac_wr_upper_o
-@29
 tbs_core_tb.dut_tbs.dac_wr_lower_o
+@24
+tbs_core_tb.dut_tbs.dac_upper_o[9:0]
 @8024
-tbs_core_tb.dut_tbs.dac_upper_o[7:0]
-tbs_core_tb.dut_tbs.dac_lower_o[7:0]
+tbs_core_tb.dut_tbs.dac_upper_o[9:0]
+@20000
+-
+-
+-
+@24
+tbs_core_tb.dut_tbs.dac_lower_o[9:0]
+@8024
+tbs_core_tb.dut_tbs.dac_lower_o[9:0]
+@20000
+-
+-
+-
 @28
 tbs_core_tb.dut_tbs.idle_led_o
 tbs_core_tb.dut_tbs.overflow_led_o

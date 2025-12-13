@@ -410,7 +410,7 @@ begin
     
     -- RESET
 		-- reset_n <= '0';		-- active low reset
-		-- wait for 1 * (sec / (2 * CLK_FREQ);
+		-- wait for 1 * (sec / (2 * CLK_FREQ));
 		-- reset_n <= '1';		-- active low reset
     -- =====================================================
     
