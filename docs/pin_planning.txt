@@ -1,0 +1,15 @@
+ATBS ADC:
+  - 1 x clock
+  - 1 x reset
+  - 12 x inputs
+  - 37 x outputs
+  
+Total:
+  - 10 x VDD
+  - 11 x VSS
+  - 1 x clock
+  - 1 x reset
+  - 12 x inputs
+  - 37 x outputs
+  - 72 pads required
+  - 72 pads available
