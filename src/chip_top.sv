@@ -12,8 +12,7 @@ module chip_top #(
 
     // Signal pads
     parameter NUM_INPUT_PADS = `NUM_INPUT_PADS,
-    parameter NUM_BIDIR_PADS = `NUM_BIDIR_PADS,
-    parameter NUM_ANALOG_PADS = `NUM_ANALOG_PADS
+    parameter NUM_BIDIR_PADS = `NUM_BIDIR_PADS
     )(
     `ifdef USE_POWER_PINS
     inout  wire VDD,
@@ -24,18 +23,24 @@ module chip_top #(
     inout  wire rst_n_PAD,
     
     inout  wire [NUM_INPUT_PADS-1:0] input_PAD,
-    inout  wire [NUM_BIDIR_PADS-1:0] bidir_PAD,
-    
-    inout  wire [NUM_ANALOG_PADS-1:0] analog_PAD
+    inout  wire [NUM_BIDIR_PADS-1:0] bidir_PAD
 );
 
+	// ======================================================
+    // Wires
+	// ======================================================
+	// Clock
     wire clk_PAD2CORE;
+	
+	// Reset
     wire rst_n_PAD2CORE;
     
+	// Inputs
     wire [NUM_INPUT_PADS-1:0] input_PAD2CORE;
     wire [NUM_INPUT_PADS-1:0] input_CORE2PAD_PU;
     wire [NUM_INPUT_PADS-1:0] input_CORE2PAD_PD;
-
+	
+	// Outputs
     wire [NUM_BIDIR_PADS-1:0] bidir_PAD2CORE;
     wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD;
     wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD_OE;
@@ -44,8 +49,11 @@ module chip_top #(
     wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD_IE;
     wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD_PU;
     wire [NUM_BIDIR_PADS-1:0] bidir_CORE2PAD_PD;
-
-    // Power/ground pad instances
+    // ======================================================
+	
+	// ======================================================
+    // VDD - PAD INSTANCES
+	// ======================================================
     generate
     for (genvar i=0; i<NUM_DVDD_PADS; i++) begin : dvdd_pads
         (* keep *)
@@ -57,7 +65,11 @@ module chip_top #(
             `endif
         );
     end
-    
+    // ======================================================
+	
+	// ======================================================
+	// VSS - PAD INSTANCES
+	// ======================================================
     for (genvar i=0; i<NUM_DVSS_PADS; i++) begin : dvss_pads
         (* keep *)
         gf180mcu_ws_io__dvss pad (
@@ -69,10 +81,11 @@ module chip_top #(
         );
     end
     endgenerate
-
-    // Signal IO pad instances
-
-    // Schmitt trigger
+    // ======================================================
+	
+	// ======================================================
+    // CLOCK - PAD INSTANCE (Schmitt trigger)
+	// ======================================================
     gf180mcu_fd_io__in_s clk_pad (
         `ifdef USE_POWER_PINS
         .DVDD   (VDD),
@@ -87,8 +100,11 @@ module chip_top #(
         .PU     (1'b0),
         .PD     (1'b0)
     );
-    
-    // Normal input
+    // ======================================================
+	
+	// ======================================================
+    // RESET - PAD INSTANCE (active low, normal input)
+	// ======================================================
     gf180mcu_fd_io__in_c rst_n_pad (
         `ifdef USE_POWER_PINS
         .DVDD   (VDD),
@@ -103,7 +119,11 @@ module chip_top #(
         .PU     (1'b0),
         .PD     (1'b0)
     );
-
+	// ======================================================
+	
+	// ======================================================
+    // SIGNAL INPUTS - PAD INSTANCES
+	// ======================================================
     generate
     for (genvar i=0; i<NUM_INPUT_PADS; i++) begin : inputs
         (* keep *)
@@ -123,7 +143,11 @@ module chip_top #(
         );
     end
     endgenerate
-
+	// ======================================================
+	
+	// ======================================================
+    // SIGNAL OUTPUTS - PAD INSTANCES
+	// ======================================================
     generate
     for (genvar i=0; i<NUM_BIDIR_PADS; i++) begin : bidir
         (* keep *)
@@ -149,28 +173,14 @@ module chip_top #(
         );
     end
     endgenerate
-
-    generate
-    for (genvar i=0; i<NUM_ANALOG_PADS; i++) begin : analog
-        (* keep *)
-        gf180mcu_fd_io__asig_5p0 pad (
-            `ifdef USE_POWER_PINS
-            .DVDD   (VDD),
-            .DVSS   (VSS),
-            .VDD    (VDD),
-            .VSS    (VSS),
-            `endif
-            .ASIG5V (analog_PAD[i])
-        );
-    end
-    endgenerate
-
-    // Core design
-
+	// ======================================================
+	
+	// ======================================================
+    // CORE DESIGN
+	// ======================================================
     chip_core #(
         .NUM_INPUT_PADS  (NUM_INPUT_PADS),
-        .NUM_BIDIR_PADS  (NUM_BIDIR_PADS),
-        .NUM_ANALOG_PADS (NUM_ANALOG_PADS)
+        .NUM_BIDIR_PADS  (NUM_BIDIR_PADS)
     ) i_chip_core (
         `ifdef USE_POWER_PINS
         .VDD        (VDD),
@@ -191,19 +201,29 @@ module chip_top #(
         .bidir_sl   (bidir_CORE2PAD_SL),
         .bidir_ie   (bidir_CORE2PAD_IE),
         .bidir_pu   (bidir_CORE2PAD_PU),
-        .bidir_pd   (bidir_CORE2PAD_PD),
-        
-        .analog     (analog_PAD)
+        .bidir_pd   (bidir_CORE2PAD_PD)
     );
-    
+    // ======================================================
+	
+	// ======================================================
     // Chip ID - do not remove, necessary for tapeout
+	// ======================================================
     (* keep *)
     gf180mcu_ws_ip__id chip_id ();
-    
-    // wafer.space logo - can be removed
+    // ======================================================
+	
+	// ======================================================
+    // LOGOS
+	// ======================================================
+    // wafer.space logo
     (* keep *)
     gf180mcu_ws_ip__logo wafer_space_logo ();
-
+	// ======================================================
+	
+    // JKU logo
+    (* keep *)
+    gf180mcu_ws_ip__jku jku_logo ();
+	// ======================================================
 endmodule
 
 `default_nettype wire
