@@ -240,7 +240,7 @@ begin
 	clk_proc: process
 	begin
 		clock <= not clock;
-		wait for 1 * sec / (2 * CLK_FREQ);
+		wait for 1 * (sec / (2 * CLK_FREQ));
 	end process clk_proc;
 	-- =====================================================
 	
@@ -248,9 +248,9 @@ begin
 	stimuli: process
 	begin
     -- RESET
-    wait for 3 * sec / (4 * CLK_FREQ);
+    wait for 3 * (sec / (4 * CLK_FREQ));
 		reset_n <= '0';		-- active low reset
-		wait for 5 * sec / (2 * CLK_FREQ);
+		wait for 5 * (sec / (2 * CLK_FREQ));
 		reset_n <= '1';		-- active low reset
     -- =====================================================
     
@@ -268,7 +268,7 @@ begin
     ecg_lod_p <= '0';
     ecg_lod_n <= '0';
     
-    wait for 2 * DEBOUNCER_MAX * sec / (CLK_FREQ); -- Debouncing Time
+    wait for 2 * DEBOUNCER_MAX * (sec / (CLK_FREQ)); -- Debouncing Time
     -- =====================================================
     
     -- Input signal within thresholds (do nothing)
@@ -278,31 +278,31 @@ begin
     
     -- TESTING ENABLE
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     
     enable <= '0';            -- SW4: Disable(0), Enable(1)
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     enable <= '1';            -- SW4: Disable(0), Enable(1)
     
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     
     enable <= '0';            -- SW4: Disable(0), Enable(1)
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     enable <= '1';            -- SW4: Disable(0), Enable(1)
     
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     -- =====================================================
     
     -- SAMPLING
     -- Decrease voltage
     comp_lower <= '0';
-    wait for 450 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+	wait for (450 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     
     -- Increase voltage
     comp_upper <= '1';
-    wait for 900 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for (900 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     -- =====================================================
     
     
@@ -320,12 +320,12 @@ begin
     ecg_lod_p <= '0';
     ecg_lod_n <= '0';
     
-    wait for 2 * DEBOUNCER_MAX * sec / (CLK_FREQ); -- Debouncing Time
+    wait for 2 * DEBOUNCER_MAX * (sec / (CLK_FREQ)); -- Debouncing Time
     -- =====================================================
     
     -- RESET
 		-- reset_n <= '0';		-- active low reset
-		-- wait for 1 * sec / (2 * CLK_FREQ);
+		-- wait for 1 * (sec / (2 * CLK_FREQ));
 		-- reset_n <= '1';		-- active low reset
     -- =====================================================
     
@@ -336,31 +336,31 @@ begin
     
     -- TESTING ENABLE
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     
     enable <= '0';            -- SW4: Disable(0), Enable(1)
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     enable <= '1';            -- SW4: Disable(0), Enable(1)
     
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     
     enable <= '0';            -- SW4: Disable(0), Enable(1)
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     enable <= '1';            -- SW4: Disable(0), Enable(1)
     
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     -- =====================================================
     
     -- SAMPLING
     -- Decrease voltage
     comp_lower <= '0';
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Increase voltage
     comp_upper <= '1';
-    wait for 100 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 100 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     -- =====================================================
     
     -- Input signal within thresholds (do nothing)
@@ -386,31 +386,31 @@ begin
     -- Setting up virtual delta steps via UART
     tx_data <= "01010110"; -- V (ASCII) --> ATBS
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
     tx_data <= "01100001"; -- a (ASCII) --> N-1 Bit
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
     tx_data <= "01010101"; -- U (ASCII) --> Update Config.
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
-    wait for 2 * DEBOUNCER_MAX * sec / (CLK_FREQ); -- Debouncing Time
+    wait for 2 * DEBOUNCER_MAX * (sec / (CLK_FREQ)); -- Debouncing Time
     -- =====================================================
     
     -- RESET
 		-- reset_n <= '0';		-- active low reset
-		-- wait for 1 * sec / (2 * CLK_FREQ);
+		-- wait for 1 * (sec / (2 * CLK_FREQ);
 		-- reset_n <= '1';		-- active low reset
     -- =====================================================
     
@@ -421,31 +421,31 @@ begin
     
     -- TESTING ENABLE
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     
     enable <= '0';            -- SW4: Disable(0), Enable(1)
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     enable <= '1';            -- SW4: Disable(0), Enable(1)
     
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     
     enable <= '0';            -- SW4: Disable(0), Enable(1)
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     enable <= '1';            -- SW4: Disable(0), Enable(1)
     
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     -- =====================================================
     
     -- SAMPLING
     -- Decrease voltage
     comp_lower <= '0';
-    wait for 450 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 450 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Increase voltage
     comp_upper <= '1';
-    wait for 900 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 900 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     -- =====================================================
     
     
@@ -463,12 +463,12 @@ begin
     ecg_lod_p <= '0';
     ecg_lod_n <= '0';
     
-    wait for 2 * DEBOUNCER_MAX * sec / (CLK_FREQ); -- Debouncing Time
+    wait for 2 * DEBOUNCER_MAX * (sec / (CLK_FREQ)); -- Debouncing Time
     -- =====================================================
     
     -- RESET
 		-- reset_n <= '0';		-- active low reset
-		-- wait for 1 * sec / (2 * CLK_FREQ);
+		-- wait for 1 * (sec / (2 * CLK_FREQ));
 		-- reset_n <= '1';		-- active low reset
     -- =====================================================
     
@@ -479,31 +479,31 @@ begin
     
     -- TESTING ENABLE
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     
     enable <= '0';            -- SW4: Disable(0), Enable(1)
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     enable <= '1';            -- SW4: Disable(0), Enable(1)
     
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     
     enable <= '0';            -- SW4: Disable(0), Enable(1)
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     enable <= '1';            -- SW4: Disable(0), Enable(1)
     
     -- Wait for Start-Up and Main-FSM to be in sampling mode.
-    wait for (3 * DAC_SETTLING_CLKS) * sec / (2 * CLK_FREQ);
+    wait for (3 * DAC_SETTLING_CLKS) * (sec / (2 * CLK_FREQ));
     -- =====================================================
     
     -- SAMPLING
     -- Decrease voltage
     comp_lower <= '0';
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Increase voltage
     comp_upper <= '1';
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     -- =====================================================
     
     -- Input signal within thresholds (do nothing)
@@ -528,66 +528,66 @@ begin
     -- Setting up virtual delta steps via UART
     tx_data <= "01010110"; -- V (ASCII) --> ATBS
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
     tx_data <= "01100011"; -- c (ASCII) --> N-3 Bit
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
     tx_data <= "01010101"; -- U (ASCII) --> Update Config.
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 100 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 100 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
 
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
-    wait for 2 * DEBOUNCER_MAX * sec / (CLK_FREQ); -- Debouncing Time
+    wait for 2 * DEBOUNCER_MAX * (sec / (CLK_FREQ)); -- Debouncing Time
     
     -- Trigger not detected
     trigger_start_sampling  <= '1';
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     trigger_start_sampling  <= '0';
     
-    wait for 40 * sec / (2 * CLK_FREQ);
+    wait for 40 * (sec / (2 * CLK_FREQ));
     
     trigger_start_sampling  <= '1';
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     trigger_start_sampling  <= '0';
     
-    wait for 40 * sec / (2 * CLK_FREQ);
+    wait for 40 * (sec / (2 * CLK_FREQ));
     
     -- Trigger detected
     trigger_start_sampling  <= '1';
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     trigger_start_sampling  <= '0';
     
-    wait for 2 * (DEBOUNCER_MAX / 32) * sec / (2 * CLK_FREQ);
+    wait for 2 * (DEBOUNCER_MAX / 32) * (sec / (2 * CLK_FREQ));
     
     trigger_start_sampling  <= '1';
-    wait for 10 * sec / (2 * CLK_FREQ);
+    wait for 10 * (sec / (2 * CLK_FREQ));
     trigger_start_sampling  <= '0';
     
     -- Decrease voltage
     comp_lower <= '0';
-    wait for 250 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 250 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Increase voltage
     comp_upper <= '1';
-    wait for 250 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 250 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     -- =====================================================
     
     -- Input signal within thresholds (do nothing)
     comp_upper <= '0';
     comp_lower <= '1';
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     -- =====================================================
     
     
@@ -606,39 +606,39 @@ begin
     ecg_lod_n <= '0';
     -- =====================================================
     
-    wait for 2 * DEBOUNCER_MAX * sec / (CLK_FREQ); -- Debouncing Time
+    wait for 2 * DEBOUNCER_MAX * (sec / (CLK_FREQ)); -- Debouncing Time
     
-    wait for 300 * sec / CLK_FREQ;
+    wait for 300 * (sec / CLK_FREQ);
     
     -- Setting up ATBS via UART
     tx_data <= "00110000"; -- 0 (ASCII) --> Start sampling directly
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
     tx_data <= "00110011"; -- 3 (ASCII) --> ATBS
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
     tx_data <= "01010101"; -- U (ASCII) --> Update Config.
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
     -- Decrease voltage
     comp_lower <= '0';
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Increase voltage
     comp_upper <= '1';
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Input signal within thresholds (do nothing)
     comp_upper <= '0';
@@ -647,51 +647,51 @@ begin
     -- Changing Analog Trigger
     tx_data <= "01010100"; -- T (ASCII) --> Analog Trigger settings can be set now.
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
     tx_data <= "01100001"; -- a (ASCII) --> Maximum Period / Minimum Frequency / 25% Duty Cycle
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 250 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 250 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Changing to TBS again
     tx_data <= "00110010"; -- 2 (ASCII) --> TBS
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
     tx_data <= "01010101"; -- U (ASCII) --> Update Config.
     tx_start_strb <= '1';
-    wait for 1 * sec / CLK_FREQ;
+    wait for 1 * (sec / CLK_FREQ);
     tx_start_strb <= '0';
     
-    wait for 2 * sec / CLK_FREQ * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
+    wait for 2 * (sec / CLK_FREQ) * UART_BAUD_COUNTER_MAX * UART_DATA_LENGTH;
     
     -- Decrease voltage
     comp_lower <= '0';
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Increase voltage
     comp_upper <= '1';
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Input signal within thresholds (do nothing)
     comp_upper <= '0';
     comp_lower <= '1';
     -- =====================================================
     
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- RESET
 		reset_n <= '0';		-- active low reset
-		wait for 1 * sec / (2 * CLK_FREQ);
+		wait for 1 * (sec / (2 * CLK_FREQ));
 		reset_n <= '1';		-- active low reset
     -- =====================================================
     
@@ -708,22 +708,22 @@ begin
     ecg_lod_p <= '0';
     ecg_lod_n <= '0';
     
-    wait for 2 * DEBOUNCER_MAX * sec / (CLK_FREQ); -- Debouncing Time
+    wait for 2 * DEBOUNCER_MAX * (sec / (CLK_FREQ)); -- Debouncing Time
     
     -- Decrease voltage
     comp_lower <= '0';
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Increase voltage
     comp_upper <= '1';
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
     -- Input signal within thresholds (do nothing)
     comp_upper <= '0';
     comp_lower <= '1';
     -- =====================================================
     
-    wait for 200 * DAC_SETTLING_CLKS * sec / (2 * CLK_FREQ);
+    wait for 200 * DAC_SETTLING_CLKS * (sec / (2 * CLK_FREQ));
     
 		tb_end <= '1';
     report "End of simulation." severity error;

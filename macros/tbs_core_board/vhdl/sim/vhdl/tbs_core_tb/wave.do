@@ -71,8 +71,6 @@ add wave -noupdate /tbs_core_tb/dut_tbs/increasing_en
 add wave -noupdate /tbs_core_tb/dut_tbs/decreasing_en
 add wave -noupdate /tbs_core_tb/dut_tbs/tbs_increasing_en
 add wave -noupdate /tbs_core_tb/dut_tbs/tbs_decreasing_en
-add wave -noupdate /tbs_core_tb/dut_tbs/adaptive_increasing_en
-add wave -noupdate /tbs_core_tb/dut_tbs/adaptive_decreasing_en
 add wave -noupdate -divider {COM Path}
 add wave -noupdate -radix unsigned /tbs_core_tb/dut_tbs/curr_time
 add wave -noupdate -radix unsigned /tbs_core_tb/dut_tbs/encoded_spike
@@ -112,8 +110,10 @@ add wave -noupdate /tbs_core_tb/dut_tbs/dac_pd_o
 add wave -noupdate /tbs_core_tb/dut_tbs/dac_clr_o
 add wave -noupdate /tbs_core_tb/dut_tbs/dac_wr_upper_o
 add wave -noupdate /tbs_core_tb/dut_tbs/dac_wr_lower_o
+add wave -noupdate /tbs_core_tb/dut_tbs/dac_pwm_lower_o
+add wave -noupdate /tbs_core_tb/dut_tbs/dac_pwm_upper_o
 add wave -noupdate -radix unsigned /tbs_core_tb/dut_tbs/dac_upper_o
-add wave -noupdate -format Analog-Step -height 74 -max 254.99999999999997 -radix unsigned /tbs_core_tb/dut_tbs/dac_upper_o
+add wave -noupdate -format Analog-Step -height 74 -max 254.99999999999997 -radix unsigned -childformat {{/tbs_core_tb/dut_tbs/dac_upper_o(9) -radix unsigned} {/tbs_core_tb/dut_tbs/dac_upper_o(8) -radix unsigned} {/tbs_core_tb/dut_tbs/dac_upper_o(7) -radix unsigned} {/tbs_core_tb/dut_tbs/dac_upper_o(6) -radix unsigned} {/tbs_core_tb/dut_tbs/dac_upper_o(5) -radix unsigned} {/tbs_core_tb/dut_tbs/dac_upper_o(4) -radix unsigned} {/tbs_core_tb/dut_tbs/dac_upper_o(3) -radix unsigned} {/tbs_core_tb/dut_tbs/dac_upper_o(2) -radix unsigned} {/tbs_core_tb/dut_tbs/dac_upper_o(1) -radix unsigned} {/tbs_core_tb/dut_tbs/dac_upper_o(0) -radix unsigned}} -subitemconfig {/tbs_core_tb/dut_tbs/dac_upper_o(9) {-height 15 -radix unsigned} /tbs_core_tb/dut_tbs/dac_upper_o(8) {-height 15 -radix unsigned} /tbs_core_tb/dut_tbs/dac_upper_o(7) {-height 15 -radix unsigned} /tbs_core_tb/dut_tbs/dac_upper_o(6) {-height 15 -radix unsigned} /tbs_core_tb/dut_tbs/dac_upper_o(5) {-height 15 -radix unsigned} /tbs_core_tb/dut_tbs/dac_upper_o(4) {-height 15 -radix unsigned} /tbs_core_tb/dut_tbs/dac_upper_o(3) {-height 15 -radix unsigned} /tbs_core_tb/dut_tbs/dac_upper_o(2) {-height 15 -radix unsigned} /tbs_core_tb/dut_tbs/dac_upper_o(1) {-height 15 -radix unsigned} /tbs_core_tb/dut_tbs/dac_upper_o(0) {-height 15 -radix unsigned}} /tbs_core_tb/dut_tbs/dac_upper_o
 add wave -noupdate -radix unsigned /tbs_core_tb/dut_tbs/dac_lower_o
 add wave -noupdate -format Analog-Step -height 74 -max 224.0 -radix unsigned /tbs_core_tb/dut_tbs/dac_lower_o
 add wave -noupdate /tbs_core_tb/dut_tbs/idle_led_o
@@ -141,4 +141,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits us
 update
-WaveRestoreZoom {0 ps} {42532973438 ps}
+WaveRestoreZoom {0 ps} {163205798438 ps}

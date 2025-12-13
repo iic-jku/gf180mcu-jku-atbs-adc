@@ -16,6 +16,7 @@ vcom -work work ../../../adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_
 vcom -work work ../../../adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd
 vcom -work work ../../../dac_control/rtl/dac_control_ea.vhd
 vcom -work work ../../../memory2uart/rtl/memory2uart_ea.vhd
+vcom -work work ../../../pwm_modulator/rtl/pwm_modulator_ea.vhd
 vcom -work work ../../../spike_detector/rtl/spike_detector_ea.vhd
 vcom -work work ../../../spike_encoder/rtl/spike_encoder_ea.vhd
 vcom -work work ../../../spike_memory/rtl/dual_ram_ea.vhd
@@ -28,7 +29,7 @@ vcom -work work ../../../analog_trigger/rtl/analog_trigger_ea.vhd
 vcom -work work ../../../sc_noc_generator/rtl/sc_noc_generator_ea.vhd
 vcom -work work ../../../quartus/pll/pll_8MHz.vhd
 vcom -work work ../../../rtl/tbs_core_ea.vhd
-vcom -work work ../../../rtl/quartus_board/tbs_core_board.vhd
+vcom -work work ../../../rtl/tbs_core_board.vhd
 vcom -work work tbs_core_tb.vhd
 
 vsim work.tbs_core_tb
