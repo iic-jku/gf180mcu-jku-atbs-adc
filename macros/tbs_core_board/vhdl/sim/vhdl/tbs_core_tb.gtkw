@@ -1,9 +1,9 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Sat Dec 13 12:18:41 2025
+[*] Sat Dec 13 13:08:57 2025
 [*]
 [dumpfile] "/foss/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sim/vhdl/tbs_core_tb.vcd"
-[dumpfile_mtime] "Sat Dec 13 12:14:36 2025"
+[dumpfile_mtime] "Sat Dec 13 12:49:09 2025"
 [dumpfile_size] 1392547829
 [savefile] "/foss/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sim/vhdl/tbs_core_tb.gtkw"
 [timestart] 0
