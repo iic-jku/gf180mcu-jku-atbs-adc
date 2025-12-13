@@ -1,0 +1,9 @@
+Project Overview:
+https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/tholin-feature
+https://github.com/AvalonSemiconductors/ws-submission-2025/tree/main
+https://github.com/splinedrive/gf180mcu-kianv-rv32ima-sv32/blob/65eb37219dc5b7ff10f1e058027384f703a5a122/librelane/config.yaml#L144
+
+- ATBS ADC - Simon Dorrer
+	--> 14 x inputs (incl. clock + reset)
+	--> 37 x outputs
+	--> ???um x ???um
