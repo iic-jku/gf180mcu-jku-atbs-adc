@@ -10,7 +10,7 @@ set -e -x
 
 cd $(dirname "$0")
 
-# Name as input parameter (counter)
+# Name as input parameter (e.g. counter)
 name=$1
 
 yosys -p "read_verilog "$name".v; proc; opt; flatten; techmap; stat"
