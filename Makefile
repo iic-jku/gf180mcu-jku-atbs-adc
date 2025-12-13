@@ -78,6 +78,20 @@ sim-view: ## View simulation waveforms in GTKWave
 	gtkwave cocotb/sim_build/chip_top.fst
 .PHONY: sim-view
 
+# Target for copying the top-level reports
+copy-reports: ## Copy yosys, antenna violations, hold & setup timing and manufacturability reports
+	rm -rf reports/
+	mkdir -p reports/
+	cp librelane/runs/${RUN_TAG}/06-yosys-synthesis/reports/pre_synth_chk.rpt reports/yosys_synth_check.rpt
+	cp librelane/runs/${RUN_TAG}/06-yosys-synthesis/reports/pre_techmap.rpt reports/yosys_pre_techmap.rpt
+	cp librelane/runs/${RUN_TAG}/06-yosys-synthesis/reports/post_dff.rpt reports/yosys_post_dff.rpt
+	cp librelane/runs/${RUN_TAG}/47-openroad-checkantennas-1/reports/antenna.rpt reports/antenna_violations.rpt
+	cp librelane/runs/${RUN_TAG}/47-openroad-checkantennas-1/reports/antenna_summary.rpt reports/antenna_summary.rpt
+	cp librelane/runs/${RUN_TAG}/56-openroad-stapostpnr/summary.rpt reports/hold_setup_timing.rpt
+	cp librelane/runs/${RUN_TAG}/62-klayout-antenna/reports/antenna.klayout.json reports/antenna.klayout.json
+	cp librelane/runs/${RUN_TAG}/79-misc-reportmanufacturability/manufacturability.rpt reports/manufacturability.rpt
+.PHONY: copy-reports
+
 copy-final: ## Copy final output files from the last run
 	rm -rf final/
 	cp -r librelane/runs/${RUN_TAG}/final/ final/
@@ -87,3 +101,18 @@ render-image: ## Render an image from the final layout (after copy-final)
 	mkdir -p img/
 	PDK_ROOT=${PDK_ROOT} PDK=${PDK} python3 scripts/lay2img.py final/gds/${TOP}.gds img/${TOP}.png --width 2048 --oversampling 4
 .PHONY: copy-final
+
+# Targets for building the macros in one place
+build-tbs_core_board:
+	@$(MAKE) -C macros/tbs_core_board librelane
+	@$(MAKE) -C macros/tbs_core_board copy-reports
+	@$(MAKE) -C macros/tbs_core_board copy-final
+	@$(MAKE) -C macros/tbs_core_board render-image
+.PHONY: build-tbs_core_board
+
+build-all-macros: build-tbs_core_board
+.PHONY: build-all-macros
+
+# Target for building the whole chip
+build-all: clone-pdk build-all-macros librelane copy-reports copy-final render-image librelane-openroad
+.PHONY: build-all
