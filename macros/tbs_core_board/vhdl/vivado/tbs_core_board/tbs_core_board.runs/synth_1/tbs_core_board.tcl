@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.runs/synth_1/tbs_core_board.tcl"
+  variable script "C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.runs/synth_1/tbs_core_board.tcl"
   variable category "vivado_synth"
 }
 
@@ -57,7 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s25ftgb196-1
 
@@ -65,47 +64,48 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.cache/wt} [current_project]
-set_property parent.project_path {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.cache/wt [current_project]
+set_property parent.project_path C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo {c:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/sim/vhdl/TBSSimVals_p.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/adaptive_threshold_control/sim/vhdl/AdaptiveCtrlSimVals_p.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/adaptive_threshold_control/Spike-Buffering/sim/vhdl/adaptive_std_p.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/adaptive_threshold_control/Weyls-Discrepancy/sim/vhdl/adaptive_std_p.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/adaptive_threshold_control/sim/vhdl/adaptive_std_p.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/analog_trigger/rtl/analog_trigger_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/sync_chain/rtl/sync_chain_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/dac_control/rtl/dac_control_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/debouncer/rtl/debouncer_ea.vhd}
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sim/vhdl/TBSSimVals_p.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/sim/vhdl/AdaptiveCtrlSimVals_p.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Spike-Buffering/sim/vhdl/adaptive_std_p.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Weyls-Discrepancy/sim/vhdl/adaptive_std_p.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/sim/vhdl/adaptive_std_p.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/analog_trigger/rtl/analog_trigger_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sync_chain/rtl/sync_chain_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/dac_control/rtl/dac_control_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/debouncer/rtl/debouncer_ea.vhd
   {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/ethernet/rtl/dual_ram_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/memory2uart/rtl/memory2uart_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/sc_noc_generator/rtl/sc_noc_generator_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/spike_detector/rtl/spike_detector_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/spike_encoder/rtl/spike_encoder_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/spike_memory/rtl/spike_memory_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/time_measurement/rtl/time_measurement_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/uart/rtl/uart_tx_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/uart/rtl/uart_rx_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/uart/rtl/uart_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/rtl/tbs_core_ea.vhd}
-  {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/rtl/vivado_board/tbs_core_board.vhd}
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/memory2uart/rtl/memory2uart_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sc_noc_generator/rtl/sc_noc_generator_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_detector/rtl/spike_detector_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_encoder/rtl/spike_encoder_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_memory/rtl/spike_memory_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/time_measurement/rtl/time_measurement_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_tx_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_rx_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/tbs_core_ea.vhd
+  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/vivado_board/tbs_core_board.vhd
 }
-read_ip -quiet {{C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.srcs/sources_1/ip/pll_8MHz/pll_8MHz.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.gen/sources_1/ip/pll_8MHz/pll_8MHz_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.gen/sources_1/ip/pll_8MHz/pll_8MHz.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.gen/sources_1/ip/pll_8MHz/pll_8MHz_ooc.xdc}}]
+read_ip -quiet C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.srcs/sources_1/ip/pll_8MHz/pll_8MHz.xci
+set_property used_in_implementation false [get_files -all c:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.gen/sources_1/ip/pll_8MHz/pll_8MHz_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.gen/sources_1/ip/pll_8MHz/pll_8MHz.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.gen/sources_1/ip/pll_8MHz/pll_8MHz_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -116,12 +116,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.srcs/constrs_1/new/tbs_core_timing.xdc}}
-set_property used_in_implementation false [get_files {{C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.srcs/constrs_1/new/tbs_core_timing.xdc}}]
+read_xdc C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.srcs/constrs_1/new/tbs_core_timing.xdc
+set_property used_in_implementation false [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.srcs/constrs_1/new/tbs_core_timing.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.srcs/utils_1/imports/synth_1/tbs_core_board.dcp}
+read_checkpoint -auto_incremental -incremental C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.srcs/utils_1/imports/synth_1/tbs_core_board.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

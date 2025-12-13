@@ -104,3 +104,8 @@ set_property PACKAGE_PIN H4 [get_ports uart_tx_o]
 set_property PACKAGE_PIN D2 [get_ports control_mode_i]
 set_property PACKAGE_PIN C1 [get_ports adaptive_mode_i]
 set_property PACKAGE_PIN F1 [get_ports select_tbs_delta_steps_i]
+
+set_property IOSTANDARD LVCMOS33 [get_ports dac_pwm_lower_o]
+set_property IOSTANDARD LVCMOS33 [get_ports dac_pwm_upper_o]
+set_property PACKAGE_PIN L3 [get_ports dac_pwm_upper_o]
+set_property PACKAGE_PIN M3 [get_ports dac_pwm_lower_o]

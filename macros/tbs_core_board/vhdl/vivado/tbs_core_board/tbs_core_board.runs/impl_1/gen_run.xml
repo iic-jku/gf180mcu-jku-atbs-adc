@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s25ftgb196-1" LaunchTime="1746548282">
+<GenRun Id="impl_1" LaunchPart="xc7s25ftgb196-1" LaunchTime="1765590995">
   <File Type="ROUTE-PWR" Name="tbs_core_board_power_routed.rpt"/>
   <File Type="PA-TCL" Name="tbs_core_board.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="tbs_core_board_power_summary_routed.pb"/>
@@ -170,13 +170,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../ethernet/rtl/dual_ram_ea.vhd">
+    <File Path="$PPRDIR/../../../../../../../../../../Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/ethernet/rtl/dual_ram_ea.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../memory2uart/rtl/memory2uart_ea.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../pwm_modulator/rtl/pwm_modulator_ea.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -242,7 +248,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../ethernet/rtl/std_p.vhd">
+    <File Path="$PPRDIR/../../../../../../../../../../Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/ethernet/rtl/std_p.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

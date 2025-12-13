@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="67" Path="C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.xpr">
+<Project Product="Vivado" Version="7" Minor="67" Path="C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="4f063cb83987487a9f2497525481982e"/>
@@ -174,13 +174,19 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../ethernet/rtl/dual_ram_ea.vhd">
+      <File Path="$PPRDIR/../../../../../../../../../../Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/ethernet/rtl/dual_ram_ea.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../memory2uart/rtl/memory2uart_ea.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../pwm_modulator/rtl/pwm_modulator_ea.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -246,7 +252,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../ethernet/rtl/std_p.vhd">
+      <File Path="$PPRDIR/../../../../../../../../../../Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/ethernet/rtl/std_p.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

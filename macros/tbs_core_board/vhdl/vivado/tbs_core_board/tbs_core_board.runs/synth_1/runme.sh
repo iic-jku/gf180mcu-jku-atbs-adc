@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/vivado/tbs_core_board/tbs_core_board.runs/synth_1'
+HD_PWD='C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
