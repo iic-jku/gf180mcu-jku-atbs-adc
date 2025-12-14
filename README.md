@@ -78,6 +78,12 @@ This will only work if the last run was completed without errors. This command i
 
 ## Build Macros
 
+To build a specific macro, look into the `Makefile` and run the corresponding command. For example, the following command builds the `tbs_core_board` macro:
+
+```
+make build-tbs_core_board
+```
+
 To build all macros, run the following command:
 
 ```
