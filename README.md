@@ -1,6 +1,6 @@
-# gf180mcu Project Template
+# gf180mcuD - JKU - ATBS ADC
 
-Project JKU2 for wafer.space MPW runs using the gf180mcu PDK.
+Project `JKU2` for wafer.space MPW runs using the `gf180mcuD` PDK.
 
 - [ ] Top-Level: ToDo
 - [ ] ATBS ADC: yosys error
@@ -28,6 +28,8 @@ With this shell enabled, run the implementation:
 make librelane
 ```
 
+This command is also available for the macros.
+
 ## View the Design
 
 After completion, you can view the design using the OpenROAD GUI:
@@ -42,6 +44,18 @@ Or using KLayout:
 make librelane-klayout
 ```
 
+These commands are also available for the macros.
+
+## Copying important Reports to the Reports Folder
+
+To copy yosys, antenna violations, hold & setup timing and manufacturability reports of the latest run to the `reports/` folder in the root directory of the repository, run the following command:
+
+```
+make copy-reports
+```
+
+This will only work if the last run was completed without errors. This command is also available for the macros.
+
 ## Copying the Design to the Final Folder
 
 To copy your latest run to the `final/` folder in the root directory of the repository, run the following command:
@@ -50,7 +64,37 @@ To copy your latest run to the `final/` folder in the root directory of the repo
 make copy-final
 ```
 
-This will only work if the last run was completed without errors.
+This will only work if the last run was completed without errors. This command is also available for the macros.
+
+## Render Layout of the Design
+
+To render your latest GDS in the `final/` folder in the root directory of the repository and save it in the `img/` folder, run the following command:
+
+```
+make render-image
+```
+
+This will only work if the last run was completed without errors. This command is also available for the macros.
+
+## Build Macros
+
+To build all macros, run the following command:
+
+```
+make build-all-macros
+```
+
+For each macro the following commands are executed: `make librelane`, `make copy-reports`, `make copy-final` and `make render-image`.
+
+## Build All
+
+To clone the PDK, build all macros, build the top-level chip, copy its reports, render its GDS and display it in the OpenROAD GUI, run the following command:
+
+```
+make build-all
+```
+
+This is especially useful for people who want to rebuild our chip from scratch. Just clone this repo, run `nix-shell` in the root of this repository and run `make build-all`. Enjoy. :-)
 
 ## Verification and Simulation
 
