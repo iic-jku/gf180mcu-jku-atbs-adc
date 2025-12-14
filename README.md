@@ -1,6 +1,9 @@
 # gf180mcu Project Template
 
-Project template for wafer.space MPW runs using the gf180mcu PDK.
+Project JKU2 for wafer.space MPW runs using the gf180mcu PDK.
+
+- [ ] Top-Level: ToDo
+- [ ] ATBS ADC: yosys error
 
 ## Prerequisites
 
