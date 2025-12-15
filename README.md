@@ -7,6 +7,10 @@ Project `JKU2` for wafer.space MPW runs using the `gf180mcuD` PDK.
 - [ ] Top-Level: ToDo
 - [ ] ATBS ADC: yosys error
 
+![chip_top_white](img/chip_top_white.png)
+
+![chip_top_layout_gui](img/chip_top_layout_gui.png)
+
 ## Prerequisites
 
 We use a custom fork of the [gf180mcuD PDK variant](https://github.com/wafer-space/gf180mcu) until all changes have been upstreamed.
