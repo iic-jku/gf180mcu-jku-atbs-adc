@@ -122,5 +122,5 @@ build-all-macros: build-tbs_core_board
 .PHONY: build-all-macros
 
 # Target for building the whole chip
-build-all: clone-pdk build-all-macros librelane copy-reports copy-final render-image librelane-openroad
+build-all: clone-pdk build-all-macros librelane copy-reports copy-final copy-gds render-image librelane-openroad
 .PHONY: build-all
