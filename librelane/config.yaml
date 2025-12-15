@@ -169,7 +169,7 @@ MACROS:
       nom_tt_025C_5v00: dir::../macros/tbs_core_board/final/lib/nom_tt_025C_5v00/tbs_core_board__nom_tt_025C_5v00.lib
     instances:
       i_chip_core.tbs_core_board:
-        location: ["expr::442 + 24 + 100", "expr::442 + 19 + 300"]
+        location: ["expr::442 + 24 + 150", "expr::442 + 19 + 150"]
         orientation: N
         
   gf180mcu_ws_ip__id:

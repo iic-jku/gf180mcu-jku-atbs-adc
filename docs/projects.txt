@@ -6,4 +6,4 @@ https://github.com/splinedrive/gf180mcu-kianv-rv32ima-sv32/blob/65eb37219dc5b7ff
 - ATBS ADC - Simon Dorrer
 	--> 14 x inputs (incl. clock + reset)
 	--> 37 x outputs
-	--> 2800um x 1000um
+	--> 2700um x 1300um
