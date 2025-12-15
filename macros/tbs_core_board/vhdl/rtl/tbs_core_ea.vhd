@@ -327,6 +327,7 @@ signal fifo_empty   		    : std_ulogic;
 
 -- UART signals
 signal uart_reset           : std_ulogic;
+signal next_uart_reset		: std_ulogic;
 signal tx_start_strb        : std_ulogic;
 signal uart_tx_strb         : std_ulogic;
 signal uart_tx              : std_ulogic;
@@ -1279,7 +1280,17 @@ begin
 	end process main_fsm_logic;
   -- =====================================================
   
-  -- Embed UART RX Control
+	-- Embed UART RX Control
+	uart_rx_reset_reg: process(clock_i, reset_sync) is
+	begin
+		if reset_sync = '0' then -- active low
+			uart_reset <= '0';
+		elsif rising_edge(clock_i) then
+			uart_reset <= next_uart_reset;
+		end if;
+	end process uart_rx_reset_reg;
+	-- ===================================================
+	
   uart_rx_control_reg: process(clock_i, reset_i) is
 	begin
 		if reset_i = '1' then
@@ -1377,7 +1388,7 @@ begin
     
     uart_changed_strb <= '0';
     uart_start_sampling_strb <= '0'; 
-    uart_reset <= '0';
+    next_uart_reset <= '0';
     
     -- https://www.rapidtables.com/convert/number/ascii-to-binary.html
     if uart_rx_data_strb = '1' then
@@ -1496,7 +1507,7 @@ begin
         elsif uart_rx_data = "01010011" then        -- S (ASCII)
           uart_start_sampling_strb <= '1';          -- Start Sampling
         elsif uart_rx_data = "01010010" then        -- R (ASCII)
-          uart_reset <= '1';                        -- Reset
+          next_uart_reset <= '1';                   -- Reset
         elsif uart_rx_data = "01010100" then        -- T (ASCII)
           next_analog_trigger_uart <= '1';          -- Analog Trigger settings can be set now.
         elsif uart_rx_data = "01000011" then        -- C (ASCII)
