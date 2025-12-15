@@ -27,7 +27,7 @@ async def enable_power(dut):
     dut.VDD.value = 1
     dut.VSS.value = 0
 
-async def start_clock(clock, freq=50):
+async def start_clock(clock, freq=8):
     """Start the clock @ freq MHz"""
     c = Clock(clock, 1 / freq * 1000, "ns")
     cocotb.start_soon(c.start())
@@ -54,11 +54,11 @@ async def start_up(dut):
 
 
 @cocotb.test()
-async def test_counter(dut):
+async def test_atbs_adc(dut):
     """Run the counter test"""
 
     # Create a logger for this testbench
-    logger = logging.getLogger("my_testbench")
+    logger = logging.getLogger("atbs_adc test")
 
     logger.info("Startup sequence...")
 
@@ -75,9 +75,6 @@ async def test_counter(dut):
 
     # Wait for a number of clock cycles
     await ClockCycles(dut.clk_PAD, 100)
-
-    # Check the end result of the counter
-    assert dut.bidir_PAD.value == 100 - 1
 
     logger.info("Done!")
 
@@ -97,11 +94,13 @@ def chip_top_runner():
 
         # We use the powered netlist
         sources.append(proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v")
+        sources.append(proj_path / f"../macros/tbs_core_board/final/pnl/tbs_core_board.pnl.v")
 
         defines = {"FUNCTIONAL": True, "USE_POWER_PINS": True}
     else:
         sources.append(proj_path / "../src/chip_top.sv")
         sources.append(proj_path / "../src/chip_core.sv")
+        sources.append(proj_path / "../macros/tbs_core_board/verilog/rtl/tbs_core_board.v")
 
     sources += [
         # IO pad models
@@ -114,6 +113,7 @@ def chip_top_runner():
         # Custom IP
         proj_path / "../ip/gf180mcu_ws_ip__id/vh/gf180mcu_ws_ip__id.v",
         proj_path / "../ip/gf180mcu_ws_ip__logo/vh/gf180mcu_ws_ip__logo.v",
+        proj_path / "../ip/gf180mcu_ws_ip__jku/vh/gf180mcu_ws_ip__jku.v",
     ]
 
     build_args = []
