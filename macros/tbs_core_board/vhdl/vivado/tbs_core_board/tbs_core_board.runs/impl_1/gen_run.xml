@@ -1,70 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s25ftgb196-1" LaunchTime="1765590995">
+<GenRun Id="impl_1" LaunchPart="xc7s25ftgb196-1" LaunchTime="1765822055">
   <File Type="ROUTE-PWR" Name="tbs_core_board_power_routed.rpt"/>
   <File Type="PA-TCL" Name="tbs_core_board.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="tbs_core_board_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="tbs_core_board_reports.tcl"/>
-  <File Type="OPT-RQA-PB" Name="tbs_core_board_rqa_opted.pb"/>
+  <File Type="BITSTR-MSK" Name="tbs_core_board.msk"/>
+  <File Type="ROUTE-CLK" Name="tbs_core_board_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="tbs_core_board.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="tbs_core_board_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="tbs_core_board.bit"/>
+  <File Type="BG-DRC" Name="tbs_core_board.drc"/>
+  <File Type="BG-BGN" Name="tbs_core_board.bgn"/>
+  <File Type="BG-BIN" Name="tbs_core_board.bin"/>
+  <File Type="BITSTR-RBT" Name="tbs_core_board.rbt"/>
+  <File Type="BITSTR-NKY" Name="tbs_core_board.nky"/>
+  <File Type="BITSTR-BMM" Name="tbs_core_board_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="tbs_core_board.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="tbs_core_board_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="tbs_core_board_timing_summary_init.rpt"/>
-  <File Type="OPT-TIMING" Name="tbs_core_board_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="tbs_core_board_opt.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="tbs_core_board_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="tbs_core_board.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="tbs_core_board.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="tbs_core_board_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="tbs_core_board.hwdef"/>
-  <File Type="PWROPT-DCP" Name="tbs_core_board_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="tbs_core_board_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="tbs_core_board_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="tbs_core_board_placed.dcp"/>
   <File Type="PLACE-IO" Name="tbs_core_board_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="tbs_core_board_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="tbs_core_board_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="tbs_core_board_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="tbs_core_board_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="tbs_core_board_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="tbs_core_board_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="tbs_core_board.bin"/>
-  <File Type="PLACE-TIMING" Name="tbs_core_board_timing_summary_placed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="tbs_core_board_power_routed.rpx"/>
-  <File Type="PLACE-RQA-PB" Name="tbs_core_board_rqa_placed.pb"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="tbs_core_board_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="tbs_core_board.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="tbs_core_board_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="tbs_core_board_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="tbs_core_board_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="tbs_core_board.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="tbs_core_board_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="tbs_core_board_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="tbs_core_board_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="tbs_core_board_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="tbs_core_board_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="tbs_core_board_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="tbs_core_board_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="tbs_core_board_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="tbs_core_board_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="tbs_core_board_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-RQS-PB" Name="tbs_core_board_rqs_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="tbs_core_board_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="tbs_core_board_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="tbs_core_board_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="tbs_core_board_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="tbs_core_board_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="tbs_core_board_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="tbs_core_board_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="tbs_core_board_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="tbs_core_board_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="tbs_core_board_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="tbs_core_board_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="tbs_core_board_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="tbs_core_board_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="tbs_core_board_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="tbs_core_board_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="tbs_core_board_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="tbs_core_board_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="tbs_core_board_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="tbs_core_board_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="tbs_core_board_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="tbs_core_board_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="tbs_core_board_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="tbs_core_board_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="tbs_core_board_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="tbs_core_board_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="tbs_core_board.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="tbs_core_board_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="tbs_core_board_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="tbs_core_board.nky"/>
-  <File Type="BITSTR-BMM" Name="tbs_core_board_bd.bmm"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="tbs_core_board_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="tbs_core_board_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="tbs_core_board_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="tbs_core_board.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="tbs_core_board_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="tbs_core_board_pld.pdi"/>
@@ -73,13 +66,6 @@
   <File Type="RNPI_FILE" Name="tbs_core_board.rnpi"/>
   <File Type="NPI_FILE" Name="tbs_core_board.npi"/>
   <File Type="RBD_FILE" Name="tbs_core_board.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="tbs_core_board.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="tbs_core_board.sysdef"/>
-  <File Type="BG-BGN" Name="tbs_core_board.bgn"/>
-  <File Type="BG-DRC" Name="tbs_core_board.drc"/>
-  <File Type="RDI-RDI" Name="tbs_core_board.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="tbs_core_board_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="tbs_core_board_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -345,6 +331,7 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="pll_8MHz"/>
 </GenRun>

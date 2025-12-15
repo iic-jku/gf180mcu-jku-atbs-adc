@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Sat Dec 13 02:59:08 2025
+| Date             : Mon Dec 15 19:10:25 2025
 | Host             : SimiBook running 64-bit major release  (build 9200)
 | Command          : report_power -file tbs_core_board_power_routed.rpt -pb tbs_core_board_power_summary_routed.pb -rpx tbs_core_board_power_routed.rpx
 | Design           : tbs_core_board
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.170        |
+| Total On-Chip Power (W)  | 0.169        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.108        |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |     4430 |       --- |             --- |
-|   LUT as Logic |    <0.001 |     1501 |     14600 |           10.28 |
+| Slice Logic    |    <0.001 |     4428 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     1504 |     14600 |           10.30 |
 |   CARRY4       |    <0.001 |      198 |      3650 |            5.42 |
 |   F7/F8 Muxes  |    <0.001 |      228 |     14600 |            1.56 |
-|   Register     |    <0.001 |     2085 |     29200 |            7.14 |
-|   Others       |     0.000 |       49 |       --- |             --- |
-| Signals        |    <0.001 |     3029 |       --- |             --- |
+|   Register     |    <0.001 |     2086 |     29200 |            7.14 |
+|   Others       |     0.000 |       50 |       --- |             --- |
+| Signals        |    <0.001 |     3025 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         3 |           33.33 |
-| I/O            |     0.001 |       49 |       100 |           49.00 |
+| I/O            |    <0.001 |       49 |       100 |           49.00 |
 | Static Power   |     0.061 |          |           |                 |
-| Total          |     0.170 |          |           |                 |
+| Total          |     0.169 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 

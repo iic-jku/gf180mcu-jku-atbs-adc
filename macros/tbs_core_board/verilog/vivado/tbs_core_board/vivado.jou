@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Dec 15 19:04:26 2025
+# Process ID: 17652
+# Current directory: C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5776 C:\Users\si150\eda\designs\gf180mcu-jku-atbs-adc\macros\tbs_core_board\verilog\vivado\tbs_core_board\tbs_core_board.xpr
+# Log file: C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board/vivado.log
+# Journal file: C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board\vivado.jou
+# Running On        :SimiBook
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26200
+# Processor Detail  :AMD Ryzen 7 5700U with Radeon Graphics         
+# CPU Frequency     :1797 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16458 MB
+# Swap memory       :20401 MB
+# Total Virtual     :36859 MB
+# Available Virtual :17303 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board/tbs_core_board.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/vivado_board/tbs_core_board.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/vivado_board/tbs_core_board.vhd
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/tbs_core_ea.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/tbs_core_ea.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_memory/rtl/spike_memory_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/debouncer/rtl/debouncer_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/dac_control/rtl/dac_control_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/analog_trigger/rtl/analog_trigger_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/memory2uart/rtl/memory2uart_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd] -no_script -reset -force -quiet
+remove_files  {C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_memory/rtl/spike_memory_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/debouncer/rtl/debouncer_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/dac_control/rtl/dac_control_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/analog_trigger/rtl/analog_trigger_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/memory2uart/rtl/memory2uart_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/ethernet/rtl/dual_ram_ea.vhd}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sc_noc_generator/rtl/sc_noc_generator_ea.vhd] -no_script -reset -force -quiet
+remove_files  {C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd {C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/ethernet/rtl/dual_ram_ea.vhd} C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sc_noc_generator/rtl/sc_noc_generator_ea.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_detector/rtl/spike_detector_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_encoder/rtl/spike_encoder_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sync_chain/rtl/sync_chain_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/time_measurement/rtl/time_measurement_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_rx_ea.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_tx_ea.vhd] -no_script -reset -force -quiet
+remove_files  {C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_detector/rtl/spike_detector_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_encoder/rtl/spike_encoder_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sync_chain/rtl/sync_chain_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/time_measurement/rtl/time_measurement_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_rx_ea.vhd C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_tx_ea.vhd}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/ethernet/rtl/std_p.vhd}}] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/sim/vhdl/Std_p.vhd] -no_script -reset -force -quiet
+remove_files  {{C:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/ethernet/rtl/std_p.vhd} C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/sim/vhdl/Std_p.vhd}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Spike-Buffering/sim/vhdl/Std_p.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Spike-Buffering/sim/vhdl/Std_p.vhd
+add_files -norecurse C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/rtl/tbs_core_board_pll.v
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+synth_design -top tbs_core_board -part xc7s25ftgb196-1 -lint 
+synth_design -top tbs_core_board -part xc7s25ftgb196-1 -lint 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board/tbs_core_board.runs/impl_1/tbs_core_board.bit} [get_hw_devices xc7s25_0]
+current_hw_device [get_hw_devices xc7s25_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s25_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s25_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s25_0]
+set_property PROGRAM.FILE {C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board/tbs_core_board.runs/impl_1/tbs_core_board.bit} [get_hw_devices xc7s25_0]
+program_hw_devices [get_hw_devices xc7s25_0]
+refresh_hw_device [lindex [get_hw_devices xc7s25_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s25_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s25_0]
+set_property PROGRAM.FILE {C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board/tbs_core_board.runs/impl_1/tbs_core_board.bit} [get_hw_devices xc7s25_0]
+program_hw_devices [get_hw_devices xc7s25_0]
+refresh_hw_device [lindex [get_hw_devices xc7s25_0] 0]

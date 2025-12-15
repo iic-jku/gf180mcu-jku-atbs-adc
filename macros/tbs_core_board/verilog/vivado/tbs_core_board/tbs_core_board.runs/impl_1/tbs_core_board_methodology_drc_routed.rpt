@@ -1,0 +1,78 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Mon Dec 15 23:35:13 2025
+| Host         : SimiBook running 64-bit major release  (build 9200)
+| Command      : report_methodology -file tbs_core_board_methodology_drc_routed.rpt -pb tbs_core_board_methodology_drc_routed.pb -rpx tbs_core_board_methodology_drc_routed.rpx
+| Design       : tbs_core_board
+| Device       : xc7s25ftgb196-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 3
++---------+----------+------------------------------+------------+
+| Rule    | Severity | Description                  | Violations |
++---------+----------+------------------------------+------------+
+| LUTAR-1 | Warning  | LUT drives async reset alert | 3          |
++---------+----------+------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell tbs_core_0/sync_chain_0/n1166[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) tbs_core_0/n1143_reg[3]/CLR, tbs_core_0/n1143_reg[4]/CLR,
+tbs_core_0/n1143_reg[5]/PRE, tbs_core_0/n1143_reg[6]/CLR,
+tbs_core_0/n1145_reg[0]/PRE, tbs_core_0/n1145_reg[1]/CLR,
+tbs_core_0/n1145_reg[2]/CLR, tbs_core_0/n1146_reg/CLR,
+tbs_core_0/n1147_reg/CLR, tbs_core_0/n1148_reg/CLR,
+tbs_core_0/n1149_reg/PRE, tbs_core_0/n1150_reg/CLR,
+tbs_core_0/n1151_reg/PRE, tbs_core_0/n1152_reg/PRE,
+tbs_core_0/n1153_reg/PRE (the first 15 of 244 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell tbs_core_0/sync_chain_0/n1897_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) tbs_core_0/time_measurement_0/n1896_reg[13]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[14]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[15]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[16]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[17]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[1]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[2]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[3]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[4]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[5]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[6]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[7]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[8]/CLR,
+tbs_core_0/time_measurement_0/n1896_reg[9]/CLR,
+tbs_core_0/time_measurement_0/n1897_reg/CLR (the first 15 of 19 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell tbs_core_0/sync_chain_0/n2592[269]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) tbs_core_0/n1144_reg[14]/CLR, tbs_core_0/n1144_reg[15]/CLR,
+tbs_core_0/n1144_reg[16]/CLR, tbs_core_0/n1144_reg[17]/CLR,
+tbs_core_0/n1144_reg[18]/CLR, tbs_core_0/n1144_reg[19]/CLR,
+tbs_core_0/n1144_reg[1]/CLR, tbs_core_0/n1144_reg[2]/CLR,
+tbs_core_0/n1144_reg[3]/CLR, tbs_core_0/n1144_reg[4]/CLR,
+tbs_core_0/n1144_reg[5]/CLR, tbs_core_0/n1144_reg[6]/CLR,
+tbs_core_0/n1144_reg[7]/CLR, tbs_core_0/n1144_reg[8]/CLR,
+tbs_core_0/n1144_reg[9]/CLR (the first 15 of 1820 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+
