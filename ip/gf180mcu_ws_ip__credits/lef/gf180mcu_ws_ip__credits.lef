@@ -6,10 +6,10 @@ MACRO gf180mcu_ws_ip__credits
   CLASS BLOCK ;
   FOREIGN gf180mcu_ws_ip__credits ;
   ORIGIN 0.000 0.000 ;
-  SIZE 350.0 BY 150.0 ;
+  SIZE 233.33 BY 100.0 ;
   OBS
       LAYER Metal5 ;
-        RECT 0.0 0.0 350.0 150.0 ;
+        RECT 0.0 0.0 233.33 100.0 ;
   END
 END gf180mcu_ws_ip__credits
 END LIBRARY

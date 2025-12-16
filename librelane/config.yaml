@@ -236,7 +236,7 @@ MACROS:
       nom_tt_025C_3v30: dir::../macros/tbs_core_board/final/lib/nom_tt_025C_3v30/tbs_core_board__nom_tt_025C_3v30.lib
     instances:
       i_chip_core.tbs_core_board:
-        location: ["expr::442 + 24 + 150", "expr::442 + 19 + 150"]
+        location: ["expr::442 + 24 + 200", "expr::442 + 19 + 150"]
         orientation: N
   
   gf180mcu_ws_ip__credits:
@@ -251,7 +251,7 @@ MACROS:
         - dir::../ip/gf180mcu_ws_ip__credits/lib/gf180mcu_ws_ip__credits.lib
     instances:
       credits_logo:
-        location: ["expr::442 + 24 + ???", "expr::442 + 19 + ???"]
+        location: ["expr::442 + 24 + 1384", "expr::442 + 19 + 25"]
         orientation: N
         
   gf180mcu_ws_ip__id:
@@ -281,7 +281,7 @@ MACROS:
         - dir::../ip/gf180mcu_ws_ip__iicqc/lib/gf180mcu_ws_ip__iicqc.lib
     instances:
       iicqc_logo:
-        location: ["expr::442 + 24 + ???", "expr::442 + 19 + ???"]
+        location: ["expr::442 + 24 + 1184", "expr::442 + 19 + 1475"]
         orientation: N
 
   gf180mcu_ws_ip__jku:
@@ -329,7 +329,7 @@ MACROS:
         - dir::../ip/gf180mcu_ws_ip__names/lib/gf180mcu_ws_ip__names.lib
     instances:
       names_logo:
-        location: ["expr::442 + 24 + ???", "expr::442 + 19 + ???"]
+        location: ["expr::442 + 24 + 25", "expr::442 + 19 + 1400"]
         orientation: N
         
 # This is an alternative method compared to

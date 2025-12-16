@@ -6,10 +6,10 @@ MACRO gf180mcu_ws_ip__iicqc
   CLASS BLOCK ;
   FOREIGN gf180mcu_ws_ip__iicqc ;
   ORIGIN 0.000 0.000 ;
-  SIZE 1900.0 BY 300.0 ;
+  SIZE 633.33 BY 100.0 ;
   OBS
       LAYER Metal5 ;
-        RECT 0.0 0.0 1900.0 300.0 ;
+        RECT 0.0 0.0 633.33 100.0 ;
   END
 END gf180mcu_ws_ip__iicqc
 END LIBRARY
