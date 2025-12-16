@@ -22,8 +22,8 @@
      $_OR_                         774
      $_XNOR_                       405
      $_XOR_                        710
-     gf180mcu_fd_sc_mcu7t5v0__dffrnq_1   2050
-     gf180mcu_fd_sc_mcu7t5v0__dffsnq_1     43
+     gf180mcu_fd_sc_mcu9t5v0__dffrnq_1   2050
+     gf180mcu_fd_sc_mcu9t5v0__dffsnq_1     43
 
    Area for cell type $_NOT_ is unknown!
    Area for cell type $_AND_ is unknown!
@@ -36,6 +36,6 @@
    Area for cell type $_ORNOT_ is unknown!
    Area for cell type $_MUX_ is unknown!
 
-   Chip area for module '\tbs_core_board': 156403.609600
-     of which used for sequential elements: 156403.609600 (100.00%)
+   Chip area for module '\tbs_core_board': 189518.515200
+     of which used for sequential elements: 189518.515200 (100.00%)
 
