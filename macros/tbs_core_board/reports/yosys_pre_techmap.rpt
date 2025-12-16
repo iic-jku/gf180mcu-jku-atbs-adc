@@ -1,0 +1,48 @@
+158. Printing statistics.
+
+=== tbs_core_board ===
+
+   Number of wires:               7425
+   Number of wire bits:          11345
+   Number of public wires:         429
+   Number of public wire bits:    4349
+   Number of ports:                 33
+   Number of port bits:             51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               9603
+     $_ANDNOT_                    2318
+     $_AND_                        134
+     $_DFFE_PP0N_                  281
+     $_DFFE_PP0P_                 1503
+     $_DFFE_PP1P_                   40
+     $_DFF_PN0_                      3
+     $_DFF_PP0_                    263
+     $_DFF_PP1_                      3
+     $_MUX_                       1517
+     $_NAND_                       600
+     $_NOR_                        431
+     $_NOT_                        261
+     $_ORNOT_                      360
+     $_OR_                         774
+     $_XNOR_                       405
+     $_XOR_                        710
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFF_PN0_ is unknown!
+   Area for cell type $_DFF_PP0_ is unknown!
+   Area for cell type $_DFF_PP1_ is unknown!
+   Area for cell type $_DFFE_PP0N_ is unknown!
+   Area for cell type $_DFFE_PP0P_ is unknown!
+   Area for cell type $_DFFE_PP1P_ is unknown!
+

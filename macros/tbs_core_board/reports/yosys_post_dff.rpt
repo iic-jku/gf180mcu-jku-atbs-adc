@@ -1,0 +1,41 @@
+160. Printing statistics.
+
+=== tbs_core_board ===
+
+   Number of wires:              11339
+   Number of wire bits:          15259
+   Number of public wires:         429
+   Number of public wire bits:    4349
+   Number of ports:                 33
+   Number of port bits:             51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              13517
+     $_ANDNOT_                    2318
+     $_AND_                        134
+     $_MUX_                       3341
+     $_NAND_                       600
+     $_NOR_                        431
+     $_NOT_                       2351
+     $_ORNOT_                      360
+     $_OR_                         774
+     $_XNOR_                       405
+     $_XOR_                        710
+     gf180mcu_fd_sc_mcu7t5v0__dffrnq_1   2050
+     gf180mcu_fd_sc_mcu7t5v0__dffsnq_1     43
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\tbs_core_board': 156403.609600
+     of which used for sequential elements: 156403.609600 (100.00%)
+

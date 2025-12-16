@@ -1,0 +1,32 @@
+92. Printing statistics.
+
+=== chip_top ===
+
+   Number of wires:                 27
+   Number of wire bits:            139
+   Number of public wires:          27
+   Number of public wire bits:     139
+   Number of ports:                  4
+   Number of port bits:             51
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 76
+     gf180mcu_fd_io__bi_24t         37
+     gf180mcu_fd_io__in_c           13
+     gf180mcu_fd_io__in_s            1
+     gf180mcu_ws_io__dvdd           10
+     gf180mcu_ws_io__dvss           11
+     gf180mcu_ws_ip__id              1
+     gf180mcu_ws_ip__jku             1
+     gf180mcu_ws_ip__logo            1
+     tbs_core_board                  1
+
+   Area for cell type \gf180mcu_ws_ip__id is unknown!
+   Area for cell type \gf180mcu_ws_ip__logo is unknown!
+   Area for cell type \gf180mcu_ws_ip__jku is unknown!
+   Area for cell type \tbs_core_board is unknown!
+
+   Chip area for module '\chip_top': 1890000.000000
+     of which used for sequential elements: 0.000000 (0.00%)
+
