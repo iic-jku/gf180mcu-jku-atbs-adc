@@ -5,6 +5,14 @@ meta:
     KLayout.DRC: null
     Checker.KLayoutDRC: null
     
+    # Fix Antenna violations by inserting them manually
+    "+OpenROAD.DetailedRouting": "Odb.InsertECODiodes"
+    "+Odb.InsertECODiodes": "OpenROAD.DetailedRouting"
+
+INSERT_ECO_DIODES:
+  - target: output48/I
+  - target: fanout986/I
+  
 DESIGN_NAME: tbs_core_board
 VERILOG_FILES: ["dir::../verilog/rtl/tbs_core_board.v"]
 
