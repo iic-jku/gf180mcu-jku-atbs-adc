@@ -45,6 +45,8 @@ CLOCK_NET: clock_i
 CLOCK_PERIOD: 125 # in ns = ~8MHz
 
 # Define Standard Cells
+# gf180mcu_fd_sc_mcu7t5v0: smaller area, lower dynamic power, slower.
+# gf180mcu_fd_sc_mcu9t5v0: bigger area, higher dynamic power, faster.
 STD_CELL_LIBRARY: gf180mcu_fd_sc_mcu9t5v0
 
 # Technology LIBs
