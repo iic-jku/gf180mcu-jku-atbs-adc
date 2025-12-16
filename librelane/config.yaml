@@ -214,25 +214,31 @@ MACROS:
       max_*: dir::../macros/tbs_core_board/final/spef/max/tbs_core_board.max.spef
     lib:
       # 5V
-      max_ff_n40C_5v50: dir::../macros/tbs_core_board/final/lib/max_ff_n40C_5v50/tbs_core_board__max_ff_n40C_5v50.lib
-      max_ss_125C_4v50: dir::../macros/tbs_core_board/final/lib/max_ss_125C_4v50/tbs_core_board__max_ss_125C_4v50.lib
-      max_tt_025C_5v00: dir::../macros/tbs_core_board/final/lib/max_tt_025C_5v00/tbs_core_board__max_tt_025C_5v00.lib
-      min_ff_n40C_5v50: dir::../macros/tbs_core_board/final/lib/min_ff_n40C_5v50/tbs_core_board__min_ff_n40C_5v50.lib
-      min_ss_125C_4v50: dir::../macros/tbs_core_board/final/lib/min_ss_125C_4v50/tbs_core_board__min_ss_125C_4v50.lib
-      min_tt_025C_5v00: dir::../macros/tbs_core_board/final/lib/min_tt_025C_5v00/tbs_core_board__min_tt_025C_5v00.lib
-      nom_ff_n40C_5v50: dir::../macros/tbs_core_board/final/lib/nom_ff_n40C_5v50/tbs_core_board__nom_ff_n40C_5v50.lib
-      nom_ss_125C_4v50: dir::../macros/tbs_core_board/final/lib/nom_ss_125C_4v50/tbs_core_board__nom_ss_125C_4v50.lib
-      nom_tt_025C_5v00: dir::../macros/tbs_core_board/final/lib/nom_tt_025C_5v00/tbs_core_board__nom_tt_025C_5v00.lib
+      # max_ff_n40C_5v50: dir::../macros/tbs_core_board/final/lib/max_ff_n40C_5v50/tbs_core_board__max_ff_n40C_5v50.lib
+      # max_ss_125C_4v50: dir::../macros/tbs_core_board/final/lib/max_ss_125C_4v50/tbs_core_board__max_ss_125C_4v50.lib
+      # max_tt_025C_5v00: dir::../macros/tbs_core_board/final/lib/max_tt_025C_5v00/tbs_core_board__max_tt_025C_5v00.lib
+      # min_ff_n40C_5v50: dir::../macros/tbs_core_board/final/lib/min_ff_n40C_5v50/tbs_core_board__min_ff_n40C_5v50.lib
+      # min_ss_125C_4v50: dir::../macros/tbs_core_board/final/lib/min_ss_125C_4v50/tbs_core_board__min_ss_125C_4v50.lib
+      # min_tt_025C_5v00: dir::../macros/tbs_core_board/final/lib/min_tt_025C_5v00/tbs_core_board__min_tt_025C_5v00.lib
+      # nom_ff_n40C_5v50: dir::../macros/tbs_core_board/final/lib/nom_ff_n40C_5v50/tbs_core_board__nom_ff_n40C_5v50.lib
+      # nom_ss_125C_4v50: dir::../macros/tbs_core_board/final/lib/nom_ss_125C_4v50/tbs_core_board__nom_ss_125C_4v50.lib
+      # nom_tt_025C_5v00: dir::../macros/tbs_core_board/final/lib/nom_tt_025C_5v00/tbs_core_board__nom_tt_025C_5v00.lib
       
       # 3.3V
+      max_ff_125C_3v60: dir::../macros/tbs_core_board/final/lib/max_ff_125C_3v60/tbs_core_board__max_ff_125C_3v60.lib
       max_ff_n40C_3v60: dir::../macros/tbs_core_board/final/lib/max_ff_n40C_3v60/tbs_core_board__max_ff_n40C_3v60.lib
       max_ss_125C_3v00: dir::../macros/tbs_core_board/final/lib/max_ss_125C_3v00/tbs_core_board__max_ss_125C_3v00.lib
+      max_ss_n40C_3v00: dir::../macros/tbs_core_board/final/lib/max_ss_n40C_3v00/tbs_core_board__max_ss_n40C_3v00.lib
       max_tt_025C_3v30: dir::../macros/tbs_core_board/final/lib/max_tt_025C_3v30/tbs_core_board__max_tt_025C_3v30.lib
+      min_ff_125C_3v60: dir::../macros/tbs_core_board/final/lib/min_ff_125C_3v60/tbs_core_board__min_ff_125C_3v60.lib
       min_ff_n40C_3v60: dir::../macros/tbs_core_board/final/lib/min_ff_n40C_3v60/tbs_core_board__min_ff_n40C_3v60.lib
       min_ss_125C_3v00: dir::../macros/tbs_core_board/final/lib/min_ss_125C_3v00/tbs_core_board__min_ss_125C_3v00.lib
+      min_ss_n40C_3v00: dir::../macros/tbs_core_board/final/lib/min_ss_n40C_3v00/tbs_core_board__min_ss_n40C_3v00.lib
       min_tt_025C_3v30: dir::../macros/tbs_core_board/final/lib/min_tt_025C_3v30/tbs_core_board__min_tt_025C_3v30.lib
+      nom_ff_125C_3v60: dir::../macros/tbs_core_board/final/lib/nom_ff_125C_3v60/tbs_core_board__nom_ff_125C_3v60.lib
       nom_ff_n40C_3v60: dir::../macros/tbs_core_board/final/lib/nom_ff_n40C_3v60/tbs_core_board__nom_ff_n40C_3v60.lib
       nom_ss_125C_3v00: dir::../macros/tbs_core_board/final/lib/nom_ss_125C_3v00/tbs_core_board__nom_ss_125C_3v00.lib
+      nom_ss_n40C_3v00: dir::../macros/tbs_core_board/final/lib/nom_ss_n40C_3v00/tbs_core_board__nom_ss_n40C_3v00.lib
       nom_tt_025C_3v30: dir::../macros/tbs_core_board/final/lib/nom_tt_025C_3v30/tbs_core_board__nom_tt_025C_3v30.lib
     instances:
       i_chip_core.tbs_core_board:
