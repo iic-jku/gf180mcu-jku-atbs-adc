@@ -50,14 +50,69 @@ VERILOG_POWER_DEFINE: "USE_POWER_PINS"
 # due to the unused Y output for output only pads
 IGNORE_DISCONNECTED_MODULES:
 - gf180mcu_fd_io__bi_24t
+- gf180mcu_ws_ip__credits
 - gf180mcu_ws_ip__id
-- gf180mcu_ws_ip__logo
+- gf180mcu_ws_ip__iicqc
 - gf180mcu_ws_ip__jku
+- gf180mcu_ws_ip__logo
+- gf180mcu_ws_ip__names
 
 # Clock
 CLOCK_PORT: clk_PAD
 CLOCK_NET: clk_pad/Y
 CLOCK_PERIOD: 125 # in ns = ~8MHz
+
+# Define Standard Cells
+# gf180mcu_fd_sc_mcu7t5v0: smaller area, lower dynamic power, slower.
+# gf180mcu_fd_sc_mcu9t5v0: bigger area, higher dynamic power, faster.
+STD_CELL_LIBRARY: gf180mcu_fd_sc_mcu9t5v0
+
+# Technology LIBs
+LIB:
+  "*_tt_025C_3v30":
+    - pdk_dir::libs.ref/gf180mcu_fd_sc_mcu9t5v0/lib/gf180mcu_fd_sc_mcu9t5v0__tt_025C_3v30.lib
+    - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_3v30.lib
+    - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_ws_io__tt_025C_5v00.lib
+
+  "*_ss_n40C_3v00":
+    - pdk_dir::libs.ref/gf180mcu_fd_sc_mcu9t5v0/lib/gf180mcu_fd_sc_mcu9t5v0__ss_n40C_3v00.lib
+    - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib
+    - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_ws_io__ss_125C_4v50.lib
+
+  "*_ss_125C_3v00":
+    - pdk_dir::libs.ref/gf180mcu_fd_sc_mcu9t5v0/lib/gf180mcu_fd_sc_mcu9t5v0__ss_125C_3v00.lib
+    - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib
+    - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_ws_io__ss_125C_4v50.lib
+
+  "*_ff_n40C_3v60":
+    - pdk_dir::libs.ref/gf180mcu_fd_sc_mcu9t5v0/lib/gf180mcu_fd_sc_mcu9t5v0__ff_n40C_3v60.lib
+    - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_3v63.lib
+    - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_ws_io__ff_n40C_5v50.lib
+
+  "*_ff_125C_3v60":
+    - pdk_dir::libs.ref/gf180mcu_fd_sc_mcu9t5v0/lib/gf180mcu_fd_sc_mcu9t5v0__ff_125C_3v60.lib
+    - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_125C_3v63.lib
+    - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_ws_io__ff_n40C_5v50.lib
+
+# Corners
+STA_CORNERS:
+  - nom_tt_025C_3v30
+  - nom_ss_n40C_3v00
+  - nom_ss_125C_3v00
+  - nom_ff_n40C_3v60
+  - nom_ff_125C_3v60
+  - min_tt_025C_3v30
+  - min_ss_n40C_3v00
+  - min_ss_125C_3v00
+  - min_ff_n40C_3v60
+  - min_ff_125C_3v60
+  - max_tt_025C_3v30
+  - max_ss_n40C_3v00
+  - max_ss_125C_3v00
+  - max_ff_n40C_3v60
+  - max_ff_125C_3v60
+
+DEFAULT_CORNER: nom_tt_025C_3v30
 
 # Fix hold violations
 PL_RESIZER_HOLD_SLACK_MARGIN: 0.35
@@ -158,6 +213,7 @@ MACROS:
       nom_*: dir::../macros/tbs_core_board/final/spef/nom/tbs_core_board.nom.spef
       max_*: dir::../macros/tbs_core_board/final/spef/max/tbs_core_board.max.spef
     lib:
+      # 5V
       max_ff_n40C_5v50: dir::../macros/tbs_core_board/final/lib/max_ff_n40C_5v50/tbs_core_board__max_ff_n40C_5v50.lib
       max_ss_125C_4v50: dir::../macros/tbs_core_board/final/lib/max_ss_125C_4v50/tbs_core_board__max_ss_125C_4v50.lib
       max_tt_025C_5v00: dir::../macros/tbs_core_board/final/lib/max_tt_025C_5v00/tbs_core_board__max_tt_025C_5v00.lib
@@ -167,9 +223,35 @@ MACROS:
       nom_ff_n40C_5v50: dir::../macros/tbs_core_board/final/lib/nom_ff_n40C_5v50/tbs_core_board__nom_ff_n40C_5v50.lib
       nom_ss_125C_4v50: dir::../macros/tbs_core_board/final/lib/nom_ss_125C_4v50/tbs_core_board__nom_ss_125C_4v50.lib
       nom_tt_025C_5v00: dir::../macros/tbs_core_board/final/lib/nom_tt_025C_5v00/tbs_core_board__nom_tt_025C_5v00.lib
+      
+      # 3.3V
+      max_ff_n40C_3v60: dir::../macros/tbs_core_board/final/lib/max_ff_n40C_3v60/tbs_core_board__max_ff_n40C_3v60.lib
+      max_ss_125C_3v00: dir::../macros/tbs_core_board/final/lib/max_ss_125C_3v00/tbs_core_board__max_ss_125C_3v00.lib
+      max_tt_025C_3v30: dir::../macros/tbs_core_board/final/lib/max_tt_025C_3v30/tbs_core_board__max_tt_025C_3v30.lib
+      min_ff_n40C_3v60: dir::../macros/tbs_core_board/final/lib/min_ff_n40C_3v60/tbs_core_board__min_ff_n40C_3v60.lib
+      min_ss_125C_3v00: dir::../macros/tbs_core_board/final/lib/min_ss_125C_3v00/tbs_core_board__min_ss_125C_3v00.lib
+      min_tt_025C_3v30: dir::../macros/tbs_core_board/final/lib/min_tt_025C_3v30/tbs_core_board__min_tt_025C_3v30.lib
+      nom_ff_n40C_3v60: dir::../macros/tbs_core_board/final/lib/nom_ff_n40C_3v60/tbs_core_board__nom_ff_n40C_3v60.lib
+      nom_ss_125C_3v00: dir::../macros/tbs_core_board/final/lib/nom_ss_125C_3v00/tbs_core_board__nom_ss_125C_3v00.lib
+      nom_tt_025C_3v30: dir::../macros/tbs_core_board/final/lib/nom_tt_025C_3v30/tbs_core_board__nom_tt_025C_3v30.lib
     instances:
       i_chip_core.tbs_core_board:
         location: ["expr::442 + 24 + 150", "expr::442 + 19 + 150"]
+        orientation: N
+  
+  gf180mcu_ws_ip__credits:
+    gds:
+      - dir::../ip/gf180mcu_ws_ip__credits/gds/gf180mcu_ws_ip__credits.gds
+    lef:
+      - dir::../ip/gf180mcu_ws_ip__credits/lef/gf180mcu_ws_ip__credits.lef
+    vh:
+      - dir::../ip/gf180mcu_ws_ip__credits/vh/gf180mcu_ws_ip__credits.v
+    lib:
+      "*":
+        - dir::../ip/gf180mcu_ws_ip__credits/lib/gf180mcu_ws_ip__credits.lib
+    instances:
+      credits_logo:
+        location: ["expr::442 + 24 + ???", "expr::442 + 19 + ???"]
         orientation: N
         
   gf180mcu_ws_ip__id:
@@ -186,20 +268,20 @@ MACROS:
       chip_id:
         location: [26, 26]
         orientation: N
-
-  gf180mcu_ws_ip__logo:
+  
+  gf180mcu_ws_ip__iicqc:
     gds:
-      - dir::../ip/gf180mcu_ws_ip__logo/gds/gf180mcu_ws_ip__logo.gds
+      - dir::../ip/gf180mcu_ws_ip__iicqc/gds/gf180mcu_ws_ip__iicqc.gds
     lef:
-      - dir::../ip/gf180mcu_ws_ip__logo/lef/gf180mcu_ws_ip__logo.lef
+      - dir::../ip/gf180mcu_ws_ip__iicqc/lef/gf180mcu_ws_ip__iicqc.lef
     vh:
-      - dir::../ip/gf180mcu_ws_ip__logo/vh/gf180mcu_ws_ip__logo.v
+      - dir::../ip/gf180mcu_ws_ip__iicqc/vh/gf180mcu_ws_ip__iicqc.v
     lib:
       "*":
-        - dir::../ip/gf180mcu_ws_ip__logo/lib/gf180mcu_ws_ip__logo.lib
+        - dir::../ip/gf180mcu_ws_ip__iicqc/lib/gf180mcu_ws_ip__iicqc.lib
     instances:
-      wafer_space_logo:
-        location: ["expr::$DIE_AREA[2] + -169.75", "expr::$DIE_AREA[1] + 26"]
+      iicqc_logo:
+        location: ["expr::442 + 24 + ???", "expr::442 + 19 + ???"]
         orientation: N
 
   gf180mcu_ws_ip__jku:
@@ -213,10 +295,43 @@ MACROS:
       "*":
         - dir::../ip/gf180mcu_ws_ip__jku/lib/gf180mcu_ws_ip__jku.lib
     instances:
-      jku_logo:
+      jku_logo_top_left:
         location: ["expr::$DIE_AREA[0] + 26", "expr::$DIE_AREA[3] + -169.75"]
         orientation: N
+      jku_logo_top_right:
+        location: ["expr::$DIE_AREA[2] + -169.75", "expr::$DIE_AREA[1] + 26"]
+        orientation: N
 
+  gf180mcu_ws_ip__logo:
+    gds:
+      - dir::../ip/gf180mcu_ws_ip__logo/gds/gf180mcu_ws_ip__logo.gds
+    lef:
+      - dir::../ip/gf180mcu_ws_ip__logo/lef/gf180mcu_ws_ip__logo.lef
+    vh:
+      - dir::../ip/gf180mcu_ws_ip__logo/vh/gf180mcu_ws_ip__logo.v
+    lib:
+      "*":
+        - dir::../ip/gf180mcu_ws_ip__logo/lib/gf180mcu_ws_ip__logo.lib
+    instances:
+      wafer_space_logo:
+        location: ["expr::$DIE_AREA[2] + -169.25", "expr::$DIE_AREA[3] + -169.25"]
+        orientation: N
+
+  gf180mcu_ws_ip__names:
+    gds:
+      - dir::../ip/gf180mcu_ws_ip__names/gds/gf180mcu_ws_ip__names.gds
+    lef:
+      - dir::../ip/gf180mcu_ws_ip__names/lef/gf180mcu_ws_ip__names.lef
+    vh:
+      - dir::../ip/gf180mcu_ws_ip__names/vh/gf180mcu_ws_ip__names.v
+    lib:
+      "*":
+        - dir::../ip/gf180mcu_ws_ip__names/lib/gf180mcu_ws_ip__names.lib
+    instances:
+      names_logo:
+        location: ["expr::442 + 24 + ???", "expr::442 + 19 + ???"]
+        orientation: N
+        
 # This is an alternative method compared to
 # specifying the power connections in the RTL
 # PDN_MACRO_CONNECTIONS:
@@ -234,13 +349,19 @@ PDN_CFG: dir::pdn_cfg.tcl
 # Make sure netgen doesn't create 'no_connect' nets
 # Not needed since netgen 1.5.303
 LVS_FLATTEN_CELLS:
+- gf180mcu_ws_ip__credits
 - gf180mcu_ws_ip__id
-- gf180mcu_ws_ip__logo
+- gf180mcu_ws_ip__iicqc
 - gf180mcu_ws_ip__jku
+- gf180mcu_ws_ip__logo
+- gf180mcu_ws_ip__names
 
 # gf180mcu_ws_ip__id/logo has no ports and components
 # therefore make it an abstract cell in the layout
 MAGIC_EXT_ABSTRACT_CELLS:
+- gf180mcu_ws_ip__credits
 - gf180mcu_ws_ip__id
-- gf180mcu_ws_ip__logo
+- gf180mcu_ws_ip__iicqc
 - gf180mcu_ws_ip__jku
+- gf180mcu_ws_ip__logo
+- gf180mcu_ws_ip__names

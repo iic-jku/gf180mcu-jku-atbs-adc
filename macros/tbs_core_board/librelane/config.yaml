@@ -76,7 +76,6 @@ LIB:
     - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_125C_3v63.lib
     - pdk_dir::libs.ref/gf180mcu_fd_io/lib/gf180mcu_ws_io__ff_n40C_5v50.lib
 
-
 # Corners
 STA_CORNERS:
   - nom_tt_025C_3v30

@@ -215,14 +215,30 @@ module chip_top #(
 	// ======================================================
     // LOGOS
 	// ======================================================
+	// Credits
+    (* keep *)
+    gf180mcu_ws_ip__credits credits_logo ();
+	// ======================================================
+	
+	// IICQC logos
+    (* keep *)
+    gf180mcu_ws_ip__iicqc iicqc_logo ();
+	// ======================================================
+	
+	// JKU logos
+    (* keep *)
+    gf180mcu_ws_ip__jku jku_logo_top_left ();
+	gf180mcu_ws_ip__jku jku_logo_top_right ();
+	// ======================================================
+	
     // wafer.space logo
     (* keep *)
     gf180mcu_ws_ip__logo wafer_space_logo ();
 	// ======================================================
 	
-    // JKU logo
+	// Names
     (* keep *)
-    gf180mcu_ws_ip__jku jku_logo ();
+	gf180mcu_ws_ip__names names_logo ();
 	// ======================================================
 endmodule
 
