@@ -6,10 +6,10 @@ MACRO gf180mcu_ws_ip__names
   CLASS BLOCK ;
   FOREIGN gf180mcu_ws_ip__names ;
   ORIGIN 0.000 0.000 ;
-  SIZE 150.0 BY 150.0 ;
+  SIZE 125.0 BY 125.0 ;
   OBS
       LAYER Metal5 ;
-        RECT 0.0 0.0 150.0 150.0 ;
+        RECT 0.0 0.0 125.0 125.0 ;
   END
 END gf180mcu_ws_ip__names
 END LIBRARY

@@ -7,7 +7,7 @@ all: logo drc
 .PHONY: all
 
 logo:
-	python3 script/make_gds.py image/names_logo.png gds/gf180mcu_ws_ip__names.gds --cellname gf180mcu_ws_ip__names --invert --merge --pixel-size 1 --scale 0.214 --foreground "81/0" --boundary "0/0" "152/5"
+	python3 script/make_gds.py image/names_logo.png gds/gf180mcu_ws_ip__names.gds --cellname gf180mcu_ws_ip__names --invert --merge --pixel-size 1 --scale 0.175 --foreground "81/0" --boundary "0/0" "152/5"
 .PHONY: logo
 
 drc:

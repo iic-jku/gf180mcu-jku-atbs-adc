@@ -205,7 +205,7 @@ MACROS:
         - dir::../ip/gf180mcu_ws_ip__credits/lib/gf180mcu_ws_ip__credits.lib
     instances:
       credits_logo:
-        location: ["expr::442 + 24 + 1384", "expr::442 + 19 + 25"]
+        location: ["expr::442 + 24 + 1384", "expr::442 + 19 + 10"]
         orientation: N
         
   gf180mcu_ws_ip__id:
@@ -235,7 +235,7 @@ MACROS:
         - dir::../ip/gf180mcu_ws_ip__iicqc/lib/gf180mcu_ws_ip__iicqc.lib
     instances:
       iicqc_logo:
-        location: ["expr::442 + 24 + 1184", "expr::442 + 19 + 1475"]
+        location: ["expr::442 + 24 + 1184", "expr::442 + 19 + 1490"]
         orientation: N
 
   gf180mcu_ws_ip__jku:
