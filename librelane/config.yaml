@@ -327,7 +327,7 @@ MACROS:
         - dir::../ip/gf180mcu_ws_ip__names/lib/gf180mcu_ws_ip__names.lib
     instances:
       names_logo:
-        location: ["expr::442 + 24 + 25", "expr::442 + 19 + 1400"]
+        location: ["expr::442 + 24 + 20", "expr::442 + 19 + 1400"]
         orientation: N
         
 # This is an alternative method compared to
