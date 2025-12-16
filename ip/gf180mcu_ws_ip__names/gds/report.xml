@@ -2,8 +2,8 @@
 <report-database>
  <description>DRC Run Report at</description>
  <original-file/>
- <generator>drc: script='/home/dorrer/eda/designs/gf180mcu-jku-atbs-adc/ip/gf180mcu_ws_ip__jku/../../gf180mcu/gf180mcuD/libs.tech/klayout/tech/drc/gf180mcu.drc'</generator>
- <top-cell>gf180mcu_ws_ip__jku</top-cell>
+ <generator>drc: script='/home/dorrer/eda/designs/gf180mcu-jku-atbs-adc/ip/gf180mcu_ws_ip__names/../../gf180mcu/gf180mcuD/libs.tech/klayout/tech/drc/gf180mcu.drc'</generator>
+ <top-cell>gf180mcu_ws_ip__names</top-cell>
  <tags>
  </tags>
  <categories>
@@ -462,7 +462,7 @@
  </categories>
  <cells>
   <cell>
-   <name>gf180mcu_ws_ip__jku</name>
+   <name>gf180mcu_ws_ip__names</name>
    <variant/>
    <layout-name/>
    <references>

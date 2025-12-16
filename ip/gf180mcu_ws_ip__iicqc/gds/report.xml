@@ -2,8 +2,8 @@
 <report-database>
  <description>DRC Run Report at</description>
  <original-file/>
- <generator>drc: script='/home/dorrer/eda/designs/gf180mcu-jku-atbs-adc/ip/gf180mcu_ws_ip__jku/../../gf180mcu/gf180mcuD/libs.tech/klayout/tech/drc/gf180mcu.drc'</generator>
- <top-cell>gf180mcu_ws_ip__jku</top-cell>
+ <generator>drc: script='/home/dorrer/eda/designs/gf180mcu-jku-atbs-adc/ip/gf180mcu_ws_ip__iicqc/../../gf180mcu/gf180mcuD/libs.tech/klayout/tech/drc/gf180mcu.drc'</generator>
+ <top-cell>gf180mcu_ws_ip__iicqc</top-cell>
  <tags>
  </tags>
  <categories>
@@ -462,7 +462,7 @@
  </categories>
  <cells>
   <cell>
-   <name>gf180mcu_ws_ip__jku</name>
+   <name>gf180mcu_ws_ip__iicqc</name>
    <variant/>
    <layout-name/>
    <references>
@@ -470,5 +470,101 @@
   </cell>
  </cells>
  <items>
+  <item>
+   <tags/>
+   <category>'MT.1'</category>
+   <cell>gf180mcu_ws_ip__iicqc</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (355,8.56;355,9)|(355,9.44;355,9)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'MT.1'</category>
+   <cell>gf180mcu_ws_ip__iicqc</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (355,9;354.56,9)|(355,9;355.44,9)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'MT.1'</category>
+   <cell>gf180mcu_ws_ip__iicqc</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (370.56,17;371,17)|(371.44,17;371,17)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'MT.1'</category>
+   <cell>gf180mcu_ws_ip__iicqc</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (371,17;371,16.56)|(371,17;371,17.44)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'MT.2a'</category>
+   <cell>gf180mcu_ws_ip__iicqc</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (355,9;354.54,9)|(355,9;355.46,9)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'MT.2a'</category>
+   <cell>gf180mcu_ws_ip__iicqc</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (355,8.54;355,9)|(355,9.46;355,9)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'MT.2a'</category>
+   <cell>gf180mcu_ws_ip__iicqc</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (371,17;371,16.54)|(371,17;371,17.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'MT.2a'</category>
+   <cell>gf180mcu_ws_ip__iicqc</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (370.54,17;371,17)|(371.46,17;371,17)</value>
+   </values>
+  </item>
  </items>
 </report-database>

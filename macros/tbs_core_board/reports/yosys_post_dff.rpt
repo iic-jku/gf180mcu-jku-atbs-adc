@@ -2,27 +2,27 @@
 
 === tbs_core_board ===
 
-   Number of wires:              11339
-   Number of wire bits:          15259
-   Number of public wires:         429
-   Number of public wire bits:    4349
+   Number of wires:              15071
+   Number of wire bits:          21363
+   Number of public wires:         493
+   Number of public wire bits:    6785
    Number of ports:                 33
    Number of port bits:             51
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:              13517
-     $_ANDNOT_                    2318
-     $_AND_                        134
-     $_MUX_                       3341
+   Number of cells:              18405
+     $_ANDNOT_                    2315
+     $_AND_                        132
+     $_MUX_                       5775
      $_NAND_                       600
-     $_NOR_                        431
-     $_NOT_                       2351
-     $_ORNOT_                      360
-     $_OR_                         774
+     $_NOR_                        439
+     $_NOT_                       3571
+     $_ORNOT_                      363
+     $_OR_                         780
      $_XNOR_                       405
-     $_XOR_                        710
-     gf180mcu_fd_sc_mcu9t5v0__dffrnq_1   2050
+     $_XOR_                        714
+     gf180mcu_fd_sc_mcu9t5v0__dffrnq_1   3268
      gf180mcu_fd_sc_mcu9t5v0__dffsnq_1     43
 
    Area for cell type $_NOT_ is unknown!
@@ -36,6 +36,6 @@
    Area for cell type $_ORNOT_ is unknown!
    Area for cell type $_MUX_ is unknown!
 
-   Chip area for module '\tbs_core_board': 189518.515200
-     of which used for sequential elements: 189518.515200 (100.00%)
+   Chip area for module '\tbs_core_board': 299524.377600
+     of which used for sequential elements: 299524.377600 (100.00%)
 

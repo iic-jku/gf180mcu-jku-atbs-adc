@@ -2,32 +2,32 @@
 
 === tbs_core_board ===
 
-   Number of wires:               7425
-   Number of wire bits:          11345
-   Number of public wires:         429
-   Number of public wire bits:    4349
+   Number of wires:               8721
+   Number of wire bits:          15013
+   Number of public wires:         493
+   Number of public wire bits:    6785
    Number of ports:                 33
    Number of port bits:             51
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               9603
-     $_ANDNOT_                    2318
-     $_AND_                        134
+   Number of cells:              12055
+     $_ANDNOT_                    2315
+     $_AND_                        132
      $_DFFE_PP0N_                  281
-     $_DFFE_PP0P_                 1503
+     $_DFFE_PP0P_                 2721
      $_DFFE_PP1P_                   40
      $_DFF_PN0_                      3
      $_DFF_PP0_                    263
      $_DFF_PP1_                      3
-     $_MUX_                       1517
+     $_MUX_                       2733
      $_NAND_                       600
-     $_NOR_                        431
-     $_NOT_                        261
-     $_ORNOT_                      360
-     $_OR_                         774
+     $_NOR_                        439
+     $_NOT_                        263
+     $_ORNOT_                      363
+     $_OR_                         780
      $_XNOR_                       405
-     $_XOR_                        710
+     $_XOR_                        714
 
    Area for cell type $_NOT_ is unknown!
    Area for cell type $_AND_ is unknown!
