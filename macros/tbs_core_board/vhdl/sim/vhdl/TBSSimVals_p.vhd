@@ -71,7 +71,7 @@ package TBSSimVals is
 
   -- MEMORY CONSTANTS
   -- ===================================================== 
-  constant ADDR_BITWIDTH : natural := 6;
+  constant ADDR_BITWIDTH : natural := 7;
   constant DATA_BITWIDTH : natural := 19;
   -- ===================================================== 
 

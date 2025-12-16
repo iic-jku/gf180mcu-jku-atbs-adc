@@ -140,7 +140,7 @@ sc_noc_counter_max = round(f_clk / f_sc_min);
 time_counter_bitwidth = ceil(log2(time_win_max * f_clk)); % TMAX > TWINDOW (max 1 overflow)
 
 % MEMORY CONSTATNS
-addr_bitwidth = 6; % 6 (ASIC), 8 / 16 (DE10), 14 (s7-Mini)
+addr_bitwidth = 7; % 7 (ASIC), 8 / 16 (DE10), 14 (s7-Mini)
 data_bitwidth = time_counter_bitwidth + 1; % signed counter values
 total_block_memory_bits = data_bitwidth * 2^addr_bitwidth % max. 4096 (Yosys)
 

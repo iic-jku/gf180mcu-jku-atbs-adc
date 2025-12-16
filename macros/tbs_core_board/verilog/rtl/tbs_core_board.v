@@ -4,27 +4,27 @@ module priority_encoder_3_3
    input  [2:0] code_i,
    output [2:0] bin_o);
   wire [2:0] bin;
-  wire n3079;
-  wire [2:0] n3082;
-  wire n3084;
-  wire [2:0] n3086;
-  wire n3087;
-  wire [2:0] n3089;
+  wire n3143;
+  wire [2:0] n3146;
+  wire n3148;
+  wire [2:0] n3150;
+  wire n3151;
+  wire [2:0] n3153;
   assign bin_o = bin; //(module output)
   /* ../../vhdl/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd:33:8  */
-  assign bin = n3089; // (signal)
+  assign bin = n3153; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd:44:16  */
-  assign n3079 = code_i[0]; // extract
+  assign n3143 = code_i[0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd:44:7  */
-  assign n3082 = n3079 ? 3'b001 : 3'b000;
+  assign n3146 = n3143 ? 3'b001 : 3'b000;
   /* ../../vhdl/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd:44:16  */
-  assign n3084 = code_i[1]; // extract
+  assign n3148 = code_i[1]; // extract
   /* ../../vhdl/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd:44:7  */
-  assign n3086 = n3084 ? 3'b010 : n3082;
+  assign n3150 = n3148 ? 3'b010 : n3146;
   /* ../../vhdl/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd:44:16  */
-  assign n3087 = code_i[2]; // extract
+  assign n3151 = code_i[2]; // extract
   /* ../../vhdl/adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd:44:7  */
-  assign n3089 = n3087 ? 3'b011 : n3086;
+  assign n3153 = n3151 ? 3'b011 : n3150;
 endmodule
 
 module spike_2_thermocode_6
@@ -34,102 +34,102 @@ module spike_2_thermocode_6
   wire plus;
   wire minus;
   wire [5:0] thermo;
-  wire n3044;
-  wire n3045;
-  wire n3048;
-  wire n3049;
-  wire n3050;
-  wire n3051;
-  wire n3052;
-  wire n3053;
-  wire n3054;
-  wire n3055;
-  wire n3056;
-  wire n3057;
-  wire n3058;
-  wire n3059;
-  wire n3060;
-  wire n3061;
-  wire n3062;
-  wire n3063;
-  wire n3064;
-  wire n3065;
-  wire n3066;
-  wire n3067;
-  wire n3068;
-  wire n3069;
-  wire n3070;
-  wire n3071;
-  wire n3072;
-  wire n3073;
-  wire [5:0] n3074;
-  wire [5:0] n3075;
+  wire n3108;
+  wire n3109;
+  wire n3112;
+  wire n3113;
+  wire n3114;
+  wire n3115;
+  wire n3116;
+  wire n3117;
+  wire n3118;
+  wire n3119;
+  wire n3120;
+  wire n3121;
+  wire n3122;
+  wire n3123;
+  wire n3124;
+  wire n3125;
+  wire n3126;
+  wire n3127;
+  wire n3128;
+  wire n3129;
+  wire n3130;
+  wire n3131;
+  wire n3132;
+  wire n3133;
+  wire n3134;
+  wire n3135;
+  wire n3136;
+  wire n3137;
+  wire [5:0] n3138;
+  wire [5:0] n3139;
   assign thermo_o = thermo; //(module output)
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:30:8  */
-  assign plus = n3045; // (signal)
+  assign plus = n3109; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:31:8  */
-  assign minus = n3044; // (signal)
+  assign minus = n3108; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:32:8  */
-  assign thermo = n3075; // (signal)
+  assign thermo = n3139; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:37:19  */
-  assign n3044 = spike_i[1]; // extract
+  assign n3108 = spike_i[1]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:38:18  */
-  assign n3045 = spike_i[0]; // extract
+  assign n3109 = spike_i[0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:43:16  */
-  assign n3048 = spike_i == 2'b00;
+  assign n3112 = spike_i == 2'b00;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:48:37  */
-  assign n3049 = thermo_i[1]; // extract
+  assign n3113 = thermo_i[1]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:48:41  */
-  assign n3050 = n3049 & minus;
+  assign n3114 = n3113 & minus;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:48:25  */
-  assign n3051 = plus | n3050;
+  assign n3115 = plus | n3114;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:31  */
-  assign n3052 = thermo_i[0]; // extract
+  assign n3116 = thermo_i[0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:37  */
-  assign n3053 = n3052 & plus;
+  assign n3117 = n3116 & plus;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:59  */
-  assign n3054 = thermo_i[2]; // extract
+  assign n3118 = thermo_i[2]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:65  */
-  assign n3055 = n3054 & minus;
+  assign n3119 = n3118 & minus;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:47  */
-  assign n3056 = n3053 | n3055;
+  assign n3120 = n3117 | n3119;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:31  */
-  assign n3057 = thermo_i[1]; // extract
+  assign n3121 = thermo_i[1]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:37  */
-  assign n3058 = n3057 & plus;
+  assign n3122 = n3121 & plus;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:59  */
-  assign n3059 = thermo_i[3]; // extract
+  assign n3123 = thermo_i[3]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:65  */
-  assign n3060 = n3059 & minus;
+  assign n3124 = n3123 & minus;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:47  */
-  assign n3061 = n3058 | n3060;
+  assign n3125 = n3122 | n3124;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:31  */
-  assign n3062 = thermo_i[2]; // extract
+  assign n3126 = thermo_i[2]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:37  */
-  assign n3063 = n3062 & plus;
+  assign n3127 = n3126 & plus;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:59  */
-  assign n3064 = thermo_i[4]; // extract
+  assign n3128 = thermo_i[4]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:65  */
-  assign n3065 = n3064 & minus;
+  assign n3129 = n3128 & minus;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:47  */
-  assign n3066 = n3063 | n3065;
+  assign n3130 = n3127 | n3129;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:31  */
-  assign n3067 = thermo_i[3]; // extract
+  assign n3131 = thermo_i[3]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:37  */
-  assign n3068 = n3067 & plus;
+  assign n3132 = n3131 & plus;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:59  */
-  assign n3069 = thermo_i[5]; // extract
+  assign n3133 = thermo_i[5]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:65  */
-  assign n3070 = n3069 & minus;
+  assign n3134 = n3133 & minus;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:53:47  */
-  assign n3071 = n3068 | n3070;
+  assign n3135 = n3132 | n3134;
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:57:40  */
-  assign n3072 = thermo_i[4]; // extract
+  assign n3136 = thermo_i[4]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:57:56  */
-  assign n3073 = n3072 & plus;
-  assign n3074 = {n3073, n3071, n3066, n3061, n3056, n3051};
+  assign n3137 = n3136 & plus;
+  assign n3138 = {n3137, n3135, n3130, n3125, n3120, n3115};
   /* ../../vhdl/adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd:43:5  */
-  assign n3075 = n3048 ? thermo_i : n3074;
+  assign n3139 = n3112 ? thermo_i : n3138;
 endmodule
 
 module uart_rx_9_8
@@ -149,279 +149,279 @@ module uart_rx_9_8
   wire [1:0] rx_state;
   wire [1:0] next_rx_state;
   wire next_strobe;
-  wire n2938;
-  wire n2939;
-  wire [2:0] n2941;
-  wire [2:0] n2942;
-  wire [2:0] n2944;
-  wire n2947;
-  wire [8:0] n2949;
-  wire [8:0] n2951;
-  wire n2953;
-  wire [8:0] n2955;
-  wire n2958;
-  wire [1:0] n2960;
-  wire n2962;
-  wire n2963;
-  wire [1:0] n2965;
-  wire n2967;
-  wire [8:0] n2969;
-  wire n2970;
-  wire [7:0] n2974;
-  wire n2975;
-  wire n2977;
-  wire n2978;
-  wire [1:0] n2980;
-  wire n2982;
-  wire [8:0] n2984;
-  wire n2985;
-  wire [1:0] n2987;
-  wire n2990;
-  wire n2992;
-  wire [3:0] n2993;
-  reg [7:0] n2995;
-  reg [1:0] n2996;
-  reg n2999;
-  reg [2:0] n3003;
-  reg [8:0] n3004;
-  reg [7:0] n3005;
-  reg n3006;
-  reg [1:0] n3007;
-  wire n3008;
-  wire n3009;
-  wire n3010;
+  wire n3002;
+  wire n3003;
+  wire [2:0] n3005;
+  wire [2:0] n3006;
+  wire [2:0] n3008;
   wire n3011;
-  wire n3012;
-  wire n3013;
-  wire n3014;
-  wire n3015;
-  wire n3016;
+  wire [8:0] n3013;
+  wire [8:0] n3015;
   wire n3017;
-  wire n3018;
-  wire n3019;
-  wire n3020;
-  wire n3021;
+  wire [8:0] n3019;
   wire n3022;
-  wire n3023;
-  wire n3024;
-  wire n3025;
+  wire [1:0] n3024;
   wire n3026;
   wire n3027;
-  wire n3028;
-  wire n3029;
-  wire n3030;
+  wire [1:0] n3029;
   wire n3031;
-  wire n3032;
-  wire n3033;
+  wire [8:0] n3033;
   wire n3034;
-  wire n3035;
-  wire n3036;
-  wire n3037;
-  wire n3038;
+  wire [7:0] n3038;
   wire n3039;
-  wire n3040;
   wire n3041;
-  wire [7:0] n3042;
+  wire n3042;
+  wire [1:0] n3044;
+  wire n3046;
+  wire [8:0] n3048;
+  wire n3049;
+  wire [1:0] n3051;
+  wire n3054;
+  wire n3056;
+  wire [3:0] n3057;
+  reg [7:0] n3059;
+  reg [1:0] n3060;
+  reg n3063;
+  reg [2:0] n3067;
+  reg [8:0] n3068;
+  reg [7:0] n3069;
+  reg n3070;
+  reg [1:0] n3071;
+  wire n3072;
+  wire n3073;
+  wire n3074;
+  wire n3075;
+  wire n3076;
+  wire n3077;
+  wire n3078;
+  wire n3079;
+  wire n3080;
+  wire n3081;
+  wire n3082;
+  wire n3083;
+  wire n3084;
+  wire n3085;
+  wire n3086;
+  wire n3087;
+  wire n3088;
+  wire n3089;
+  wire n3090;
+  wire n3091;
+  wire n3092;
+  wire n3093;
+  wire n3094;
+  wire n3095;
+  wire n3096;
+  wire n3097;
+  wire n3098;
+  wire n3099;
+  wire n3100;
+  wire n3101;
+  wire n3102;
+  wire n3103;
+  wire n3104;
+  wire n3105;
+  wire [7:0] n3106;
   assign data_o = received_data; //(module output)
   assign data_valid_strb_o = data_valid_strb; //(module output)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:38:8  */
-  assign receive_counter_value = n3003; // (signal)
+  assign receive_counter_value = n3067; // (signal)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:39:8  */
-  assign next_receive_counter_value = n2944; // (signal)
+  assign next_receive_counter_value = n3008; // (signal)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:42:8  */
-  assign baud_counter_value = n3004; // (signal)
+  assign baud_counter_value = n3068; // (signal)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:43:8  */
-  assign next_baud_counter_value = n2955; // (signal)
+  assign next_baud_counter_value = n3019; // (signal)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:46:8  */
-  assign received_data = n3005; // (signal)
+  assign received_data = n3069; // (signal)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:47:8  */
-  assign next_received_data = n2995; // (signal)
+  assign next_received_data = n3059; // (signal)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:48:8  */
-  assign data_valid_strb = n3006; // (signal)
+  assign data_valid_strb = n3070; // (signal)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:51:8  */
-  assign rx_state = n3007; // (signal)
+  assign rx_state = n3071; // (signal)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:52:8  */
-  assign next_rx_state = n2996; // (signal)
+  assign next_rx_state = n3060; // (signal)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:54:8  */
-  assign next_strobe = n2999; // (signal)
+  assign next_strobe = n3063; // (signal)
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:81:17  */
-  assign n2938 = rx_state == 2'b10;
+  assign n3002 = rx_state == 2'b10;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:82:29  */
-  assign n2939 = baud_counter_value == baudrate_adj_i;
+  assign n3003 = baud_counter_value == baudrate_adj_i;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:83:61  */
-  assign n2941 = receive_counter_value + 3'b001;
+  assign n3005 = receive_counter_value + 3'b001;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:82:7  */
-  assign n2942 = n2939 ? n2941 : receive_counter_value;
+  assign n3006 = n3003 ? n3005 : receive_counter_value;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:81:5  */
-  assign n2944 = n2938 ? n2942 : 3'b000;
+  assign n3008 = n3002 ? n3006 : 3'b000;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:96:27  */
-  assign n2947 = $unsigned(baud_counter_value) < $unsigned(baudrate_adj_i);
+  assign n3011 = $unsigned(baud_counter_value) < $unsigned(baudrate_adj_i);
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:97:53  */
-  assign n2949 = baud_counter_value + 9'b000000001;
+  assign n3013 = baud_counter_value + 9'b000000001;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:96:5  */
-  assign n2951 = n2947 ? n2949 : 9'b000000000;
+  assign n3015 = n3011 ? n3013 : 9'b000000000;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:102:17  */
-  assign n2953 = rx_state == 2'b00;
+  assign n3017 = rx_state == 2'b00;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:102:5  */
-  assign n2955 = n2953 ? 9'b000000000 : n2951;
+  assign n3019 = n3017 ? 9'b000000000 : n3015;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:118:17  */
-  assign n2958 = ~rx_i;
+  assign n3022 = ~rx_i;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:118:9  */
-  assign n2960 = n2958 ? 2'b01 : rx_state;
+  assign n3024 = n3022 ? 2'b01 : rx_state;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:116:7  */
-  assign n2962 = rx_state == 2'b00;
+  assign n3026 = rx_state == 2'b00;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:123:31  */
-  assign n2963 = baud_counter_value == baudrate_adj_i;
+  assign n3027 = baud_counter_value == baudrate_adj_i;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:123:9  */
-  assign n2965 = n2963 ? 2'b10 : rx_state;
+  assign n3029 = n3027 ? 2'b10 : rx_state;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:122:7  */
-  assign n2967 = rx_state == 2'b01;
+  assign n3031 = rx_state == 2'b01;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:128:33  */
-  assign n2969 = baudrate_adj_i >> 31'b0000000000000000000000000000001;
+  assign n3033 = baudrate_adj_i >> 31'b0000000000000000000000000000001;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:128:31  */
-  assign n2970 = baud_counter_value == n2969;
+  assign n3034 = baud_counter_value == n3033;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:128:9  */
-  assign n2974 = n2970 ? n3042 : received_data;
+  assign n3038 = n3034 ? n3106 : received_data;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:131:31  */
-  assign n2975 = baud_counter_value == baudrate_adj_i;
+  assign n3039 = baud_counter_value == baudrate_adj_i;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:131:74  */
-  assign n2977 = receive_counter_value == 3'b111;
+  assign n3041 = receive_counter_value == 3'b111;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:131:48  */
-  assign n2978 = n2977 & n2975;
+  assign n3042 = n3041 & n3039;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:131:9  */
-  assign n2980 = n2978 ? 2'b11 : rx_state;
+  assign n3044 = n3042 ? 2'b11 : rx_state;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:127:7  */
-  assign n2982 = rx_state == 2'b10;
+  assign n3046 = rx_state == 2'b10;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:136:33  */
-  assign n2984 = baudrate_adj_i >> 31'b0000000000000000000000000000001;
+  assign n3048 = baudrate_adj_i >> 31'b0000000000000000000000000000001;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:136:31  */
-  assign n2985 = baud_counter_value == n2984;
+  assign n3049 = baud_counter_value == n3048;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:136:9  */
-  assign n2987 = n2985 ? 2'b00 : rx_state;
+  assign n3051 = n3049 ? 2'b00 : rx_state;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:136:9  */
-  assign n2990 = n2985 ? 1'b1 : 1'b0;
+  assign n3054 = n3049 ? 1'b1 : 1'b0;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:135:7  */
-  assign n2992 = rx_state == 2'b11;
-  assign n2993 = {n2992, n2982, n2967, n2962};
+  assign n3056 = rx_state == 2'b11;
+  assign n3057 = {n3056, n3046, n3031, n3026};
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:115:5  */
   always @*
-    case (n2993)
-      4'b1000: n2995 = received_data;
-      4'b0100: n2995 = n2974;
-      4'b0010: n2995 = received_data;
-      4'b0001: n2995 = received_data;
-      default: n2995 = 8'b00000000;
+    case (n3057)
+      4'b1000: n3059 = received_data;
+      4'b0100: n3059 = n3038;
+      4'b0010: n3059 = received_data;
+      4'b0001: n3059 = received_data;
+      default: n3059 = 8'b00000000;
     endcase
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:115:5  */
   always @*
-    case (n2993)
-      4'b1000: n2996 = n2987;
-      4'b0100: n2996 = n2980;
-      4'b0010: n2996 = n2965;
-      4'b0001: n2996 = n2960;
-      default: n2996 = rx_state;
+    case (n3057)
+      4'b1000: n3060 = n3051;
+      4'b0100: n3060 = n3044;
+      4'b0010: n3060 = n3029;
+      4'b0001: n3060 = n3024;
+      default: n3060 = rx_state;
     endcase
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:115:5  */
   always @*
-    case (n2993)
-      4'b1000: n2999 = n2990;
-      4'b0100: n2999 = 1'b0;
-      4'b0010: n2999 = 1'b0;
-      4'b0001: n2999 = 1'b0;
-      default: n2999 = 1'b0;
+    case (n3057)
+      4'b1000: n3063 = n3054;
+      4'b0100: n3063 = 1'b0;
+      4'b0010: n3063 = 1'b0;
+      4'b0001: n3063 = 1'b0;
+      default: n3063 = 1'b0;
     endcase
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:66:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n3003 <= 3'b000;
+      n3067 <= 3'b000;
     else
-      n3003 <= next_receive_counter_value;
+      n3067 <= next_receive_counter_value;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:66:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n3004 <= 9'b000000000;
+      n3068 <= 9'b000000000;
     else
-      n3004 <= next_baud_counter_value;
+      n3068 <= next_baud_counter_value;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:66:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n3005 <= 8'b00000000;
+      n3069 <= 8'b00000000;
     else
-      n3005 <= next_received_data;
+      n3069 <= next_received_data;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:66:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n3006 <= 1'b0;
+      n3070 <= 1'b0;
     else
-      n3006 <= next_strobe;
+      n3070 <= next_strobe;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:66:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n3007 <= 2'b00;
+      n3071 <= 2'b00;
     else
-      n3007 <= next_rx_state;
+      n3071 <= next_rx_state;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3008 = receive_counter_value[2]; // extract
+  assign n3072 = receive_counter_value[2]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3009 = ~n3008;
+  assign n3073 = ~n3072;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3010 = receive_counter_value[1]; // extract
+  assign n3074 = receive_counter_value[1]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3011 = ~n3010;
+  assign n3075 = ~n3074;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3012 = n3009 & n3011;
+  assign n3076 = n3073 & n3075;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3013 = n3009 & n3010;
+  assign n3077 = n3073 & n3074;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3014 = n3008 & n3011;
+  assign n3078 = n3072 & n3075;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3015 = n3008 & n3010;
+  assign n3079 = n3072 & n3074;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3016 = receive_counter_value[0]; // extract
+  assign n3080 = receive_counter_value[0]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3017 = ~n3016;
+  assign n3081 = ~n3080;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3018 = n3012 & n3017;
+  assign n3082 = n3076 & n3081;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3019 = n3012 & n3016;
+  assign n3083 = n3076 & n3080;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3020 = n3013 & n3017;
+  assign n3084 = n3077 & n3081;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3021 = n3013 & n3016;
+  assign n3085 = n3077 & n3080;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3022 = n3014 & n3017;
+  assign n3086 = n3078 & n3081;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3023 = n3014 & n3016;
+  assign n3087 = n3078 & n3080;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3024 = n3015 & n3017;
+  assign n3088 = n3079 & n3081;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3025 = n3015 & n3016;
+  assign n3089 = n3079 & n3080;
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:53:8  */
-  assign n3026 = received_data[0]; // extract
+  assign n3090 = received_data[0]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3027 = n3018 ? rx_i : n3026;
-  assign n3028 = received_data[1]; // extract
+  assign n3091 = n3082 ? rx_i : n3090;
+  assign n3092 = received_data[1]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3029 = n3019 ? rx_i : n3028;
-  assign n3030 = received_data[2]; // extract
+  assign n3093 = n3083 ? rx_i : n3092;
+  assign n3094 = received_data[2]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3031 = n3020 ? rx_i : n3030;
-  assign n3032 = received_data[3]; // extract
+  assign n3095 = n3084 ? rx_i : n3094;
+  assign n3096 = received_data[3]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3033 = n3021 ? rx_i : n3032;
-  assign n3034 = received_data[4]; // extract
+  assign n3097 = n3085 ? rx_i : n3096;
+  assign n3098 = received_data[4]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3035 = n3022 ? rx_i : n3034;
-  assign n3036 = received_data[5]; // extract
+  assign n3099 = n3086 ? rx_i : n3098;
+  assign n3100 = received_data[5]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3037 = n3023 ? rx_i : n3036;
-  assign n3038 = received_data[6]; // extract
+  assign n3101 = n3087 ? rx_i : n3100;
+  assign n3102 = received_data[6]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3039 = n3024 ? rx_i : n3038;
-  assign n3040 = received_data[7]; // extract
+  assign n3103 = n3088 ? rx_i : n3102;
+  assign n3104 = received_data[7]; // extract
   /* ../../vhdl/uart/rtl/uart_rx_ea.vhd:129:11  */
-  assign n3041 = n3025 ? rx_i : n3040;
-  assign n3042 = {n3041, n3039, n3037, n3035, n3033, n3031, n3029, n3027};
+  assign n3105 = n3089 ? rx_i : n3104;
+  assign n3106 = {n3105, n3103, n3101, n3099, n3097, n3095, n3093, n3091};
 endmodule
 
 module uart_tx_9_8
@@ -441,192 +441,192 @@ module uart_tx_9_8
   wire [8:0] next_baud_counter_value;
   wire [2:0] tx_state;
   wire [2:0] next_tx_state;
-  wire n2831;
-  wire n2832;
-  wire [2:0] n2834;
-  wire [2:0] n2835;
-  wire [2:0] n2837;
-  wire n2840;
-  wire [8:0] n2842;
-  wire [8:0] n2844;
-  wire n2847;
-  wire [2:0] n2850;
-  wire [2:0] n2851;
-  wire n2853;
-  wire n2854;
-  wire n2857;
-  wire [2:0] n2860;
-  wire n2862;
-  wire n2863;
-  wire [2:0] n2865;
-  wire n2867;
-  wire n2869;
-  wire n2874;
-  wire n2875;
-  wire n2876;
-  wire [2:0] n2878;
-  wire n2880;
-  wire n2881;
-  wire n2883;
-  wire n2884;
-  wire [2:0] n2887;
-  wire [2:0] n2888;
-  wire n2890;
-  wire [4:0] n2891;
-  reg n2896;
-  reg [2:0] n2898;
-  wire n2902;
+  wire n2895;
+  wire n2896;
+  wire [2:0] n2898;
+  wire [2:0] n2899;
+  wire [2:0] n2901;
   wire n2904;
-  wire n2906;
-  wire n2907;
-  wire n2908;
-  wire n2909;
-  reg n2911;
-  reg [2:0] n2912;
-  reg [8:0] n2913;
-  reg [2:0] n2914;
-  wire n2915;
+  wire [8:0] n2906;
+  wire [8:0] n2908;
+  wire n2911;
+  wire [2:0] n2914;
+  wire [2:0] n2915;
+  wire n2917;
+  wire n2918;
+  wire n2921;
+  wire [2:0] n2924;
+  wire n2926;
+  wire n2927;
+  wire [2:0] n2929;
+  wire n2931;
+  wire n2933;
+  wire n2938;
+  wire n2939;
+  wire n2940;
+  wire [2:0] n2942;
+  wire n2944;
+  wire n2945;
+  wire n2947;
+  wire n2948;
+  wire [2:0] n2951;
+  wire [2:0] n2952;
+  wire n2954;
+  wire [4:0] n2955;
+  reg n2960;
+  reg [2:0] n2962;
+  wire n2966;
+  wire n2968;
+  wire n2970;
+  wire n2971;
+  wire n2972;
+  wire n2973;
+  reg n2975;
+  reg [2:0] n2976;
+  reg [8:0] n2977;
+  reg [2:0] n2978;
+  wire n2979;
   assign tx_strb_o = tx_strb; //(module output)
   assign tx_o = tx; //(module output)
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:38:8  */
-  assign tx = n2896; // (signal)
+  assign tx = n2960; // (signal)
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:39:8  */
-  assign tx_strb = n2911; // (signal)
+  assign tx_strb = n2975; // (signal)
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:40:8  */
-  assign next_tx_strb = n2909; // (signal)
+  assign next_tx_strb = n2973; // (signal)
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:43:8  */
-  assign transmit_counter_value = n2912; // (signal)
+  assign transmit_counter_value = n2976; // (signal)
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:44:8  */
-  assign next_transmit_counter_value = n2837; // (signal)
+  assign next_transmit_counter_value = n2901; // (signal)
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:47:8  */
-  assign baud_counter_value = n2913; // (signal)
+  assign baud_counter_value = n2977; // (signal)
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:48:8  */
-  assign next_baud_counter_value = n2844; // (signal)
+  assign next_baud_counter_value = n2908; // (signal)
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:51:8  */
-  assign tx_state = n2914; // (signal)
+  assign tx_state = n2978; // (signal)
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:52:8  */
-  assign next_tx_state = n2898; // (signal)
+  assign next_tx_state = n2962; // (signal)
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:78:29  */
-  assign n2831 = tx_state == 3'b011;
+  assign n2895 = tx_state == 3'b011;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:79:47  */
-  assign n2832 = baud_counter_value == baudrate_adj_i;
+  assign n2896 = baud_counter_value == baudrate_adj_i;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:80:87  */
-  assign n2834 = transmit_counter_value + 3'b001;
+  assign n2898 = transmit_counter_value + 3'b001;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:79:25  */
-  assign n2835 = n2832 ? n2834 : transmit_counter_value;
+  assign n2899 = n2896 ? n2898 : transmit_counter_value;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:78:17  */
-  assign n2837 = n2831 ? n2835 : 3'b000;
+  assign n2901 = n2895 ? n2899 : 3'b000;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:93:39  */
-  assign n2840 = $unsigned(baud_counter_value) < $unsigned(baudrate_adj_i);
+  assign n2904 = $unsigned(baud_counter_value) < $unsigned(baudrate_adj_i);
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:94:71  */
-  assign n2842 = baud_counter_value + 9'b000000001;
+  assign n2906 = baud_counter_value + 9'b000000001;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:93:17  */
-  assign n2844 = n2840 ? n2842 : 9'b000000000;
+  assign n2908 = n2904 ? n2906 : 9'b000000000;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:111:63  */
-  assign n2847 = baud_counter_value == baudrate_adj_i;
+  assign n2911 = baud_counter_value == baudrate_adj_i;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:111:41  */
-  assign n2850 = n2847 ? 3'b010 : 3'b001;
+  assign n2914 = n2911 ? 3'b010 : 3'b001;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:110:33  */
-  assign n2851 = tx_start_strb_i ? n2850 : tx_state;
+  assign n2915 = tx_start_strb_i ? n2914 : tx_state;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:108:25  */
-  assign n2853 = tx_state == 3'b000;
+  assign n2917 = tx_state == 3'b000;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:123:55  */
-  assign n2854 = baud_counter_value == baudrate_adj_i;
+  assign n2918 = baud_counter_value == baudrate_adj_i;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:123:33  */
-  assign n2857 = n2854 ? 1'b0 : 1'b1;
+  assign n2921 = n2918 ? 1'b0 : 1'b1;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:123:33  */
-  assign n2860 = n2854 ? 3'b010 : tx_state;
+  assign n2924 = n2918 ? 3'b010 : tx_state;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:121:25  */
-  assign n2862 = tx_state == 3'b001;
+  assign n2926 = tx_state == 3'b001;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:130:55  */
-  assign n2863 = baud_counter_value == baudrate_adj_i;
+  assign n2927 = baud_counter_value == baudrate_adj_i;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:130:33  */
-  assign n2865 = n2863 ? 3'b011 : tx_state;
+  assign n2929 = n2927 ? 3'b011 : tx_state;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:128:25  */
-  assign n2867 = tx_state == 3'b010;
+  assign n2931 = tx_state == 3'b010;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:135:59  */
-  assign n2869 = $unsigned(transmit_counter_value) <= $unsigned(3'b111);
+  assign n2933 = $unsigned(transmit_counter_value) <= $unsigned(3'b111);
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:137:67  */
-  assign n2874 = transmit_counter_value == 3'b111;
+  assign n2938 = transmit_counter_value == 3'b111;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:137:113  */
-  assign n2875 = baud_counter_value == baudrate_adj_i;
+  assign n2939 = baud_counter_value == baudrate_adj_i;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:137:90  */
-  assign n2876 = n2875 & n2874;
+  assign n2940 = n2939 & n2938;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:135:33  */
-  assign n2878 = n2881 ? 3'b100 : tx_state;
+  assign n2942 = n2945 ? 3'b100 : tx_state;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:135:33  */
-  assign n2880 = n2869 ? n2915 : 1'bX;
+  assign n2944 = n2933 ? n2979 : 1'bX;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:135:33  */
-  assign n2881 = n2876 & n2869;
+  assign n2945 = n2940 & n2933;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:134:25  */
-  assign n2883 = tx_state == 3'b011;
+  assign n2947 = tx_state == 3'b011;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:144:55  */
-  assign n2884 = baud_counter_value == baudrate_adj_i;
+  assign n2948 = baud_counter_value == baudrate_adj_i;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:146:41  */
-  assign n2887 = tx_start_strb_i ? 3'b010 : 3'b000;
+  assign n2951 = tx_start_strb_i ? 3'b010 : 3'b000;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:144:33  */
-  assign n2888 = n2884 ? n2887 : tx_state;
+  assign n2952 = n2948 ? n2951 : tx_state;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:142:25  */
-  assign n2890 = tx_state == 3'b100;
-  assign n2891 = {n2890, n2883, n2867, n2862, n2853};
+  assign n2954 = tx_state == 3'b100;
+  assign n2955 = {n2954, n2947, n2931, n2926, n2917};
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:107:17  */
   always @*
-    case (n2891)
-      5'b10000: n2896 = 1'b1;
-      5'b01000: n2896 = n2880;
-      5'b00100: n2896 = 1'b0;
-      5'b00010: n2896 = n2857;
-      5'b00001: n2896 = 1'b1;
-      default: n2896 = 1'bX;
+    case (n2955)
+      5'b10000: n2960 = 1'b1;
+      5'b01000: n2960 = n2944;
+      5'b00100: n2960 = 1'b0;
+      5'b00010: n2960 = n2921;
+      5'b00001: n2960 = 1'b1;
+      default: n2960 = 1'bX;
     endcase
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:107:17  */
   always @*
-    case (n2891)
-      5'b10000: n2898 = n2888;
-      5'b01000: n2898 = n2878;
-      5'b00100: n2898 = n2865;
-      5'b00010: n2898 = n2860;
-      5'b00001: n2898 = n2851;
-      default: n2898 = tx_state;
+    case (n2955)
+      5'b10000: n2962 = n2952;
+      5'b01000: n2962 = n2942;
+      5'b00100: n2962 = n2929;
+      5'b00010: n2962 = n2924;
+      5'b00001: n2962 = n2915;
+      default: n2962 = tx_state;
     endcase
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:158:37  */
-  assign n2902 = tx_state == 3'b100;
+  assign n2966 = tx_state == 3'b100;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:158:66  */
-  assign n2904 = next_tx_state == 3'b010;
+  assign n2968 = next_tx_state == 3'b010;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:158:94  */
-  assign n2906 = next_tx_state == 3'b000;
+  assign n2970 = next_tx_state == 3'b000;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:158:77  */
-  assign n2907 = n2904 | n2906;
+  assign n2971 = n2968 | n2970;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:158:47  */
-  assign n2908 = n2907 & n2902;
+  assign n2972 = n2971 & n2966;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:158:23  */
-  assign n2909 = n2908 ? 1'b1 : 1'b0;
+  assign n2973 = n2972 ? 1'b1 : 1'b0;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:63:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2911 <= 1'b0;
+      n2975 <= 1'b0;
     else
-      n2911 <= next_tx_strb;
+      n2975 <= next_tx_strb;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:63:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2912 <= 3'b000;
+      n2976 <= 3'b000;
     else
-      n2912 <= next_transmit_counter_value;
+      n2976 <= next_transmit_counter_value;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:63:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2913 <= 9'b000000000;
+      n2977 <= 9'b000000000;
     else
-      n2913 <= next_baud_counter_value;
+      n2977 <= next_baud_counter_value;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:63:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2914 <= 3'b000;
+      n2978 <= 3'b000;
     else
-      n2914 <= next_tx_state;
+      n2978 <= next_tx_state;
   /* ../../vhdl/uart/rtl/uart_tx_ea.vhd:136:54  */
-  assign n2915 = data_i[transmit_counter_value * 1 +: 1]; //(Bmux)
+  assign n2979 = data_i[transmit_counter_value * 1 +: 1]; //(Bmux)
 endmodule
 
 module weyls_discrepancy_8_3_6
@@ -649,132 +649,68 @@ module weyls_discrepancy_8_3_6
   wire [2:0] next_weylsd;
   wire [2:0] weylsd_neg;
   wire [2:0] weylsd_pos;
-  wire n2600;
-  wire [1:0] n2602;
+  wire n2664;
+  wire [1:0] n2666;
   wire [5:0] \gen_spike_2_tc_n1_spike_2_tc.thermo_o ;
-  wire [1:0] n2613;
-  wire [5:0] n2614;
-  wire [5:0] \gen_spike_2_tc_n2_spike_2_tc.thermo_o ;
-  wire [1:0] n2616;
-  wire [5:0] n2617;
-  wire [5:0] \gen_spike_2_tc_n3_spike_2_tc.thermo_o ;
-  wire [1:0] n2619;
-  wire [5:0] n2620;
-  wire [5:0] \gen_spike_2_tc_n4_spike_2_tc.thermo_o ;
-  wire [1:0] n2622;
-  wire [5:0] n2623;
-  wire [5:0] \gen_spike_2_tc_n5_spike_2_tc.thermo_o ;
-  wire [1:0] n2625;
-  wire [5:0] n2626;
-  wire [5:0] \gen_spike_2_tc_n6_spike_2_tc.thermo_o ;
-  wire [1:0] n2628;
-  wire [5:0] n2629;
-  wire [5:0] \gen_spike_2_tc_n7_spike_2_tc.thermo_o ;
-  wire [1:0] n2631;
-  wire [5:0] n2632;
-  wire [5:0] \gen_spike_2_tc_n8_spike_2_tc.thermo_o ;
-  wire [1:0] n2634;
-  wire [5:0] n2635;
-  wire [5:0] \gen_spike_2_tc_n9_spike_2_tc.thermo_o ;
-  wire [1:0] n2637;
-  wire [5:0] n2638;
-  wire [5:0] \gen_spike_2_tc_n10_spike_2_tc.thermo_o ;
-  wire [1:0] n2640;
-  wire [5:0] n2641;
-  wire [5:0] \gen_spike_2_tc_n11_spike_2_tc.thermo_o ;
-  wire [1:0] n2643;
-  wire [5:0] n2644;
-  wire [5:0] \gen_spike_2_tc_n12_spike_2_tc.thermo_o ;
-  wire [1:0] n2646;
-  wire [5:0] n2647;
-  wire [5:0] \gen_spike_2_tc_n13_spike_2_tc.thermo_o ;
-  wire [1:0] n2649;
-  wire [5:0] n2650;
-  wire [5:0] \gen_spike_2_tc_n14_spike_2_tc.thermo_o ;
-  wire [1:0] n2652;
-  wire [5:0] n2653;
-  wire [5:0] \gen_spike_2_tc_n15_spike_2_tc.thermo_o ;
-  wire [1:0] n2655;
-  wire [5:0] n2656;
-  wire [5:0] n2659;
-  wire [41:0] n2660;
-  wire [47:0] n2661;
-  reg [95:0] eval_orresult_offset_comp;
-  wire [2:0] n2665;
-  wire [2:0] n2666;
-  wire [2:0] n2667;
-  wire [89:0] n2668;
-  wire [95:0] n2669;
-  wire [5:0] n2670;
-  wire [2:0] n2671;
-  wire [2:0] n2672;
-  wire [2:0] n2673;
-  wire [5:0] n2674;
-  wire [83:0] n2675;
-  wire [95:0] n2676;
-  wire [5:0] n2677;
+  wire [1:0] n2677;
   wire [5:0] n2678;
-  wire [2:0] n2679;
-  wire [2:0] n2680;
-  wire [2:0] n2681;
-  wire [5:0] n2682;
-  wire [77:0] n2683;
-  wire [95:0] n2684;
-  wire [5:0] n2685;
-  wire [5:0] n2686;
-  wire [2:0] n2687;
-  wire [2:0] n2688;
-  wire [2:0] n2689;
+  wire [5:0] \gen_spike_2_tc_n2_spike_2_tc.thermo_o ;
+  wire [1:0] n2680;
+  wire [5:0] n2681;
+  wire [5:0] \gen_spike_2_tc_n3_spike_2_tc.thermo_o ;
+  wire [1:0] n2683;
+  wire [5:0] n2684;
+  wire [5:0] \gen_spike_2_tc_n4_spike_2_tc.thermo_o ;
+  wire [1:0] n2686;
+  wire [5:0] n2687;
+  wire [5:0] \gen_spike_2_tc_n5_spike_2_tc.thermo_o ;
+  wire [1:0] n2689;
   wire [5:0] n2690;
-  wire [71:0] n2691;
-  wire [95:0] n2692;
+  wire [5:0] \gen_spike_2_tc_n6_spike_2_tc.thermo_o ;
+  wire [1:0] n2692;
   wire [5:0] n2693;
-  wire [5:0] n2694;
-  wire [2:0] n2695;
-  wire [2:0] n2696;
-  wire [2:0] n2697;
-  wire [5:0] n2698;
-  wire [65:0] n2699;
-  wire [95:0] n2700;
-  wire [5:0] n2701;
+  wire [5:0] \gen_spike_2_tc_n7_spike_2_tc.thermo_o ;
+  wire [1:0] n2695;
+  wire [5:0] n2696;
+  wire [5:0] \gen_spike_2_tc_n8_spike_2_tc.thermo_o ;
+  wire [1:0] n2698;
+  wire [5:0] n2699;
+  wire [5:0] \gen_spike_2_tc_n9_spike_2_tc.thermo_o ;
+  wire [1:0] n2701;
   wire [5:0] n2702;
-  wire [2:0] n2703;
-  wire [2:0] n2704;
-  wire [2:0] n2705;
-  wire [5:0] n2706;
-  wire [59:0] n2707;
-  wire [95:0] n2708;
-  wire [5:0] n2709;
-  wire [5:0] n2710;
-  wire [2:0] n2711;
-  wire [2:0] n2712;
-  wire [2:0] n2713;
+  wire [5:0] \gen_spike_2_tc_n10_spike_2_tc.thermo_o ;
+  wire [1:0] n2704;
+  wire [5:0] n2705;
+  wire [5:0] \gen_spike_2_tc_n11_spike_2_tc.thermo_o ;
+  wire [1:0] n2707;
+  wire [5:0] n2708;
+  wire [5:0] \gen_spike_2_tc_n12_spike_2_tc.thermo_o ;
+  wire [1:0] n2710;
+  wire [5:0] n2711;
+  wire [5:0] \gen_spike_2_tc_n13_spike_2_tc.thermo_o ;
+  wire [1:0] n2713;
   wire [5:0] n2714;
-  wire [53:0] n2715;
-  wire [95:0] n2716;
+  wire [5:0] \gen_spike_2_tc_n14_spike_2_tc.thermo_o ;
+  wire [1:0] n2716;
   wire [5:0] n2717;
-  wire [5:0] n2718;
-  wire [2:0] n2719;
-  wire [2:0] n2720;
-  wire [2:0] n2721;
-  wire [5:0] n2722;
-  wire [47:0] n2723;
-  wire [95:0] n2724;
-  wire [5:0] n2725;
-  wire [5:0] n2726;
-  wire [2:0] n2727;
-  wire [2:0] n2728;
+  wire [5:0] \gen_spike_2_tc_n15_spike_2_tc.thermo_o ;
+  wire [1:0] n2719;
+  wire [5:0] n2720;
+  wire [5:0] n2723;
+  wire [41:0] n2724;
+  wire [47:0] n2725;
+  reg [95:0] eval_orresult_offset_comp;
   wire [2:0] n2729;
-  wire [5:0] n2730;
-  wire [41:0] n2731;
-  wire [95:0] n2732;
-  wire [5:0] n2733;
+  wire [2:0] n2730;
+  wire [2:0] n2731;
+  wire [89:0] n2732;
+  wire [95:0] n2733;
   wire [5:0] n2734;
   wire [2:0] n2735;
   wire [2:0] n2736;
   wire [2:0] n2737;
   wire [5:0] n2738;
-  wire [35:0] n2739;
+  wire [83:0] n2739;
   wire [95:0] n2740;
   wire [5:0] n2741;
   wire [5:0] n2742;
@@ -782,7 +718,7 @@ module weyls_discrepancy_8_3_6
   wire [2:0] n2744;
   wire [2:0] n2745;
   wire [5:0] n2746;
-  wire [29:0] n2747;
+  wire [77:0] n2747;
   wire [95:0] n2748;
   wire [5:0] n2749;
   wire [5:0] n2750;
@@ -790,7 +726,7 @@ module weyls_discrepancy_8_3_6
   wire [2:0] n2752;
   wire [2:0] n2753;
   wire [5:0] n2754;
-  wire [23:0] n2755;
+  wire [71:0] n2755;
   wire [95:0] n2756;
   wire [5:0] n2757;
   wire [5:0] n2758;
@@ -798,7 +734,7 @@ module weyls_discrepancy_8_3_6
   wire [2:0] n2760;
   wire [2:0] n2761;
   wire [5:0] n2762;
-  wire [17:0] n2763;
+  wire [65:0] n2763;
   wire [95:0] n2764;
   wire [5:0] n2765;
   wire [5:0] n2766;
@@ -806,7 +742,7 @@ module weyls_discrepancy_8_3_6
   wire [2:0] n2768;
   wire [2:0] n2769;
   wire [5:0] n2770;
-  wire [11:0] n2771;
+  wire [59:0] n2771;
   wire [95:0] n2772;
   wire [5:0] n2773;
   wire [5:0] n2774;
@@ -814,7 +750,7 @@ module weyls_discrepancy_8_3_6
   wire [2:0] n2776;
   wire [2:0] n2777;
   wire [5:0] n2778;
-  wire [5:0] n2779;
+  wire [53:0] n2779;
   wire [95:0] n2780;
   wire [5:0] n2781;
   wire [5:0] n2782;
@@ -822,423 +758,487 @@ module weyls_discrepancy_8_3_6
   wire [2:0] n2784;
   wire [2:0] n2785;
   wire [5:0] n2786;
-  wire [95:0] n2787;
-  wire [5:0] n2788;
+  wire [47:0] n2787;
+  wire [95:0] n2788;
   wire [5:0] n2789;
   wire [5:0] n2790;
-  wire [95:0] n2792;
-  wire n2794;
-  wire n2795;
-  wire n2796;
+  wire [2:0] n2791;
+  wire [2:0] n2792;
+  wire [2:0] n2793;
+  wire [5:0] n2794;
+  wire [41:0] n2795;
+  wire [95:0] n2796;
+  wire [5:0] n2797;
+  wire [5:0] n2798;
   wire [2:0] n2799;
+  wire [2:0] n2800;
   wire [2:0] n2801;
-  wire n2802;
-  wire [95:0] n2803;
+  wire [5:0] n2802;
+  wire [35:0] n2803;
   wire [95:0] n2804;
-  wire [2:0] n2805;
-  wire [95:0] n2806;
-  reg [5:0] n2809;
-  reg [1:0] n2810;
-  reg [2:0] n2811;
+  wire [5:0] n2805;
+  wire [5:0] n2806;
+  wire [2:0] n2807;
+  wire [2:0] n2808;
+  wire [2:0] n2809;
+  wire [5:0] n2810;
+  wire [29:0] n2811;
+  wire [95:0] n2812;
+  wire [5:0] n2813;
+  wire [5:0] n2814;
+  wire [2:0] n2815;
+  wire [2:0] n2816;
+  wire [2:0] n2817;
+  wire [5:0] n2818;
+  wire [23:0] n2819;
+  wire [95:0] n2820;
+  wire [5:0] n2821;
+  wire [5:0] n2822;
+  wire [2:0] n2823;
+  wire [2:0] n2824;
+  wire [2:0] n2825;
+  wire [5:0] n2826;
+  wire [17:0] n2827;
+  wire [95:0] n2828;
+  wire [5:0] n2829;
+  wire [5:0] n2830;
+  wire [2:0] n2831;
+  wire [2:0] n2832;
+  wire [2:0] n2833;
+  wire [5:0] n2834;
+  wire [11:0] n2835;
+  wire [95:0] n2836;
+  wire [5:0] n2837;
+  wire [5:0] n2838;
+  wire [2:0] n2839;
+  wire [2:0] n2840;
+  wire [2:0] n2841;
+  wire [5:0] n2842;
+  wire [5:0] n2843;
+  wire [95:0] n2844;
+  wire [5:0] n2845;
+  wire [5:0] n2846;
+  wire [2:0] n2847;
+  wire [2:0] n2848;
+  wire [2:0] n2849;
+  wire [5:0] n2850;
+  wire [95:0] n2851;
+  wire [5:0] n2852;
+  wire [5:0] n2853;
+  wire [5:0] n2854;
+  wire [95:0] n2856;
+  wire n2858;
+  wire n2859;
+  wire n2860;
+  wire [2:0] n2863;
+  wire [2:0] n2865;
+  wire n2866;
+  wire [95:0] n2867;
+  wire [95:0] n2868;
+  wire [2:0] n2869;
+  wire [95:0] n2870;
+  reg [5:0] n2873;
+  reg [1:0] n2874;
+  reg [2:0] n2875;
   assign weylsd_o = weylsd; //(module output)
-  assign weylsd_strb_o = n2802; //(module output)
+  assign weylsd_strb_o = n2866; //(module output)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:60:8  */
-  assign buf_reg = n2809; // (signal)
+  assign buf_reg = n2873; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:61:8  */
-  assign next_buf_reg = n2659; // (signal)
+  assign next_buf_reg = n2723; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:63:8  */
-  assign sync_weylsd_strb = n2810; // (signal)
+  assign sync_weylsd_strb = n2874; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:64:8  */
   assign next_weylsd_strb = spikes_strb_i; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:66:8  */
-  assign thermocodes = n2803; // (signal)
+  assign thermocodes = n2867; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:67:8  */
-  assign buf_thermocodes = n2804; // (signal)
+  assign buf_thermocodes = n2868; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:69:8  */
-  assign orresult = n2790; // (signal)
+  assign orresult = n2854; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:70:8  */
-  assign neg_orresult = n2805; // (signal)
+  assign neg_orresult = n2869; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:71:8  */
-  assign temp_orresult = n2806; // (signal)
+  assign temp_orresult = n2870; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:73:8  */
-  assign weylsd = n2811; // (signal)
+  assign weylsd = n2875; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:74:8  */
-  assign next_weylsd = n2801; // (signal)
+  assign next_weylsd = n2865; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:97:48  */
-  assign n2600 = sync_weylsd_strb[0]; // extract
-  assign n2602 = {n2600, next_weylsd_strb};
+  assign n2664 = sync_weylsd_strb[0]; // extract
+  assign n2666 = {n2664, next_weylsd_strb};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n1_spike_2_tc (
-    .spike_i(n2613),
-    .thermo_i(n2614),
+    .spike_i(n2677),
+    .thermo_i(n2678),
     .thermo_o(\gen_spike_2_tc_n1_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2613 = spikes_i[29:28]; // extract
+  assign n2677 = spikes_i[29:28]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2614 = thermocodes[5:0]; // extract
+  assign n2678 = thermocodes[5:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n2_spike_2_tc (
-    .spike_i(n2616),
-    .thermo_i(n2617),
+    .spike_i(n2680),
+    .thermo_i(n2681),
     .thermo_o(\gen_spike_2_tc_n2_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2616 = spikes_i[27:26]; // extract
+  assign n2680 = spikes_i[27:26]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2617 = thermocodes[11:6]; // extract
+  assign n2681 = thermocodes[11:6]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n3_spike_2_tc (
-    .spike_i(n2619),
-    .thermo_i(n2620),
+    .spike_i(n2683),
+    .thermo_i(n2684),
     .thermo_o(\gen_spike_2_tc_n3_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2619 = spikes_i[25:24]; // extract
+  assign n2683 = spikes_i[25:24]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2620 = thermocodes[17:12]; // extract
+  assign n2684 = thermocodes[17:12]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n4_spike_2_tc (
-    .spike_i(n2622),
-    .thermo_i(n2623),
+    .spike_i(n2686),
+    .thermo_i(n2687),
     .thermo_o(\gen_spike_2_tc_n4_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2622 = spikes_i[23:22]; // extract
+  assign n2686 = spikes_i[23:22]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2623 = thermocodes[23:18]; // extract
+  assign n2687 = thermocodes[23:18]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n5_spike_2_tc (
-    .spike_i(n2625),
-    .thermo_i(n2626),
+    .spike_i(n2689),
+    .thermo_i(n2690),
     .thermo_o(\gen_spike_2_tc_n5_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2625 = spikes_i[21:20]; // extract
+  assign n2689 = spikes_i[21:20]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2626 = thermocodes[29:24]; // extract
+  assign n2690 = thermocodes[29:24]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n6_spike_2_tc (
-    .spike_i(n2628),
-    .thermo_i(n2629),
+    .spike_i(n2692),
+    .thermo_i(n2693),
     .thermo_o(\gen_spike_2_tc_n6_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2628 = spikes_i[19:18]; // extract
+  assign n2692 = spikes_i[19:18]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2629 = thermocodes[35:30]; // extract
+  assign n2693 = thermocodes[35:30]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n7_spike_2_tc (
-    .spike_i(n2631),
-    .thermo_i(n2632),
+    .spike_i(n2695),
+    .thermo_i(n2696),
     .thermo_o(\gen_spike_2_tc_n7_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2631 = spikes_i[17:16]; // extract
+  assign n2695 = spikes_i[17:16]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2632 = thermocodes[41:36]; // extract
+  assign n2696 = thermocodes[41:36]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n8_spike_2_tc (
-    .spike_i(n2634),
-    .thermo_i(n2635),
+    .spike_i(n2698),
+    .thermo_i(n2699),
     .thermo_o(\gen_spike_2_tc_n8_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2634 = spikes_i[15:14]; // extract
+  assign n2698 = spikes_i[15:14]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2635 = thermocodes[47:42]; // extract
+  assign n2699 = thermocodes[47:42]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n9_spike_2_tc (
-    .spike_i(n2637),
-    .thermo_i(n2638),
+    .spike_i(n2701),
+    .thermo_i(n2702),
     .thermo_o(\gen_spike_2_tc_n9_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2637 = spikes_i[13:12]; // extract
+  assign n2701 = spikes_i[13:12]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2638 = thermocodes[53:48]; // extract
+  assign n2702 = thermocodes[53:48]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n10_spike_2_tc (
-    .spike_i(n2640),
-    .thermo_i(n2641),
+    .spike_i(n2704),
+    .thermo_i(n2705),
     .thermo_o(\gen_spike_2_tc_n10_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2640 = spikes_i[11:10]; // extract
+  assign n2704 = spikes_i[11:10]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2641 = thermocodes[59:54]; // extract
+  assign n2705 = thermocodes[59:54]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n11_spike_2_tc (
-    .spike_i(n2643),
-    .thermo_i(n2644),
+    .spike_i(n2707),
+    .thermo_i(n2708),
     .thermo_o(\gen_spike_2_tc_n11_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2643 = spikes_i[9:8]; // extract
+  assign n2707 = spikes_i[9:8]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2644 = thermocodes[65:60]; // extract
+  assign n2708 = thermocodes[65:60]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n12_spike_2_tc (
-    .spike_i(n2646),
-    .thermo_i(n2647),
+    .spike_i(n2710),
+    .thermo_i(n2711),
     .thermo_o(\gen_spike_2_tc_n12_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2646 = spikes_i[7:6]; // extract
+  assign n2710 = spikes_i[7:6]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2647 = thermocodes[71:66]; // extract
+  assign n2711 = thermocodes[71:66]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n13_spike_2_tc (
-    .spike_i(n2649),
-    .thermo_i(n2650),
+    .spike_i(n2713),
+    .thermo_i(n2714),
     .thermo_o(\gen_spike_2_tc_n13_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2649 = spikes_i[5:4]; // extract
+  assign n2713 = spikes_i[5:4]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2650 = thermocodes[77:72]; // extract
+  assign n2714 = thermocodes[77:72]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n14_spike_2_tc (
-    .spike_i(n2652),
-    .thermo_i(n2653),
+    .spike_i(n2716),
+    .thermo_i(n2717),
     .thermo_o(\gen_spike_2_tc_n14_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2652 = spikes_i[3:2]; // extract
+  assign n2716 = spikes_i[3:2]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2653 = thermocodes[83:78]; // extract
+  assign n2717 = thermocodes[83:78]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:107:5  */
   spike_2_thermocode_6 gen_spike_2_tc_n15_spike_2_tc (
-    .spike_i(n2655),
-    .thermo_i(n2656),
+    .spike_i(n2719),
+    .thermo_i(n2720),
     .thermo_o(\gen_spike_2_tc_n15_spike_2_tc.thermo_o ));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:112:30  */
-  assign n2655 = spikes_i[1:0]; // extract
+  assign n2719 = spikes_i[1:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:113:33  */
-  assign n2656 = thermocodes[89:84]; // extract
+  assign n2720 = thermocodes[89:84]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:126:41  */
-  assign n2659 = buf_thermocodes[53:48]; // extract
-  assign n2660 = buf_thermocodes[95:54]; // extract
-  assign n2661 = buf_thermocodes[47:0]; // extract
+  assign n2723 = buf_thermocodes[53:48]; // extract
+  assign n2724 = buf_thermocodes[95:54]; // extract
+  assign n2725 = buf_thermocodes[47:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:136:12  */
   always @*
-    eval_orresult_offset_comp = n2792; // (isignal)
+    eval_orresult_offset_comp = n2856; // (isignal)
   initial
     eval_orresult_offset_comp = 96'bX;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:138:71  */
-  assign n2665 = thermocodes[2:0]; // extract
+  assign n2729 = thermocodes[2:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:138:53  */
-  assign n2666 = ~n2665;
+  assign n2730 = ~n2729;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:139:77  */
-  assign n2667 = thermocodes[5:3]; // extract
-  assign n2668 = eval_orresult_offset_comp[95:6]; // extract
-  assign n2669 = {n2668, n2667, n2666};
+  assign n2731 = thermocodes[5:3]; // extract
+  assign n2732 = eval_orresult_offset_comp[95:6]; // extract
+  assign n2733 = {n2732, n2731, n2730};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:140:36  */
-  assign n2670 = n2669[5:0]; // extract
+  assign n2734 = n2733[5:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2671 = thermocodes[8:6]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
-  assign n2672 = ~n2671;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2673 = thermocodes[11:9]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2674 = temp_orresult[5:0]; // extract
-  assign n2675 = eval_orresult_offset_comp[95:12]; // extract
-  assign n2676 = {n2675, n2673, n2672, n2667, n2666};
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2677 = n2676[11:6]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
-  assign n2678 = n2674 | n2677;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2679 = thermocodes[14:12]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
-  assign n2680 = ~n2679;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2681 = thermocodes[17:15]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2682 = temp_orresult[11:6]; // extract
-  assign n2683 = eval_orresult_offset_comp[95:18]; // extract
-  assign n2684 = {n2683, n2681, n2680, n2673, n2672, n2667, n2666};
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2685 = n2684[17:12]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
-  assign n2686 = n2682 | n2685;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2687 = thermocodes[20:18]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
-  assign n2688 = ~n2687;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2689 = thermocodes[23:21]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2690 = temp_orresult[17:12]; // extract
-  assign n2691 = eval_orresult_offset_comp[95:24]; // extract
-  assign n2692 = {n2691, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2693 = n2692[23:18]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
-  assign n2694 = n2690 | n2693;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2695 = thermocodes[26:24]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
-  assign n2696 = ~n2695;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2697 = thermocodes[29:27]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2698 = temp_orresult[23:18]; // extract
-  assign n2699 = eval_orresult_offset_comp[95:30]; // extract
-  assign n2700 = {n2699, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2701 = n2700[29:24]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
-  assign n2702 = n2698 | n2701;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2703 = thermocodes[32:30]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
-  assign n2704 = ~n2703;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2705 = thermocodes[35:33]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2706 = temp_orresult[29:24]; // extract
-  assign n2707 = eval_orresult_offset_comp[95:36]; // extract
-  assign n2708 = {n2707, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2709 = n2708[35:30]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
-  assign n2710 = n2706 | n2709;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2711 = thermocodes[38:36]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
-  assign n2712 = ~n2711;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2713 = thermocodes[41:39]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2714 = temp_orresult[35:30]; // extract
-  assign n2715 = eval_orresult_offset_comp[95:42]; // extract
-  assign n2716 = {n2715, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2717 = n2716[41:36]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
-  assign n2718 = n2714 | n2717;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2719 = thermocodes[44:42]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
-  assign n2720 = ~n2719;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2721 = thermocodes[47:45]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2722 = temp_orresult[41:36]; // extract
-  assign n2723 = eval_orresult_offset_comp[95:48]; // extract
-  assign n2724 = {n2723, n2721, n2720, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2725 = n2724[47:42]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
-  assign n2726 = n2722 | n2725;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2727 = thermocodes[50:48]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
-  assign n2728 = ~n2727;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2729 = thermocodes[53:51]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2730 = temp_orresult[47:42]; // extract
-  assign n2731 = eval_orresult_offset_comp[95:54]; // extract
-  assign n2732 = {n2731, n2729, n2728, n2721, n2720, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2733 = n2732[53:48]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
-  assign n2734 = n2730 | n2733;
-  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2735 = thermocodes[56:54]; // extract
+  assign n2735 = thermocodes[8:6]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
   assign n2736 = ~n2735;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2737 = thermocodes[59:57]; // extract
+  assign n2737 = thermocodes[11:9]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2738 = temp_orresult[53:48]; // extract
-  assign n2739 = eval_orresult_offset_comp[95:60]; // extract
-  assign n2740 = {n2739, n2737, n2736, n2729, n2728, n2721, n2720, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
+  assign n2738 = temp_orresult[5:0]; // extract
+  assign n2739 = eval_orresult_offset_comp[95:12]; // extract
+  assign n2740 = {n2739, n2737, n2736, n2731, n2730};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2741 = n2740[59:54]; // extract
+  assign n2741 = n2740[11:6]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
   assign n2742 = n2738 | n2741;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2743 = thermocodes[62:60]; // extract
+  assign n2743 = thermocodes[14:12]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
   assign n2744 = ~n2743;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2745 = thermocodes[65:63]; // extract
+  assign n2745 = thermocodes[17:15]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2746 = temp_orresult[59:54]; // extract
-  assign n2747 = eval_orresult_offset_comp[95:66]; // extract
-  assign n2748 = {n2747, n2745, n2744, n2737, n2736, n2729, n2728, n2721, n2720, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
+  assign n2746 = temp_orresult[11:6]; // extract
+  assign n2747 = eval_orresult_offset_comp[95:18]; // extract
+  assign n2748 = {n2747, n2745, n2744, n2737, n2736, n2731, n2730};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2749 = n2748[65:60]; // extract
+  assign n2749 = n2748[17:12]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
   assign n2750 = n2746 | n2749;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2751 = thermocodes[68:66]; // extract
+  assign n2751 = thermocodes[20:18]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
   assign n2752 = ~n2751;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2753 = thermocodes[71:69]; // extract
+  assign n2753 = thermocodes[23:21]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2754 = temp_orresult[65:60]; // extract
-  assign n2755 = eval_orresult_offset_comp[95:72]; // extract
-  assign n2756 = {n2755, n2753, n2752, n2745, n2744, n2737, n2736, n2729, n2728, n2721, n2720, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
+  assign n2754 = temp_orresult[17:12]; // extract
+  assign n2755 = eval_orresult_offset_comp[95:24]; // extract
+  assign n2756 = {n2755, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2757 = n2756[71:66]; // extract
+  assign n2757 = n2756[23:18]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
   assign n2758 = n2754 | n2757;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2759 = thermocodes[74:72]; // extract
+  assign n2759 = thermocodes[26:24]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
   assign n2760 = ~n2759;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2761 = thermocodes[77:75]; // extract
+  assign n2761 = thermocodes[29:27]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2762 = temp_orresult[71:66]; // extract
-  assign n2763 = eval_orresult_offset_comp[95:78]; // extract
-  assign n2764 = {n2763, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2729, n2728, n2721, n2720, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
+  assign n2762 = temp_orresult[23:18]; // extract
+  assign n2763 = eval_orresult_offset_comp[95:30]; // extract
+  assign n2764 = {n2763, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2765 = n2764[77:72]; // extract
+  assign n2765 = n2764[29:24]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
   assign n2766 = n2762 | n2765;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2767 = thermocodes[80:78]; // extract
+  assign n2767 = thermocodes[32:30]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
   assign n2768 = ~n2767;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2769 = thermocodes[83:81]; // extract
+  assign n2769 = thermocodes[35:33]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2770 = temp_orresult[77:72]; // extract
-  assign n2771 = eval_orresult_offset_comp[95:84]; // extract
-  assign n2772 = {n2771, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2729, n2728, n2721, n2720, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
+  assign n2770 = temp_orresult[29:24]; // extract
+  assign n2771 = eval_orresult_offset_comp[95:36]; // extract
+  assign n2772 = {n2771, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2773 = n2772[83:78]; // extract
+  assign n2773 = n2772[35:30]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
   assign n2774 = n2770 | n2773;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2775 = thermocodes[86:84]; // extract
+  assign n2775 = thermocodes[38:36]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
   assign n2776 = ~n2775;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2777 = thermocodes[89:87]; // extract
+  assign n2777 = thermocodes[41:39]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2778 = temp_orresult[83:78]; // extract
-  assign n2779 = eval_orresult_offset_comp[95:90]; // extract
-  assign n2780 = {n2779, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2729, n2728, n2721, n2720, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
+  assign n2778 = temp_orresult[35:30]; // extract
+  assign n2779 = eval_orresult_offset_comp[95:42]; // extract
+  assign n2780 = {n2779, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2781 = n2780[89:84]; // extract
+  assign n2781 = n2780[41:36]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
   assign n2782 = n2778 | n2781;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
-  assign n2783 = thermocodes[92:90]; // extract
+  assign n2783 = thermocodes[44:42]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
   assign n2784 = ~n2783;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
-  assign n2785 = thermocodes[95:93]; // extract
+  assign n2785 = thermocodes[47:45]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
-  assign n2786 = temp_orresult[89:84]; // extract
-  assign n2787 = {n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2729, n2728, n2721, n2720, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
+  assign n2786 = temp_orresult[41:36]; // extract
+  assign n2787 = eval_orresult_offset_comp[95:48]; // extract
+  assign n2788 = {n2787, n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
-  assign n2788 = n2787[95:90]; // extract
+  assign n2789 = n2788[47:42]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
-  assign n2789 = n2786 | n2788;
+  assign n2790 = n2786 | n2789;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
+  assign n2791 = thermocodes[50:48]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
+  assign n2792 = ~n2791;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
+  assign n2793 = thermocodes[53:51]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
+  assign n2794 = temp_orresult[47:42]; // extract
+  assign n2795 = eval_orresult_offset_comp[95:54]; // extract
+  assign n2796 = {n2795, n2793, n2792, n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
+  assign n2797 = n2796[53:48]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
+  assign n2798 = n2794 | n2797;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
+  assign n2799 = thermocodes[56:54]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
+  assign n2800 = ~n2799;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
+  assign n2801 = thermocodes[59:57]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
+  assign n2802 = temp_orresult[53:48]; // extract
+  assign n2803 = eval_orresult_offset_comp[95:60]; // extract
+  assign n2804 = {n2803, n2801, n2800, n2793, n2792, n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
+  assign n2805 = n2804[59:54]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
+  assign n2806 = n2802 | n2805;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
+  assign n2807 = thermocodes[62:60]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
+  assign n2808 = ~n2807;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
+  assign n2809 = thermocodes[65:63]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
+  assign n2810 = temp_orresult[59:54]; // extract
+  assign n2811 = eval_orresult_offset_comp[95:66]; // extract
+  assign n2812 = {n2811, n2809, n2808, n2801, n2800, n2793, n2792, n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
+  assign n2813 = n2812[65:60]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
+  assign n2814 = n2810 | n2813;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
+  assign n2815 = thermocodes[68:66]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
+  assign n2816 = ~n2815;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
+  assign n2817 = thermocodes[71:69]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
+  assign n2818 = temp_orresult[65:60]; // extract
+  assign n2819 = eval_orresult_offset_comp[95:72]; // extract
+  assign n2820 = {n2819, n2817, n2816, n2809, n2808, n2801, n2800, n2793, n2792, n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
+  assign n2821 = n2820[71:66]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
+  assign n2822 = n2818 | n2821;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
+  assign n2823 = thermocodes[74:72]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
+  assign n2824 = ~n2823;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
+  assign n2825 = thermocodes[77:75]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
+  assign n2826 = temp_orresult[71:66]; // extract
+  assign n2827 = eval_orresult_offset_comp[95:78]; // extract
+  assign n2828 = {n2827, n2825, n2824, n2817, n2816, n2809, n2808, n2801, n2800, n2793, n2792, n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
+  assign n2829 = n2828[77:72]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
+  assign n2830 = n2826 | n2829;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
+  assign n2831 = thermocodes[80:78]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
+  assign n2832 = ~n2831;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
+  assign n2833 = thermocodes[83:81]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
+  assign n2834 = temp_orresult[77:72]; // extract
+  assign n2835 = eval_orresult_offset_comp[95:84]; // extract
+  assign n2836 = {n2835, n2833, n2832, n2825, n2824, n2817, n2816, n2809, n2808, n2801, n2800, n2793, n2792, n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
+  assign n2837 = n2836[83:78]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
+  assign n2838 = n2834 | n2837;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
+  assign n2839 = thermocodes[86:84]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
+  assign n2840 = ~n2839;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
+  assign n2841 = thermocodes[89:87]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
+  assign n2842 = temp_orresult[83:78]; // extract
+  assign n2843 = eval_orresult_offset_comp[95:90]; // extract
+  assign n2844 = {n2843, n2841, n2840, n2833, n2832, n2825, n2824, n2817, n2816, n2809, n2808, n2801, n2800, n2793, n2792, n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
+  assign n2845 = n2844[89:84]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
+  assign n2846 = n2842 | n2845;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:73  */
+  assign n2847 = thermocodes[92:90]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:146:55  */
+  assign n2848 = ~n2847;
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:147:79  */
+  assign n2849 = thermocodes[95:93]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:40  */
+  assign n2850 = temp_orresult[89:84]; // extract
+  assign n2851 = {n2849, n2848, n2841, n2840, n2833, n2832, n2825, n2824, n2817, n2816, n2809, n2808, n2801, n2800, n2793, n2792, n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:60  */
+  assign n2852 = n2851[95:90]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:148:46  */
+  assign n2853 = n2850 | n2852;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:151:30  */
-  assign n2790 = temp_orresult[95:90]; // extract
-  assign n2792 = {n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2729, n2728, n2721, n2720, n2713, n2712, n2705, n2704, n2697, n2696, n2689, n2688, n2681, n2680, n2673, n2672, n2667, n2666};
+  assign n2854 = temp_orresult[95:90]; // extract
+  assign n2856 = {n2849, n2848, n2841, n2840, n2833, n2832, n2825, n2824, n2817, n2816, n2809, n2808, n2801, n2800, n2793, n2792, n2785, n2784, n2777, n2776, n2769, n2768, n2761, n2760, n2753, n2752, n2745, n2744, n2737, n2736, n2731, n2730};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:160:54  */
-  assign n2794 = orresult[0]; // extract
+  assign n2858 = orresult[0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:160:54  */
-  assign n2795 = orresult[1]; // extract
+  assign n2859 = orresult[1]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:160:54  */
-  assign n2796 = orresult[2]; // extract
+  assign n2860 = orresult[2]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:164:3  */
   priority_encoder_3_3 priority_encoder_0 (
     .clock_i(clock_i),
@@ -1249,36 +1249,36 @@ module weyls_discrepancy_8_3_6
   priority_encoder_3_3 priority_encoder_1 (
     .clock_i(clock_i),
     .reset_i(reset_i),
-    .code_i(n2799),
+    .code_i(n2863),
     .bin_o(weylsd_pos));
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:187:24  */
-  assign n2799 = orresult[5:3]; // extract
+  assign n2863 = orresult[5:3]; // extract
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:194:36  */
-  assign n2801 = weylsd_neg + weylsd_pos;
+  assign n2865 = weylsd_neg + weylsd_pos;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:199:36  */
-  assign n2802 = sync_weylsd_strb[1]; // extract
-  assign n2803 = {n2660, buf_reg, n2661};
-  assign n2804 = {\gen_spike_2_tc_n15_spike_2_tc.thermo_o , \gen_spike_2_tc_n14_spike_2_tc.thermo_o , \gen_spike_2_tc_n13_spike_2_tc.thermo_o , \gen_spike_2_tc_n12_spike_2_tc.thermo_o , \gen_spike_2_tc_n11_spike_2_tc.thermo_o , \gen_spike_2_tc_n10_spike_2_tc.thermo_o , \gen_spike_2_tc_n9_spike_2_tc.thermo_o , \gen_spike_2_tc_n8_spike_2_tc.thermo_o , \gen_spike_2_tc_n7_spike_2_tc.thermo_o , \gen_spike_2_tc_n6_spike_2_tc.thermo_o , \gen_spike_2_tc_n5_spike_2_tc.thermo_o , \gen_spike_2_tc_n4_spike_2_tc.thermo_o , \gen_spike_2_tc_n3_spike_2_tc.thermo_o , \gen_spike_2_tc_n2_spike_2_tc.thermo_o , \gen_spike_2_tc_n1_spike_2_tc.thermo_o , 6'b000111};
-  assign n2805 = {n2794, n2795, n2796};
-  assign n2806 = {n2789, n2782, n2774, n2766, n2758, n2750, n2742, n2734, n2726, n2718, n2710, n2702, n2694, n2686, n2678, n2670};
+  assign n2866 = sync_weylsd_strb[1]; // extract
+  assign n2867 = {n2724, buf_reg, n2725};
+  assign n2868 = {\gen_spike_2_tc_n15_spike_2_tc.thermo_o , \gen_spike_2_tc_n14_spike_2_tc.thermo_o , \gen_spike_2_tc_n13_spike_2_tc.thermo_o , \gen_spike_2_tc_n12_spike_2_tc.thermo_o , \gen_spike_2_tc_n11_spike_2_tc.thermo_o , \gen_spike_2_tc_n10_spike_2_tc.thermo_o , \gen_spike_2_tc_n9_spike_2_tc.thermo_o , \gen_spike_2_tc_n8_spike_2_tc.thermo_o , \gen_spike_2_tc_n7_spike_2_tc.thermo_o , \gen_spike_2_tc_n6_spike_2_tc.thermo_o , \gen_spike_2_tc_n5_spike_2_tc.thermo_o , \gen_spike_2_tc_n4_spike_2_tc.thermo_o , \gen_spike_2_tc_n3_spike_2_tc.thermo_o , \gen_spike_2_tc_n2_spike_2_tc.thermo_o , \gen_spike_2_tc_n1_spike_2_tc.thermo_o , 6'b000111};
+  assign n2869 = {n2858, n2859, n2860};
+  assign n2870 = {n2853, n2846, n2838, n2830, n2822, n2814, n2806, n2798, n2790, n2782, n2774, n2766, n2758, n2750, n2742, n2734};
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:91:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2809 <= 6'b000000;
+      n2873 <= 6'b000000;
     else
-      n2809 <= next_buf_reg;
+      n2873 <= next_buf_reg;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:91:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2810 <= 2'b00;
+      n2874 <= 2'b00;
     else
-      n2810 <= n2602;
+      n2874 <= n2666;
   /* ../../vhdl/adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd:91:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2811 <= 3'b000;
+      n2875 <= 3'b000;
     else
-      n2811 <= next_weylsd;
+      n2875 <= next_weylsd;
 endmodule
 
 module spike_shift_reg_19_18
@@ -1300,207 +1300,147 @@ module spike_shift_reg_19_18
   wire [14:0] next_overflow_marker;
   wire spikes_strb;
   wire next_spikes_strb;
-  wire [14:0] n2201;
-  wire [1:0] n2202;
-  wire [17:0] n2203;
-  wire n2204;
-  wire [1:0] n2205;
-  wire [17:0] n2206;
-  wire n2207;
-  wire [1:0] n2208;
-  wire [17:0] n2209;
-  wire n2210;
-  wire [1:0] n2211;
-  wire [17:0] n2212;
-  wire n2213;
-  wire [1:0] n2214;
-  wire [17:0] n2215;
-  wire n2216;
-  wire [1:0] n2217;
-  wire [17:0] n2218;
-  wire n2219;
-  wire [1:0] n2220;
-  wire [17:0] n2221;
-  wire n2222;
-  wire [1:0] n2223;
-  wire [17:0] n2224;
-  wire n2225;
-  wire [1:0] n2226;
-  wire [17:0] n2227;
-  wire n2228;
-  wire [1:0] n2229;
-  wire [17:0] n2230;
-  wire n2231;
-  wire [1:0] n2232;
-  wire [17:0] n2233;
-  wire n2234;
-  wire [1:0] n2235;
-  wire [17:0] n2236;
-  wire n2237;
-  wire [1:0] n2238;
-  wire [17:0] n2239;
-  wire n2240;
-  wire [1:0] n2241;
-  wire [17:0] n2242;
-  wire n2243;
-  wire n2244;
-  wire [18:0] n2246;
-  wire [18:0] n2247;
-  wire n2248;
-  wire [1:0] n2250;
-  wire [1:0] n2251;
-  wire [18:0] n2252;
-  wire [18:0] n2253;
-  wire n2254;
-  wire [1:0] n2256;
-  wire [1:0] n2257;
-  wire [18:0] n2258;
-  wire [18:0] n2259;
-  wire n2260;
-  wire [1:0] n2262;
-  wire [1:0] n2263;
-  wire [18:0] n2264;
-  wire [18:0] n2265;
-  wire n2266;
-  wire [1:0] n2268;
+  wire [14:0] n2265;
+  wire [1:0] n2266;
+  wire [17:0] n2267;
+  wire n2268;
   wire [1:0] n2269;
-  wire [18:0] n2270;
-  wire [18:0] n2271;
-  wire n2272;
-  wire [1:0] n2274;
+  wire [17:0] n2270;
+  wire n2271;
+  wire [1:0] n2272;
+  wire [17:0] n2273;
+  wire n2274;
   wire [1:0] n2275;
-  wire [18:0] n2276;
-  wire [18:0] n2277;
-  wire n2278;
-  wire [1:0] n2280;
+  wire [17:0] n2276;
+  wire n2277;
+  wire [1:0] n2278;
+  wire [17:0] n2279;
+  wire n2280;
   wire [1:0] n2281;
-  wire [18:0] n2282;
-  wire [18:0] n2283;
-  wire n2284;
-  wire [1:0] n2286;
+  wire [17:0] n2282;
+  wire n2283;
+  wire [1:0] n2284;
+  wire [17:0] n2285;
+  wire n2286;
   wire [1:0] n2287;
-  wire [18:0] n2288;
-  wire [18:0] n2289;
-  wire n2290;
-  wire [1:0] n2292;
+  wire [17:0] n2288;
+  wire n2289;
+  wire [1:0] n2290;
+  wire [17:0] n2291;
+  wire n2292;
   wire [1:0] n2293;
-  wire [18:0] n2294;
-  wire [18:0] n2295;
-  wire n2296;
-  wire [1:0] n2298;
+  wire [17:0] n2294;
+  wire n2295;
+  wire [1:0] n2296;
+  wire [17:0] n2297;
+  wire n2298;
   wire [1:0] n2299;
-  wire [18:0] n2300;
-  wire [18:0] n2301;
-  wire n2302;
-  wire [1:0] n2304;
+  wire [17:0] n2300;
+  wire n2301;
+  wire [1:0] n2302;
+  wire [17:0] n2303;
+  wire n2304;
   wire [1:0] n2305;
-  wire [18:0] n2306;
-  wire [18:0] n2307;
+  wire [17:0] n2306;
+  wire n2307;
   wire n2308;
-  wire [1:0] n2310;
-  wire [1:0] n2311;
-  wire [18:0] n2312;
-  wire [18:0] n2313;
-  wire n2314;
-  wire [1:0] n2316;
-  wire [1:0] n2317;
-  wire [18:0] n2318;
-  wire [18:0] n2319;
-  wire n2320;
-  wire [1:0] n2322;
-  wire [1:0] n2323;
-  wire [18:0] n2324;
-  wire [18:0] n2325;
-  wire n2326;
-  wire [1:0] n2328;
-  wire [1:0] n2329;
-  wire [18:0] n2330;
-  wire [18:0] n2331;
-  wire n2332;
-  wire [1:0] n2334;
-  wire [1:0] n2335;
-  wire [269:0] n2336;
-  wire [269:0] n2337;
-  wire [29:0] n2338;
-  wire [29:0] n2339;
-  wire [29:0] n2340;
-  wire [14:0] n2341;
-  wire [14:0] n2342;
-  wire n2345;
-  reg [284:0] end_of_window_logic_virt_win_end;
-  reg [14:0] end_of_window_logic_carry;
-  wire [17:0] n2351;
+  wire [18:0] n2310;
+  wire [18:0] n2311;
+  wire n2312;
+  wire [1:0] n2314;
+  wire [1:0] n2315;
+  wire [18:0] n2316;
+  wire [18:0] n2317;
+  wire n2318;
+  wire [1:0] n2320;
+  wire [1:0] n2321;
+  wire [18:0] n2322;
+  wire [18:0] n2323;
+  wire n2324;
+  wire [1:0] n2326;
+  wire [1:0] n2327;
+  wire [18:0] n2328;
+  wire [18:0] n2329;
+  wire n2330;
+  wire [1:0] n2332;
+  wire [1:0] n2333;
+  wire [18:0] n2334;
+  wire [18:0] n2335;
+  wire n2336;
+  wire [1:0] n2338;
+  wire [1:0] n2339;
+  wire [18:0] n2340;
+  wire [18:0] n2341;
+  wire n2342;
+  wire [1:0] n2344;
+  wire [1:0] n2345;
+  wire [18:0] n2346;
+  wire [18:0] n2347;
+  wire n2348;
+  wire [1:0] n2350;
+  wire [1:0] n2351;
   wire [18:0] n2352;
   wire [18:0] n2353;
   wire n2354;
-  wire [265:0] n2356;
-  wire [284:0] n2357;
-  wire n2358;
-  wire n2359;
-  wire [13:0] n2360;
-  wire [14:0] n2361;
-  wire n2362;
-  wire [265:0] n2363;
-  wire [284:0] n2364;
-  wire [17:0] n2365;
-  wire [18:0] n2366;
-  wire [17:0] n2367;
-  wire [18:0] n2368;
-  wire [18:0] n2369;
-  wire n2370;
-  wire [246:0] n2372;
-  wire [284:0] n2373;
-  wire n2374;
-  wire n2375;
-  wire [12:0] n2376;
-  wire [14:0] n2377;
+  wire [1:0] n2356;
+  wire [1:0] n2357;
+  wire [18:0] n2358;
+  wire [18:0] n2359;
+  wire n2360;
+  wire [1:0] n2362;
+  wire [1:0] n2363;
+  wire [18:0] n2364;
+  wire [18:0] n2365;
+  wire n2366;
+  wire [1:0] n2368;
+  wire [1:0] n2369;
+  wire [18:0] n2370;
+  wire [18:0] n2371;
+  wire n2372;
+  wire [1:0] n2374;
+  wire [1:0] n2375;
+  wire [18:0] n2376;
+  wire [18:0] n2377;
   wire n2378;
-  wire [246:0] n2379;
-  wire [284:0] n2380;
-  wire [17:0] n2381;
+  wire [1:0] n2380;
+  wire [1:0] n2381;
   wire [18:0] n2382;
-  wire [17:0] n2383;
-  wire [18:0] n2384;
-  wire [18:0] n2385;
-  wire n2386;
-  wire [227:0] n2388;
-  wire [284:0] n2389;
+  wire [18:0] n2383;
+  wire n2384;
+  wire [1:0] n2386;
+  wire [1:0] n2387;
+  wire [18:0] n2388;
+  wire [18:0] n2389;
   wire n2390;
-  wire n2391;
-  wire [11:0] n2392;
-  wire [14:0] n2393;
-  wire n2394;
-  wire [227:0] n2395;
-  wire [284:0] n2396;
-  wire [17:0] n2397;
-  wire [18:0] n2398;
-  wire [17:0] n2399;
-  wire [18:0] n2400;
-  wire [18:0] n2401;
-  wire n2402;
-  wire [208:0] n2404;
-  wire [284:0] n2405;
-  wire n2406;
-  wire n2407;
-  wire [10:0] n2408;
-  wire [14:0] n2409;
-  wire n2410;
-  wire [208:0] n2411;
-  wire [284:0] n2412;
-  wire [17:0] n2413;
-  wire [18:0] n2414;
+  wire [1:0] n2392;
+  wire [1:0] n2393;
+  wire [18:0] n2394;
+  wire [18:0] n2395;
+  wire n2396;
+  wire [1:0] n2398;
+  wire [1:0] n2399;
+  wire [269:0] n2400;
+  wire [269:0] n2401;
+  wire [29:0] n2402;
+  wire [29:0] n2403;
+  wire [29:0] n2404;
+  wire [14:0] n2405;
+  wire [14:0] n2406;
+  wire n2409;
+  reg [284:0] end_of_window_logic_virt_win_end;
+  reg [14:0] end_of_window_logic_carry;
   wire [17:0] n2415;
   wire [18:0] n2416;
   wire [18:0] n2417;
   wire n2418;
-  wire [189:0] n2420;
+  wire [265:0] n2420;
   wire [284:0] n2421;
   wire n2422;
   wire n2423;
-  wire [9:0] n2424;
+  wire [13:0] n2424;
   wire [14:0] n2425;
   wire n2426;
-  wire [189:0] n2427;
+  wire [265:0] n2427;
   wire [284:0] n2428;
   wire [17:0] n2429;
   wire [18:0] n2430;
@@ -1508,14 +1448,14 @@ module spike_shift_reg_19_18
   wire [18:0] n2432;
   wire [18:0] n2433;
   wire n2434;
-  wire [170:0] n2436;
+  wire [246:0] n2436;
   wire [284:0] n2437;
   wire n2438;
   wire n2439;
-  wire [8:0] n2440;
+  wire [12:0] n2440;
   wire [14:0] n2441;
   wire n2442;
-  wire [170:0] n2443;
+  wire [246:0] n2443;
   wire [284:0] n2444;
   wire [17:0] n2445;
   wire [18:0] n2446;
@@ -1523,14 +1463,14 @@ module spike_shift_reg_19_18
   wire [18:0] n2448;
   wire [18:0] n2449;
   wire n2450;
-  wire [151:0] n2452;
+  wire [227:0] n2452;
   wire [284:0] n2453;
   wire n2454;
   wire n2455;
-  wire [7:0] n2456;
+  wire [11:0] n2456;
   wire [14:0] n2457;
   wire n2458;
-  wire [151:0] n2459;
+  wire [227:0] n2459;
   wire [284:0] n2460;
   wire [17:0] n2461;
   wire [18:0] n2462;
@@ -1538,14 +1478,14 @@ module spike_shift_reg_19_18
   wire [18:0] n2464;
   wire [18:0] n2465;
   wire n2466;
-  wire [132:0] n2468;
+  wire [208:0] n2468;
   wire [284:0] n2469;
   wire n2470;
   wire n2471;
-  wire [6:0] n2472;
+  wire [10:0] n2472;
   wire [14:0] n2473;
   wire n2474;
-  wire [132:0] n2475;
+  wire [208:0] n2475;
   wire [284:0] n2476;
   wire [17:0] n2477;
   wire [18:0] n2478;
@@ -1553,14 +1493,14 @@ module spike_shift_reg_19_18
   wire [18:0] n2480;
   wire [18:0] n2481;
   wire n2482;
-  wire [113:0] n2484;
+  wire [189:0] n2484;
   wire [284:0] n2485;
   wire n2486;
   wire n2487;
-  wire [5:0] n2488;
+  wire [9:0] n2488;
   wire [14:0] n2489;
   wire n2490;
-  wire [113:0] n2491;
+  wire [189:0] n2491;
   wire [284:0] n2492;
   wire [17:0] n2493;
   wire [18:0] n2494;
@@ -1568,14 +1508,14 @@ module spike_shift_reg_19_18
   wire [18:0] n2496;
   wire [18:0] n2497;
   wire n2498;
-  wire [94:0] n2500;
+  wire [170:0] n2500;
   wire [284:0] n2501;
   wire n2502;
   wire n2503;
-  wire [4:0] n2504;
+  wire [8:0] n2504;
   wire [14:0] n2505;
   wire n2506;
-  wire [94:0] n2507;
+  wire [170:0] n2507;
   wire [284:0] n2508;
   wire [17:0] n2509;
   wire [18:0] n2510;
@@ -1583,14 +1523,14 @@ module spike_shift_reg_19_18
   wire [18:0] n2512;
   wire [18:0] n2513;
   wire n2514;
-  wire [75:0] n2516;
+  wire [151:0] n2516;
   wire [284:0] n2517;
   wire n2518;
   wire n2519;
-  wire [3:0] n2520;
+  wire [7:0] n2520;
   wire [14:0] n2521;
   wire n2522;
-  wire [75:0] n2523;
+  wire [151:0] n2523;
   wire [284:0] n2524;
   wire [17:0] n2525;
   wire [18:0] n2526;
@@ -1598,14 +1538,14 @@ module spike_shift_reg_19_18
   wire [18:0] n2528;
   wire [18:0] n2529;
   wire n2530;
-  wire [56:0] n2532;
+  wire [132:0] n2532;
   wire [284:0] n2533;
   wire n2534;
   wire n2535;
-  wire [2:0] n2536;
+  wire [6:0] n2536;
   wire [14:0] n2537;
   wire n2538;
-  wire [56:0] n2539;
+  wire [132:0] n2539;
   wire [284:0] n2540;
   wire [17:0] n2541;
   wire [18:0] n2542;
@@ -1613,14 +1553,14 @@ module spike_shift_reg_19_18
   wire [18:0] n2544;
   wire [18:0] n2545;
   wire n2546;
-  wire [37:0] n2548;
+  wire [113:0] n2548;
   wire [284:0] n2549;
   wire n2550;
   wire n2551;
-  wire [1:0] n2552;
+  wire [5:0] n2552;
   wire [14:0] n2553;
   wire n2554;
-  wire [37:0] n2555;
+  wire [113:0] n2555;
   wire [284:0] n2556;
   wire [17:0] n2557;
   wire [18:0] n2558;
@@ -1628,14 +1568,14 @@ module spike_shift_reg_19_18
   wire [18:0] n2560;
   wire [18:0] n2561;
   wire n2562;
-  wire [18:0] n2564;
+  wire [94:0] n2564;
   wire [284:0] n2565;
   wire n2566;
   wire n2567;
-  wire n2568;
+  wire [4:0] n2568;
   wire [14:0] n2569;
   wire n2570;
-  wire [18:0] n2571;
+  wire [94:0] n2571;
   wire [284:0] n2572;
   wire [17:0] n2573;
   wire [18:0] n2574;
@@ -1643,670 +1583,730 @@ module spike_shift_reg_19_18
   wire [18:0] n2576;
   wire [18:0] n2577;
   wire n2578;
-  wire [284:0] n2580;
-  wire n2581;
+  wire [75:0] n2580;
+  wire [284:0] n2581;
   wire n2582;
-  wire [14:0] n2583;
-  wire n2584;
-  wire [284:0] n2585;
-  wire [17:0] n2586;
-  wire [18:0] n2587;
-  wire [284:0] n2589;
-  wire [14:0] n2590;
-  wire [284:0] n2591;
-  reg [269:0] n2592;
-  reg [29:0] n2593;
-  reg [14:0] n2594;
-  reg n2595;
+  wire n2583;
+  wire [3:0] n2584;
+  wire [14:0] n2585;
+  wire n2586;
+  wire [75:0] n2587;
+  wire [284:0] n2588;
+  wire [17:0] n2589;
+  wire [18:0] n2590;
+  wire [17:0] n2591;
+  wire [18:0] n2592;
+  wire [18:0] n2593;
+  wire n2594;
+  wire [56:0] n2596;
+  wire [284:0] n2597;
+  wire n2598;
+  wire n2599;
+  wire [2:0] n2600;
+  wire [14:0] n2601;
+  wire n2602;
+  wire [56:0] n2603;
+  wire [284:0] n2604;
+  wire [17:0] n2605;
+  wire [18:0] n2606;
+  wire [17:0] n2607;
+  wire [18:0] n2608;
+  wire [18:0] n2609;
+  wire n2610;
+  wire [37:0] n2612;
+  wire [284:0] n2613;
+  wire n2614;
+  wire n2615;
+  wire [1:0] n2616;
+  wire [14:0] n2617;
+  wire n2618;
+  wire [37:0] n2619;
+  wire [284:0] n2620;
+  wire [17:0] n2621;
+  wire [18:0] n2622;
+  wire [17:0] n2623;
+  wire [18:0] n2624;
+  wire [18:0] n2625;
+  wire n2626;
+  wire [18:0] n2628;
+  wire [284:0] n2629;
+  wire n2630;
+  wire n2631;
+  wire n2632;
+  wire [14:0] n2633;
+  wire n2634;
+  wire [18:0] n2635;
+  wire [284:0] n2636;
+  wire [17:0] n2637;
+  wire [18:0] n2638;
+  wire [17:0] n2639;
+  wire [18:0] n2640;
+  wire [18:0] n2641;
+  wire n2642;
+  wire [284:0] n2644;
+  wire n2645;
+  wire n2646;
+  wire [14:0] n2647;
+  wire n2648;
+  wire [284:0] n2649;
+  wire [17:0] n2650;
+  wire [18:0] n2651;
+  wire [284:0] n2653;
+  wire [14:0] n2654;
+  wire [284:0] n2655;
+  reg [269:0] n2656;
+  reg [29:0] n2657;
+  reg [14:0] n2658;
+  reg n2659;
   assign spikes_o = spikes; //(module output)
   assign spikes_strb_o = spikes_strb; //(module output)
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:46:8  */
-  assign timestamps = n2592; // (signal)
+  assign timestamps = n2656; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:47:8  */
-  assign next_timestamps = n2337; // (signal)
+  assign next_timestamps = n2401; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:48:8  */
-  assign spikes = n2593; // (signal)
+  assign spikes = n2657; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:49:8  */
-  assign next_spikes = n2340; // (signal)
+  assign next_spikes = n2404; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:50:8  */
-  assign win_end = n2591; // (signal)
+  assign win_end = n2655; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:51:8  */
-  assign overflow_marker = n2594; // (signal)
+  assign overflow_marker = n2658; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:52:8  */
-  assign next_overflow_marker = n2342; // (signal)
+  assign next_overflow_marker = n2406; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:53:8  */
-  assign spikes_strb = n2595; // (signal)
+  assign spikes_strb = n2659; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:54:8  */
-  assign next_spikes_strb = n2345; // (signal)
+  assign next_spikes_strb = n2409; // (signal)
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:83:5  */
-  assign n2201 = overflow_strb_i ? 15'b111111111111111 : overflow_marker;
+  assign n2265 = overflow_strb_i ? 15'b111111111111111 : overflow_marker;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2202 = spikes[1:0]; // extract
+  assign n2266 = spikes[1:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2203 = timestamps[17:0]; // extract
+  assign n2267 = timestamps[17:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2204 = overflow_marker[0]; // extract
+  assign n2268 = overflow_marker[0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2205 = spikes[3:2]; // extract
+  assign n2269 = spikes[3:2]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2206 = timestamps[35:18]; // extract
+  assign n2270 = timestamps[35:18]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2207 = overflow_marker[1]; // extract
+  assign n2271 = overflow_marker[1]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2208 = spikes[5:4]; // extract
+  assign n2272 = spikes[5:4]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2209 = timestamps[53:36]; // extract
+  assign n2273 = timestamps[53:36]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2210 = overflow_marker[2]; // extract
+  assign n2274 = overflow_marker[2]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2211 = spikes[7:6]; // extract
+  assign n2275 = spikes[7:6]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2212 = timestamps[71:54]; // extract
+  assign n2276 = timestamps[71:54]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2213 = overflow_marker[3]; // extract
+  assign n2277 = overflow_marker[3]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2214 = spikes[9:8]; // extract
+  assign n2278 = spikes[9:8]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2215 = timestamps[89:72]; // extract
+  assign n2279 = timestamps[89:72]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2216 = overflow_marker[4]; // extract
+  assign n2280 = overflow_marker[4]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2217 = spikes[11:10]; // extract
+  assign n2281 = spikes[11:10]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2218 = timestamps[107:90]; // extract
+  assign n2282 = timestamps[107:90]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2219 = overflow_marker[5]; // extract
+  assign n2283 = overflow_marker[5]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2220 = spikes[13:12]; // extract
+  assign n2284 = spikes[13:12]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2221 = timestamps[125:108]; // extract
+  assign n2285 = timestamps[125:108]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2222 = overflow_marker[6]; // extract
+  assign n2286 = overflow_marker[6]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2223 = spikes[15:14]; // extract
+  assign n2287 = spikes[15:14]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2224 = timestamps[143:126]; // extract
+  assign n2288 = timestamps[143:126]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2225 = overflow_marker[7]; // extract
+  assign n2289 = overflow_marker[7]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2226 = spikes[17:16]; // extract
+  assign n2290 = spikes[17:16]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2227 = timestamps[161:144]; // extract
+  assign n2291 = timestamps[161:144]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2228 = overflow_marker[8]; // extract
+  assign n2292 = overflow_marker[8]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2229 = spikes[19:18]; // extract
+  assign n2293 = spikes[19:18]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2230 = timestamps[179:162]; // extract
+  assign n2294 = timestamps[179:162]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2231 = overflow_marker[9]; // extract
+  assign n2295 = overflow_marker[9]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2232 = spikes[21:20]; // extract
+  assign n2296 = spikes[21:20]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2233 = timestamps[197:180]; // extract
+  assign n2297 = timestamps[197:180]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2234 = overflow_marker[10]; // extract
+  assign n2298 = overflow_marker[10]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2235 = spikes[23:22]; // extract
+  assign n2299 = spikes[23:22]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2236 = timestamps[215:198]; // extract
+  assign n2300 = timestamps[215:198]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2237 = overflow_marker[11]; // extract
+  assign n2301 = overflow_marker[11]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2238 = spikes[25:24]; // extract
+  assign n2302 = spikes[25:24]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2239 = timestamps[233:216]; // extract
+  assign n2303 = timestamps[233:216]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2240 = overflow_marker[12]; // extract
+  assign n2304 = overflow_marker[12]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:90:33  */
-  assign n2241 = spikes[27:26]; // extract
+  assign n2305 = spikes[27:26]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:91:41  */
-  assign n2242 = timestamps[251:234]; // extract
+  assign n2306 = timestamps[251:234]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:92:51  */
-  assign n2243 = overflow_marker[13]; // extract
+  assign n2307 = overflow_marker[13]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:96:28  */
-  assign n2244 = ~spike_i;
+  assign n2308 = ~spike_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2246 = win_end[18:0]; // extract
+  assign n2310 = win_end[18:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2247 = {1'b0, curr_time_i};  //  uext
+  assign n2311 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2248 = $unsigned(n2247) >= $unsigned(n2246);
-  assign n2250 = spikes[1:0]; // extract
+  assign n2312 = $unsigned(n2311) >= $unsigned(n2310);
+  assign n2314 = spikes[1:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2251 = n2248 ? 2'b00 : n2250;
+  assign n2315 = n2312 ? 2'b00 : n2314;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2252 = win_end[37:19]; // extract
+  assign n2316 = win_end[37:19]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2253 = {1'b0, curr_time_i};  //  uext
+  assign n2317 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2254 = $unsigned(n2253) >= $unsigned(n2252);
-  assign n2256 = spikes[3:2]; // extract
+  assign n2318 = $unsigned(n2317) >= $unsigned(n2316);
+  assign n2320 = spikes[3:2]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2257 = n2254 ? 2'b00 : n2256;
+  assign n2321 = n2318 ? 2'b00 : n2320;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2258 = win_end[56:38]; // extract
+  assign n2322 = win_end[56:38]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2259 = {1'b0, curr_time_i};  //  uext
+  assign n2323 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2260 = $unsigned(n2259) >= $unsigned(n2258);
-  assign n2262 = spikes[5:4]; // extract
+  assign n2324 = $unsigned(n2323) >= $unsigned(n2322);
+  assign n2326 = spikes[5:4]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2263 = n2260 ? 2'b00 : n2262;
+  assign n2327 = n2324 ? 2'b00 : n2326;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2264 = win_end[75:57]; // extract
+  assign n2328 = win_end[75:57]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2265 = {1'b0, curr_time_i};  //  uext
+  assign n2329 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2266 = $unsigned(n2265) >= $unsigned(n2264);
-  assign n2268 = spikes[7:6]; // extract
+  assign n2330 = $unsigned(n2329) >= $unsigned(n2328);
+  assign n2332 = spikes[7:6]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2269 = n2266 ? 2'b00 : n2268;
+  assign n2333 = n2330 ? 2'b00 : n2332;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2270 = win_end[94:76]; // extract
+  assign n2334 = win_end[94:76]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2271 = {1'b0, curr_time_i};  //  uext
+  assign n2335 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2272 = $unsigned(n2271) >= $unsigned(n2270);
-  assign n2274 = spikes[9:8]; // extract
+  assign n2336 = $unsigned(n2335) >= $unsigned(n2334);
+  assign n2338 = spikes[9:8]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2275 = n2272 ? 2'b00 : n2274;
+  assign n2339 = n2336 ? 2'b00 : n2338;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2276 = win_end[113:95]; // extract
+  assign n2340 = win_end[113:95]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2277 = {1'b0, curr_time_i};  //  uext
+  assign n2341 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2278 = $unsigned(n2277) >= $unsigned(n2276);
-  assign n2280 = spikes[11:10]; // extract
+  assign n2342 = $unsigned(n2341) >= $unsigned(n2340);
+  assign n2344 = spikes[11:10]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2281 = n2278 ? 2'b00 : n2280;
+  assign n2345 = n2342 ? 2'b00 : n2344;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2282 = win_end[132:114]; // extract
+  assign n2346 = win_end[132:114]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2283 = {1'b0, curr_time_i};  //  uext
+  assign n2347 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2284 = $unsigned(n2283) >= $unsigned(n2282);
-  assign n2286 = spikes[13:12]; // extract
+  assign n2348 = $unsigned(n2347) >= $unsigned(n2346);
+  assign n2350 = spikes[13:12]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2287 = n2284 ? 2'b00 : n2286;
+  assign n2351 = n2348 ? 2'b00 : n2350;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2288 = win_end[151:133]; // extract
+  assign n2352 = win_end[151:133]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2289 = {1'b0, curr_time_i};  //  uext
+  assign n2353 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2290 = $unsigned(n2289) >= $unsigned(n2288);
-  assign n2292 = spikes[15:14]; // extract
+  assign n2354 = $unsigned(n2353) >= $unsigned(n2352);
+  assign n2356 = spikes[15:14]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2293 = n2290 ? 2'b00 : n2292;
+  assign n2357 = n2354 ? 2'b00 : n2356;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2294 = win_end[170:152]; // extract
+  assign n2358 = win_end[170:152]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2295 = {1'b0, curr_time_i};  //  uext
+  assign n2359 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2296 = $unsigned(n2295) >= $unsigned(n2294);
-  assign n2298 = spikes[17:16]; // extract
+  assign n2360 = $unsigned(n2359) >= $unsigned(n2358);
+  assign n2362 = spikes[17:16]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2299 = n2296 ? 2'b00 : n2298;
+  assign n2363 = n2360 ? 2'b00 : n2362;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2300 = win_end[189:171]; // extract
+  assign n2364 = win_end[189:171]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2301 = {1'b0, curr_time_i};  //  uext
+  assign n2365 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2302 = $unsigned(n2301) >= $unsigned(n2300);
-  assign n2304 = spikes[19:18]; // extract
+  assign n2366 = $unsigned(n2365) >= $unsigned(n2364);
+  assign n2368 = spikes[19:18]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2305 = n2302 ? 2'b00 : n2304;
+  assign n2369 = n2366 ? 2'b00 : n2368;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2306 = win_end[208:190]; // extract
+  assign n2370 = win_end[208:190]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2307 = {1'b0, curr_time_i};  //  uext
+  assign n2371 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2308 = $unsigned(n2307) >= $unsigned(n2306);
-  assign n2310 = spikes[21:20]; // extract
+  assign n2372 = $unsigned(n2371) >= $unsigned(n2370);
+  assign n2374 = spikes[21:20]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2311 = n2308 ? 2'b00 : n2310;
+  assign n2375 = n2372 ? 2'b00 : n2374;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2312 = win_end[227:209]; // extract
+  assign n2376 = win_end[227:209]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2313 = {1'b0, curr_time_i};  //  uext
+  assign n2377 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2314 = $unsigned(n2313) >= $unsigned(n2312);
-  assign n2316 = spikes[23:22]; // extract
+  assign n2378 = $unsigned(n2377) >= $unsigned(n2376);
+  assign n2380 = spikes[23:22]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2317 = n2314 ? 2'b00 : n2316;
+  assign n2381 = n2378 ? 2'b00 : n2380;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2318 = win_end[246:228]; // extract
+  assign n2382 = win_end[246:228]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2319 = {1'b0, curr_time_i};  //  uext
+  assign n2383 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2320 = $unsigned(n2319) >= $unsigned(n2318);
-  assign n2322 = spikes[25:24]; // extract
+  assign n2384 = $unsigned(n2383) >= $unsigned(n2382);
+  assign n2386 = spikes[25:24]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2323 = n2320 ? 2'b00 : n2322;
+  assign n2387 = n2384 ? 2'b00 : n2386;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2324 = win_end[265:247]; // extract
+  assign n2388 = win_end[265:247]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2325 = {1'b0, curr_time_i};  //  uext
+  assign n2389 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2326 = $unsigned(n2325) >= $unsigned(n2324);
-  assign n2328 = spikes[27:26]; // extract
+  assign n2390 = $unsigned(n2389) >= $unsigned(n2388);
+  assign n2392 = spikes[27:26]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2329 = n2326 ? 2'b00 : n2328;
+  assign n2393 = n2390 ? 2'b00 : n2392;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:34  */
-  assign n2330 = win_end[284:266]; // extract
+  assign n2394 = win_end[284:266]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2331 = {1'b0, curr_time_i};  //  uext
+  assign n2395 = {1'b0, curr_time_i};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:24  */
-  assign n2332 = $unsigned(n2331) >= $unsigned(n2330);
-  assign n2334 = spikes[29:28]; // extract
+  assign n2396 = $unsigned(n2395) >= $unsigned(n2394);
+  assign n2398 = spikes[29:28]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:103:9  */
-  assign n2335 = n2332 ? 2'b00 : n2334;
-  assign n2336 = {n2242, n2239, n2236, n2233, n2230, n2227, n2224, n2221, n2218, n2215, n2212, n2209, n2206, n2203, curr_time_i};
+  assign n2399 = n2396 ? 2'b00 : n2398;
+  assign n2400 = {n2306, n2303, n2300, n2297, n2294, n2291, n2288, n2285, n2282, n2279, n2276, n2273, n2270, n2267, curr_time_i};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:87:5  */
-  assign n2337 = spike_strb_i ? n2336 : timestamps;
-  assign n2338 = {n2335, n2329, n2323, n2317, n2311, n2305, n2299, n2293, n2287, n2281, n2275, n2269, n2263, n2257, n2251};
-  assign n2339 = {n2241, n2238, n2235, n2232, n2229, n2226, n2223, n2220, n2217, n2214, n2211, n2208, n2205, n2202, n2244, spike_i};
+  assign n2401 = spike_strb_i ? n2400 : timestamps;
+  assign n2402 = {n2399, n2393, n2387, n2381, n2375, n2369, n2363, n2357, n2351, n2345, n2339, n2333, n2327, n2321, n2315};
+  assign n2403 = {n2305, n2302, n2299, n2296, n2293, n2290, n2287, n2284, n2281, n2278, n2275, n2272, n2269, n2266, n2308, spike_i};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:87:5  */
-  assign n2340 = spike_strb_i ? n2339 : n2338;
-  assign n2341 = {n2243, n2240, n2237, n2234, n2231, n2228, n2225, n2222, n2219, n2216, n2213, n2210, n2207, n2204, 1'b0};
+  assign n2404 = spike_strb_i ? n2403 : n2402;
+  assign n2405 = {n2307, n2304, n2301, n2298, n2295, n2292, n2289, n2286, n2283, n2280, n2277, n2274, n2271, n2268, 1'b0};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:87:5  */
-  assign n2342 = spike_strb_i ? n2341 : n2201;
+  assign n2406 = spike_strb_i ? n2405 : n2265;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:87:5  */
-  assign n2345 = spike_strb_i ? 1'b1 : 1'b0;
+  assign n2409 = spike_strb_i ? 1'b1 : 1'b0;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:113:12  */
   always @*
-    end_of_window_logic_virt_win_end = n2589; // (isignal)
+    end_of_window_logic_virt_win_end = n2653; // (isignal)
   initial
     end_of_window_logic_virt_win_end = 285'bX;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:114:12  */
   always @*
-    end_of_window_logic_carry = n2590; // (isignal)
+    end_of_window_logic_carry = n2654; // (isignal)
   initial
     end_of_window_logic_carry = 15'bX;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2351 = timestamps[17:0]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
-  assign n2352 = {1'b0, n2351};  //  uext
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
-  assign n2353 = n2352 + win_length_i;
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2354 = overflow_marker[0]; // extract
-  assign n2356 = end_of_window_logic_virt_win_end[284:19]; // extract
-  assign n2357 = {n2356, n2353};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2358 = n2357[18]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
-  assign n2359 = n2354 ? 1'b0 : n2358;
-  assign n2360 = end_of_window_logic_carry[13:0]; // extract
-  assign n2361 = {n2359, n2360};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2362 = n2361[14]; // extract
-  assign n2363 = end_of_window_logic_virt_win_end[284:19]; // extract
-  assign n2364 = {n2363, n2353};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2365 = n2364[17:0]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
-  assign n2366 = {n2362, n2365};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2367 = timestamps[35:18]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
-  assign n2368 = {1'b0, n2367};  //  uext
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
-  assign n2369 = n2368 + win_length_i;
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2370 = overflow_marker[1]; // extract
-  assign n2372 = end_of_window_logic_virt_win_end[284:38]; // extract
-  assign n2373 = {n2372, n2369, n2353};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2374 = n2373[37]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
-  assign n2375 = n2370 ? 1'b0 : n2374;
-  assign n2376 = end_of_window_logic_carry[12:0]; // extract
-  assign n2377 = {n2359, n2375, n2376};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2378 = n2377[13]; // extract
-  assign n2379 = end_of_window_logic_virt_win_end[284:38]; // extract
-  assign n2380 = {n2379, n2369, n2353};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2381 = n2380[36:19]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
-  assign n2382 = {n2378, n2381};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2383 = timestamps[53:36]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
-  assign n2384 = {1'b0, n2383};  //  uext
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
-  assign n2385 = n2384 + win_length_i;
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2386 = overflow_marker[2]; // extract
-  assign n2388 = end_of_window_logic_virt_win_end[284:57]; // extract
-  assign n2389 = {n2388, n2385, n2369, n2353};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2390 = n2389[56]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
-  assign n2391 = n2386 ? 1'b0 : n2390;
-  assign n2392 = end_of_window_logic_carry[11:0]; // extract
-  assign n2393 = {n2359, n2375, n2391, n2392};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2394 = n2393[12]; // extract
-  assign n2395 = end_of_window_logic_virt_win_end[284:57]; // extract
-  assign n2396 = {n2395, n2385, n2369, n2353};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2397 = n2396[55:38]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
-  assign n2398 = {n2394, n2397};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2399 = timestamps[71:54]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
-  assign n2400 = {1'b0, n2399};  //  uext
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
-  assign n2401 = n2400 + win_length_i;
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2402 = overflow_marker[3]; // extract
-  assign n2404 = end_of_window_logic_virt_win_end[284:76]; // extract
-  assign n2405 = {n2404, n2401, n2385, n2369, n2353};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2406 = n2405[75]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
-  assign n2407 = n2402 ? 1'b0 : n2406;
-  assign n2408 = end_of_window_logic_carry[10:0]; // extract
-  assign n2409 = {n2359, n2375, n2391, n2407, n2408};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2410 = n2409[11]; // extract
-  assign n2411 = end_of_window_logic_virt_win_end[284:76]; // extract
-  assign n2412 = {n2411, n2401, n2385, n2369, n2353};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2413 = n2412[74:57]; // extract
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
-  assign n2414 = {n2410, n2413};
-  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2415 = timestamps[89:72]; // extract
+  assign n2415 = timestamps[17:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2416 = {1'b0, n2415};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2417 = n2416 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2418 = overflow_marker[4]; // extract
-  assign n2420 = end_of_window_logic_virt_win_end[284:95]; // extract
-  assign n2421 = {n2420, n2417, n2401, n2385, n2369, n2353};
+  assign n2418 = overflow_marker[0]; // extract
+  assign n2420 = end_of_window_logic_virt_win_end[284:19]; // extract
+  assign n2421 = {n2420, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2422 = n2421[94]; // extract
+  assign n2422 = n2421[18]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
   assign n2423 = n2418 ? 1'b0 : n2422;
-  assign n2424 = end_of_window_logic_carry[9:0]; // extract
-  assign n2425 = {n2359, n2375, n2391, n2407, n2423, n2424};
+  assign n2424 = end_of_window_logic_carry[13:0]; // extract
+  assign n2425 = {n2423, n2424};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2426 = n2425[10]; // extract
-  assign n2427 = end_of_window_logic_virt_win_end[284:95]; // extract
-  assign n2428 = {n2427, n2417, n2401, n2385, n2369, n2353};
+  assign n2426 = n2425[14]; // extract
+  assign n2427 = end_of_window_logic_virt_win_end[284:19]; // extract
+  assign n2428 = {n2427, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2429 = n2428[93:76]; // extract
+  assign n2429 = n2428[17:0]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
   assign n2430 = {n2426, n2429};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2431 = timestamps[107:90]; // extract
+  assign n2431 = timestamps[35:18]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2432 = {1'b0, n2431};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2433 = n2432 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2434 = overflow_marker[5]; // extract
-  assign n2436 = end_of_window_logic_virt_win_end[284:114]; // extract
-  assign n2437 = {n2436, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2434 = overflow_marker[1]; // extract
+  assign n2436 = end_of_window_logic_virt_win_end[284:38]; // extract
+  assign n2437 = {n2436, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2438 = n2437[113]; // extract
+  assign n2438 = n2437[37]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
   assign n2439 = n2434 ? 1'b0 : n2438;
-  assign n2440 = end_of_window_logic_carry[8:0]; // extract
-  assign n2441 = {n2359, n2375, n2391, n2407, n2423, n2439, n2440};
+  assign n2440 = end_of_window_logic_carry[12:0]; // extract
+  assign n2441 = {n2423, n2439, n2440};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2442 = n2441[9]; // extract
-  assign n2443 = end_of_window_logic_virt_win_end[284:114]; // extract
-  assign n2444 = {n2443, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2442 = n2441[13]; // extract
+  assign n2443 = end_of_window_logic_virt_win_end[284:38]; // extract
+  assign n2444 = {n2443, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2445 = n2444[112:95]; // extract
+  assign n2445 = n2444[36:19]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
   assign n2446 = {n2442, n2445};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2447 = timestamps[125:108]; // extract
+  assign n2447 = timestamps[53:36]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2448 = {1'b0, n2447};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2449 = n2448 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2450 = overflow_marker[6]; // extract
-  assign n2452 = end_of_window_logic_virt_win_end[284:133]; // extract
-  assign n2453 = {n2452, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2450 = overflow_marker[2]; // extract
+  assign n2452 = end_of_window_logic_virt_win_end[284:57]; // extract
+  assign n2453 = {n2452, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2454 = n2453[132]; // extract
+  assign n2454 = n2453[56]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
   assign n2455 = n2450 ? 1'b0 : n2454;
-  assign n2456 = end_of_window_logic_carry[7:0]; // extract
-  assign n2457 = {n2359, n2375, n2391, n2407, n2423, n2439, n2455, n2456};
+  assign n2456 = end_of_window_logic_carry[11:0]; // extract
+  assign n2457 = {n2423, n2439, n2455, n2456};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2458 = n2457[8]; // extract
-  assign n2459 = end_of_window_logic_virt_win_end[284:133]; // extract
-  assign n2460 = {n2459, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2458 = n2457[12]; // extract
+  assign n2459 = end_of_window_logic_virt_win_end[284:57]; // extract
+  assign n2460 = {n2459, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2461 = n2460[131:114]; // extract
+  assign n2461 = n2460[55:38]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
   assign n2462 = {n2458, n2461};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2463 = timestamps[143:126]; // extract
+  assign n2463 = timestamps[71:54]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2464 = {1'b0, n2463};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2465 = n2464 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2466 = overflow_marker[7]; // extract
-  assign n2468 = end_of_window_logic_virt_win_end[284:152]; // extract
-  assign n2469 = {n2468, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2466 = overflow_marker[3]; // extract
+  assign n2468 = end_of_window_logic_virt_win_end[284:76]; // extract
+  assign n2469 = {n2468, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2470 = n2469[151]; // extract
+  assign n2470 = n2469[75]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
   assign n2471 = n2466 ? 1'b0 : n2470;
-  assign n2472 = end_of_window_logic_carry[6:0]; // extract
-  assign n2473 = {n2359, n2375, n2391, n2407, n2423, n2439, n2455, n2471, n2472};
+  assign n2472 = end_of_window_logic_carry[10:0]; // extract
+  assign n2473 = {n2423, n2439, n2455, n2471, n2472};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2474 = n2473[7]; // extract
-  assign n2475 = end_of_window_logic_virt_win_end[284:152]; // extract
-  assign n2476 = {n2475, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2474 = n2473[11]; // extract
+  assign n2475 = end_of_window_logic_virt_win_end[284:76]; // extract
+  assign n2476 = {n2475, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2477 = n2476[150:133]; // extract
+  assign n2477 = n2476[74:57]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
   assign n2478 = {n2474, n2477};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2479 = timestamps[161:144]; // extract
+  assign n2479 = timestamps[89:72]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2480 = {1'b0, n2479};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2481 = n2480 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2482 = overflow_marker[8]; // extract
-  assign n2484 = end_of_window_logic_virt_win_end[284:171]; // extract
-  assign n2485 = {n2484, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2482 = overflow_marker[4]; // extract
+  assign n2484 = end_of_window_logic_virt_win_end[284:95]; // extract
+  assign n2485 = {n2484, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2486 = n2485[170]; // extract
+  assign n2486 = n2485[94]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
   assign n2487 = n2482 ? 1'b0 : n2486;
-  assign n2488 = end_of_window_logic_carry[5:0]; // extract
-  assign n2489 = {n2359, n2375, n2391, n2407, n2423, n2439, n2455, n2471, n2487, n2488};
+  assign n2488 = end_of_window_logic_carry[9:0]; // extract
+  assign n2489 = {n2423, n2439, n2455, n2471, n2487, n2488};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2490 = n2489[6]; // extract
-  assign n2491 = end_of_window_logic_virt_win_end[284:171]; // extract
-  assign n2492 = {n2491, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2490 = n2489[10]; // extract
+  assign n2491 = end_of_window_logic_virt_win_end[284:95]; // extract
+  assign n2492 = {n2491, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2493 = n2492[169:152]; // extract
+  assign n2493 = n2492[93:76]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
   assign n2494 = {n2490, n2493};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2495 = timestamps[179:162]; // extract
+  assign n2495 = timestamps[107:90]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2496 = {1'b0, n2495};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2497 = n2496 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2498 = overflow_marker[9]; // extract
-  assign n2500 = end_of_window_logic_virt_win_end[284:190]; // extract
-  assign n2501 = {n2500, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2498 = overflow_marker[5]; // extract
+  assign n2500 = end_of_window_logic_virt_win_end[284:114]; // extract
+  assign n2501 = {n2500, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2502 = n2501[189]; // extract
+  assign n2502 = n2501[113]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
   assign n2503 = n2498 ? 1'b0 : n2502;
-  assign n2504 = end_of_window_logic_carry[4:0]; // extract
-  assign n2505 = {n2359, n2375, n2391, n2407, n2423, n2439, n2455, n2471, n2487, n2503, n2504};
+  assign n2504 = end_of_window_logic_carry[8:0]; // extract
+  assign n2505 = {n2423, n2439, n2455, n2471, n2487, n2503, n2504};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2506 = n2505[5]; // extract
-  assign n2507 = end_of_window_logic_virt_win_end[284:190]; // extract
-  assign n2508 = {n2507, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2506 = n2505[9]; // extract
+  assign n2507 = end_of_window_logic_virt_win_end[284:114]; // extract
+  assign n2508 = {n2507, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2509 = n2508[188:171]; // extract
+  assign n2509 = n2508[112:95]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
   assign n2510 = {n2506, n2509};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2511 = timestamps[197:180]; // extract
+  assign n2511 = timestamps[125:108]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2512 = {1'b0, n2511};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2513 = n2512 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2514 = overflow_marker[10]; // extract
-  assign n2516 = end_of_window_logic_virt_win_end[284:209]; // extract
-  assign n2517 = {n2516, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2514 = overflow_marker[6]; // extract
+  assign n2516 = end_of_window_logic_virt_win_end[284:133]; // extract
+  assign n2517 = {n2516, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2518 = n2517[208]; // extract
+  assign n2518 = n2517[132]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
   assign n2519 = n2514 ? 1'b0 : n2518;
-  assign n2520 = end_of_window_logic_carry[3:0]; // extract
-  assign n2521 = {n2359, n2375, n2391, n2407, n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2520};
+  assign n2520 = end_of_window_logic_carry[7:0]; // extract
+  assign n2521 = {n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2520};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2522 = n2521[4]; // extract
-  assign n2523 = end_of_window_logic_virt_win_end[284:209]; // extract
-  assign n2524 = {n2523, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2522 = n2521[8]; // extract
+  assign n2523 = end_of_window_logic_virt_win_end[284:133]; // extract
+  assign n2524 = {n2523, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2525 = n2524[207:190]; // extract
+  assign n2525 = n2524[131:114]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
   assign n2526 = {n2522, n2525};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2527 = timestamps[215:198]; // extract
+  assign n2527 = timestamps[143:126]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2528 = {1'b0, n2527};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2529 = n2528 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2530 = overflow_marker[11]; // extract
-  assign n2532 = end_of_window_logic_virt_win_end[284:228]; // extract
-  assign n2533 = {n2532, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2530 = overflow_marker[7]; // extract
+  assign n2532 = end_of_window_logic_virt_win_end[284:152]; // extract
+  assign n2533 = {n2532, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2534 = n2533[227]; // extract
+  assign n2534 = n2533[151]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
   assign n2535 = n2530 ? 1'b0 : n2534;
-  assign n2536 = end_of_window_logic_carry[2:0]; // extract
-  assign n2537 = {n2359, n2375, n2391, n2407, n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2536};
+  assign n2536 = end_of_window_logic_carry[6:0]; // extract
+  assign n2537 = {n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2536};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2538 = n2537[3]; // extract
-  assign n2539 = end_of_window_logic_virt_win_end[284:228]; // extract
-  assign n2540 = {n2539, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2538 = n2537[7]; // extract
+  assign n2539 = end_of_window_logic_virt_win_end[284:152]; // extract
+  assign n2540 = {n2539, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2541 = n2540[226:209]; // extract
+  assign n2541 = n2540[150:133]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
   assign n2542 = {n2538, n2541};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2543 = timestamps[233:216]; // extract
+  assign n2543 = timestamps[161:144]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2544 = {1'b0, n2543};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2545 = n2544 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2546 = overflow_marker[12]; // extract
-  assign n2548 = end_of_window_logic_virt_win_end[284:247]; // extract
-  assign n2549 = {n2548, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2546 = overflow_marker[8]; // extract
+  assign n2548 = end_of_window_logic_virt_win_end[284:171]; // extract
+  assign n2549 = {n2548, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2550 = n2549[246]; // extract
+  assign n2550 = n2549[170]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
   assign n2551 = n2546 ? 1'b0 : n2550;
-  assign n2552 = end_of_window_logic_carry[1:0]; // extract
-  assign n2553 = {n2359, n2375, n2391, n2407, n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2552};
+  assign n2552 = end_of_window_logic_carry[5:0]; // extract
+  assign n2553 = {n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2552};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2554 = n2553[2]; // extract
-  assign n2555 = end_of_window_logic_virt_win_end[284:247]; // extract
-  assign n2556 = {n2555, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2554 = n2553[6]; // extract
+  assign n2555 = end_of_window_logic_virt_win_end[284:171]; // extract
+  assign n2556 = {n2555, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2557 = n2556[245:228]; // extract
+  assign n2557 = n2556[169:152]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
   assign n2558 = {n2554, n2557};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2559 = timestamps[251:234]; // extract
+  assign n2559 = timestamps[179:162]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2560 = {1'b0, n2559};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2561 = n2560 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2562 = overflow_marker[13]; // extract
-  assign n2564 = end_of_window_logic_virt_win_end[284:266]; // extract
-  assign n2565 = {n2564, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2562 = overflow_marker[9]; // extract
+  assign n2564 = end_of_window_logic_virt_win_end[284:190]; // extract
+  assign n2565 = {n2564, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2566 = n2565[265]; // extract
+  assign n2566 = n2565[189]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
   assign n2567 = n2562 ? 1'b0 : n2566;
-  assign n2568 = end_of_window_logic_carry[0]; // extract
-  assign n2569 = {n2359, n2375, n2391, n2407, n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2567, n2568};
+  assign n2568 = end_of_window_logic_carry[4:0]; // extract
+  assign n2569 = {n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2567, n2568};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2570 = n2569[1]; // extract
-  assign n2571 = end_of_window_logic_virt_win_end[284:266]; // extract
-  assign n2572 = {n2571, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2570 = n2569[5]; // extract
+  assign n2571 = end_of_window_logic_virt_win_end[284:190]; // extract
+  assign n2572 = {n2571, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2573 = n2572[264:247]; // extract
+  assign n2573 = n2572[188:171]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
   assign n2574 = {n2570, n2573};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
-  assign n2575 = timestamps[269:252]; // extract
+  assign n2575 = timestamps[197:180]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
   assign n2576 = {1'b0, n2575};  //  uext
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
   assign n2577 = n2576 + win_length_i;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
-  assign n2578 = overflow_marker[14]; // extract
-  assign n2580 = {n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2578 = overflow_marker[10]; // extract
+  assign n2580 = end_of_window_logic_virt_win_end[284:209]; // extract
+  assign n2581 = {n2580, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
-  assign n2581 = n2580[284]; // extract
+  assign n2582 = n2581[208]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
-  assign n2582 = n2578 ? 1'b0 : n2581;
-  assign n2583 = {n2359, n2375, n2391, n2407, n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2567, n2582};
+  assign n2583 = n2578 ? 1'b0 : n2582;
+  assign n2584 = end_of_window_logic_carry[3:0]; // extract
+  assign n2585 = {n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2567, n2583, n2584};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
-  assign n2584 = n2583[0]; // extract
-  assign n2585 = {n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
+  assign n2586 = n2585[4]; // extract
+  assign n2587 = end_of_window_logic_virt_win_end[284:209]; // extract
+  assign n2588 = {n2587, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
-  assign n2586 = n2585[283:266]; // extract
+  assign n2589 = n2588[207:190]; // extract
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
-  assign n2587 = {n2584, n2586};
-  assign n2589 = {n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417, n2401, n2385, n2369, n2353};
-  assign n2590 = {n2359, n2375, n2391, n2407, n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2567, n2582};
-  assign n2591 = {n2587, n2574, n2558, n2542, n2526, n2510, n2494, n2478, n2462, n2446, n2430, n2414, n2398, n2382, n2366};
+  assign n2590 = {n2586, n2589};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
+  assign n2591 = timestamps[215:198]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
+  assign n2592 = {1'b0, n2591};  //  uext
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
+  assign n2593 = n2592 + win_length_i;
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
+  assign n2594 = overflow_marker[11]; // extract
+  assign n2596 = end_of_window_logic_virt_win_end[284:228]; // extract
+  assign n2597 = {n2596, n2593, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
+  assign n2598 = n2597[227]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
+  assign n2599 = n2594 ? 1'b0 : n2598;
+  assign n2600 = end_of_window_logic_carry[2:0]; // extract
+  assign n2601 = {n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2567, n2583, n2599, n2600};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
+  assign n2602 = n2601[3]; // extract
+  assign n2603 = end_of_window_logic_virt_win_end[284:228]; // extract
+  assign n2604 = {n2603, n2593, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
+  assign n2605 = n2604[226:209]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
+  assign n2606 = {n2602, n2605};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
+  assign n2607 = timestamps[233:216]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
+  assign n2608 = {1'b0, n2607};  //  uext
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
+  assign n2609 = n2608 + win_length_i;
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
+  assign n2610 = overflow_marker[12]; // extract
+  assign n2612 = end_of_window_logic_virt_win_end[284:247]; // extract
+  assign n2613 = {n2612, n2609, n2593, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
+  assign n2614 = n2613[246]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
+  assign n2615 = n2610 ? 1'b0 : n2614;
+  assign n2616 = end_of_window_logic_carry[1:0]; // extract
+  assign n2617 = {n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2567, n2583, n2599, n2615, n2616};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
+  assign n2618 = n2617[2]; // extract
+  assign n2619 = end_of_window_logic_virt_win_end[284:247]; // extract
+  assign n2620 = {n2619, n2609, n2593, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
+  assign n2621 = n2620[245:228]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
+  assign n2622 = {n2618, n2621};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
+  assign n2623 = timestamps[251:234]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
+  assign n2624 = {1'b0, n2623};  //  uext
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
+  assign n2625 = n2624 + win_length_i;
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
+  assign n2626 = overflow_marker[13]; // extract
+  assign n2628 = end_of_window_logic_virt_win_end[284:266]; // extract
+  assign n2629 = {n2628, n2625, n2609, n2593, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
+  assign n2630 = n2629[265]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
+  assign n2631 = n2626 ? 1'b0 : n2630;
+  assign n2632 = end_of_window_logic_carry[0]; // extract
+  assign n2633 = {n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2567, n2583, n2599, n2615, n2631, n2632};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
+  assign n2634 = n2633[1]; // extract
+  assign n2635 = end_of_window_logic_virt_win_end[284:266]; // extract
+  assign n2636 = {n2635, n2625, n2609, n2593, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
+  assign n2637 = n2636[264:247]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
+  assign n2638 = {n2634, n2637};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:50  */
+  assign n2639 = timestamps[269:252]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:33  */
+  assign n2640 = {1'b0, n2639};  //  uext
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:117:65  */
+  assign n2641 = n2640 + win_length_i;
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:25  */
+  assign n2642 = overflow_marker[14]; // extract
+  assign n2644 = {n2641, n2625, n2609, n2593, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:121:36  */
+  assign n2645 = n2644[284]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:118:7  */
+  assign n2646 = n2642 ? 1'b0 : n2645;
+  assign n2647 = {n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2567, n2583, n2599, n2615, n2631, n2646};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:35  */
+  assign n2648 = n2647[0]; // extract
+  assign n2649 = {n2641, n2625, n2609, n2593, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:74  */
+  assign n2650 = n2649[283:266]; // extract
+  /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:123:39  */
+  assign n2651 = {n2648, n2650};
+  assign n2653 = {n2641, n2625, n2609, n2593, n2577, n2561, n2545, n2529, n2513, n2497, n2481, n2465, n2449, n2433, n2417};
+  assign n2654 = {n2423, n2439, n2455, n2471, n2487, n2503, n2519, n2535, n2551, n2567, n2583, n2599, n2615, n2631, n2646};
+  assign n2655 = {n2651, n2638, n2622, n2606, n2590, n2574, n2558, n2542, n2526, n2510, n2494, n2478, n2462, n2446, n2430};
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:65:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2592 <= 270'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+      n2656 <= 270'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
     else
-      n2592 <= next_timestamps;
+      n2656 <= next_timestamps;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:65:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2593 <= 30'b000000000000000000000000000000;
+      n2657 <= 30'b000000000000000000000000000000;
     else
-      n2593 <= next_spikes;
+      n2657 <= next_spikes;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:65:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2594 <= 15'b000000000000000;
+      n2658 <= 15'b000000000000000;
     else
-      n2594 <= next_overflow_marker;
+      n2658 <= next_overflow_marker;
   /* ../../vhdl/adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd:65:5  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2595 <= 1'b0;
+      n2659 <= 1'b0;
     else
-      n2595 <= next_spikes_strb;
+      n2659 <= next_spikes_strb;
 endmodule
 
 module uart_9_8
@@ -2362,109 +2362,109 @@ module memory2uart_19_8
   wire [1:0] counter;
   wire [1:0] next_counter;
   wire [23:0] data;
-  wire [23:0] n2120;
-  wire [7:0] n2135;
-  wire [7:0] n2136;
-  wire [7:0] n2137;
-  wire n2139;
-  wire n2140;
-  wire [15:0] n2141;
-  wire [15:0] n2142;
-  wire [15:0] n2143;
-  wire n2146;
-  wire [23:0] n2147;
-  wire [15:0] n2148;
-  wire [15:0] n2149;
-  wire [7:0] n2150;
-  wire [7:0] n2151;
-  wire [7:0] n2152;
-  wire n2155;
-  wire n2162;
-  wire [1:0] n2164;
-  wire [1:0] n2166;
-  wire [1:0] n2167;
-  wire [7:0] n2169;
-  wire [23:0] n2170;
-  reg [23:0] n2171;
-  reg n2172;
-  reg [1:0] n2173;
-  assign uart_data_o = n2169; //(module output)
+  wire [23:0] n2184;
+  wire [7:0] n2199;
+  wire [7:0] n2200;
+  wire [7:0] n2201;
+  wire n2203;
+  wire n2204;
+  wire [15:0] n2205;
+  wire [15:0] n2206;
+  wire [15:0] n2207;
+  wire n2210;
+  wire [23:0] n2211;
+  wire [15:0] n2212;
+  wire [15:0] n2213;
+  wire [7:0] n2214;
+  wire [7:0] n2215;
+  wire [7:0] n2216;
+  wire n2219;
+  wire n2226;
+  wire [1:0] n2228;
+  wire [1:0] n2230;
+  wire [1:0] n2231;
+  wire [7:0] n2233;
+  wire [23:0] n2234;
+  reg [23:0] n2235;
+  reg n2236;
+  reg [1:0] n2237;
+  assign uart_data_o = n2233; //(module output)
   assign tx_start_strb_o = tx_start_strb; //(module output)
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:46:8  */
-  assign shift_reg_out = n2171; // (signal)
+  assign shift_reg_out = n2235; // (signal)
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:47:8  */
-  assign next_shift_reg_out = n2170; // (signal)
+  assign next_shift_reg_out = n2234; // (signal)
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:48:8  */
-  assign tx_start_strb = n2172; // (signal)
+  assign tx_start_strb = n2236; // (signal)
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:49:8  */
-  assign next_tx_start_strb = n2155; // (signal)
+  assign next_tx_start_strb = n2219; // (signal)
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:50:8  */
-  assign counter = n2173; // (signal)
+  assign counter = n2237; // (signal)
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:51:8  */
-  assign next_counter = n2167; // (signal)
+  assign next_counter = n2231; // (signal)
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:52:8  */
-  assign data = n2120; // (signal)
+  assign data = n2184; // (signal)
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:57:29  */
-  assign n2120 = {{5{memory_data_i[18]}}, memory_data_i}; // sext
+  assign n2184 = {{5{memory_data_i[18]}}, memory_data_i}; // sext
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:87:38  */
-  assign n2135 = data[7:0]; // extract
+  assign n2199 = data[7:0]; // extract
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:87:38  */
-  assign n2136 = data[15:8]; // extract
+  assign n2200 = data[15:8]; // extract
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:87:38  */
-  assign n2137 = data[23:16]; // extract
+  assign n2201 = data[23:16]; // extract
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:90:51  */
-  assign n2139 = $unsigned(counter) < $unsigned(2'b10);
+  assign n2203 = $unsigned(counter) < $unsigned(2'b10);
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:90:39  */
-  assign n2140 = n2139 & tx_strb_i;
+  assign n2204 = n2203 & tx_strb_i;
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:91:76  */
-  assign n2141 = shift_reg_out[23:8]; // extract
-  assign n2142 = shift_reg_out[15:0]; // extract
+  assign n2205 = shift_reg_out[23:8]; // extract
+  assign n2206 = shift_reg_out[15:0]; // extract
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:90:17  */
-  assign n2143 = n2140 ? n2141 : n2142;
+  assign n2207 = n2204 ? n2205 : n2206;
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:90:17  */
-  assign n2146 = n2140 ? 1'b1 : 1'b0;
-  assign n2147 = {n2135, n2136, n2137};
-  assign n2148 = n2147[15:0]; // extract
+  assign n2210 = n2204 ? 1'b1 : 1'b0;
+  assign n2211 = {n2199, n2200, n2201};
+  assign n2212 = n2211[15:0]; // extract
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:82:5  */
-  assign n2149 = read_strb_i ? n2148 : n2143;
-  assign n2150 = n2147[23:16]; // extract
-  assign n2151 = shift_reg_out[23:16]; // extract
+  assign n2213 = read_strb_i ? n2212 : n2207;
+  assign n2214 = n2211[23:16]; // extract
+  assign n2215 = shift_reg_out[23:16]; // extract
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:82:5  */
-  assign n2152 = read_strb_i ? n2150 : n2151;
+  assign n2216 = read_strb_i ? n2214 : n2215;
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:82:5  */
-  assign n2155 = read_strb_i ? 1'b1 : n2146;
+  assign n2219 = read_strb_i ? 1'b1 : n2210;
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:103:18  */
-  assign n2162 = counter == 2'b10;
+  assign n2226 = counter == 2'b10;
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:106:33  */
-  assign n2164 = counter + 2'b01;
+  assign n2228 = counter + 2'b01;
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:103:7  */
-  assign n2166 = n2162 ? 2'b00 : n2164;
+  assign n2230 = n2226 ? 2'b00 : n2228;
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:102:5  */
-  assign n2167 = tx_strb_i ? n2166 : counter;
+  assign n2231 = tx_strb_i ? n2230 : counter;
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:114:37  */
-  assign n2169 = shift_reg_out[7:0]; // extract
-  assign n2170 = {n2152, n2149};
+  assign n2233 = shift_reg_out[7:0]; // extract
+  assign n2234 = {n2216, n2213};
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:66:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2171 <= 24'b000000000000000000000000;
+      n2235 <= 24'b000000000000000000000000;
     else
-      n2171 <= next_shift_reg_out;
+      n2235 <= next_shift_reg_out;
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:66:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2172 <= 1'b0;
+      n2236 <= 1'b0;
     else
-      n2172 <= next_tx_start_strb;
+      n2236 <= next_tx_start_strb;
   /* ../../vhdl/memory2uart/rtl/memory2uart_ea.vhd:66:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2173 <= 2'b00;
+      n2237 <= 2'b00;
     else
-      n2173 <= next_counter;
+      n2237 <= next_counter;
 endmodule
 
-module spike_memory_19_6
+module spike_memory_19_7
   (input  clock_i,
    input  reset_i,
    input  enable_write_i,
@@ -2475,13 +2475,13 @@ module spike_memory_19_6
    output [18:0] b_data_o,
    output fifo_full_o,
    output fifo_empty_o);
-  wire [1215:0] srg;
-  wire [1215:0] next_srg;
-  wire [5:0] head;
-  wire [5:0] next_head;
-  wire [5:0] tail;
-  wire [5:0] next_tail;
-  wire [5:0] fifo_fill_count;
+  wire [2431:0] srg;
+  wire [2431:0] next_srg;
+  wire [6:0] head;
+  wire [6:0] next_head;
+  wire [6:0] tail;
+  wire [6:0] next_tail;
+  wire [6:0] fifo_fill_count;
   wire write_strb;
   wire write_delayed_strb;
   wire read_strb;
@@ -2497,8 +2497,8 @@ module spike_memory_19_6
   wire [2:0] next_tx_active;
   wire n1975;
   wire n1976;
-  wire [5:0] n1978;
-  wire [5:0] n1979;
+  wire [6:0] n1978;
+  wire [6:0] n1979;
   wire n1982;
   wire [18:0] n1984;
   wire n1987;
@@ -2506,19 +2506,19 @@ module spike_memory_19_6
   wire n1989;
   wire n1990;
   wire n1991;
-  wire [5:0] n1993;
-  wire [5:0] n1994;
+  wire [6:0] n1993;
+  wire [6:0] n1994;
   wire n1997;
   wire [2:0] n2000;
   wire n2002;
   wire n2003;
   wire [2:0] n2004;
   wire [2:0] n2005;
-  wire [5:0] n2007;
-  wire [5:0] n2009;
+  wire [6:0] n2007;
+  wire [6:0] n2009;
   wire n2010;
-  wire [5:0] n2011;
-  wire [5:0] n2012;
+  wire [6:0] n2011;
+  wire [6:0] n2012;
   wire n2015;
   wire n2016;
   wire n2020;
@@ -2586,36 +2586,100 @@ module spike_memory_19_6
   wire [18:0] n2090;
   wire [18:0] n2091;
   wire [18:0] n2092;
-  wire [1215:0] n2093;
-  wire [1215:0] n2094;
-  wire n2101;
-  wire n2103;
-  wire n2105;
-  wire n2107;
-  wire [3:0] n2108;
-  reg [1215:0] n2109;
-  reg [5:0] n2110;
-  reg [5:0] n2111;
-  reg n2112;
-  reg [18:0] n2113;
-  reg [18:0] n2114;
-  reg [3:0] n2115;
-  reg [2:0] n2116;
+  wire [18:0] n2093;
+  wire [18:0] n2094;
+  wire [18:0] n2095;
+  wire [18:0] n2096;
+  wire [18:0] n2097;
+  wire [18:0] n2098;
+  wire [18:0] n2099;
+  wire [18:0] n2100;
+  wire [18:0] n2101;
+  wire [18:0] n2102;
+  wire [18:0] n2103;
+  wire [18:0] n2104;
+  wire [18:0] n2105;
+  wire [18:0] n2106;
+  wire [18:0] n2107;
+  wire [18:0] n2108;
+  wire [18:0] n2109;
+  wire [18:0] n2110;
+  wire [18:0] n2111;
+  wire [18:0] n2112;
+  wire [18:0] n2113;
+  wire [18:0] n2114;
+  wire [18:0] n2115;
+  wire [18:0] n2116;
   wire [18:0] n2117;
-  assign read_strb_o = n2107; //(module output)
+  wire [18:0] n2118;
+  wire [18:0] n2119;
+  wire [18:0] n2120;
+  wire [18:0] n2121;
+  wire [18:0] n2122;
+  wire [18:0] n2123;
+  wire [18:0] n2124;
+  wire [18:0] n2125;
+  wire [18:0] n2126;
+  wire [18:0] n2127;
+  wire [18:0] n2128;
+  wire [18:0] n2129;
+  wire [18:0] n2130;
+  wire [18:0] n2131;
+  wire [18:0] n2132;
+  wire [18:0] n2133;
+  wire [18:0] n2134;
+  wire [18:0] n2135;
+  wire [18:0] n2136;
+  wire [18:0] n2137;
+  wire [18:0] n2138;
+  wire [18:0] n2139;
+  wire [18:0] n2140;
+  wire [18:0] n2141;
+  wire [18:0] n2142;
+  wire [18:0] n2143;
+  wire [18:0] n2144;
+  wire [18:0] n2145;
+  wire [18:0] n2146;
+  wire [18:0] n2147;
+  wire [18:0] n2148;
+  wire [18:0] n2149;
+  wire [18:0] n2150;
+  wire [18:0] n2151;
+  wire [18:0] n2152;
+  wire [18:0] n2153;
+  wire [18:0] n2154;
+  wire [18:0] n2155;
+  wire [18:0] n2156;
+  wire [2431:0] n2157;
+  wire [2431:0] n2158;
+  wire n2165;
+  wire n2167;
+  wire n2169;
+  wire n2171;
+  wire [3:0] n2172;
+  reg [2431:0] n2173;
+  reg [6:0] n2174;
+  reg [6:0] n2175;
+  reg n2176;
+  reg [18:0] n2177;
+  reg [18:0] n2178;
+  reg [3:0] n2179;
+  reg [2:0] n2180;
+  wire [18:0] n2181;
+  assign read_strb_o = n2171; //(module output)
   assign b_data_o = b_data; //(module output)
   assign fifo_full_o = fifo_full; //(module output)
   assign fifo_empty_o = fifo_empty; //(module output)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:53:8  */
-  assign srg = n2109; // (signal)
+  assign srg = n2173; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:54:8  */
-  assign next_srg = n2094; // (signal)
+  assign next_srg = n2158; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:57:8  */
-  assign head = n2110; // (signal)
+  assign head = n2174; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:58:8  */
   assign next_head = n1979; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:61:8  */
-  assign tail = n2111; // (signal)
+  assign tail = n2175; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:62:8  */
   assign next_tail = n1994; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:65:8  */
@@ -2623,27 +2687,27 @@ module spike_memory_19_6
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:67:8  */
   assign write_strb = n1982; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:68:8  */
-  assign write_delayed_strb = n2112; // (signal)
+  assign write_delayed_strb = n2176; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:70:8  */
   assign read_strb = n1997; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:73:8  */
-  assign a_data = n2113; // (signal)
+  assign a_data = n2177; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:74:8  */
   assign next_a_data = n1984; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:76:8  */
-  assign b_data = n2114; // (signal)
+  assign b_data = n2178; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:77:8  */
-  assign next_b_data = n2117; // (signal)
+  assign next_b_data = n2181; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:80:8  */
   assign fifo_empty = n2016; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:81:8  */
   assign fifo_full = n2021; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:83:8  */
-  assign sync_read_strb = n2115; // (signal)
+  assign sync_read_strb = n2179; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:84:8  */
-  assign next_sync_read_strb = n2108; // (signal)
+  assign next_sync_read_strb = n2172; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:86:8  */
-  assign tx_active = n2116; // (signal)
+  assign tx_active = n2180; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:87:8  */
   assign next_tx_active = n2005; // (signal)
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:153:55  */
@@ -2651,7 +2715,7 @@ module spike_memory_19_6
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:153:41  */
   assign n1976 = n1975 & enable_write_i;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:154:43  */
-  assign n1978 = head + 6'b000001;
+  assign n1978 = head + 7'b0000001;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:153:17  */
   assign n1979 = n1976 ? n1978 : head;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:153:17  */
@@ -2669,7 +2733,7 @@ module spike_memory_19_6
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:170:61  */
   assign n1991 = n1990 & n1988;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:171:43  */
-  assign n1993 = tail + 6'b000001;
+  assign n1993 = tail + 7'b0000001;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:170:17  */
   assign n1994 = n1991 ? n1993 : tail;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:170:17  */
@@ -2686,7 +2750,7 @@ module spike_memory_19_6
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:188:33  */
   assign n2007 = head - tail;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:188:40  */
-  assign n2009 = n2007 + 6'b000000;
+  assign n2009 = n2007 + 7'b0000000;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:188:62  */
   assign n2010 = $unsigned(head) < $unsigned(tail);
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:188:52  */
@@ -2694,11 +2758,11 @@ module spike_memory_19_6
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:188:79  */
   assign n2012 = head - tail;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:190:48  */
-  assign n2015 = fifo_fill_count == 6'b000000;
+  assign n2015 = fifo_fill_count == 7'b0000000;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:190:27  */
   assign n2016 = n2015 ? 1'b1 : 1'b0;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:191:47  */
-  assign n2020 = $unsigned(fifo_fill_count) >= $unsigned(6'b111111);
+  assign n2020 = $unsigned(fifo_fill_count) >= $unsigned(7'b1111111);
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:191:26  */
   assign n2021 = n2020 ? 1'b1 : 1'b0;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
@@ -2827,68 +2891,196 @@ module spike_memory_19_6
   assign n2091 = srg[1177:1159]; // extract
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
   assign n2092 = srg[1196:1178]; // extract
-  assign n2093 = {n2092, n2091, n2090, n2089, n2088, n2087, n2086, n2085, n2084, n2083, n2082, n2081, n2080, n2079, n2078, n2077, n2076, n2075, n2074, n2073, n2072, n2071, n2070, n2069, n2068, n2067, n2066, n2065, n2064, n2063, n2062, n2061, n2060, n2059, n2058, n2057, n2056, n2055, n2054, n2053, n2052, n2051, n2050, n2049, n2048, n2047, n2046, n2045, n2044, n2043, n2042, n2041, n2040, n2039, n2038, n2037, n2036, n2035, n2034, n2033, n2032, n2031, n2030, a_data};
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2093 = srg[1215:1197]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2094 = srg[1234:1216]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2095 = srg[1253:1235]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2096 = srg[1272:1254]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2097 = srg[1291:1273]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2098 = srg[1310:1292]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2099 = srg[1329:1311]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2100 = srg[1348:1330]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2101 = srg[1367:1349]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2102 = srg[1386:1368]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2103 = srg[1405:1387]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2104 = srg[1424:1406]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2105 = srg[1443:1425]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2106 = srg[1462:1444]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2107 = srg[1481:1463]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2108 = srg[1500:1482]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2109 = srg[1519:1501]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2110 = srg[1538:1520]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2111 = srg[1557:1539]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2112 = srg[1576:1558]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2113 = srg[1595:1577]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2114 = srg[1614:1596]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2115 = srg[1633:1615]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2116 = srg[1652:1634]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2117 = srg[1671:1653]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2118 = srg[1690:1672]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2119 = srg[1709:1691]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2120 = srg[1728:1710]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2121 = srg[1747:1729]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2122 = srg[1766:1748]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2123 = srg[1785:1767]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2124 = srg[1804:1786]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2125 = srg[1823:1805]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2126 = srg[1842:1824]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2127 = srg[1861:1843]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2128 = srg[1880:1862]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2129 = srg[1899:1881]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2130 = srg[1918:1900]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2131 = srg[1937:1919]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2132 = srg[1956:1938]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2133 = srg[1975:1957]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2134 = srg[1994:1976]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2135 = srg[2013:1995]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2136 = srg[2032:2014]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2137 = srg[2051:2033]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2138 = srg[2070:2052]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2139 = srg[2089:2071]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2140 = srg[2108:2090]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2141 = srg[2127:2109]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2142 = srg[2146:2128]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2143 = srg[2165:2147]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2144 = srg[2184:2166]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2145 = srg[2203:2185]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2146 = srg[2222:2204]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2147 = srg[2241:2223]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2148 = srg[2260:2242]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2149 = srg[2279:2261]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2150 = srg[2298:2280]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2151 = srg[2317:2299]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2152 = srg[2336:2318]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2153 = srg[2355:2337]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2154 = srg[2374:2356]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2155 = srg[2393:2375]; // extract
+  /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:216:29  */
+  assign n2156 = srg[2412:2394]; // extract
+  assign n2157 = {n2156, n2155, n2154, n2153, n2152, n2151, n2150, n2149, n2148, n2147, n2146, n2145, n2144, n2143, n2142, n2141, n2140, n2139, n2138, n2137, n2136, n2135, n2134, n2133, n2132, n2131, n2130, n2129, n2128, n2127, n2126, n2125, n2124, n2123, n2122, n2121, n2120, n2119, n2118, n2117, n2116, n2115, n2114, n2113, n2112, n2111, n2110, n2109, n2108, n2107, n2106, n2105, n2104, n2103, n2102, n2101, n2100, n2099, n2098, n2097, n2096, n2095, n2094, n2093, n2092, n2091, n2090, n2089, n2088, n2087, n2086, n2085, n2084, n2083, n2082, n2081, n2080, n2079, n2078, n2077, n2076, n2075, n2074, n2073, n2072, n2071, n2070, n2069, n2068, n2067, n2066, n2065, n2064, n2063, n2062, n2061, n2060, n2059, n2058, n2057, n2056, n2055, n2054, n2053, n2052, n2051, n2050, n2049, n2048, n2047, n2046, n2045, n2044, n2043, n2042, n2041, n2040, n2039, n2038, n2037, n2036, n2035, n2034, n2033, n2032, n2031, n2030, a_data};
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:213:7  */
-  assign n2094 = write_delayed_strb ? n2093 : srg;
+  assign n2158 = write_delayed_strb ? n2157 : srg;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:262:49  */
-  assign n2101 = sync_read_strb[2]; // extract
+  assign n2165 = sync_read_strb[2]; // extract
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:262:49  */
-  assign n2103 = sync_read_strb[1]; // extract
+  assign n2167 = sync_read_strb[1]; // extract
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:262:49  */
-  assign n2105 = sync_read_strb[0]; // extract
+  assign n2169 = sync_read_strb[0]; // extract
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:268:38  */
-  assign n2107 = sync_read_strb[3]; // extract
-  assign n2108 = {n2101, n2103, n2105, read_strb};
+  assign n2171 = sync_read_strb[3]; // extract
+  assign n2172 = {n2165, n2167, n2169, read_strb};
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:203:7  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2109 <= 1216'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+      n2173 <= 2432'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
     else
-      n2109 <= next_srg;
+      n2173 <= next_srg;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:104:7  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2110 <= 6'b000000;
+      n2174 <= 7'b0000000;
     else
-      n2110 <= next_head;
+      n2174 <= next_head;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:104:7  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2111 <= 6'b000000;
+      n2175 <= 7'b0000000;
     else
-      n2111 <= next_tail;
+      n2175 <= next_tail;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:104:7  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2112 <= 1'b0;
+      n2176 <= 1'b0;
     else
-      n2112 <= write_strb;
+      n2176 <= write_strb;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:104:7  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2113 <= 19'b0000000000000000000;
+      n2177 <= 19'b0000000000000000000;
     else
-      n2113 <= next_a_data;
+      n2177 <= next_a_data;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:104:7  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2114 <= 19'b0000000000000000000;
+      n2178 <= 19'b0000000000000000000;
     else
-      n2114 <= next_b_data;
+      n2178 <= next_b_data;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:104:7  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2115 <= 4'b0000;
+      n2179 <= 4'b0000;
     else
-      n2115 <= next_sync_read_strb;
+      n2179 <= next_sync_read_strb;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:104:7  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n2116 <= 3'b000;
+      n2180 <= 3'b000;
     else
-      n2116 <= next_tx_active;
+      n2180 <= next_tx_active;
   /* ../../vhdl/spike_memory/rtl/spike_memory_ea.vhd:224:24  */
-  assign n2117 = srg[fifo_fill_count * 19 +: 19]; //(Bmux)
+  assign n2181 = srg[fifo_fill_count * 19 +: 19]; //(Bmux)
 endmodule
 
 module spike_encoder_18_19
@@ -4703,7 +4895,7 @@ module sync_chain_2_1
       n1166 <= n1160;
 endmodule
 
-module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_10_1024_8_160_11_2048_6_19_9_417_8
+module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_10_1024_8_160_11_2048_7_19_9_417_8
   (input  clock_i,
    input  reset_btn_i,
    input  comp_upper_i,
@@ -6079,7 +6271,7 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   /* ../../vhdl/rtl/tbs_core_ea.vhd:972:42  */
   assign n233 = select_enable_write ? encoded_spike_strb : 1'b0;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:976:3  */
-  spike_memory_19_6 spike_memory_0 (
+  spike_memory_19_7 spike_memory_0 (
     .clock_i(clock_i),
     .reset_i(reset_entity),
     .enable_write_i(enable_write_mux),
@@ -7612,7 +7804,7 @@ module tbs_core_board(
   /* ../../vhdl/rtl/tbs_core_board.vhd:100:29  */
   assign n25 = ~select_tbs_delta_steps_i;
   /* ../../vhdl/rtl/tbs_core_board.vhd:103:9  */
-  tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_10_1024_8_160_11_2048_6_19_9_417_8 tbs_core_0 (
+  tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_10_1024_8_160_11_2048_7_19_9_417_8 tbs_core_0 (
     .clock_i(clock_i),
     .reset_btn_i(reset),
     .comp_upper_i(comp_upper_i),
