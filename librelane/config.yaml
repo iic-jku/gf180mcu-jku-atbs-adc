@@ -301,11 +301,8 @@ MACROS:
       "*":
         - dir::../ip/gf180mcu_ws_ip__jku/lib/gf180mcu_ws_ip__jku.lib
     instances:
-      jku_logo_top_left:
+      jku_logo:
         location: ["expr::$DIE_AREA[0] + 26", "expr::$DIE_AREA[3] + -169.75"]
-        orientation: N
-      jku_logo_top_right:
-        location: ["expr::$DIE_AREA[2] + -169.75", "expr::$DIE_AREA[1] + 26"]
         orientation: N
 
   gf180mcu_ws_ip__logo:

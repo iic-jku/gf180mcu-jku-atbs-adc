@@ -227,8 +227,7 @@ module chip_top #(
 	
 	// JKU logos
     (* keep *)
-    gf180mcu_ws_ip__jku jku_logo_top_left ();
-	gf180mcu_ws_ip__jku jku_logo_top_right ();
+    gf180mcu_ws_ip__jku jku_logo ();
 	// ======================================================
 	
     // wafer.space logo
