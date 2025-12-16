@@ -2,14 +2,14 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO gf180mcu_ws_ip__credits
+MACRO gf180mcu_ws_ip__names
   CLASS BLOCK ;
-  FOREIGN gf180mcu_ws_ip__credits ;
+  FOREIGN gf180mcu_ws_ip__names ;
   ORIGIN 0.000 0.000 ;
-  SIZE 350.0 BY 150.0 ;
+  SIZE 200.0 BY 200.0 ;
   OBS
       LAYER Metal5 ;
-        RECT 0.0 0.0 350.0 150.0 ;
+        RECT 0.0 0.0 200.0 200.0 ;
   END
-END gf180mcu_ws_ip__credits
+END gf180mcu_ws_ip__names
 END LIBRARY
