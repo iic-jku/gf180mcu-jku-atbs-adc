@@ -36,20 +36,25 @@ signal trigger_start_sampling : std_ulogic := '0';
 
 -- Switches for different modes
 signal trigger_start_mode   : std_ulogic;
+signal trigger_start_mode_n : std_ulogic;
+
 signal adaptive_mode        : std_ulogic;
+signal adaptive_mode_n      : std_ulogic;
+
 signal control_mode         : std_ulogic;
+signal control_mode_n       : std_ulogic;
 
 -- Switch for Input Signal Select Switch
 signal signal_select    : std_ulogic;
+signal signal_select_n  : std_ulogic;
 
 -- Enable Switch for Input Signal Select Switch, Amp. and DAC.
 signal enable           : std_ulogic;
+signal enable_n         : std_ulogic;
 
 -- Select TBS delta steps --> enables virtual DAC resolution
-signal select_tbs_delta_steps : std_ulogic; -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-
--- Select Comparator Type (CT/DT comparator)    
-signal select_comparator_type : std_ulogic; -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
+signal select_tbs_delta_steps 	: std_ulogic; -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
+signal select_tbs_delta_steps_n : std_ulogic;
 
 -- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
 signal ecg_lod_p        : std_ulogic;
@@ -162,8 +167,17 @@ component tbs_core_board
 end component tbs_core_board;
 
 begin
-
-  -- Embed Adaptive Threshold Based Sampling
+	-- Inverting Input Logic
+	reset <= not reset_n;
+	
+	-- Embed Adaptive Threshold Based Sampling
+	trigger_start_mode_n <= not trigger_start_mode;
+	adaptive_mode_n <= not adaptive_mode;
+	control_mode_n <= not control_mode;
+	signal_select_n <= not signal_select;
+	enable_n <= not enable;
+	select_tbs_delta_steps_n <= not select_tbs_delta_steps;
+	
 	dut_tbs: tbs_core_board
 	port map(
     -- INPUTS
@@ -175,15 +189,15 @@ begin
     -- AWG Trigger
     trigger_start_sampling_i  => trigger_start_sampling, -- Coming from AWG Trigger
     -- Switches for different modes
-    trigger_start_mode_i      => trigger_start_mode, -- SW0: Start sampling directly(0), Start sampling on trigger(1)
-    adaptive_mode_i           => adaptive_mode,   -- SW1: TBS(0), ATBS(1)
-    control_mode_i            => control_mode,    -- SW2: Switches(0), UART(1)
+    trigger_start_mode_i      => trigger_start_mode_n, -- SW0: Start sampling directly(0), Start sampling on trigger(1)
+    adaptive_mode_i           => adaptive_mode_n,   -- SW1: TBS(0), ATBS(1)
+    control_mode_i            => control_mode_n,    -- SW2: Switches(0), UART(1)
     -- Switch for Input Signal Select Switch
-    signal_select_in_i        => signal_select,   -- SW3: ECG(0), BNC(1)
+    signal_select_in_i        => signal_select_n,   -- SW3: ECG(0), BNC(1)
     -- Enable Switch for Input Signal Select Switch, Amp. and DAC.
-    enable_i                  => enable,          -- SW4: Disable(0), Enable(1)
+    enable_i                  => enable_n,          -- SW4: Disable(0), Enable(1)
     -- Select TBS delta steps --> enables virtual DAC resolution
-    select_tbs_delta_steps_i  => select_tbs_delta_steps, -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
+    select_tbs_delta_steps_i  => select_tbs_delta_steps_n, -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
 	-- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
     ecg_lod_p_i               => ecg_lod_p,
     ecg_lod_n_i				        => ecg_lod_n,
@@ -273,7 +287,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '0';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -325,7 +338,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '1';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -388,7 +400,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '1';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -468,7 +479,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '0';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -530,7 +540,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '1';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -610,7 +619,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '0';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -713,7 +721,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '1';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '1';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
