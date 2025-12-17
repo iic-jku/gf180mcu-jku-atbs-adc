@@ -10,7 +10,7 @@ meta:
     "+Odb.InsertECODiodes": "OpenROAD.DetailedRouting"
 
 INSERT_ECO_DIODES:
-  - target: fanout2045/I
+  - target: fanout1877/I
   
 DESIGN_NAME: tbs_core_board
 VERILOG_FILES: ["dir::../verilog/rtl/tbs_core_board.v"]
