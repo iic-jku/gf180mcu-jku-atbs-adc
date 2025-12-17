@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Wed Dec 17 00:59:10 2025
+| Date         : Wed Dec 17 12:29:54 2025
 | Host         : SimiBook running 64-bit major release  (build 9200)
 | Command      : report_methodology -file tbs_core_board_methodology_drc_routed.rpt -pb tbs_core_board_methodology_drc_routed.pb -rpx tbs_core_board_methodology_drc_routed.rpx
 | Design       : tbs_core_board
@@ -34,25 +34,6 @@ Table of Contents
 -----------------
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell tbs_core_0/debouncer_1/overflow_marker[14]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) tbs_core_0/main_counter_value_reg[16]/CLR,
-tbs_core_0/main_counter_value_reg[17]/CLR,
-tbs_core_0/main_counter_value_reg[18]/CLR,
-tbs_core_0/main_counter_value_reg[19]/CLR,
-tbs_core_0/main_counter_value_reg[1]/CLR,
-tbs_core_0/main_counter_value_reg[2]/CLR,
-tbs_core_0/main_counter_value_reg[3]/CLR,
-tbs_core_0/main_counter_value_reg[4]/CLR,
-tbs_core_0/main_counter_value_reg[5]/CLR,
-tbs_core_0/main_counter_value_reg[6]/CLR,
-tbs_core_0/main_counter_value_reg[7]/CLR,
-tbs_core_0/main_counter_value_reg[8]/CLR,
-tbs_core_0/main_counter_value_reg[9]/CLR,
-tbs_core_0/tbs_decreasing_en_reg/CLR, tbs_core_0/tbs_increasing_en_reg/CLR
- (the first 15 of 3038 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#2 Warning
-LUT drives async reset alert  
 LUT cell tbs_core_0/debouncer_2/counter_value[17]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) tbs_core_0/time_measurement_0/counter_value_reg[13]/CLR,
 tbs_core_0/time_measurement_0/counter_value_reg[14]/CLR,
 tbs_core_0/time_measurement_0/counter_value_reg[15]/CLR,
@@ -69,6 +50,25 @@ tbs_core_0/time_measurement_0/counter_value_reg[8]/CLR,
 tbs_core_0/time_measurement_0/counter_value_reg[9]/CLR,
 tbs_core_0/time_measurement_0/overflow_strb_reg/CLR
  (the first 15 of 19 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell tbs_core_0/debouncer_3/overflow_marker[14]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) tbs_core_0/main_counter_value_reg[16]/CLR,
+tbs_core_0/main_counter_value_reg[17]/CLR,
+tbs_core_0/main_counter_value_reg[18]/CLR,
+tbs_core_0/main_counter_value_reg[19]/CLR,
+tbs_core_0/main_counter_value_reg[1]/CLR,
+tbs_core_0/main_counter_value_reg[2]/CLR,
+tbs_core_0/main_counter_value_reg[3]/CLR,
+tbs_core_0/main_counter_value_reg[4]/CLR,
+tbs_core_0/main_counter_value_reg[5]/CLR,
+tbs_core_0/main_counter_value_reg[6]/CLR,
+tbs_core_0/main_counter_value_reg[7]/CLR,
+tbs_core_0/main_counter_value_reg[8]/CLR,
+tbs_core_0/main_counter_value_reg[9]/CLR,
+tbs_core_0/tbs_decreasing_en_reg/CLR, tbs_core_0/tbs_increasing_en_reg/CLR
+ (the first 15 of 3020 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 

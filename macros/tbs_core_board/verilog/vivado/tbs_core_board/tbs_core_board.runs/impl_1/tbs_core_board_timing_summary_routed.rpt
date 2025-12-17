@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Wed Dec 17 01:06:52 2025
+| Date         : Wed Dec 17 12:34:24 2025
 | Host         : SimiBook running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file tbs_core_board_timing_summary_routed.rpt -pb tbs_core_board_timing_summary_routed.pb -rpx tbs_core_board_timing_summary_routed.rpx -warn_on_violation
 | Design       : tbs_core_board
@@ -54,12 +54,12 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (3303)
+1. checking no_clock (3285)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (9558)
+4. checking unconstrained_internal_endpoints (9504)
 5. checking no_input_delay (9)
-6. checking no_output_delay (37)
+6. checking no_output_delay (33)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -67,9 +67,9 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (3303)
+1. checking no_clock (3285)
 ---------------------------
- There are 3303 register/latch pins with no clock driven by root clock pin: clock_i (HIGH)
+ There are 3285 register/latch pins with no clock driven by root clock pin: clock_i (HIGH)
 
 
 2. checking constant_clock (0)
@@ -82,9 +82,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (9558)
+4. checking unconstrained_internal_endpoints (9504)
 ---------------------------------------------------
- There are 9558 pins that are not constrained for maximum delay. (HIGH)
+ There are 9504 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -96,9 +96,9 @@ Table of Contents
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (37)
+6. checking no_output_delay (33)
 --------------------------------
- There are 37 ports with no output delay specified. (HIGH)
+ There are 33 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -143,7 +143,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                 9595          inf        0.000                      0                 9595           NA           NA                      NA                    NA  
+        inf        0.000                      0                 9537          inf        0.000                      0                 9537           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -212,329 +212,261 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay          9595 Endpoints
-Min Delay          9595 Endpoints
+Max Delay          9537 Endpoints
+Min Delay          9537 Endpoints
 --------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 tbs_core_0/debouncer_2/n1224_reg/C
+  Source:                 tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/dac_control_0/n1631_reg[4]/CE
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[1975]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.852ns  (logic 2.608ns (14.609%)  route 15.244ns (85.391%))
-  Logic Levels:           12  (CARRY4=3 FDCE=1 LUT2=2 LUT3=2 LUT6=4)
+  Data Path Delay:        19.636ns  (logic 1.182ns (6.019%)  route 18.454ns (93.981%))
+  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=3)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y22         FDCE                         0.000     0.000 r  tbs_core_0/debouncer_2/n1224_reg/C
-    SLICE_X27Y22         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  tbs_core_0/debouncer_2/n1224_reg/Q
-                         net (fo=42, routed)          2.514     2.970    tbs_core_0/debouncer_2/control_mode_debounced
-    SLICE_X23Y10         LUT3 (Prop_lut3_I1_O)        0.124     3.094 r  tbs_core_0/debouncer_2/n1631[10]_i_3/O
-                         net (fo=43, routed)          1.853     4.947    tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n1079
-    SLICE_X21Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.071 f  tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635[269]_i_4/O
-                         net (fo=54, routed)          2.539     7.610    tbs_core_0/adaptive_ctrl_0/n1102_reg
-    SLICE_X28Y33         LUT3 (Prop_lut3_I0_O)        0.124     7.734 f  tbs_core_0/adaptive_ctrl_0/n1306_i_1/O
-                         net (fo=34, routed)          2.025     9.759    tbs_core_0/adaptive_ctrl_0/spike
-    SLICE_X22Y14         LUT2 (Prop_lut2_I1_O)        0.148     9.907 r  tbs_core_0/adaptive_ctrl_0/n1496[9]_i_6/O
-                         net (fo=11, routed)          1.454    11.361    tbs_core_0/adaptive_ctrl_0/n1496[9]_i_6_n_0
-    SLICE_X16Y12         LUT6 (Prop_lut6_I3_O)        0.328    11.689 r  tbs_core_0/adaptive_ctrl_0/n1498[3]_i_11/O
-                         net (fo=7, routed)           1.721    13.409    tbs_core_0/adaptive_ctrl_0/n1498[3]_i_11_n_0
-    SLICE_X23Y10         LUT6 (Prop_lut6_I2_O)        0.124    13.533 r  tbs_core_0/adaptive_ctrl_0/n1630[4]_i_2/O
-                         net (fo=5, routed)           0.975    14.509    tbs_core_0/adaptive_ctrl_0/n198[3]
-    SLICE_X21Y7          LUT2 (Prop_lut2_I0_O)        0.124    14.633 r  tbs_core_0/adaptive_ctrl_0/n1631[3]_i_4/O
-                         net (fo=1, routed)           0.000    14.633    tbs_core_0/dac_control_0/n1631_reg[3]_1[3]
-    SLICE_X21Y7          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    15.034 r  tbs_core_0/dac_control_0/n1631_reg[3]_i_2/CO[3]
-                         net (fo=1, routed)           0.000    15.034    tbs_core_0/dac_control_0/n1631_reg[3]_i_2_n_0
-    SLICE_X21Y8          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.148 r  tbs_core_0/dac_control_0/n1631_reg[7]_i_2/CO[3]
-                         net (fo=1, routed)           0.000    15.148    tbs_core_0/dac_control_0/n1631_reg[7]_i_2_n_0
-    SLICE_X21Y9          CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    15.387 f  tbs_core_0/dac_control_0/n1631_reg[10]_i_4/O[2]
-                         net (fo=2, routed)           0.970    16.356    tbs_core_0/adaptive_ctrl_0/n1631_reg[0][0]
-    SLICE_X22Y11         LUT6 (Prop_lut6_I3_O)        0.302    16.658 r  tbs_core_0/adaptive_ctrl_0/n1631[10]_i_1/O
-                         net (fo=11, routed)          1.194    17.852    tbs_core_0/dac_control_0/E[0]
-    SLICE_X22Y8          FDCE                                         r  tbs_core_0/dac_control_0/n1631_reg[4]/CE
+    SLICE_X34Y25         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
+    SLICE_X34Y25         FDCE (Prop_fdce_C_Q)         0.456     0.456 f  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/Q
+                         net (fo=7, routed)           1.434     1.890    tbs_core_0/uart_0/uart_rx_0/uart_rx_data[4]
+    SLICE_X33Y28         LUT5 (Prop_lut5_I0_O)        0.124     2.014 f  tbs_core_0/uart_0/uart_rx_0/n1117_i_6/O
+                         net (fo=7, routed)           1.008     3.022    tbs_core_0/uart_0/uart_rx_0/n1117_i_6_n_0
+    SLICE_X29Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.174 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10/O
+                         net (fo=2, routed)           0.831     4.005    tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10_n_0
+    SLICE_X31Y28         LUT5 (Prop_lut5_I1_O)        0.326     4.331 r  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
+                         net (fo=6, routed)           1.378     5.709    tbs_core_0/uart_0/uart_rx_0/n1224_reg
+    SLICE_X35Y32         LUT5 (Prop_lut5_I0_O)        0.124     5.833 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
+                         net (fo=3021, routed)       13.804    19.636    tbs_core_0/spike_memory_0/AR[0]
+    SLICE_X33Y61         FDCE                                         f  tbs_core_0/spike_memory_0/n2152_reg[1975]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/debouncer_2/n1224_reg/C
+  Source:                 tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/dac_control_0/n1631_reg[5]/CE
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[1994]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.852ns  (logic 2.608ns (14.609%)  route 15.244ns (85.391%))
-  Logic Levels:           12  (CARRY4=3 FDCE=1 LUT2=2 LUT3=2 LUT6=4)
+  Data Path Delay:        19.636ns  (logic 1.182ns (6.019%)  route 18.454ns (93.981%))
+  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=3)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y22         FDCE                         0.000     0.000 r  tbs_core_0/debouncer_2/n1224_reg/C
-    SLICE_X27Y22         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  tbs_core_0/debouncer_2/n1224_reg/Q
-                         net (fo=42, routed)          2.514     2.970    tbs_core_0/debouncer_2/control_mode_debounced
-    SLICE_X23Y10         LUT3 (Prop_lut3_I1_O)        0.124     3.094 r  tbs_core_0/debouncer_2/n1631[10]_i_3/O
-                         net (fo=43, routed)          1.853     4.947    tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n1079
-    SLICE_X21Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.071 f  tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635[269]_i_4/O
-                         net (fo=54, routed)          2.539     7.610    tbs_core_0/adaptive_ctrl_0/n1102_reg
-    SLICE_X28Y33         LUT3 (Prop_lut3_I0_O)        0.124     7.734 f  tbs_core_0/adaptive_ctrl_0/n1306_i_1/O
-                         net (fo=34, routed)          2.025     9.759    tbs_core_0/adaptive_ctrl_0/spike
-    SLICE_X22Y14         LUT2 (Prop_lut2_I1_O)        0.148     9.907 r  tbs_core_0/adaptive_ctrl_0/n1496[9]_i_6/O
-                         net (fo=11, routed)          1.454    11.361    tbs_core_0/adaptive_ctrl_0/n1496[9]_i_6_n_0
-    SLICE_X16Y12         LUT6 (Prop_lut6_I3_O)        0.328    11.689 r  tbs_core_0/adaptive_ctrl_0/n1498[3]_i_11/O
-                         net (fo=7, routed)           1.721    13.409    tbs_core_0/adaptive_ctrl_0/n1498[3]_i_11_n_0
-    SLICE_X23Y10         LUT6 (Prop_lut6_I2_O)        0.124    13.533 r  tbs_core_0/adaptive_ctrl_0/n1630[4]_i_2/O
-                         net (fo=5, routed)           0.975    14.509    tbs_core_0/adaptive_ctrl_0/n198[3]
-    SLICE_X21Y7          LUT2 (Prop_lut2_I0_O)        0.124    14.633 r  tbs_core_0/adaptive_ctrl_0/n1631[3]_i_4/O
-                         net (fo=1, routed)           0.000    14.633    tbs_core_0/dac_control_0/n1631_reg[3]_1[3]
-    SLICE_X21Y7          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    15.034 r  tbs_core_0/dac_control_0/n1631_reg[3]_i_2/CO[3]
-                         net (fo=1, routed)           0.000    15.034    tbs_core_0/dac_control_0/n1631_reg[3]_i_2_n_0
-    SLICE_X21Y8          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.148 r  tbs_core_0/dac_control_0/n1631_reg[7]_i_2/CO[3]
-                         net (fo=1, routed)           0.000    15.148    tbs_core_0/dac_control_0/n1631_reg[7]_i_2_n_0
-    SLICE_X21Y9          CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    15.387 f  tbs_core_0/dac_control_0/n1631_reg[10]_i_4/O[2]
-                         net (fo=2, routed)           0.970    16.356    tbs_core_0/adaptive_ctrl_0/n1631_reg[0][0]
-    SLICE_X22Y11         LUT6 (Prop_lut6_I3_O)        0.302    16.658 r  tbs_core_0/adaptive_ctrl_0/n1631[10]_i_1/O
-                         net (fo=11, routed)          1.194    17.852    tbs_core_0/dac_control_0/E[0]
-    SLICE_X22Y8          FDCE                                         r  tbs_core_0/dac_control_0/n1631_reg[5]/CE
+    SLICE_X34Y25         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
+    SLICE_X34Y25         FDCE (Prop_fdce_C_Q)         0.456     0.456 f  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/Q
+                         net (fo=7, routed)           1.434     1.890    tbs_core_0/uart_0/uart_rx_0/uart_rx_data[4]
+    SLICE_X33Y28         LUT5 (Prop_lut5_I0_O)        0.124     2.014 f  tbs_core_0/uart_0/uart_rx_0/n1117_i_6/O
+                         net (fo=7, routed)           1.008     3.022    tbs_core_0/uart_0/uart_rx_0/n1117_i_6_n_0
+    SLICE_X29Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.174 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10/O
+                         net (fo=2, routed)           0.831     4.005    tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10_n_0
+    SLICE_X31Y28         LUT5 (Prop_lut5_I1_O)        0.326     4.331 r  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
+                         net (fo=6, routed)           1.378     5.709    tbs_core_0/uart_0/uart_rx_0/n1224_reg
+    SLICE_X35Y32         LUT5 (Prop_lut5_I0_O)        0.124     5.833 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
+                         net (fo=3021, routed)       13.804    19.636    tbs_core_0/spike_memory_0/AR[0]
+    SLICE_X33Y61         FDCE                                         f  tbs_core_0/spike_memory_0/n2152_reg[1994]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/debouncer_2/n1224_reg/C
+  Source:                 tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/dac_control_0/n1631_reg[6]/CE
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[2013]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.852ns  (logic 2.608ns (14.609%)  route 15.244ns (85.391%))
-  Logic Levels:           12  (CARRY4=3 FDCE=1 LUT2=2 LUT3=2 LUT6=4)
+  Data Path Delay:        19.636ns  (logic 1.182ns (6.019%)  route 18.454ns (93.981%))
+  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=3)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y22         FDCE                         0.000     0.000 r  tbs_core_0/debouncer_2/n1224_reg/C
-    SLICE_X27Y22         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  tbs_core_0/debouncer_2/n1224_reg/Q
-                         net (fo=42, routed)          2.514     2.970    tbs_core_0/debouncer_2/control_mode_debounced
-    SLICE_X23Y10         LUT3 (Prop_lut3_I1_O)        0.124     3.094 r  tbs_core_0/debouncer_2/n1631[10]_i_3/O
-                         net (fo=43, routed)          1.853     4.947    tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n1079
-    SLICE_X21Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.071 f  tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635[269]_i_4/O
-                         net (fo=54, routed)          2.539     7.610    tbs_core_0/adaptive_ctrl_0/n1102_reg
-    SLICE_X28Y33         LUT3 (Prop_lut3_I0_O)        0.124     7.734 f  tbs_core_0/adaptive_ctrl_0/n1306_i_1/O
-                         net (fo=34, routed)          2.025     9.759    tbs_core_0/adaptive_ctrl_0/spike
-    SLICE_X22Y14         LUT2 (Prop_lut2_I1_O)        0.148     9.907 r  tbs_core_0/adaptive_ctrl_0/n1496[9]_i_6/O
-                         net (fo=11, routed)          1.454    11.361    tbs_core_0/adaptive_ctrl_0/n1496[9]_i_6_n_0
-    SLICE_X16Y12         LUT6 (Prop_lut6_I3_O)        0.328    11.689 r  tbs_core_0/adaptive_ctrl_0/n1498[3]_i_11/O
-                         net (fo=7, routed)           1.721    13.409    tbs_core_0/adaptive_ctrl_0/n1498[3]_i_11_n_0
-    SLICE_X23Y10         LUT6 (Prop_lut6_I2_O)        0.124    13.533 r  tbs_core_0/adaptive_ctrl_0/n1630[4]_i_2/O
-                         net (fo=5, routed)           0.975    14.509    tbs_core_0/adaptive_ctrl_0/n198[3]
-    SLICE_X21Y7          LUT2 (Prop_lut2_I0_O)        0.124    14.633 r  tbs_core_0/adaptive_ctrl_0/n1631[3]_i_4/O
-                         net (fo=1, routed)           0.000    14.633    tbs_core_0/dac_control_0/n1631_reg[3]_1[3]
-    SLICE_X21Y7          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    15.034 r  tbs_core_0/dac_control_0/n1631_reg[3]_i_2/CO[3]
-                         net (fo=1, routed)           0.000    15.034    tbs_core_0/dac_control_0/n1631_reg[3]_i_2_n_0
-    SLICE_X21Y8          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.148 r  tbs_core_0/dac_control_0/n1631_reg[7]_i_2/CO[3]
-                         net (fo=1, routed)           0.000    15.148    tbs_core_0/dac_control_0/n1631_reg[7]_i_2_n_0
-    SLICE_X21Y9          CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    15.387 f  tbs_core_0/dac_control_0/n1631_reg[10]_i_4/O[2]
-                         net (fo=2, routed)           0.970    16.356    tbs_core_0/adaptive_ctrl_0/n1631_reg[0][0]
-    SLICE_X22Y11         LUT6 (Prop_lut6_I3_O)        0.302    16.658 r  tbs_core_0/adaptive_ctrl_0/n1631[10]_i_1/O
-                         net (fo=11, routed)          1.194    17.852    tbs_core_0/dac_control_0/E[0]
-    SLICE_X22Y8          FDCE                                         r  tbs_core_0/dac_control_0/n1631_reg[6]/CE
+    SLICE_X34Y25         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
+    SLICE_X34Y25         FDCE (Prop_fdce_C_Q)         0.456     0.456 f  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/Q
+                         net (fo=7, routed)           1.434     1.890    tbs_core_0/uart_0/uart_rx_0/uart_rx_data[4]
+    SLICE_X33Y28         LUT5 (Prop_lut5_I0_O)        0.124     2.014 f  tbs_core_0/uart_0/uart_rx_0/n1117_i_6/O
+                         net (fo=7, routed)           1.008     3.022    tbs_core_0/uart_0/uart_rx_0/n1117_i_6_n_0
+    SLICE_X29Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.174 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10/O
+                         net (fo=2, routed)           0.831     4.005    tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10_n_0
+    SLICE_X31Y28         LUT5 (Prop_lut5_I1_O)        0.326     4.331 r  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
+                         net (fo=6, routed)           1.378     5.709    tbs_core_0/uart_0/uart_rx_0/n1224_reg
+    SLICE_X35Y32         LUT5 (Prop_lut5_I0_O)        0.124     5.833 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
+                         net (fo=3021, routed)       13.804    19.636    tbs_core_0/spike_memory_0/AR[0]
+    SLICE_X33Y61         FDCE                                         f  tbs_core_0/spike_memory_0/n2152_reg[2013]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/debouncer_2/n1224_reg/C
+  Source:                 tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/dac_control_0/n1631_reg[7]/CE
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[2032]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.852ns  (logic 2.608ns (14.609%)  route 15.244ns (85.391%))
-  Logic Levels:           12  (CARRY4=3 FDCE=1 LUT2=2 LUT3=2 LUT6=4)
+  Data Path Delay:        19.636ns  (logic 1.182ns (6.019%)  route 18.454ns (93.981%))
+  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=3)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y22         FDCE                         0.000     0.000 r  tbs_core_0/debouncer_2/n1224_reg/C
-    SLICE_X27Y22         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  tbs_core_0/debouncer_2/n1224_reg/Q
-                         net (fo=42, routed)          2.514     2.970    tbs_core_0/debouncer_2/control_mode_debounced
-    SLICE_X23Y10         LUT3 (Prop_lut3_I1_O)        0.124     3.094 r  tbs_core_0/debouncer_2/n1631[10]_i_3/O
-                         net (fo=43, routed)          1.853     4.947    tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n1079
-    SLICE_X21Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.071 f  tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635[269]_i_4/O
-                         net (fo=54, routed)          2.539     7.610    tbs_core_0/adaptive_ctrl_0/n1102_reg
-    SLICE_X28Y33         LUT3 (Prop_lut3_I0_O)        0.124     7.734 f  tbs_core_0/adaptive_ctrl_0/n1306_i_1/O
-                         net (fo=34, routed)          2.025     9.759    tbs_core_0/adaptive_ctrl_0/spike
-    SLICE_X22Y14         LUT2 (Prop_lut2_I1_O)        0.148     9.907 r  tbs_core_0/adaptive_ctrl_0/n1496[9]_i_6/O
-                         net (fo=11, routed)          1.454    11.361    tbs_core_0/adaptive_ctrl_0/n1496[9]_i_6_n_0
-    SLICE_X16Y12         LUT6 (Prop_lut6_I3_O)        0.328    11.689 r  tbs_core_0/adaptive_ctrl_0/n1498[3]_i_11/O
-                         net (fo=7, routed)           1.721    13.409    tbs_core_0/adaptive_ctrl_0/n1498[3]_i_11_n_0
-    SLICE_X23Y10         LUT6 (Prop_lut6_I2_O)        0.124    13.533 r  tbs_core_0/adaptive_ctrl_0/n1630[4]_i_2/O
-                         net (fo=5, routed)           0.975    14.509    tbs_core_0/adaptive_ctrl_0/n198[3]
-    SLICE_X21Y7          LUT2 (Prop_lut2_I0_O)        0.124    14.633 r  tbs_core_0/adaptive_ctrl_0/n1631[3]_i_4/O
-                         net (fo=1, routed)           0.000    14.633    tbs_core_0/dac_control_0/n1631_reg[3]_1[3]
-    SLICE_X21Y7          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401    15.034 r  tbs_core_0/dac_control_0/n1631_reg[3]_i_2/CO[3]
-                         net (fo=1, routed)           0.000    15.034    tbs_core_0/dac_control_0/n1631_reg[3]_i_2_n_0
-    SLICE_X21Y8          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.148 r  tbs_core_0/dac_control_0/n1631_reg[7]_i_2/CO[3]
-                         net (fo=1, routed)           0.000    15.148    tbs_core_0/dac_control_0/n1631_reg[7]_i_2_n_0
-    SLICE_X21Y9          CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    15.387 f  tbs_core_0/dac_control_0/n1631_reg[10]_i_4/O[2]
-                         net (fo=2, routed)           0.970    16.356    tbs_core_0/adaptive_ctrl_0/n1631_reg[0][0]
-    SLICE_X22Y11         LUT6 (Prop_lut6_I3_O)        0.302    16.658 r  tbs_core_0/adaptive_ctrl_0/n1631[10]_i_1/O
-                         net (fo=11, routed)          1.194    17.852    tbs_core_0/dac_control_0/E[0]
-    SLICE_X22Y8          FDCE                                         r  tbs_core_0/dac_control_0/n1631_reg[7]/CE
+    SLICE_X34Y25         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
+    SLICE_X34Y25         FDCE (Prop_fdce_C_Q)         0.456     0.456 f  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/Q
+                         net (fo=7, routed)           1.434     1.890    tbs_core_0/uart_0/uart_rx_0/uart_rx_data[4]
+    SLICE_X33Y28         LUT5 (Prop_lut5_I0_O)        0.124     2.014 f  tbs_core_0/uart_0/uart_rx_0/n1117_i_6/O
+                         net (fo=7, routed)           1.008     3.022    tbs_core_0/uart_0/uart_rx_0/n1117_i_6_n_0
+    SLICE_X29Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.174 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10/O
+                         net (fo=2, routed)           0.831     4.005    tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10_n_0
+    SLICE_X31Y28         LUT5 (Prop_lut5_I1_O)        0.326     4.331 r  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
+                         net (fo=6, routed)           1.378     5.709    tbs_core_0/uart_0/uart_rx_0/n1224_reg
+    SLICE_X35Y32         LUT5 (Prop_lut5_I0_O)        0.124     5.833 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
+                         net (fo=3021, routed)       13.804    19.636    tbs_core_0/spike_memory_0/AR[0]
+    SLICE_X33Y61         FDCE                                         f  tbs_core_0/spike_memory_0/n2152_reg[2032]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
+  Source:                 tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[152]/CLR
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[2051]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.743ns  (logic 1.320ns (7.440%)  route 16.423ns (92.560%))
-  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        19.636ns  (logic 1.182ns (6.019%)  route 18.454ns (93.981%))
+  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=3)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y16         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
-    SLICE_X31Y16         FDCE (Prop_fdce_C_Q)         0.419     0.419 f  tbs_core_0/uart_0/uart_rx_0/n3049_reg/Q
-                         net (fo=13, routed)          1.395     1.814    tbs_core_0/uart_0/uart_rx_0/uart_rx_data_strb
-    SLICE_X27Y18         LUT4 (Prop_lut4_I2_O)        0.327     2.141 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_14/O
-                         net (fo=1, routed)           0.871     3.012    tbs_core_0/debouncer_2/n2635[269]_i_5
-    SLICE_X28Y19         LUT6 (Prop_lut6_I4_O)        0.326     3.338 r  tbs_core_0/debouncer_2/n2635[269]_i_9/O
-                         net (fo=1, routed)           0.161     3.499    tbs_core_0/uart_0/uart_rx_0/n2153_reg[0]_1
-    SLICE_X28Y19         LUT6 (Prop_lut6_I5_O)        0.124     3.623 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
-                         net (fo=4, routed)           1.185     4.808    tbs_core_0/uart_0/uart_rx_0/n3048_reg[0]_0
-    SLICE_X33Y23         LUT5 (Prop_lut5_I3_O)        0.124     4.932 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
-                         net (fo=3039, routed)       12.811    17.743    tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2636_reg[0]_0
-    SLICE_X22Y25         FDCE                                         f  tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[152]/CLR
+    SLICE_X34Y25         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
+    SLICE_X34Y25         FDCE (Prop_fdce_C_Q)         0.456     0.456 f  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/Q
+                         net (fo=7, routed)           1.434     1.890    tbs_core_0/uart_0/uart_rx_0/uart_rx_data[4]
+    SLICE_X33Y28         LUT5 (Prop_lut5_I0_O)        0.124     2.014 f  tbs_core_0/uart_0/uart_rx_0/n1117_i_6/O
+                         net (fo=7, routed)           1.008     3.022    tbs_core_0/uart_0/uart_rx_0/n1117_i_6_n_0
+    SLICE_X29Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.174 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10/O
+                         net (fo=2, routed)           0.831     4.005    tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10_n_0
+    SLICE_X31Y28         LUT5 (Prop_lut5_I1_O)        0.326     4.331 r  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
+                         net (fo=6, routed)           1.378     5.709    tbs_core_0/uart_0/uart_rx_0/n1224_reg
+    SLICE_X35Y32         LUT5 (Prop_lut5_I0_O)        0.124     5.833 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
+                         net (fo=3021, routed)       13.804    19.636    tbs_core_0/spike_memory_0/AR[0]
+    SLICE_X32Y61         FDCE                                         f  tbs_core_0/spike_memory_0/n2152_reg[2051]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
+  Source:                 tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[153]/CLR
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[2070]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.743ns  (logic 1.320ns (7.440%)  route 16.423ns (92.560%))
-  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        19.636ns  (logic 1.182ns (6.019%)  route 18.454ns (93.981%))
+  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=3)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y16         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
-    SLICE_X31Y16         FDCE (Prop_fdce_C_Q)         0.419     0.419 f  tbs_core_0/uart_0/uart_rx_0/n3049_reg/Q
-                         net (fo=13, routed)          1.395     1.814    tbs_core_0/uart_0/uart_rx_0/uart_rx_data_strb
-    SLICE_X27Y18         LUT4 (Prop_lut4_I2_O)        0.327     2.141 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_14/O
-                         net (fo=1, routed)           0.871     3.012    tbs_core_0/debouncer_2/n2635[269]_i_5
-    SLICE_X28Y19         LUT6 (Prop_lut6_I4_O)        0.326     3.338 r  tbs_core_0/debouncer_2/n2635[269]_i_9/O
-                         net (fo=1, routed)           0.161     3.499    tbs_core_0/uart_0/uart_rx_0/n2153_reg[0]_1
-    SLICE_X28Y19         LUT6 (Prop_lut6_I5_O)        0.124     3.623 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
-                         net (fo=4, routed)           1.185     4.808    tbs_core_0/uart_0/uart_rx_0/n3048_reg[0]_0
-    SLICE_X33Y23         LUT5 (Prop_lut5_I3_O)        0.124     4.932 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
-                         net (fo=3039, routed)       12.811    17.743    tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2636_reg[0]_0
-    SLICE_X22Y25         FDCE                                         f  tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[153]/CLR
+    SLICE_X34Y25         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
+    SLICE_X34Y25         FDCE (Prop_fdce_C_Q)         0.456     0.456 f  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/Q
+                         net (fo=7, routed)           1.434     1.890    tbs_core_0/uart_0/uart_rx_0/uart_rx_data[4]
+    SLICE_X33Y28         LUT5 (Prop_lut5_I0_O)        0.124     2.014 f  tbs_core_0/uart_0/uart_rx_0/n1117_i_6/O
+                         net (fo=7, routed)           1.008     3.022    tbs_core_0/uart_0/uart_rx_0/n1117_i_6_n_0
+    SLICE_X29Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.174 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10/O
+                         net (fo=2, routed)           0.831     4.005    tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10_n_0
+    SLICE_X31Y28         LUT5 (Prop_lut5_I1_O)        0.326     4.331 r  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
+                         net (fo=6, routed)           1.378     5.709    tbs_core_0/uart_0/uart_rx_0/n1224_reg
+    SLICE_X35Y32         LUT5 (Prop_lut5_I0_O)        0.124     5.833 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
+                         net (fo=3021, routed)       13.804    19.636    tbs_core_0/spike_memory_0/AR[0]
+    SLICE_X32Y61         FDCE                                         f  tbs_core_0/spike_memory_0/n2152_reg[2070]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
+  Source:                 tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[162]/CLR
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[2089]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.743ns  (logic 1.320ns (7.440%)  route 16.423ns (92.560%))
-  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        19.636ns  (logic 1.182ns (6.019%)  route 18.454ns (93.981%))
+  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=3)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y16         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
-    SLICE_X31Y16         FDCE (Prop_fdce_C_Q)         0.419     0.419 f  tbs_core_0/uart_0/uart_rx_0/n3049_reg/Q
-                         net (fo=13, routed)          1.395     1.814    tbs_core_0/uart_0/uart_rx_0/uart_rx_data_strb
-    SLICE_X27Y18         LUT4 (Prop_lut4_I2_O)        0.327     2.141 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_14/O
-                         net (fo=1, routed)           0.871     3.012    tbs_core_0/debouncer_2/n2635[269]_i_5
-    SLICE_X28Y19         LUT6 (Prop_lut6_I4_O)        0.326     3.338 r  tbs_core_0/debouncer_2/n2635[269]_i_9/O
-                         net (fo=1, routed)           0.161     3.499    tbs_core_0/uart_0/uart_rx_0/n2153_reg[0]_1
-    SLICE_X28Y19         LUT6 (Prop_lut6_I5_O)        0.124     3.623 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
-                         net (fo=4, routed)           1.185     4.808    tbs_core_0/uart_0/uart_rx_0/n3048_reg[0]_0
-    SLICE_X33Y23         LUT5 (Prop_lut5_I3_O)        0.124     4.932 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
-                         net (fo=3039, routed)       12.811    17.743    tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2636_reg[0]_0
-    SLICE_X23Y25         FDCE                                         f  tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[162]/CLR
+    SLICE_X34Y25         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
+    SLICE_X34Y25         FDCE (Prop_fdce_C_Q)         0.456     0.456 f  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/Q
+                         net (fo=7, routed)           1.434     1.890    tbs_core_0/uart_0/uart_rx_0/uart_rx_data[4]
+    SLICE_X33Y28         LUT5 (Prop_lut5_I0_O)        0.124     2.014 f  tbs_core_0/uart_0/uart_rx_0/n1117_i_6/O
+                         net (fo=7, routed)           1.008     3.022    tbs_core_0/uart_0/uart_rx_0/n1117_i_6_n_0
+    SLICE_X29Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.174 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10/O
+                         net (fo=2, routed)           0.831     4.005    tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10_n_0
+    SLICE_X31Y28         LUT5 (Prop_lut5_I1_O)        0.326     4.331 r  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
+                         net (fo=6, routed)           1.378     5.709    tbs_core_0/uart_0/uart_rx_0/n1224_reg
+    SLICE_X35Y32         LUT5 (Prop_lut5_I0_O)        0.124     5.833 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
+                         net (fo=3021, routed)       13.804    19.636    tbs_core_0/spike_memory_0/AR[0]
+    SLICE_X32Y61         FDCE                                         f  tbs_core_0/spike_memory_0/n2152_reg[2089]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
+  Source:                 tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[163]/CLR
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[2108]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.743ns  (logic 1.320ns (7.440%)  route 16.423ns (92.560%))
-  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        19.636ns  (logic 1.182ns (6.019%)  route 18.454ns (93.981%))
+  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=3)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y16         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
-    SLICE_X31Y16         FDCE (Prop_fdce_C_Q)         0.419     0.419 f  tbs_core_0/uart_0/uart_rx_0/n3049_reg/Q
-                         net (fo=13, routed)          1.395     1.814    tbs_core_0/uart_0/uart_rx_0/uart_rx_data_strb
-    SLICE_X27Y18         LUT4 (Prop_lut4_I2_O)        0.327     2.141 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_14/O
-                         net (fo=1, routed)           0.871     3.012    tbs_core_0/debouncer_2/n2635[269]_i_5
-    SLICE_X28Y19         LUT6 (Prop_lut6_I4_O)        0.326     3.338 r  tbs_core_0/debouncer_2/n2635[269]_i_9/O
-                         net (fo=1, routed)           0.161     3.499    tbs_core_0/uart_0/uart_rx_0/n2153_reg[0]_1
-    SLICE_X28Y19         LUT6 (Prop_lut6_I5_O)        0.124     3.623 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
-                         net (fo=4, routed)           1.185     4.808    tbs_core_0/uart_0/uart_rx_0/n3048_reg[0]_0
-    SLICE_X33Y23         LUT5 (Prop_lut5_I3_O)        0.124     4.932 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
-                         net (fo=3039, routed)       12.811    17.743    tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2636_reg[0]_0
-    SLICE_X23Y25         FDCE                                         f  tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[163]/CLR
+    SLICE_X34Y25         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
+    SLICE_X34Y25         FDCE (Prop_fdce_C_Q)         0.456     0.456 f  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/Q
+                         net (fo=7, routed)           1.434     1.890    tbs_core_0/uart_0/uart_rx_0/uart_rx_data[4]
+    SLICE_X33Y28         LUT5 (Prop_lut5_I0_O)        0.124     2.014 f  tbs_core_0/uart_0/uart_rx_0/n1117_i_6/O
+                         net (fo=7, routed)           1.008     3.022    tbs_core_0/uart_0/uart_rx_0/n1117_i_6_n_0
+    SLICE_X29Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.174 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10/O
+                         net (fo=2, routed)           0.831     4.005    tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10_n_0
+    SLICE_X31Y28         LUT5 (Prop_lut5_I1_O)        0.326     4.331 r  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
+                         net (fo=6, routed)           1.378     5.709    tbs_core_0/uart_0/uart_rx_0/n1224_reg
+    SLICE_X35Y32         LUT5 (Prop_lut5_I0_O)        0.124     5.833 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
+                         net (fo=3021, routed)       13.804    19.636    tbs_core_0/spike_memory_0/AR[0]
+    SLICE_X32Y61         FDCE                                         f  tbs_core_0/spike_memory_0/n2152_reg[2108]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
+  Source:                 tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[164]/CLR
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[1081]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.743ns  (logic 1.320ns (7.440%)  route 16.423ns (92.560%))
-  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        19.618ns  (logic 1.182ns (6.025%)  route 18.436ns (93.975%))
+  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=3)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y16         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
-    SLICE_X31Y16         FDCE (Prop_fdce_C_Q)         0.419     0.419 f  tbs_core_0/uart_0/uart_rx_0/n3049_reg/Q
-                         net (fo=13, routed)          1.395     1.814    tbs_core_0/uart_0/uart_rx_0/uart_rx_data_strb
-    SLICE_X27Y18         LUT4 (Prop_lut4_I2_O)        0.327     2.141 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_14/O
-                         net (fo=1, routed)           0.871     3.012    tbs_core_0/debouncer_2/n2635[269]_i_5
-    SLICE_X28Y19         LUT6 (Prop_lut6_I4_O)        0.326     3.338 r  tbs_core_0/debouncer_2/n2635[269]_i_9/O
-                         net (fo=1, routed)           0.161     3.499    tbs_core_0/uart_0/uart_rx_0/n2153_reg[0]_1
-    SLICE_X28Y19         LUT6 (Prop_lut6_I5_O)        0.124     3.623 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
-                         net (fo=4, routed)           1.185     4.808    tbs_core_0/uart_0/uart_rx_0/n3048_reg[0]_0
-    SLICE_X33Y23         LUT5 (Prop_lut5_I3_O)        0.124     4.932 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
-                         net (fo=3039, routed)       12.811    17.743    tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2636_reg[0]_0
-    SLICE_X23Y25         FDCE                                         f  tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[164]/CLR
+    SLICE_X34Y25         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
+    SLICE_X34Y25         FDCE (Prop_fdce_C_Q)         0.456     0.456 f  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/Q
+                         net (fo=7, routed)           1.434     1.890    tbs_core_0/uart_0/uart_rx_0/uart_rx_data[4]
+    SLICE_X33Y28         LUT5 (Prop_lut5_I0_O)        0.124     2.014 f  tbs_core_0/uart_0/uart_rx_0/n1117_i_6/O
+                         net (fo=7, routed)           1.008     3.022    tbs_core_0/uart_0/uart_rx_0/n1117_i_6_n_0
+    SLICE_X29Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.174 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10/O
+                         net (fo=2, routed)           0.831     4.005    tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10_n_0
+    SLICE_X31Y28         LUT5 (Prop_lut5_I1_O)        0.326     4.331 r  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
+                         net (fo=6, routed)           1.378     5.709    tbs_core_0/uart_0/uart_rx_0/n1224_reg
+    SLICE_X35Y32         LUT5 (Prop_lut5_I0_O)        0.124     5.833 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
+                         net (fo=3021, routed)       13.785    19.618    tbs_core_0/spike_memory_0/AR[0]
+    SLICE_X31Y53         FDCE                                         f  tbs_core_0/spike_memory_0/n2152_reg[1081]/CLR
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
+  Source:                 tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[166]/CLR
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[1100]/CLR
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        17.743ns  (logic 1.320ns (7.440%)  route 16.423ns (92.560%))
-  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=1 LUT6=2)
+  Data Path Delay:        19.618ns  (logic 1.182ns (6.025%)  route 18.436ns (93.975%))
+  Logic Levels:           5  (FDCE=1 LUT4=1 LUT5=3)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y16         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3049_reg/C
-    SLICE_X31Y16         FDCE (Prop_fdce_C_Q)         0.419     0.419 f  tbs_core_0/uart_0/uart_rx_0/n3049_reg/Q
-                         net (fo=13, routed)          1.395     1.814    tbs_core_0/uart_0/uart_rx_0/uart_rx_data_strb
-    SLICE_X27Y18         LUT4 (Prop_lut4_I2_O)        0.327     2.141 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_14/O
-                         net (fo=1, routed)           0.871     3.012    tbs_core_0/debouncer_2/n2635[269]_i_5
-    SLICE_X28Y19         LUT6 (Prop_lut6_I4_O)        0.326     3.338 r  tbs_core_0/debouncer_2/n2635[269]_i_9/O
-                         net (fo=1, routed)           0.161     3.499    tbs_core_0/uart_0/uart_rx_0/n2153_reg[0]_1
-    SLICE_X28Y19         LUT6 (Prop_lut6_I5_O)        0.124     3.623 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
-                         net (fo=4, routed)           1.185     4.808    tbs_core_0/uart_0/uart_rx_0/n3048_reg[0]_0
-    SLICE_X33Y23         LUT5 (Prop_lut5_I3_O)        0.124     4.932 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
-                         net (fo=3039, routed)       12.811    17.743    tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2636_reg[0]_0
-    SLICE_X23Y25         FDCE                                         f  tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/n2635_reg[166]/CLR
+    SLICE_X34Y25         FDCE                         0.000     0.000 r  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/C
+    SLICE_X34Y25         FDCE (Prop_fdce_C_Q)         0.456     0.456 f  tbs_core_0/uart_0/uart_rx_0/n3048_reg[4]/Q
+                         net (fo=7, routed)           1.434     1.890    tbs_core_0/uart_0/uart_rx_0/uart_rx_data[4]
+    SLICE_X33Y28         LUT5 (Prop_lut5_I0_O)        0.124     2.014 f  tbs_core_0/uart_0/uart_rx_0/n1117_i_6/O
+                         net (fo=7, routed)           1.008     3.022    tbs_core_0/uart_0/uart_rx_0/n1117_i_6_n_0
+    SLICE_X29Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.174 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10/O
+                         net (fo=2, routed)           0.831     4.005    tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_10_n_0
+    SLICE_X31Y28         LUT5 (Prop_lut5_I1_O)        0.326     4.331 r  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_5/O
+                         net (fo=6, routed)           1.378     5.709    tbs_core_0/uart_0/uart_rx_0/n1224_reg
+    SLICE_X35Y32         LUT5 (Prop_lut5_I0_O)        0.124     5.833 f  tbs_core_0/uart_0/uart_rx_0/n2635[269]_i_2/O
+                         net (fo=3021, routed)       13.785    19.618    tbs_core_0/spike_memory_0/AR[0]
+    SLICE_X31Y53         FDCE                                         f  tbs_core_0/spike_memory_0/n2152_reg[1100]/CLR
   -------------------------------------------------------------------    -------------------
 
 
@@ -544,37 +476,20 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 tbs_core_0/spike_memory_0/n2152_reg[283]/C
+  Source:                 tbs_core_0/dac_control_0/sync_chain_0/n1145_reg[0]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/spike_memory_0/n2152_reg[302]/D
+  Destination:            tbs_core_0/dac_control_0/sync_chain_0/n1145_reg[1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.202ns  (logic 0.128ns (63.513%)  route 0.074ns (36.487%))
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X33Y44         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[283]/C
-    SLICE_X33Y44         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  tbs_core_0/spike_memory_0/n2152_reg[283]/Q
-                         net (fo=2, routed)           0.074     0.202    tbs_core_0/spike_memory_0/p_13_in[17]
-    SLICE_X32Y44         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[302]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 tbs_core_0/spike_memory_0/n2152_reg[60]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/spike_memory_0/n2152_reg[79]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.206ns  (logic 0.128ns (62.108%)  route 0.078ns (37.892%))
-  Logic Levels:           1  (FDCE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X25Y37         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[60]/C
-    SLICE_X25Y37         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  tbs_core_0/spike_memory_0/n2152_reg[60]/Q
-                         net (fo=2, routed)           0.078     0.206    tbs_core_0/spike_memory_0/p_2_in[3]
-    SLICE_X24Y37         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[79]/D
+    SLICE_X37Y31         FDCE                         0.000     0.000 r  tbs_core_0/dac_control_0/sync_chain_0/n1145_reg[0]/C
+    SLICE_X37Y31         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/dac_control_0/sync_chain_0/n1145_reg[0]/Q
+                         net (fo=1, routed)           0.056     0.197    tbs_core_0/dac_control_0/sync_chain_0/n1145[0]
+    SLICE_X37Y31         FDCE                                         r  tbs_core_0/dac_control_0/sync_chain_0/n1145_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -583,106 +498,140 @@ Slack:                    inf
   Destination:            tbs_core_0/debouncer_5/sync_chain_0/n1145_reg[1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.206ns  (logic 0.141ns (68.336%)  route 0.065ns (31.664%))
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X38Y27         FDCE                         0.000     0.000 r  tbs_core_0/debouncer_5/sync_chain_0/n1145_reg[0]/C
-    SLICE_X38Y27         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/debouncer_5/sync_chain_0/n1145_reg[0]/Q
-                         net (fo=1, routed)           0.065     0.206    tbs_core_0/debouncer_5/sync_chain_0/n1139[1]
-    SLICE_X38Y27         FDCE                                         r  tbs_core_0/debouncer_5/sync_chain_0/n1145_reg[1]/D
+    SLICE_X39Y31         FDCE                         0.000     0.000 r  tbs_core_0/debouncer_5/sync_chain_0/n1145_reg[0]/C
+    SLICE_X39Y31         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/debouncer_5/sync_chain_0/n1145_reg[0]/Q
+                         net (fo=1, routed)           0.056     0.197    tbs_core_0/debouncer_5/sync_chain_0/n1139[1]
+    SLICE_X39Y31         FDCE                                         r  tbs_core_0/debouncer_5/sync_chain_0/n1145_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/spike_memory_0/n2152_reg[1326]/C
+  Source:                 tbs_core_0/spike_memory_0/n2152_reg[966]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/spike_memory_0/n2152_reg[1345]/D
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[985]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.206ns  (logic 0.128ns (62.028%)  route 0.078ns (37.972%))
+  Data Path Delay:        0.202ns  (logic 0.128ns (63.428%)  route 0.074ns (36.572%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X38Y44         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[1326]/C
-    SLICE_X38Y44         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  tbs_core_0/spike_memory_0/n2152_reg[1326]/Q
-                         net (fo=2, routed)           0.078     0.206    tbs_core_0/spike_memory_0/p_68_in[15]
-    SLICE_X39Y44         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[1345]/D
+    SLICE_X33Y39         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[966]/C
+    SLICE_X33Y39         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  tbs_core_0/spike_memory_0/n2152_reg[966]/Q
+                         net (fo=2, routed)           0.074     0.202    tbs_core_0/spike_memory_0/p_49_in[16]
+    SLICE_X32Y39         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[985]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/spike_memory_0/n2152_reg[1460]/C
+  Source:                 tbs_core_0/spike_memory_0/n2152_reg[965]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/spike_memory_0/n2152_reg[1479]/D
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[984]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.208ns  (logic 0.128ns (61.625%)  route 0.080ns (38.375%))
+  Data Path Delay:        0.204ns  (logic 0.128ns (62.599%)  route 0.076ns (37.401%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X38Y37         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[1460]/C
-    SLICE_X38Y37         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  tbs_core_0/spike_memory_0/n2152_reg[1460]/Q
-                         net (fo=2, routed)           0.080     0.208    tbs_core_0/spike_memory_0/p_75_in[16]
-    SLICE_X39Y37         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[1479]/D
+    SLICE_X25Y20         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[965]/C
+    SLICE_X25Y20         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  tbs_core_0/spike_memory_0/n2152_reg[965]/Q
+                         net (fo=2, routed)           0.076     0.204    tbs_core_0/spike_memory_0/p_49_in[15]
+    SLICE_X24Y20         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[984]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/spike_memory_0/n2152_reg[1049]/C
+  Source:                 tbs_core_0/spike_memory_0/n2152_reg[23]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/spike_memory_0/n2152_reg[1068]/D
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[42]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.209ns  (logic 0.141ns (67.387%)  route 0.068ns (32.613%))
+  Data Path Delay:        0.208ns  (logic 0.141ns (67.788%)  route 0.067ns (32.212%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X29Y45         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[1049]/C
-    SLICE_X29Y45         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/spike_memory_0/n2152_reg[1049]/Q
-                         net (fo=2, routed)           0.068     0.209    tbs_core_0/spike_memory_0/p_54_in[4]
-    SLICE_X28Y45         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[1068]/D
+    SLICE_X15Y19         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[23]/C
+    SLICE_X15Y19         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/spike_memory_0/n2152_reg[23]/Q
+                         net (fo=2, routed)           0.067     0.208    tbs_core_0/spike_memory_0/p_0_in[4]
+    SLICE_X15Y19         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[42]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/spike_memory_0/n2152_reg[1233]/C
+  Source:                 tbs_core_0/spike_memory_0/n2152_reg[24]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/spike_memory_0/n2152_reg[1252]/D
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[43]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.209ns  (logic 0.141ns (67.387%)  route 0.068ns (32.613%))
+  Data Path Delay:        0.208ns  (logic 0.141ns (67.788%)  route 0.067ns (32.212%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X41Y46         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[1233]/C
-    SLICE_X41Y46         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/spike_memory_0/n2152_reg[1233]/Q
-                         net (fo=2, routed)           0.068     0.209    tbs_core_0/spike_memory_0/p_63_in[17]
-    SLICE_X40Y46         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[1252]/D
+    SLICE_X21Y38         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[24]/C
+    SLICE_X21Y38         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/spike_memory_0/n2152_reg[24]/Q
+                         net (fo=2, routed)           0.067     0.208    tbs_core_0/spike_memory_0/p_0_in[5]
+    SLICE_X21Y38         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[43]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/spike_memory_0/n2152_reg[491]/C
+  Source:                 tbs_core_0/spike_memory_0/n2152_reg[0]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/spike_memory_0/n2152_reg[510]/D
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[19]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.209ns  (logic 0.141ns (67.387%)  route 0.068ns (32.613%))
+  Data Path Delay:        0.209ns  (logic 0.141ns (67.433%)  route 0.068ns (32.567%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X37Y36         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[491]/C
-    SLICE_X37Y36         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/spike_memory_0/n2152_reg[491]/Q
-                         net (fo=2, routed)           0.068     0.209    tbs_core_0/spike_memory_0/p_24_in[16]
-    SLICE_X36Y36         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[510]/D
+    SLICE_X31Y37         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[0]/C
+    SLICE_X31Y37         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/spike_memory_0/n2152_reg[0]/Q
+                         net (fo=2, routed)           0.068     0.209    tbs_core_0/spike_memory_0/n2152_reg_n_0_[0]
+    SLICE_X31Y37         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[19]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 tbs_core_0/spike_memory_0/n2152_reg[2150]/C
+  Source:                 tbs_core_0/spike_memory_0/n2152_reg[1099]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/spike_memory_0/n2152_reg[2169]/D
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[1118]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.209ns  (logic 0.141ns (67.367%)  route 0.068ns (32.633%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y38         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[1099]/C
+    SLICE_X33Y38         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/spike_memory_0/n2152_reg[1099]/Q
+                         net (fo=2, routed)           0.068     0.209    tbs_core_0/spike_memory_0/p_56_in[16]
+    SLICE_X32Y38         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[1118]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 tbs_core_0/spike_memory_0/n2152_reg[1867]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[1886]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.209ns  (logic 0.141ns (67.367%)  route 0.068ns (32.633%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X29Y41         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[1867]/C
+    SLICE_X29Y41         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/spike_memory_0/n2152_reg[1867]/Q
+                         net (fo=2, routed)           0.068     0.209    tbs_core_0/spike_memory_0/p_97_in[5]
+    SLICE_X28Y41         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[1886]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 tbs_core_0/spike_memory_0/n2152_reg[473]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            tbs_core_0/spike_memory_0/n2152_reg[492]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.212ns  (logic 0.141ns (66.629%)  route 0.071ns (33.371%))
@@ -690,27 +639,10 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X25Y44         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[2150]/C
-    SLICE_X25Y44         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/spike_memory_0/n2152_reg[2150]/Q
-                         net (fo=2, routed)           0.071     0.212    tbs_core_0/spike_memory_0/p_112_in[3]
-    SLICE_X24Y44         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[2169]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 tbs_core_0/spike_memory_0/n2152_reg[67]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            tbs_core_0/spike_memory_0/n2152_reg[86]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.222ns  (logic 0.148ns (66.589%)  route 0.074ns (33.411%))
-  Logic Levels:           1  (FDCE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X26Y38         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[67]/C
-    SLICE_X26Y38         FDCE (Prop_fdce_C_Q)         0.148     0.148 r  tbs_core_0/spike_memory_0/n2152_reg[67]/Q
-                         net (fo=2, routed)           0.074     0.222    tbs_core_0/spike_memory_0/p_2_in[10]
-    SLICE_X27Y38         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[86]/D
+    SLICE_X39Y48         FDCE                         0.000     0.000 r  tbs_core_0/spike_memory_0/n2152_reg[473]/C
+    SLICE_X39Y48         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  tbs_core_0/spike_memory_0/n2152_reg[473]/Q
+                         net (fo=2, routed)           0.071     0.212    tbs_core_0/spike_memory_0/p_23_in[17]
+    SLICE_X38Y48         FDCE                                         r  tbs_core_0/spike_memory_0/n2152_reg[492]/D
   -------------------------------------------------------------------    -------------------
 
 

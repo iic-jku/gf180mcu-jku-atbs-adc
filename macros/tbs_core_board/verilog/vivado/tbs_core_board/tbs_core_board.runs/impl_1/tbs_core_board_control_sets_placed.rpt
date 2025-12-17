@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Wed Dec 17 01:06:31 2025
+| Date         : Wed Dec 17 12:34:01 2025
 | Host         : SimiBook running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file tbs_core_board_control_sets_placed.rpt
 | Design       : tbs_core_board
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    30 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   121 |
+| Unused register locations in slices containing registers |   115 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -43,8 +43,8 @@ Table of Contents
 | >= 0 to < 4        |     5 |
 | >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     2 |
-| >= 8 to < 10       |     1 |
-| >= 10 to < 12      |     8 |
+| >= 8 to < 10       |     8 |
+| >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
 | >= 16              |    10 |
@@ -59,10 +59,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |             349 |          141 |
+| No           | No                    | Yes                    |             349 |          136 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |            2954 |          760 |
+| Yes          | No                    | Yes                    |            2936 |          767 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -73,36 +73,36 @@ Table of Contents
 +--------------------+------------------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
 |    Clock Signal    |                           Enable Signal                          |              Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------------+------------------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
-|  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n430                                   | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                1 |              1 |         1.00 |
 |  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n432                                   | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                1 |              1 |         1.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n430                                   | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                1 |              1 |         1.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n428                                 | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                1 |              1 |         1.00 |
 |  clock_i_IBUF_BUFG | tbs_core_0/n441                                                  | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                1 |              1 |         1.00 |
-|  clock_i_IBUF_BUFG | tbs_core_0/debouncer_2/n428                                      | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                1 |              1 |         1.00 |
 |  clock_i_IBUF_BUFG |                                                                  | tbs_core_0/sync_chain_0/AR[0]             |                1 |              2 |         2.00 |
-|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n11120                               | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                2 |              4 |         2.00 |
-|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n1115_reg[0]                         | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                3 |              5 |         1.67 |
-|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/E[0]                                 | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                2 |              5 |         2.50 |
-|  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n2151__0[0]                            | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                3 |              7 |         2.33 |
-|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n1111_reg[0]                         | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                3 |              7 |         2.33 |
-|  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n2158_reg[3]_0[1]                      | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                3 |              8 |         2.67 |
-|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n1108_reg[0]                         | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                3 |             10 |         3.33 |
-|  clock_i_IBUF_BUFG | tbs_core_0/adaptive_ctrl_0/weyls_discrepancy_0/E[0]              | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                6 |             10 |         1.67 |
-|  clock_i_IBUF_BUFG | tbs_core_0/adaptive_ctrl_0/weyls_discrepancy_0/n2853_reg[1]_0[0] | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                3 |             10 |         3.33 |
-|  clock_i_IBUF_BUFG | tbs_core_0/dac_control_0/n1546[0]                                | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                4 |             10 |         2.50 |
-|  clock_i_IBUF_BUFG | tbs_core_0/adaptive_ctrl_0/n1491_reg_0[0]                        | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                5 |             11 |         2.20 |
-|  clock_i_IBUF_BUFG | tbs_core_0/adaptive_ctrl_0/n1491_reg_1[0]                        | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                4 |             11 |         2.75 |
-|  clock_i_IBUF_BUFG | tbs_core_0/debouncer_2/n1124_reg[0]_0[0]                         | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                3 |             11 |         3.67 |
-|  clock_i_IBUF_BUFG | tbs_core_0/debouncer_2/n1124_reg[0][0]                           | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                3 |             11 |         3.67 |
-|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n1119_reg[0]                         | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                6 |             12 |         2.00 |
-|  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n2158_reg[3]_0[0]                      | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                3 |             16 |         5.33 |
-|  clock_i_IBUF_BUFG | tbs_core_0/sync_chain_1/n1876_reg[0]                             | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                6 |             16 |         2.67 |
-|  clock_i_IBUF_BUFG |                                                                  | tbs_core_0/debouncer_2/n212               |                6 |             19 |         3.17 |
-|  clock_i_IBUF_BUFG | tbs_core_0/sync_chain_1/E[0]                                     | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                5 |             19 |         3.80 |
-|  clock_i_IBUF_BUFG | tbs_core_0/spike_encoder_0/n1106_reg[0]                          | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |                8 |             26 |         3.25 |
-|  clock_i_IBUF_BUFG | tbs_core_0/debouncer_2/E[0]                                      | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |               13 |             39 |         3.00 |
-|  clock_i_IBUF_BUFG |                                                                  | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |               69 |            131 |         1.90 |
-|  clock_i_IBUF_BUFG |                                                                  | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |               65 |            197 |         3.03 |
-|  clock_i_IBUF_BUFG | tbs_core_0/sync_chain_1/n1104_reg_0[0]                           | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |               85 |            270 |         3.18 |
-|  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n2155                                  | tbs_core_0/uart_0/uart_rx_0/n1124_reg[0]  |              583 |           2432 |         4.17 |
+|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n11120                               | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                1 |              4 |         4.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n1117_reg[0]                         | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                1 |              5 |         5.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n1111_reg[0]                         | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                2 |              5 |         2.50 |
+|  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n2151__0[0]                            | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                2 |              7 |         3.50 |
+|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n1111_reg_0[0]                       | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                3 |              7 |         2.33 |
+|  clock_i_IBUF_BUFG | tbs_core_0/adaptive_ctrl_0/weyls_discrepancy_0/n2853_reg[1]_0[0] | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                2 |              8 |         4.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/adaptive_ctrl_0/weyls_discrepancy_0/E[0]              | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                3 |              8 |         2.67 |
+|  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n2158_reg[3]_0[1]                      | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                1 |              8 |         8.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/dac_control_0/n1546[0]                                | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                3 |              8 |         2.67 |
+|  clock_i_IBUF_BUFG | tbs_core_0/debouncer_2/n1124_reg[2]_1[0]                         | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                3 |              9 |         3.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/debouncer_2/n1124_reg[2][0]                           | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                3 |              9 |         3.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/adaptive_ctrl_0/n1491_reg_0[0]                        | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                3 |              9 |         3.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/adaptive_ctrl_0/n1491_reg_1[0]                        | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                3 |              9 |         3.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/n3049_reg_0[0]                       | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                2 |             10 |         5.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/uart_0/uart_rx_0/E[0]                                 | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |                4 |             12 |         3.00 |
+|  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n2158_reg[3]_0[0]                      | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                3 |             16 |         5.33 |
+|  clock_i_IBUF_BUFG | tbs_core_0/time_measurement_0/E[0]                               | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                6 |             16 |         2.67 |
+|  clock_i_IBUF_BUFG |                                                                  | tbs_core_0/debouncer_2/n212               |                5 |             19 |         3.80 |
+|  clock_i_IBUF_BUFG | tbs_core_0/time_measurement_0/n1876_reg_1[0]                     | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                6 |             19 |         3.17 |
+|  clock_i_IBUF_BUFG | tbs_core_0/spike_encoder_0/n1106_reg[0]                          | tbs_core_0/uart_0/uart_rx_0/AR[0]         |                9 |             26 |         2.89 |
+|  clock_i_IBUF_BUFG | tbs_core_0/debouncer_2/E[0]                                      | tbs_core_0/uart_0/uart_rx_0/AR[0]         |               12 |             35 |         2.92 |
+|  clock_i_IBUF_BUFG |                                                                  | tbs_core_0/uart_0/uart_rx_0/AR[0]         |               61 |            131 |         2.15 |
+|  clock_i_IBUF_BUFG |                                                                  | tbs_core_0/sync_chain_0/n1145_reg[1]_0[0] |               69 |            197 |         2.86 |
+|  clock_i_IBUF_BUFG | tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/E[0]                | tbs_core_0/uart_0/uart_rx_0/AR[0]         |               93 |            270 |         2.90 |
+|  clock_i_IBUF_BUFG | tbs_core_0/spike_memory_0/n2155                                  | tbs_core_0/uart_0/uart_rx_0/AR[0]         |              598 |           2432 |         4.07 |
 +--------------------+------------------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
 
 
