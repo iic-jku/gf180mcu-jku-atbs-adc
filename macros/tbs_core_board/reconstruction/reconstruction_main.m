@@ -27,7 +27,7 @@ tbs_vals = load('..\vhdl\sim\matlab\tbs.mat');
 % =====================================================
 
 %% Reconstruction Settings
-tbs_mode = 1;           % 0... TBS; 1... ATBS
+tbs_mode = 0;           % 0... TBS; 1... ATBS
 trigger_mode = 0;       % 0... manually; 1... auto (UART) --> change control_mode_i Switch to UART
 com_interface = 0;      % 0... UART TX; 1... Ethernet TX; 2... Reconstruct Data (reading data)
 auto = 1;               % 0... manually; 1... auto (UART) --> change control_mode_i Switch to UART
@@ -123,9 +123,9 @@ PAYLOAD_SIZE = tbs_vals.ethernet_payload;  % Amount of Payload Bytes in one fram
 if com_interface ~= 2 && auto == 1 % UART (auto)
     fprintf("Auto Mode: Setting up digital core via UART... \n");
 
-    write(device, "R", "char");      % Reset
-    fprintf("Reset digital core. \n");
-    pause(0.5);
+    % write(device, "R", "char");      % Reset
+    % fprintf("Reset digital core. \n");
+    % pause(0.5);
 
     write(device, "1", "char");      % Start sampling on trigger
     fprintf("Start sampling on trigger. \n");
@@ -385,8 +385,8 @@ end
 % =====================================================
 
 %% Plotting Results
-ecg_data = load('..\Measurements\Generate_ECG\data\ecg_data_0.15V_3.15V.mat');
-% ecg_data = load('..\Measurements\Generate_ECG\data\ecg_data_0.3V_2.4V.mat');
+ecg_data = load('..\measurements\generate_ecg\data\ecg_data_0.15V_3.15V.mat');
+% ecg_data = load('..\measurements\generate_ecg\data\ecg_data_0.3V_2.4V.mat');
 
 if ecg_or_sine == 0     % sine
     t_analog = 0:1/ecg_data.N:3 - 1/ecg_data.N;
