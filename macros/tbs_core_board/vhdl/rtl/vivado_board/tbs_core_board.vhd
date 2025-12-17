@@ -176,8 +176,6 @@ begin
     enable_i                  => '1',                       -- Disable(0), Enable(1)
     -- Select TBS delta steps --> enables virtual DAC resolution
     select_tbs_delta_steps_i  => select_tbs_delta_steps,    -- S1_4: full DAC resolution(0), "virtual" DAC resolution(1)
-    -- Select Comparator Type (CT/DT comparator)
-    select_comparator_type_i  => '0',                       -- Modeling CT comparator(0), Modeling DT comparator(1)
     -- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
     ecg_lod_p_i               => ecg_lod_p_i,
     ecg_lod_n_i				        => ecg_lod_n_i,

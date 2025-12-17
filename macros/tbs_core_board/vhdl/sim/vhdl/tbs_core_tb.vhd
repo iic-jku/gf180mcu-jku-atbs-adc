@@ -48,9 +48,6 @@ signal enable           : std_ulogic;
 -- Select TBS delta steps --> enables virtual DAC resolution
 signal select_tbs_delta_steps : std_ulogic; -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
 
--- Select Comparator Type (CT/DT comparator)    
-signal select_comparator_type : std_ulogic; -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
-
 -- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
 signal ecg_lod_p        : std_ulogic;
 signal ecg_lod_n        : std_ulogic;
@@ -171,8 +168,6 @@ begin
     enable_i                  => enable,          -- SW4: Disable(0), Enable(1)
     -- Select TBS delta steps --> enables virtual DAC resolution
     select_tbs_delta_steps_i  => select_tbs_delta_steps, -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    -- Select Comparator Type (CT/DT comparator)
-    select_comparator_type_i  => select_comparator_type, -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     -- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
     ecg_lod_p_i               => ecg_lod_p,
     ecg_lod_n_i				        => ecg_lod_n,
@@ -262,7 +257,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '0';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -314,7 +308,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '1';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -377,7 +370,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '1';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -457,7 +449,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '0';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -519,7 +510,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '1';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -599,7 +589,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '0';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '0';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';
@@ -702,7 +691,6 @@ begin
     signal_select <= '0';           -- SW3: ECG(0), BNC(1)
     enable <= '1';                  -- SW4: Disable(0), Enable(1)
     select_tbs_delta_steps <= '1';  -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    select_comparator_type <= '1';  -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     
     -- ECG is connected.
     ecg_lod_p <= '0';

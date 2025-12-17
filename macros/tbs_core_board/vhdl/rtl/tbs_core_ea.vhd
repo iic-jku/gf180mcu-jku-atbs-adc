@@ -51,7 +51,7 @@ entity tbs_core is
     -- ANALOG TRIGGER CONSTANTS
     TRIGGER_COUNTER_BITWIDTH    : natural;
     TRIGGER_COUNTER_MAX         : natural;
-    -- SC NOC GENERATOR
+    -- SC NOC GENERATOR CONSTANTS
     SC_NOC_COUNTER_BITWIDTH     : natural;
     SC_NOC_COUNTER_MAX          : natural;
     -- MEMORY CONSTANTS
@@ -81,8 +81,6 @@ entity tbs_core is
     enable_i                  : in std_ulogic; -- SW4: Disable(0), Enable(1)
     -- Select TBS delta steps --> enables virtual DAC resolution
     select_tbs_delta_steps_i  : in std_ulogic; -- SW5: full DAC resolution(0), "virtual" DAC resolution(1)
-    -- Select Comparator Type (CT/DT comparator)
-    select_comparator_type_i  : in std_ulogic; -- SW6: Modeling CT comparator(0), Modeling DT comparator(1)
     -- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
     ecg_lod_p_i               : in std_ulogic;
     ecg_lod_n_i				        : in std_ulogic;
@@ -198,7 +196,6 @@ signal control_mode_debounced 	          : std_ulogic;
 signal signal_select_in_debounced 	      : std_ulogic;
 signal enable_debounced                   : std_ulogic;
 signal select_tbs_delta_steps_debounced   : std_ulogic;
-signal select_comparator_type_debounced   : std_ulogic;
 
 -- Edge detection
 signal adaptive_mode_d 	            : std_ulogic;
@@ -229,14 +226,6 @@ signal uart_changed_reset_strb        : std_ulogic;
 
 -- ADAPTIVE THRESHOLD BASED SAMPLING SECTION
 -- =====================================================
--- Modeling DT comparator
-signal dt_comp_upper 	      : std_ulogic;
-signal dt_comp_lower 	      : std_ulogic;
-
--- MUX Output of CT/DT comparator select
-signal comp_upper_mux 	    : std_ulogic;
-signal comp_lower_mux 	    : std_ulogic;
-
 -- Input hardware entity signals
 signal comp_upper_sync 	    : std_ulogic;
 signal comp_lower_sync 	    : std_ulogic;
@@ -452,7 +441,8 @@ begin
 	-- =====================================================
   
   -- Reset (Button or UART or Input Changed Reset)
-  reset_i <= not reset_sync or uart_reset; -- highest priority reset
+  -- reset_i <= not reset_sync or uart_reset; -- highest priority reset
+  reset_i <= not reset_sync;
   reset_entity <= reset_i or input_changed_reset_strb or uart_changed_reset_strb; -- entity reset of signal path
   -- =====================================================
   
@@ -551,19 +541,6 @@ begin
     
     debounced_o	        => select_tbs_delta_steps_debounced
 	);
-  
-  debouncer_6: entity debouncer(rtl)
-  generic map(
-    DEBOUNCER_BITWIDTH  => DEBOUNCER_BITWIDTH,
-    DEBOUNCER_MAX			  => DEBOUNCER_MAX
-	)
-	port map(
-		clock_i				      => clock_i,
-		reset_i				      => reset_i,
-    bouncing_i		      => select_comparator_type_i,
-    
-    debounced_o	        => select_comparator_type_debounced
-	);
   -- =====================================================
   
   -- Input changed detection / Edge detection
@@ -609,28 +586,7 @@ begin
   -- =====================================================
   -- ADAPTIVE THRESHOLD BASED SAMPLING SECTION (Synchronization Chain, Spike-Detector, Adaptive-Control and DAC-Control)
   -- =====================================================
-  
-  -- Modeling DT comparator
-  -- Register with enable (analog_trigger)
-  dt_comp_reg: process(clock_i, reset_i) is
-	begin
-		if reset_i = '1' then
-      dt_comp_upper <= '0';
-      dt_comp_lower <= '0';
-		elsif rising_edge(clock_i) then
-      if analog_trigger = '1' then
-        dt_comp_upper <= comp_upper_i;
-        dt_comp_lower <= comp_lower_i;
-      end if;
-		end if;
-	end process dt_comp_reg;
-  -- =====================================================
-  
-  -- MUX for selecting input directly or modeling of DT comparator
-  comp_upper_mux <= dt_comp_upper when select_comparator_type_debounced = '1' else comp_upper_i;
-  comp_lower_mux <= dt_comp_lower when select_comparator_type_debounced = '1' else comp_lower_i;
-  -- =====================================================
-  
+
   -- Embed Generic Synchronization Chain entity for Comparator Inputs
 	sync_chain_1: entity sync_chain(rtl)
 	generic map(
@@ -640,8 +596,8 @@ begin
 	port map(
 		clock_i     => clock_i,
 		reset_i 		=> reset_i,
-		async_i(0)  => comp_upper_mux,
-    async_i(1)  => comp_lower_mux,
+		async_i(0)  => comp_upper_i,
+    async_i(1)  => comp_lower_i,
     
     sync_o(0)   => comp_upper_sync,
 		sync_o(1)   => comp_lower_sync

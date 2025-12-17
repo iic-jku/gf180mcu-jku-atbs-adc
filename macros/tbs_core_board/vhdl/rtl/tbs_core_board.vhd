@@ -131,7 +131,7 @@ begin
     -- ANALOG TRIGGER CONSTANTS
     TRIGGER_COUNTER_BITWIDTH    => TRIGGER_COUNTER_BITWIDTH,
     TRIGGER_COUNTER_MAX         => TRIGGER_COUNTER_MAX,
-    -- SC NOC GENERATOR
+    -- SC NOC GENERATOR CONSTANTS
     SC_NOC_COUNTER_BITWIDTH     => SC_NOC_COUNTER_BITWIDTH,
     SC_NOC_COUNTER_MAX          => SC_NOC_COUNTER_MAX,
     -- MEMORY CONSTANTS
@@ -161,9 +161,7 @@ begin
     enable_i                  => enable,                    -- S1_5: Disable(0), Enable(1)
     -- Select TBS delta steps --> enables virtual DAC resolution
     select_tbs_delta_steps_i  => select_tbs_delta_steps,    -- S1_6: full DAC resolution(0), "virtual" DAC resolution(1)
-    -- Select Comparator Type (CT/DT comparator)
-    select_comparator_type_i  => '0',                       -- Modeling CT comparator(0), Modeling DT comparator(1)
-    -- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
+	-- Check ECG LOD (Leads Off Comparator) --> Are ECG electrodes connected?
     ecg_lod_p_i               => ecg_lod_p_i,
     ecg_lod_n_i				  => ecg_lod_n_i,
     
