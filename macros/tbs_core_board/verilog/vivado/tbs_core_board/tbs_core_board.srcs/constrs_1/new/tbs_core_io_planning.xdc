@@ -1,4 +1,5 @@
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets PLL100to8/inst/clk_in1_pll_8MHz]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clock_i_IBUF]
 set_property CFGBVS VCCO [current_design]
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 

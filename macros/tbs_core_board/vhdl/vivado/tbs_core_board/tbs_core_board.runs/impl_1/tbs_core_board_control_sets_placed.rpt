@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Mon Dec 15 19:10:00 2025
+| Date         : Wed Dec 17 00:58:39 2025
 | Host         : SimiBook running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file tbs_core_board_control_sets_placed.rpt
 | Design       : tbs_core_board
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    39 |
-|    Minimum number of control sets                        |    39 |
+| Total control sets                                       |    38 |
+|    Minimum number of control sets                        |    38 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   186 |
+| Unused register locations in slices containing registers |   177 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,8 +39,8 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    39 |
-| >= 0 to < 4        |    14 |
+| Total control sets |    38 |
+| >= 0 to < 4        |    13 |
 | >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     2 |
 | >= 8 to < 10       |     1 |
@@ -59,10 +59,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |             342 |          143 |
+| No           | No                    | Yes                    |             341 |          129 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |            1744 |          480 |
+| Yes          | No                    | Yes                    |            2962 |          789 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,48 +70,47 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------+-----------------------------------------------------------------------------+---------------------------------------------+------------------+----------------+--------------+
-|       Clock Signal       |                                Enable Signal                                |               Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------------+-----------------------------------------------------------------------------+---------------------------------------------+------------------+----------------+--------------+
-|  PLL100to8/inst/clk_out1 |                                                                             | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0 |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[3]                           | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[1]                           | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[7]                           | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[0]                           | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[2]                           | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[5]                           | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/debouncer_2/state_reg[2]                                         | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/clear_dac_i_1_n_0                                                | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/state_reg[1]                                      | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[6]                           | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/state_reg[2]                                      | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[4]                           | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                1 |              1 |         1.00 |
-|  PLL100to8/inst/clk_out1 |                                                                             | tbs_core_0/sync_chain_0/reset_btn_i         |                1 |              2 |         2.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_sc_noc_generator_period_adj_uart           | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                2 |              4 |         2.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/E[0]                                            | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                2 |              5 |         2.50 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/data_valid_strb_reg_0[0]                        | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                3 |              5 |         1.67 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/p_1_in                                            | tbs_core_0/sync_chain_0/AR[0]               |                1 |              6 |         6.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/sc_noc_generator_uart_reg[0]                    | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                2 |              7 |         3.50 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/async_reg.sync_read_strb_reg[3]_0[0]              | tbs_core_0/sync_chain_0/AR[0]               |                2 |              8 |         4.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/weyls_discrepancy_0/E[0]                         | tbs_core_0/sync_chain_0/AR[0]               |                3 |             10 |         3.33 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/weyls_discrepancy_0/sync_weylsd_strb_reg[1]_0[0] | tbs_core_0/sync_chain_0/AR[0]               |                4 |             10 |         2.50 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/data_valid_strb_reg_1[0]                        | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                4 |             10 |         2.50 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/dac_control_0/dac_init_value[10]_i_1_n_0                         | tbs_core_0/sync_chain_0/AR[0]               |                3 |             10 |         3.33 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/steps_to_lower_v[10]_i_1_n_0                     | tbs_core_0/sync_chain_0/AR[0]               |                3 |             11 |         3.67 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/steps_to_upper_v[10]_i_1_n_0                     | tbs_core_0/sync_chain_0/AR[0]               |                3 |             11 |         3.67 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/adapt_on_overflow_reg_1[0]                       | tbs_core_0/sync_chain_0/AR[0]               |                4 |             11 |         2.75 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/adapt_on_overflow_reg_0[0]                       | tbs_core_0/sync_chain_0/AR[0]               |                4 |             11 |         2.75 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/atbs_win_length_uart_reg[0]                     | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |                4 |             12 |         3.00 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/time_measurement_0/E[0]                                          | tbs_core_0/sync_chain_0/AR[0]               |                6 |             16 |         2.67 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/async_reg.sync_read_strb_reg[3]_1[0]              | tbs_core_0/sync_chain_0/AR[0]               |                3 |             16 |         5.33 |
-|  PLL100to8/inst/clk_out1 |                                                                             | tbs_core_0/sync_chain_0/reset_i             |                4 |             19 |         4.75 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/time_measurement_0/overflow_strb_reg_1[0]                        | tbs_core_0/sync_chain_0/AR[0]               |                5 |             19 |         3.80 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_encoder_0/select_enable_write_reg[0]                       | tbs_core_0/sync_chain_0/AR[0]               |               12 |             25 |         2.08 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/debouncer_2/E[0]                                                 | tbs_core_0/sync_chain_0/AR[0]               |               14 |             39 |         2.79 |
-|  PLL100to8/inst/clk_out1 |                                                                             | tbs_core_0/sync_chain_0/AR[0]               |               68 |            131 |         1.93 |
-|  PLL100to8/inst/clk_out1 |                                                                             | tbs_core_0/sync_chain_0/uart_reset_reg[0]   |               69 |            189 |         2.74 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/E[0]                           | tbs_core_0/sync_chain_0/AR[0]               |               85 |            270 |         3.18 |
-|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/write_delayed_strb                                | tbs_core_0/sync_chain_0/AR[0]               |              299 |           1216 |         4.07 |
-+--------------------------+-----------------------------------------------------------------------------+---------------------------------------------+------------------+----------------+--------------+
++--------------------------+-----------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal       |                                Enable Signal                                |                Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------+-----------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|  PLL100to8/inst/clk_out1 | tbs_core_0/clear_dac_i_1_n_0                                                | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[4]                           | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[3]                           | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/debouncer_1/state_reg[1]                                         | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[1]                           | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/state_reg[0]                                      | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/state_reg[0]_0                                    | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[2]                           | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[5]                           | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[6]                           | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[7]                           | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_received_data[0]                           | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              1 |         1.00 |
+|  PLL100to8/inst/clk_out1 |                                                                             | tbs_core_0/sync_chain_0/reset_btn_i            |                1 |              2 |         2.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/next_sc_noc_generator_period_adj_uart           | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                2 |              4 |         2.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/analog_trigger_uart_reg[0]                      | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                1 |              5 |         5.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/atbs_max_delta_steps_uart_reg[0]                | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                2 |              5 |         2.50 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/p_1_in                                            | tbs_core_0/debouncer_1/AR[0]                   |                3 |              7 |         2.33 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/data_valid_strb_reg_0[0]                        | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                4 |              7 |         1.75 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/async_reg.sync_read_strb_reg[3]_0[0]              | tbs_core_0/debouncer_1/AR[0]                   |                2 |              8 |         4.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/analog_trigger_uart_reg_0[0]                    | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                3 |             10 |         3.33 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/dac_control_0/dac_init_value[10]_i_1_n_0                         | tbs_core_0/debouncer_1/AR[0]                   |                4 |             10 |         2.50 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/weyls_discrepancy_0/E[0]                         | tbs_core_0/debouncer_1/AR[0]                   |                4 |             10 |         2.50 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/weyls_discrepancy_0/sync_weylsd_strb_reg[1]_0[0] | tbs_core_0/debouncer_1/AR[0]                   |                3 |             10 |         3.33 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/steps_to_lower_v[10]_i_1_n_0                     | tbs_core_0/debouncer_1/AR[0]                   |                3 |             11 |         3.67 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/steps_to_upper_v[10]_i_1_n_0                     | tbs_core_0/debouncer_1/AR[0]                   |                3 |             11 |         3.67 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/adapt_on_overflow_reg_1[0]                       | tbs_core_0/debouncer_1/AR[0]                   |                5 |             11 |         2.20 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/adapt_on_overflow_reg_0[0]                       | tbs_core_0/debouncer_1/AR[0]                   |                4 |             11 |         2.75 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/uart_0/uart_rx_0/E[0]                                            | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |                5 |             12 |         2.40 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/async_reg.sync_read_strb_reg[3]_1[0]              | tbs_core_0/debouncer_1/AR[0]                   |                5 |             16 |         3.20 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/time_measurement_0/E[0]                                          | tbs_core_0/debouncer_1/AR[0]                   |                6 |             16 |         2.67 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/time_measurement_0/overflow_strb_reg_1[0]                        | tbs_core_0/debouncer_1/AR[0]                   |                7 |             19 |         2.71 |
+|  PLL100to8/inst/clk_out1 |                                                                             | tbs_core_0/debouncer_2/reset_i                 |                5 |             19 |         3.80 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_encoder_0/select_enable_write_reg[0]                       | tbs_core_0/debouncer_1/AR[0]                   |               11 |             26 |         2.36 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/debouncer_2/E[0]                                                 | tbs_core_0/debouncer_1/AR[0]                   |               11 |             39 |         3.55 |
+|  PLL100to8/inst/clk_out1 |                                                                             | tbs_core_0/debouncer_1/AR[0]                   |               60 |            131 |         2.18 |
+|  PLL100to8/inst/clk_out1 |                                                                             | tbs_core_0/sync_chain_0/[1].buf_reg[1][0]_0[0] |               63 |            189 |         3.00 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/adaptive_ctrl_0/spike_shift_reg_0/E[0]                           | tbs_core_0/debouncer_1/AR[0]                   |               86 |            270 |         3.14 |
+|  PLL100to8/inst/clk_out1 | tbs_core_0/spike_memory_0/write_delayed_strb                                | tbs_core_0/debouncer_1/AR[0]                   |              603 |           2432 |         4.03 |
++--------------------------+-----------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
 
 

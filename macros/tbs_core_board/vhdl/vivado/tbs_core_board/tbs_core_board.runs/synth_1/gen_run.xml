@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s25ftgb196-1" LaunchTime="1765822055" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/tbs_core_board.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7s25ftgb196-1" LaunchTime="1765929378" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/tbs_core_board.dcp">
   <File Type="PA-TCL" Name="tbs_core_board.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="tbs_core_board_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="tbs_core_board_reports.tcl"/>
   <File Type="RDS-RDS" Name="tbs_core_board.vds"/>
   <File Type="RDS-UTIL" Name="tbs_core_board_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="tbs_core_board_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="tbs_core_board.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="tbs_core_board_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="tbs_core_board_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../sim/vhdl/TBSSimVals_p.vhd">

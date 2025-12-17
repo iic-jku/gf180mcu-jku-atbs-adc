@@ -39,15 +39,12 @@ add wave -noupdate /tbs_core_tb/dut_tbs/control_mode_i
 add wave -noupdate /tbs_core_tb/dut_tbs/signal_select_in_i
 add wave -noupdate /tbs_core_tb/dut_tbs/enable_i
 add wave -noupdate /tbs_core_tb/dut_tbs/select_tbs_delta_steps_i
-add wave -noupdate /tbs_core_tb/dut_tbs/select_comparator_type_i
 add wave -noupdate /tbs_core_tb/dut_tbs/ecg_lod_p_i
 add wave -noupdate /tbs_core_tb/dut_tbs/ecg_lod_n_i
 add wave -noupdate /tbs_core_tb/dut_tbs/uart_rx_i
 add wave -noupdate -divider INTERNAL
 add wave -noupdate /tbs_core_tb/dut_tbs/reset_i
 add wave -noupdate /tbs_core_tb/dut_tbs/reset_entity
-add wave -noupdate /tbs_core_tb/dut_tbs/dt_comp_upper
-add wave -noupdate /tbs_core_tb/dut_tbs/dt_comp_lower
 add wave -noupdate /tbs_core_tb/dut_tbs/comp_upper_sync
 add wave -noupdate /tbs_core_tb/dut_tbs/comp_lower_sync
 add wave -noupdate -divider {MAIN Counter}
@@ -125,8 +122,8 @@ add wave -noupdate /tbs_core_tb/dut_tbs/sc_noc_1_o
 add wave -noupdate /tbs_core_tb/dut_tbs/sc_noc_2_o
 add wave -noupdate /tbs_core_tb/dut_tbs/uart_tx_o
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ps} 0} {{Cursor 2} {0 ps} 0}
-quietly wave cursor active 1
+WaveRestoreCursors {{Cursor 1} {153495875000 ps} 0} {{Cursor 2} {0 ps} 0}
+quietly wave cursor active 2
 configure wave -namecolwidth 233
 configure wave -valuecolwidth 143
 configure wave -justifyvalue left

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Mon Dec 15 23:35:11 2025
+| Date         : Wed Dec 17 01:06:50 2025
 | Host         : SimiBook running 64-bit major release  (build 9200)
 | Command      : report_drc -file tbs_core_board_drc_routed.rpt -pb tbs_core_board_drc_routed.pb -rpx tbs_core_board_drc_routed.rpx
 | Design       : tbs_core_board
@@ -28,19 +28,19 @@ Table of Contents
 +---------+----------+---------------------+------------+
 | Rule    | Severity | Description         | Violations |
 +---------+----------+---------------------+------------+
-| PLCK-23 | Warning  | Clock Placer Checks | 1          |
+| PLCK-12 | Warning  | Clock Placer Checks | 1          |
 +---------+----------+---------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-PLCK-23#1 Warning
+PLCK-12#1 Warning
 Clock Placer Checks  
-Sub-optimal placement for a clock-capable IO pin and MMCM pair. 
-Resolution: A dedicated routing path between the two can be used if: (a) The clock-capable IO (CCIO) is placed on a CCIO capable site (b) The MMCM is placed in the same clock region as the CCIO pin. If the IOB is driving multiple MMCMs, all MMCMs must be placed in the same clock region, one clock region above or one clock region below the IOB. Both the above conditions must be met at the same time, else it may lead to longer and less predictable clock insertion delays.
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	PLL100to8/inst/clkin1_ibufg (IBUF.O) is locked to L5
-	PLL100to8/inst/mmcm_adv_inst (MMCME2_ADV.CLKIN1) is provisionally placed by clockplacer on MMCME2_ADV_X1Y0
+	clock_i_IBUF_inst (IBUF.O) is locked to L5
+	clock_i_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y0
 
 Related violations: <none>
 

@@ -97,8 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
@@ -108,8 +106,6 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 4
-  set_param checkpoint.writeSynthRtdsInDcp 1
-  set_param synth.incrementalSynthesisCache C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board/.Xil/Vivado-17652-SimiBook/incrSyn
   set_param runs.launchOptions { -jobs 8  }
   open_checkpoint tbs_core_board_routed.dcp
   set_property webtalk.parent_dir C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board/tbs_core_board.cache/wt [current_project]

@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Dec 15 19:07:39 2025
-# Process ID: 22752
+# Start of session at: Wed Dec 17 00:56:22 2025
+# Process ID: 30288
 # Current directory: C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.runs/synth_1
 # Command line: vivado.exe -log tbs_core_board.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tbs_core_board.tcl
 # Log file: C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.runs/synth_1/tbs_core_board.vds
@@ -19,10 +19,10 @@
 # Host memory       :16458 MB
 # Swap memory       :20401 MB
 # Total Virtual     :36859 MB
-# Available Virtual :14547 MB
+# Available Virtual :14215 MB
 #-----------------------------------------------------------
 source tbs_core_board.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 530.656 ; gain = 200.648
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 531.867 ; gain = 201.445
 Command: read_checkpoint -auto_incremental -incremental C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.srcs/utils_1/imports/synth_1/tbs_core_board.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.srcs/utils_1/imports/synth_1/tbs_core_board.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -36,16 +36,16 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 18416
+INFO: [Synth 8-7075] Helper process launched with PID 32440
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1375.312 ; gain = 449.375
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1375.438 ; gain = 448.320
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-9871] overwriting existing primary unit 'adaptive_std' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/Weyls-Discrepancy/sim/vhdl/adaptive_std_p.vhd:6]
 CRITICAL WARNING: [Synth 8-9871] overwriting existing primary unit 'adaptive_std' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/adaptive_threshold_control/sim/vhdl/adaptive_std_p.vhd:12]
 INFO: [Synth 8-638] synthesizing module 'tbs_core_board' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/vivado_board/tbs_core_board.vhd:75]
-INFO: [Synth 8-3491] module 'pll_8MHz' declared at 'C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.runs/synth_1/.Xil/Vivado-22752-SimiBook/realtime/pll_8MHz_stub.vhdl:6' bound to instance 'PLL100to8' of component 'pll_8MHz' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/vivado_board/tbs_core_board.vhd:108]
-INFO: [Synth 8-638] synthesizing module 'pll_8MHz' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.runs/synth_1/.Xil/Vivado-22752-SimiBook/realtime/pll_8MHz_stub.vhdl:16]
-INFO: [Synth 8-638] synthesizing module 'tbs_core' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/tbs_core_ea.vhd:121]
+INFO: [Synth 8-3491] module 'pll_8MHz' declared at 'C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.runs/synth_1/.Xil/Vivado-30288-SimiBook/realtime/pll_8MHz_stub.vhdl:6' bound to instance 'PLL100to8' of component 'pll_8MHz' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/vivado_board/tbs_core_board.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'pll_8MHz' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.runs/synth_1/.Xil/Vivado-30288-SimiBook/realtime/pll_8MHz_stub.vhdl:16]
+INFO: [Synth 8-638] synthesizing module 'tbs_core' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/tbs_core_ea.vhd:119]
 	Parameter CLK_FREQ bound to: 8000000 - type: integer 
 	Parameter MAIN_COUNTER_BITWIDTH bound to: 20 - type: integer 
 	Parameter MAIN_COUNTER_MAX bound to: 800000 - type: integer 
@@ -69,7 +69,7 @@ INFO: [Synth 8-638] synthesizing module 'tbs_core' [C:/Users/si150/eda/designs/g
 	Parameter TRIGGER_COUNTER_MAX bound to: 160 - type: integer 
 	Parameter SC_NOC_COUNTER_BITWIDTH bound to: 11 - type: integer 
 	Parameter SC_NOC_COUNTER_MAX bound to: 2048 - type: integer 
-	Parameter ADDR_BITWIDTH bound to: 6 - type: integer 
+	Parameter ADDR_BITWIDTH bound to: 7 - type: integer 
 	Parameter DATA_BITWIDTH bound to: 19 - type: integer 
 	Parameter UART_BAUD_COUNTER_BITWIDTH bound to: 9 - type: integer 
 	Parameter UART_BAUD_COUNTER_MAX bound to: 417 - type: integer 
@@ -148,7 +148,7 @@ INFO: [Synth 8-638] synthesizing module 'spike_encoder' [C:/Users/si150/eda/desi
 INFO: [Synth 8-256] done synthesizing module 'spike_encoder' (0#1) [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_encoder/rtl/spike_encoder_ea.vhd:38]
 INFO: [Synth 8-638] synthesizing module 'spike_memory' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_memory/rtl/spike_memory_ea.vhd:38]
 	Parameter DATA_BITWIDTH bound to: 19 - type: integer 
-	Parameter ADDR_BITWIDTH bound to: 6 - type: integer 
+	Parameter ADDR_BITWIDTH bound to: 7 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'spike_memory' (0#1) [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/spike_memory/rtl/spike_memory_ea.vhd:38]
 INFO: [Synth 8-638] synthesizing module 'memory2uart' [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/memory2uart/rtl/memory2uart_ea.vhd:37]
 	Parameter DATA_BITWIDTH bound to: 19 - type: integer 
@@ -167,26 +167,27 @@ INFO: [Synth 8-638] synthesizing module 'uart_rx' [C:/Users/si150/eda/designs/gf
 INFO: [Synth 8-226] default block is never used [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_rx_ea.vhd:115]
 INFO: [Synth 8-256] done synthesizing module 'uart_rx' (0#1) [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_rx_ea.vhd:28]
 INFO: [Synth 8-256] done synthesizing module 'uart' (0#1) [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/uart/rtl/uart_ea.vhd:40]
-INFO: [Synth 8-226] default block is never used [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/tbs_core_ea.vhd:1115]
-INFO: [Synth 8-256] done synthesizing module 'tbs_core' (0#1) [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/tbs_core_ea.vhd:121]
+INFO: [Synth 8-226] default block is never used [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/tbs_core_ea.vhd:1071]
+INFO: [Synth 8-256] done synthesizing module 'tbs_core' (0#1) [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/tbs_core_ea.vhd:119]
 INFO: [Synth 8-256] done synthesizing module 'tbs_core_board' (0#1) [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/vivado_board/tbs_core_board.vhd:75]
+WARNING: [Synth 8-6014] Unused sequential element uart_reset_reg was removed.  [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/rtl/tbs_core_ea.vhd:1243]
 WARNING: [Synth 8-7129] Port adaptive_mode_i in module dac_control__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port select_tbs_delta_steps_i in module dac_control__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clock_i in module priority_encoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reset_i in module priority_encoder is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1519.793 ; gain = 593.855
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1520.793 ; gain = 593.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1519.793 ; gain = 593.855
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1520.793 ; gain = 593.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1519.793 ; gain = 593.855
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1520.793 ; gain = 593.676
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1519.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1520.793 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -197,22 +198,22 @@ Parsing XDC File [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_co
 Finished Parsing XDC File [C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.srcs/constrs_1/new/tbs_core_timing.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1615.254 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1622.977 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1615.254 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1622.977 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s25ftgb196-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -221,7 +222,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for clock_i. (constraint file  c:/Use
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clock_i. (constraint file  c:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.gen/sources_1/ip/pll_8MHz/pll_8MHz/pll_8MHz_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for PLL100to8. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'debouncer'
 INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'uart_tx'
@@ -254,7 +255,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encodi
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'uart_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -270,26 +271,25 @@ Detailed RTL Component Info :
 	   3 Input   10 Bit       Adders := 1     
 	   2 Input    9 Bit       Adders := 2     
 	   2 Input    8 Bit       Adders := 1     
-	   2 Input    7 Bit       Adders := 2     
-	   2 Input    6 Bit       Adders := 2     
-	   3 Input    6 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 4     
+	   3 Input    7 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 3     
 	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
 	               20 Bit    Registers := 1     
-	               19 Bit    Registers := 68    
+	               19 Bit    Registers := 132   
 	               18 Bit    Registers := 16    
 	               15 Bit    Registers := 1     
 	               11 Bit    Registers := 10    
 	               10 Bit    Registers := 6     
 	                9 Bit    Registers := 3     
 	                8 Bit    Registers := 7     
-	                7 Bit    Registers := 2     
-	                6 Bit    Registers := 3     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 5     
 	                2 Bit    Registers := 19    
-	                1 Bit    Registers := 90    
+	                1 Bit    Registers := 82    
 +---Muxes : 
 	   2 Input   20 Bit        Muxes := 1     
 	   2 Input   19 Bit        Muxes := 2     
@@ -313,11 +313,11 @@ Detailed RTL Component Info :
 	   2 Input    3 Bit        Muxes := 21    
 	   5 Input    3 Bit        Muxes := 4     
 	   4 Input    3 Bit        Muxes := 1     
-	   3 Input    2 Bit        Muxes := 7     
-	   2 Input    2 Bit        Muxes := 32    
+	   3 Input    2 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 31    
 	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 132   
-	   3 Input    1 Bit        Muxes := 21    
+	   2 Input    1 Bit        Muxes := 126   
+	   3 Input    1 Bit        Muxes := 18    
 	   5 Input    1 Bit        Muxes := 2     
 	   4 Input    1 Bit        Muxes := 4     
 	   8 Input    1 Bit        Muxes := 17    
@@ -342,28 +342,26 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port adaptive_mode_i in module dac_control__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port select_tbs_delta_steps_i in module dac_control__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_reg[1]) is unused and will be removed from module debouncer.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_reg[0]) is unused and will be removed from module debouncer.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -381,37 +379,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -431,41 +429,41 @@ Report Cell Usage:
 |1     |pll_8MHz_bbox |     1|
 |2     |CARRY4        |   198|
 |3     |LUT1          |    39|
-|4     |LUT2          |   346|
-|5     |LUT3          |    99|
-|6     |LUT4          |   512|
-|7     |LUT5          |   220|
-|8     |LUT6          |   651|
-|9     |MUXF7         |   152|
-|10    |MUXF8         |    76|
-|11    |FDCE          |  2045|
+|4     |LUT2          |   359|
+|5     |LUT3          |   106|
+|6     |LUT4          |   510|
+|7     |LUT5          |   230|
+|8     |LUT6          |   963|
+|9     |MUXF7         |   323|
+|10    |MUXF8         |   152|
+|11    |FDCE          |  3262|
 |12    |FDPE          |    41|
 |13    |IBUF          |    11|
 |14    |OBUF          |    37|
 +------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1622.977 ; gain = 695.859
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1615.254 ; gain = 593.855
-Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1615.254 ; gain = 689.316
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 1622.977 ; gain = 593.676
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1622.977 ; gain = 695.859
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1615.254 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 426 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1622.977 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 673 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1615.254 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1622.977 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 7b9c7f26
+Synth Design complete | Checksum: 8c686f49
 INFO: [Common 17-83] Releasing license: Synthesis
-79 Infos, 9 Warnings, 2 Critical Warnings and 0 Errors encountered.
+79 Infos, 8 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:12 . Memory (MB): peak = 1615.254 ; gain = 1073.414
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 1622.977 ; gain = 1079.367
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1615.254 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1622.977 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/vivado/tbs_core_board/tbs_core_board.runs/synth_1/tbs_core_board.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file tbs_core_board_utilization_synth.rpt -pb tbs_core_board_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec 15 19:09:03 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 17 00:57:36 2025...
