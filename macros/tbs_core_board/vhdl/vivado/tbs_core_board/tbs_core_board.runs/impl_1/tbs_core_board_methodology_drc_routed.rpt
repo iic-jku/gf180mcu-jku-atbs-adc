@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Wed Dec 17 12:29:54 2025
+| Date         : Wed Dec 17 17:30:22 2025
 | Host         : SimiBook running 64-bit major release  (build 9200)
 | Command      : report_methodology -file tbs_core_board_methodology_drc_routed.rpt -pb tbs_core_board_methodology_drc_routed.pb -rpx tbs_core_board_methodology_drc_routed.rpx
 | Design       : tbs_core_board
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 2
+             Violations found: 3
 +---------+----------+------------------------------+------------+
 | Rule    | Severity | Description                  | Violations |
 +---------+----------+------------------------------+------------+
-| LUTAR-1 | Warning  | LUT drives async reset alert | 2          |
+| LUTAR-1 | Warning  | LUT drives async reset alert | 3          |
 +---------+----------+------------------------------+------------+
 
 2. REPORT DETAILS
@@ -54,7 +54,24 @@ Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell tbs_core_0/debouncer_3/overflow_marker[14]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) tbs_core_0/main_counter_value_reg[16]/CLR,
+LUT cell tbs_core_0/sync_chain_0/FSM_sequential_state[1]_i_2__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) tbs_core_0/signal_select_in_d_reg/CLR,
+tbs_core_0/signal_select_in_uart_reg/PRE, tbs_core_0/state_reg[0]/PRE,
+tbs_core_0/state_reg[1]/CLR, tbs_core_0/state_reg[2]/CLR,
+tbs_core_0/tbs_virtual_delta_steps_adj_uart_reg[1]/CLR,
+tbs_core_0/tbs_virtual_delta_steps_adj_uart_reg[2]/CLR,
+tbs_core_0/tbs_virtual_delta_steps_adj_uart_reg[3]/PRE,
+tbs_core_0/tbs_virtual_delta_steps_adj_uart_reg[4]/CLR,
+tbs_core_0/tbs_virtual_delta_steps_adj_uart_reg[5]/CLR,
+tbs_core_0/tbs_virtual_delta_steps_uart_reg/CLR,
+tbs_core_0/trigger_start_mode_d_reg/CLR,
+tbs_core_0/trigger_start_mode_uart_reg/PRE,
+tbs_core_0/trigger_start_sampling_d_reg/CLR,
+tbs_core_0/underflow_led_reg/CLR (the first 15 of 244 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell tbs_core_0/uart_0/uart_rx_0/overflow_marker[14]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) tbs_core_0/main_counter_value_reg[16]/CLR,
 tbs_core_0/main_counter_value_reg[17]/CLR,
 tbs_core_0/main_counter_value_reg[18]/CLR,
 tbs_core_0/main_counter_value_reg[19]/CLR,

@@ -14,7 +14,7 @@ Z1 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 2656
+!i122 2682
 Z5 w1765969734
 Z6 dC:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sim/vhdl
 8../../adaptive_threshold_control/sim/vhdl/adaptive_std_p.vhd
@@ -25,9 +25,9 @@ ViVeR0FEP8^M8I1lF?zfN=2
 !s100 9W;A4806fk75eG3kc4B[90
 Z8 OV;C;2020.1;71
 32
-Z9 !s110 1765971116
+Z9 !s110 1765988743
 !i10b 1
-Z10 !s108 1765971116.000000
+Z10 !s108 1765988743.000000
 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/sim/vhdl/adaptive_std_p.vhd|
 !s107 ../../adaptive_threshold_control/sim/vhdl/adaptive_std_p.vhd|
 !i113 1
@@ -42,7 +42,7 @@ R1
 R2
 R3
 R4
-!i122 2664
+!i122 2690
 R6
 Z17 8../../adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd
 Z18 F../../adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd
@@ -52,9 +52,9 @@ V3@BI4>`@o]jb2l1I^>6Ne3
 !s100 UU=GKCfIeL3nC3Hl48HNk1
 R8
 32
-Z19 !s110 1765971119
+Z19 !s110 1765988745
 !i10b 1
-Z20 !s108 1765971119.000000
+Z20 !s108 1765988745.000000
 Z21 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd|
 Z22 !s107 ../../adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd|
 !i113 1
@@ -71,7 +71,7 @@ R2
 R3
 R4
 Z25 DEx4 work 26 adaptive_threshold_control 0 22 3@BI4>`@o]jb2l1I^>6Ne3
-!i122 2664
+!i122 2690
 l104
 L58 292
 VoiAle<d@oY>:I05^m86=b1
@@ -92,7 +92,7 @@ R1
 R2
 R3
 R4
-!i122 2657
+!i122 2683
 R5
 R6
 8../../adaptive_threshold_control/sim/vhdl/AdaptiveCtrlSimVals_p.vhd
@@ -103,7 +103,7 @@ V98d4:P]H?Di]cdnGB5UMf1
 !s100 CedgAXE8S6KXk3UI?VSb60
 R8
 32
-Z27 !s110 1765971117
+R9
 !i10b 1
 R10
 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/sim/vhdl/AdaptiveCtrlSimVals_p.vhd|
@@ -112,26 +112,26 @@ R10
 R11
 R12
 Eanalog_trig
-Z28 w1742817607
+Z27 w1742817607
 R1
 R2
 R3
 R4
-!i122 2676
+!i122 2702
 R6
-Z29 8../../analog_trigger/rtl/analog_trigger_ea.vhd
-Z30 F../../analog_trigger/rtl/analog_trigger_ea.vhd
+Z28 8../../analog_trigger/rtl/analog_trigger_ea.vhd
+Z29 F../../analog_trigger/rtl/analog_trigger_ea.vhd
 l0
-Z31 L13 1
+Z30 L13 1
 VjjT6_Fe[B1DG_chmaJiTo1
 !s100 EFSWRXz957hkQI2k2XW303
 R8
 32
-Z32 !s110 1765971124
+Z31 !s110 1765988749
 !i10b 1
-Z33 !s108 1765971123.000000
-Z34 !s90 -reportprogress|300|-work|work|../../analog_trigger/rtl/analog_trigger_ea.vhd|
-Z35 !s107 ../../analog_trigger/rtl/analog_trigger_ea.vhd|
+Z32 !s108 1765988749.000000
+Z33 !s90 -reportprogress|300|-work|work|../../analog_trigger/rtl/analog_trigger_ea.vhd|
+Z34 !s107 ../../analog_trigger/rtl/analog_trigger_ea.vhd|
 !i113 1
 R11
 R12
@@ -140,39 +140,39 @@ R1
 R2
 R3
 R4
-Z36 DEx4 work 11 analog_trig 0 22 jjT6_Fe[B1DG_chmaJiTo1
-!i122 2676
+Z35 DEx4 work 11 analog_trig 0 22 jjT6_Fe[B1DG_chmaJiTo1
+!i122 2702
 l34
 L28 40
 VWHge4aamJQe=dC6jlz]A`1
 !s100 fK=ZfdG8`MHOzm^=>QX?C0
 R8
 32
-R32
+R31
 !i10b 1
+R32
 R33
 R34
-R35
 !i113 1
 R11
 R12
 Edac_control
-Z37 w1734102564
+Z36 w1734102564
 R1
 R2
 R3
 R4
-!i122 2665
+!i122 2691
 R6
-Z38 8../../dac_control/rtl/dac_control_ea.vhd
-Z39 F../../dac_control/rtl/dac_control_ea.vhd
+Z37 8../../dac_control/rtl/dac_control_ea.vhd
+Z38 F../../dac_control/rtl/dac_control_ea.vhd
 l0
-R31
+R30
 V6^L1YS8>QQz::1j<HYF_22
 !s100 5oN;mK^GM9F^Jj8I5TT802
 R8
 32
-R19
+Z39 !s110 1765988746
 !i10b 1
 R20
 Z40 !s90 -reportprogress|300|-work|work|../../dac_control/rtl/dac_control_ea.vhd|
@@ -187,14 +187,14 @@ R2
 R3
 R4
 Z43 DEx4 work 11 dac_control 0 22 6^L1YS8>QQz::1j<HYF_22
-!i122 2665
+!i122 2691
 l84
 L45 204
 V^F4F^2dM0FXo[ao0EeDgR0
 !s100 K_1@SSkAgVeO6:ge>YOez2
 R8
 32
-R19
+R39
 !i10b 1
 R20
 R40
@@ -207,7 +207,7 @@ Z44 w1742472401
 R2
 R3
 R4
-!i122 2659
+!i122 2685
 R6
 Z45 8../../debouncer/rtl/debouncer_ea.vhd
 Z46 F../../debouncer/rtl/debouncer_ea.vhd
@@ -217,9 +217,9 @@ V?lNID0P8B?z7^Pzom>1L>0
 !s100 G=ejII0nJ]^QQJBll^;mR2
 R8
 32
-R27
+Z47 !s110 1765988744
 !i10b 1
-Z47 !s108 1765971117.000000
+R10
 Z48 !s90 -reportprogress|300|-work|work|../../debouncer/rtl/debouncer_ea.vhd|
 Z49 !s107 ../../debouncer/rtl/debouncer_ea.vhd|
 !i113 1
@@ -231,16 +231,16 @@ R2
 R3
 R4
 Z50 DEx4 work 9 debouncer 0 22 ?lNID0P8B?z7^Pzom>1L>0
-!i122 2659
+!i122 2685
 l50
 L26 135
 Vah_^hAalZ28LkX0a`L7PN1
 !s100 CSWbnW3EBNJ_P^olJVI?J2
 R8
 32
-R27
-!i10b 1
 R47
+!i10b 1
+R10
 R48
 R49
 !i113 1
@@ -251,19 +251,19 @@ Z51 w1719071611
 R2
 R3
 R4
-!i122 2670
+!i122 2696
 R6
 Z52 8../../spike_memory/rtl/dual_ram_ea.vhd
 Z53 F../../spike_memory/rtl/dual_ram_ea.vhd
 l0
-R31
+R30
 VPBbgzIh3]ScT=Y8G9`6>@3
 !s100 Z=iiUa2eze1ZkHagZ5oMa1
 R8
 32
-Z54 !s110 1765971121
+Z54 !s110 1765988747
 !i10b 1
-Z55 !s108 1765971121.000000
+Z55 !s108 1765988747.000000
 Z56 !s90 -reportprogress|300|-work|work|../../spike_memory/rtl/dual_ram_ea.vhd|
 Z57 !s107 ../../spike_memory/rtl/dual_ram_ea.vhd|
 !i113 1
@@ -274,7 +274,7 @@ R2
 R3
 R4
 Z58 DEx4 work 8 dual_ram 0 22 PBbgzIh3]ScT=Y8G9`6>@3
-!i122 2670
+!i122 2696
 l41
 L35 32
 V066V>dS:hUFOTk27Q`LTf0
@@ -295,7 +295,7 @@ R1
 R2
 R3
 R4
-!i122 2666
+!i122 2692
 R6
 Z60 8../../memory2uart/rtl/memory2uart_ea.vhd
 Z61 F../../memory2uart/rtl/memory2uart_ea.vhd
@@ -305,11 +305,11 @@ Vz[hFPWZbhK;YiaV?SOmBE1
 !s100 f[`5Mf]DMz33;ZD59T;gE3
 R8
 32
-Z62 !s110 1765971120
+R39
 !i10b 1
-Z63 !s108 1765971120.000000
-Z64 !s90 -reportprogress|300|-work|work|../../memory2uart/rtl/memory2uart_ea.vhd|
-Z65 !s107 ../../memory2uart/rtl/memory2uart_ea.vhd|
+Z62 !s108 1765988746.000000
+Z63 !s90 -reportprogress|300|-work|work|../../memory2uart/rtl/memory2uart_ea.vhd|
+Z64 !s107 ../../memory2uart/rtl/memory2uart_ea.vhd|
 !i113 1
 R11
 R12
@@ -318,42 +318,42 @@ R1
 R2
 R3
 R4
-Z66 DEx4 work 11 memory2uart 0 22 z[hFPWZbhK;YiaV?SOmBE1
-!i122 2666
+Z65 DEx4 work 11 memory2uart 0 22 z[hFPWZbhK;YiaV?SOmBE1
+!i122 2692
 l54
 L37 80
 VTQ^ZVZNm0F0I9Q]IjaLoZ3
 !s100 a0aCjBoo4JW^@d8MD29kj0
 R8
 32
-R62
+R39
 !i10b 1
+R62
 R63
 R64
-R65
 !i113 1
 R11
 R12
 Epll_10mhz
-Z67 w1728540475
+Z66 w1728540475
 R2
 R3
 R4
 !i122 1537
-Z68 dC:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/sim/vhdl/tbs_core_tb
-Z69 8../../../quartus/pll/pll_10MHz.vhd
-Z70 F../../../quartus/pll/pll_10MHz.vhd
+Z67 dC:/Simon Dorrer/JKU-Linz/Master/Semester 2/Master-Thesis/FPGA-Design/tbs_core/sim/vhdl/tbs_core_tb
+Z68 8../../../quartus/pll/pll_10MHz.vhd
+Z69 F../../../quartus/pll/pll_10MHz.vhd
 l0
-Z71 L11 1
+Z70 L11 1
 VgHEBT2Aj<gO;X^o=jVcGh2
 !s100 :Jz8kKfQd2CMAXWVfjUeO1
 R8
 32
-Z72 !s110 1734116405
+Z71 !s110 1734116405
 !i10b 1
-Z73 !s108 1734116405.000000
-Z74 !s90 -reportprogress|300|-work|work|../../../quartus/pll/pll_10MHz.vhd|
-Z75 !s107 ../../../quartus/pll/pll_10MHz.vhd|
+Z72 !s108 1734116405.000000
+Z73 !s90 -reportprogress|300|-work|work|../../../quartus/pll/pll_10MHz.vhd|
+Z74 !s107 ../../../quartus/pll/pll_10MHz.vhd|
 !i113 1
 R11
 R12
@@ -364,39 +364,39 @@ R4
 DEx4 work 9 pll_10mhz 0 22 gHEBT2Aj<gO;X^o=jVcGh2
 !i122 1537
 l30
-Z76 L20 21
+Z75 L20 21
 VNJDdl[R6;`i3bAh[f4FnT0
 !s100 XXUS^V@aF@N4kHMHX:2z63
 R8
 32
-R72
+R71
 !i10b 1
+R72
 R73
 R74
-R75
 !i113 1
 R11
 R12
 Epll_5mhz
-Z77 w1725658637
+Z76 w1725658637
 R2
 R3
 R4
 !i122 31
 R0
-Z78 8../../../quartus/pll/pll_5MHz.vhd
-Z79 F../../../quartus/pll/pll_5MHz.vhd
+Z77 8../../../quartus/pll/pll_5MHz.vhd
+Z78 F../../../quartus/pll/pll_5MHz.vhd
 l0
-R71
+R70
 V;B<14dd]SP];VXiPgOJ?V2
 !s100 9I:PC<S5LZ_jYanb:@VkI0
 R8
 32
-Z80 !s110 1728506589
+Z79 !s110 1728506589
 !i10b 1
-Z81 !s108 1728506589.000000
-Z82 !s90 -reportprogress|300|-work|work|../../../quartus/pll/pll_5MHz.vhd|
-Z83 !s107 ../../../quartus/pll/pll_5MHz.vhd|
+Z80 !s108 1728506589.000000
+Z81 !s90 -reportprogress|300|-work|work|../../../quartus/pll/pll_5MHz.vhd|
+Z82 !s107 ../../../quartus/pll/pll_5MHz.vhd|
 !i113 1
 R11
 R12
@@ -407,39 +407,39 @@ R4
 DEx4 work 8 pll_5mhz 0 22 ;B<14dd]SP];VXiPgOJ?V2
 !i122 31
 l30
-R76
+R75
 VDk:nf;EaXn47f1OjX<;ST1
 !s100 9Wc[@dYZEJCm`TDV;IE9X1
 R8
 32
-R80
+R79
 !i10b 1
+R80
 R81
 R82
-R83
 !i113 1
 R11
 R12
 Epll_8mhz
-Z84 w1742472405
+Z83 w1742472405
 R2
 R3
 R4
 !i122 2316
-Z85 dC:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sim/vhdl/tbs_core_tb
-Z86 8../../../quartus/pll/pll_8MHz.vhd
-Z87 F../../../quartus/pll/pll_8MHz.vhd
+Z84 dC:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/vhdl/sim/vhdl/tbs_core_tb
+Z85 8../../../quartus/pll/pll_8MHz.vhd
+Z86 F../../../quartus/pll/pll_8MHz.vhd
 l0
-R71
+R70
 V>l]2^cELRKcj=n9`zDK>A1
 !s100 _zd@mNidJ@gJf0>EJKkBK1
 R8
 32
-Z88 !s110 1765587399
+Z87 !s110 1765587399
 !i10b 1
-Z89 !s108 1765587398.000000
-Z90 !s90 -reportprogress|300|-work|work|../../../quartus/pll/pll_8MHz.vhd|
-Z91 !s107 ../../../quartus/pll/pll_8MHz.vhd|
+Z88 !s108 1765587398.000000
+Z89 !s90 -reportprogress|300|-work|work|../../../quartus/pll/pll_8MHz.vhd|
+Z90 !s107 ../../../quartus/pll/pll_8MHz.vhd|
 !i113 1
 R11
 R12
@@ -450,39 +450,39 @@ R4
 DEx4 work 8 pll_8mhz 0 22 >l]2^cELRKcj=n9`zDK>A1
 !i122 2316
 l30
-R76
+R75
 VSQQoI[V>@^`4Y1k7`nR]o1
 !s100 V]kOG8ZO]QUUmBiO[;]Sl1
 R8
 32
-R88
+R87
 !i10b 1
+R88
 R89
 R90
-R91
 !i113 1
 R11
 R12
 Epriority_encoder
-Z92 w1742472394
+Z91 w1742472394
 R2
 R3
 R4
-!i122 2662
+!i122 2688
 R6
-Z93 8../../adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd
-Z94 F../../adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd
+Z92 8../../adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd
+Z93 F../../adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd
 l0
 R26
 V2j3O6fELVJF6el]E4z`e[3
 !s100 lAP7_H3TBzRGRGL]baH>20
 R8
 32
-Z95 !s110 1765971118
+R19
 !i10b 1
-Z96 !s108 1765971118.000000
-Z97 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd|
-Z98 !s107 ../../adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd|
+Z94 !s108 1765988744.000000
+Z95 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd|
+Z96 !s107 ../../adaptive_threshold_control/Priority-Encoder/rtl/priority_encoder_ea.vhd|
 !i113 1
 R11
 R12
@@ -490,43 +490,43 @@ Artl
 R2
 R3
 R4
-Z99 DEx4 work 16 priority_encoder 0 22 2j3O6fELVJF6el]E4z`e[3
-!i122 2662
+Z97 DEx4 work 16 priority_encoder 0 22 2j3O6fELVJF6el]E4z`e[3
+!i122 2688
 l35
 L31 24
 VPN9B]bV6X?h;0YeRjBSF12
 !s100 mBhc>2GlO?GQAea:lnOd12
 R8
 32
-R95
+R19
 !i10b 1
+R94
+R95
 R96
-R97
-R98
 !i113 1
 R11
 R12
 Epwm_modulator
-Z100 w1727564312
+Z98 w1727564312
 R1
 R2
 R3
 R4
-!i122 2667
+!i122 2693
 R6
-Z101 8../../pwm_modulator/rtl/pwm_modulator_ea.vhd
-Z102 F../../pwm_modulator/rtl/pwm_modulator_ea.vhd
+Z99 8../../pwm_modulator/rtl/pwm_modulator_ea.vhd
+Z100 F../../pwm_modulator/rtl/pwm_modulator_ea.vhd
 l0
-R31
+R30
 VO5nE6lY[QYOnVhMm0^8l60
 !s100 0SbF^0:i>6GLe<z>^<M9G0
 R8
 32
-R62
+R39
 !i10b 1
-R63
-Z103 !s90 -reportprogress|300|-work|work|../../pwm_modulator/rtl/pwm_modulator_ea.vhd|
-Z104 !s107 ../../pwm_modulator/rtl/pwm_modulator_ea.vhd|
+R62
+Z101 !s90 -reportprogress|300|-work|work|../../pwm_modulator/rtl/pwm_modulator_ea.vhd|
+Z102 !s107 ../../pwm_modulator/rtl/pwm_modulator_ea.vhd|
 !i113 1
 R11
 R12
@@ -535,43 +535,43 @@ R1
 R2
 R3
 R4
-Z105 DEx4 work 13 pwm_modulator 0 22 O5nE6lY[QYOnVhMm0^8l60
-!i122 2667
+Z103 DEx4 work 13 pwm_modulator 0 22 O5nE6lY[QYOnVhMm0^8l60
+!i122 2693
 l34
 L28 37
 VTUzLH65;iMaWD[RoIm1C[1
 !s100 R=e2UDH2D_DmY]lR]b?[>3
 R8
 32
-R62
+R39
 !i10b 1
-R63
-R103
-R104
+R62
+R101
+R102
 !i113 1
 R11
 R12
 Esc_noc_generator
-Z106 w1742824330
+Z104 w1742824330
 R1
 R2
 R3
 R4
-!i122 2677
+!i122 2703
 R6
-Z107 8../../sc_noc_generator/rtl/sc_noc_generator_ea.vhd
-Z108 F../../sc_noc_generator/rtl/sc_noc_generator_ea.vhd
+Z105 8../../sc_noc_generator/rtl/sc_noc_generator_ea.vhd
+Z106 F../../sc_noc_generator/rtl/sc_noc_generator_ea.vhd
 l0
 L14 1
 V@gm@Nh<X`fnC=;a7H__IW1
 !s100 Q`8_2JV>=<B0AkRnR1BGZ0
 R8
 32
-R32
+R31
 !i10b 1
-Z109 !s108 1765971124.000000
-Z110 !s90 -reportprogress|300|-work|work|../../sc_noc_generator/rtl/sc_noc_generator_ea.vhd|
-Z111 !s107 ../../sc_noc_generator/rtl/sc_noc_generator_ea.vhd|
+R32
+Z107 !s90 -reportprogress|300|-work|work|../../sc_noc_generator/rtl/sc_noc_generator_ea.vhd|
+Z108 !s107 ../../sc_noc_generator/rtl/sc_noc_generator_ea.vhd|
 !i113 1
 R11
 R12
@@ -580,42 +580,42 @@ R1
 R2
 R3
 R4
-Z112 DEx4 work 16 sc_noc_generator 0 22 @gm@Nh<X`fnC=;a7H__IW1
-!i122 2677
+Z109 DEx4 work 16 sc_noc_generator 0 22 @gm@Nh<X`fnC=;a7H__IW1
+!i122 2703
 l37
 L31 38
 Vkf5XIWM>e?mEzOCk^1klI2
 !s100 kV=fMGgoXQam31CXki8HB0
 R8
 32
-R32
+R31
 !i10b 1
-R109
-R110
-R111
+R32
+R107
+R108
 !i113 1
 R11
 R12
 Espike_2_thermocode
-Z113 w1719072313
+Z110 w1719072313
 R2
 R3
 R4
-!i122 2661
+!i122 2687
 R6
-Z114 8../../adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd
-Z115 F../../adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd
+Z111 8../../adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd
+Z112 F../../adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd
 l0
-Z116 L16 1
+Z113 L16 1
 V3AVLZ0igfWPeoiShPY5Gi0
 !s100 ZX_[6LcPb6e[8d5;gaCIQ2
 R8
 32
-R95
+R47
 !i10b 1
-R96
-Z117 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd|
-Z118 !s107 ../../adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd|
+R94
+Z114 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd|
+Z115 !s107 ../../adaptive_threshold_control/Spike-2-Thermocode/rtl/spike_2_thermocode_ea.vhd|
 !i113 1
 R11
 R12
@@ -623,42 +623,42 @@ Artl
 R2
 R3
 R4
-Z119 DEx4 work 18 spike_2_thermocode 0 22 3AVLZ0igfWPeoiShPY5Gi0
-!i122 2661
+Z116 DEx4 work 18 spike_2_thermocode 0 22 3AVLZ0igfWPeoiShPY5Gi0
+!i122 2687
 l34
 L27 39
 Vj3@:_?4lb1077?KQNR[e30
 !s100 KHn9LZaJe3VTbRmAojP]H2
 R8
 32
-R95
+R47
 !i10b 1
-R96
-R117
-R118
+R94
+R114
+R115
 !i113 1
 R11
 R12
 Espike_detector
-Z120 w1746890832
+Z117 w1746890832
 R2
 R3
 R4
-!i122 2668
+!i122 2694
 R6
-Z121 8../../spike_detector/rtl/spike_detector_ea.vhd
-Z122 F../../spike_detector/rtl/spike_detector_ea.vhd
+Z118 8../../spike_detector/rtl/spike_detector_ea.vhd
+Z119 F../../spike_detector/rtl/spike_detector_ea.vhd
 l0
-Z123 L21 1
+Z120 L21 1
 V[ccEb@JIYiA@L;5L[dIdz1
 !s100 lknA28zOK1kCW<mmfN03h3
 R8
 32
 R54
 !i10b 1
-R63
-Z124 !s90 -reportprogress|300|-work|work|../../spike_detector/rtl/spike_detector_ea.vhd|
-Z125 !s107 ../../spike_detector/rtl/spike_detector_ea.vhd|
+R62
+Z121 !s90 -reportprogress|300|-work|work|../../spike_detector/rtl/spike_detector_ea.vhd|
+Z122 !s107 ../../spike_detector/rtl/spike_detector_ea.vhd|
 !i113 1
 R11
 R12
@@ -666,8 +666,8 @@ Artl
 R2
 R3
 R4
-Z126 DEx4 work 14 spike_detector 0 22 [ccEb@JIYiA@L;5L[dIdz1
-!i122 2668
+Z123 DEx4 work 14 spike_detector 0 22 [ccEb@JIYiA@L;5L[dIdz1
+!i122 2694
 l61
 L42 128
 V1G@89_>2a9YLQ;^9]MiL[1
@@ -676,22 +676,22 @@ R8
 32
 R54
 !i10b 1
-R63
-R124
-R125
+R62
+R121
+R122
 !i113 1
 R11
 R12
 Espike_encoder
-Z127 w1727969386
+Z124 w1727969386
 R1
 R2
 R3
 R4
-!i122 2669
+!i122 2695
 R6
-Z128 8../../spike_encoder/rtl/spike_encoder_ea.vhd
-Z129 F../../spike_encoder/rtl/spike_encoder_ea.vhd
+Z125 8../../spike_encoder/rtl/spike_encoder_ea.vhd
+Z126 F../../spike_encoder/rtl/spike_encoder_ea.vhd
 l0
 R26
 VBKN9WEI28ci5>a3feA_?_1
@@ -701,8 +701,8 @@ R8
 R54
 !i10b 1
 R55
-Z130 !s90 -reportprogress|300|-work|work|../../spike_encoder/rtl/spike_encoder_ea.vhd|
-Z131 !s107 ../../spike_encoder/rtl/spike_encoder_ea.vhd|
+Z127 !s90 -reportprogress|300|-work|work|../../spike_encoder/rtl/spike_encoder_ea.vhd|
+Z128 !s107 ../../spike_encoder/rtl/spike_encoder_ea.vhd|
 !i113 1
 R11
 R12
@@ -711,8 +711,8 @@ R1
 R2
 R3
 R4
-Z132 DEx4 work 13 spike_encoder 0 22 BKN9WEI28ci5>a3feA_?_1
-!i122 2669
+Z129 DEx4 work 13 spike_encoder 0 22 BKN9WEI28ci5>a3feA_?_1
+!i122 2695
 l49
 L38 65
 VWoKR]Y^Sc[e^2V@R]zF6Y2
@@ -722,32 +722,32 @@ R8
 R54
 !i10b 1
 R55
-R130
-R131
+R127
+R128
 !i113 1
 R11
 R12
 Espike_memory
-Z133 w1765387046
+Z130 w1765387046
 R1
 R2
 R3
 R4
-!i122 2671
+!i122 2697
 R6
-Z134 8../../spike_memory/rtl/spike_memory_ea.vhd
-Z135 F../../spike_memory/rtl/spike_memory_ea.vhd
+Z131 8../../spike_memory/rtl/spike_memory_ea.vhd
+Z132 F../../spike_memory/rtl/spike_memory_ea.vhd
 l0
-Z136 L15 1
+Z133 L15 1
 V>Qc5SiL]Thn`1mjLm]l`D3
 !s100 Pzn6<TYjC<k?:T645VjZL2
 R8
 32
-Z137 !s110 1765971122
+R54
 !i10b 1
-Z138 !s108 1765971122.000000
-Z139 !s90 -reportprogress|300|-work|work|../../spike_memory/rtl/spike_memory_ea.vhd|
-Z140 !s107 ../../spike_memory/rtl/spike_memory_ea.vhd|
+R55
+Z134 !s90 -reportprogress|300|-work|work|../../spike_memory/rtl/spike_memory_ea.vhd|
+Z135 !s107 ../../spike_memory/rtl/spike_memory_ea.vhd|
 !i113 1
 R11
 R12
@@ -757,44 +757,44 @@ R1
 R2
 R3
 R4
-Z141 DEx4 work 12 spike_memory 0 22 >Qc5SiL]Thn`1mjLm]l`D3
-!i122 2671
+Z136 DEx4 work 12 spike_memory 0 22 >Qc5SiL]Thn`1mjLm]l`D3
+!i122 2697
 l89
 L38 236
 VXZkafK0BoM8bVN8W4I9md0
 !s100 ?NLjDEA=QX?G]no927PZN2
 R8
 32
-R137
+R54
 !i10b 1
-R138
-R139
-R140
+R55
+R134
+R135
 !i113 1
 R11
 R12
 Espike_shift_reg
-Z142 w1742472397
+Z137 w1742472397
 R14
 R1
 R2
 R3
 R4
-!i122 2660
+!i122 2686
 R6
-Z143 8../../adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd
-Z144 F../../adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd
+Z138 8../../adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd
+Z139 F../../adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd
 l0
 R26
 VL1IDQDRY^P_^Ej9f=Ze0S0
 !s100 <R`:AXL^5fb;4dBhA9Mji1
 R8
 32
-R95
-!i10b 1
 R47
-Z145 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd|
-Z146 !s107 ../../adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd|
+!i10b 1
+R94
+Z140 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd|
+Z141 !s107 ../../adaptive_threshold_control/Spike-Buffering/rtl/spike_shift_reg_ea.vhd|
 !i113 1
 R11
 R12
@@ -805,41 +805,41 @@ R2
 R3
 R4
 R24
-!i122 2660
+!i122 2686
 l56
 L36 97
 VA_cRanM]]maKTD03;5Ol40
 !s100 0QDmb0IKjmibVDa7hinPT3
 R8
 32
-R95
-!i10b 1
 R47
-R145
-R146
+!i10b 1
+R94
+R140
+R141
 !i113 1
 R11
 R12
 Esync_chain
-Z147 w1719664156
+Z142 w1719664156
 R2
 R3
 R4
-!i122 2658
+!i122 2684
 R6
-Z148 8../../sync_chain/rtl/sync_chain_ea.vhd
-Z149 F../../sync_chain/rtl/sync_chain_ea.vhd
+Z143 8../../sync_chain/rtl/sync_chain_ea.vhd
+Z144 F../../sync_chain/rtl/sync_chain_ea.vhd
 l0
 R26
 V`BaG1J7Li[k>?7`:eHf4K1
 !s100 ::?=>I`N?;aMHj42ZTQ1Y0
 R8
 32
-R27
+R9
 !i10b 1
-R47
-Z150 !s90 -reportprogress|300|-work|work|../../sync_chain/rtl/sync_chain_ea.vhd|
-Z151 !s107 ../../sync_chain/rtl/sync_chain_ea.vhd|
+R10
+Z145 !s90 -reportprogress|300|-work|work|../../sync_chain/rtl/sync_chain_ea.vhd|
+Z146 !s107 ../../sync_chain/rtl/sync_chain_ea.vhd|
 !i113 1
 R11
 R12
@@ -848,176 +848,176 @@ R2
 R3
 R4
 R42
-!i122 2658
+!i122 2684
 l38
 L31 28
 VeS4i3KmPFg@0Kk3H[>Cl<0
 !s100 f<9>Ek08[L0`NSz@gh3M<1
 R8
 32
-R27
+R9
 !i10b 1
-R47
-R150
-R151
+R10
+R145
+R146
 !i113 1
 R11
 R12
 Etbs_core
-Z152 w1765922164
+Z147 w1765988277
 R1
 R2
 R3
 R4
-!i122 2678
+!i122 2704
 R6
-Z153 8../../rtl/tbs_core_ea.vhd
-Z154 F../../rtl/tbs_core_ea.vhd
+Z148 8../../rtl/tbs_core_ea.vhd
+Z149 F../../rtl/tbs_core_ea.vhd
 l0
 L23 1
 Vm_9nUP^N17L`A:FcCdA7;0
 !s100 h;b;j16=`BWb6A72[g7lQ0
 R8
 32
-Z155 !s110 1765971125
+Z150 !s110 1765988750
 !i10b 1
-R109
-Z156 !s90 -reportprogress|300|-work|work|../../rtl/tbs_core_ea.vhd|
-Z157 !s107 ../../rtl/tbs_core_ea.vhd|
+Z151 !s108 1765988750.000000
+Z152 !s90 -reportprogress|300|-work|work|../../rtl/tbs_core_ea.vhd|
+Z153 !s107 ../../rtl/tbs_core_ea.vhd|
 !i113 1
 R11
 R12
 Artl
-Z158 DEx4 work 4 uart 0 22 m67n[o;PhWzona=D74E7W3
-R66
-R141
-R132
-Z159 DEx4 work 16 time_measurement 0 22 h`eZ`lk5`TQ]AQHfbS_dF1
-R112
-R36
-R105
+Z154 DEx4 work 4 uart 0 22 m67n[o;PhWzona=D74E7W3
+R65
+R136
+R129
+Z155 DEx4 work 16 time_measurement 0 22 h`eZ`lk5`TQ]AQHfbS_dF1
+R109
+R35
+R103
 R43
 R14
 R15
 R16
 R25
-R126
+R123
 R50
 R42
 R1
 R2
 R3
 R4
-Z160 DEx4 work 8 tbs_core 0 22 m_9nUP^N17L`A:FcCdA7;0
-!i122 2678
+Z156 DEx4 work 8 tbs_core 0 22 m_9nUP^N17L`A:FcCdA7;0
+!i122 2704
 l422
-L119 1417
-V[YBY?9;ad4=[i=f;13Mh22
-!s100 ;>LSoPz<P:ac0zW@fhO7=2
+L119 1416
+VB@LU81<6od5jF8cVRgD?Z0
+!s100 _Y>]FEoREeiFjLAj7Cmn03
 R8
 32
-R155
+R150
 !i10b 1
-R109
-R156
-R157
+R151
+R152
+R153
 !i113 1
 R11
 R12
 Etbs_core_board
-Z161 w1765922700
+Z157 w1765922700
 R15
 R1
 R2
 R3
 R4
-!i122 2679
+!i122 2705
 R6
-Z162 8../../rtl/tbs_core_board.vhd
-Z163 F../../rtl/tbs_core_board.vhd
+Z158 8../../rtl/tbs_core_board.vhd
+Z159 F../../rtl/tbs_core_board.vhd
 l0
 L24 1
 V]7XWz`EDdBklLRTm1=]291
 !s100 dHNNV;?G03@70afoaeYz`2
 R8
 32
-R155
+R150
 !i10b 1
-Z164 !s108 1765971125.000000
-Z165 !s90 -reportprogress|300|-work|work|../../rtl/tbs_core_board.vhd|
-Z166 !s107 ../../rtl/tbs_core_board.vhd|
+R151
+Z160 !s90 -reportprogress|300|-work|work|../../rtl/tbs_core_board.vhd|
+Z161 !s107 ../../rtl/tbs_core_board.vhd|
 !i113 1
 R11
 R12
 Artl
-R160
+R156
 R15
 R1
 R2
 R3
 R4
 DEx4 work 14 tbs_core_board 0 22 ]7XWz`EDdBklLRTm1=]291
-!i122 2679
+!i122 2705
 l91
 L79 120
 V9IUX1VU77L4kh8k:C5;d[1
 !s100 Wm=e^OI44^8MUJ_JPCII`0
 R8
 32
-R155
+R150
 !i10b 1
-R164
-R165
-R166
+R151
+R160
+R161
 !i113 1
 R11
 R12
 Etbs_core_tb
-Z167 w1765929523
+Z162 w1765929523
 R15
 R1
 R2
 R3
 R4
-!i122 2680
+!i122 2706
 R6
-Z168 8tbs_core_tb.vhd
-Z169 Ftbs_core_tb.vhd
+Z163 8tbs_core_tb.vhd
+Z164 Ftbs_core_tb.vhd
 l0
-R116
+R113
 VUkVjW==Eji5j@nR2mfXGm2
 !s100 97eZjf=cW[W_oF18h=OTL1
 R8
 32
-R155
+Z165 !s110 1765988751
 !i10b 1
-R164
-Z170 !s90 -reportprogress|300|-work|work|tbs_core_tb.vhd|
-Z171 !s107 tbs_core_tb.vhd|
+R151
+Z166 !s90 -reportprogress|300|-work|work|tbs_core_tb.vhd|
+Z167 !s107 tbs_core_tb.vhd|
 !i113 1
 R11
 R12
 Abhv
-R158
-R160
+R154
+R156
 R15
 R1
 R2
 R3
 R4
-Z172 DEx4 work 11 tbs_core_tb 0 22 UkVjW==Eji5j@nR2mfXGm2
-!i122 2680
+Z168 DEx4 work 11 tbs_core_tb 0 22 UkVjW==Eji5j@nR2mfXGm2
+!i122 2706
 l105
-Z173 L20 702
-Z174 V]OoZAHbIX_eU]hV1H:e>B2
-Z175 !s100 f`_CAm^gSAlKKQLQ@JXkP0
+Z169 L20 702
+Z170 V]OoZAHbIX_eU]hV1H:e>B2
+Z171 !s100 f`_CAm^gSAlKKQLQ@JXkP0
 R8
 32
-!s110 1765971126
+R165
 !i10b 1
-R164
-R170
-R171
+R151
+R166
+R167
 !i113 1
 R11
 R12
@@ -1026,7 +1026,7 @@ R1
 R2
 R3
 R4
-!i122 2655
+!i122 2681
 R5
 R6
 8TBSSimVals_p.vhd
@@ -1039,33 +1039,33 @@ R8
 32
 R9
 !i10b 1
-!s108 1765971115.000000
+!s108 1765988742.000000
 !s90 -reportprogress|300|-work|work|TBSSimVals_p.vhd|
 !s107 TBSSimVals_p.vhd|
 !i113 1
 R11
 R12
 Etime_measurement
-Z176 w1719072828
+Z172 w1719072828
 R1
 R2
 R3
 R4
-!i122 2672
+!i122 2698
 R6
-Z177 8../../time_measurement/rtl/time_measurement_ea.vhd
-Z178 F../../time_measurement/rtl/time_measurement_ea.vhd
+Z173 8../../time_measurement/rtl/time_measurement_ea.vhd
+Z174 F../../time_measurement/rtl/time_measurement_ea.vhd
 l0
-R123
+R120
 Vh`eZ`lk5`TQ]AQHfbS_dF1
 !s100 H;iQWQ@W@`oi;RYDjGLPG0
 R8
 32
-R137
+Z175 !s110 1765988748
 !i10b 1
-R138
-Z179 !s90 -reportprogress|300|-work|work|../../time_measurement/rtl/time_measurement_ea.vhd|
-Z180 !s107 ../../time_measurement/rtl/time_measurement_ea.vhd|
+Z176 !s108 1765988748.000000
+Z177 !s90 -reportprogress|300|-work|work|../../time_measurement/rtl/time_measurement_ea.vhd|
+Z178 !s107 ../../time_measurement/rtl/time_measurement_ea.vhd|
 !i113 1
 R11
 R12
@@ -1074,90 +1074,90 @@ R1
 R2
 R3
 R4
-R159
-!i122 2672
+R155
+!i122 2698
 l45
 L36 44
 V0:X1X@gXjZS3RTY?m4<9h1
 !s100 43F9[Q838dnkHfUWNcRab2
 R8
 32
-R137
+R175
 !i10b 1
-R138
-R179
-R180
+R176
+R177
+R178
 !i113 1
 R11
 R12
 Euart
-Z181 w1728220113
+Z179 w1728220113
 R1
 R2
 R3
 R4
-!i122 2675
+!i122 2701
 R6
-Z182 8../../uart/rtl/uart_ea.vhd
-Z183 F../../uart/rtl/uart_ea.vhd
+Z180 8../../uart/rtl/uart_ea.vhd
+Z181 F../../uart/rtl/uart_ea.vhd
 l0
-R136
+R133
 Vm67n[o;PhWzona=D74E7W3
 !s100 mTJ6oQ5?0NAl?RV:@WEdd0
 R8
 32
-Z184 !s110 1765971123
+R31
 !i10b 1
-R33
-Z185 !s90 -reportprogress|300|-work|work|../../uart/rtl/uart_ea.vhd|
-Z186 !s107 ../../uart/rtl/uart_ea.vhd|
+R176
+Z182 !s90 -reportprogress|300|-work|work|../../uart/rtl/uart_ea.vhd|
+Z183 !s107 ../../uart/rtl/uart_ea.vhd|
 !i113 1
 R11
 R12
 Artl
-Z187 DEx4 work 7 uart_rx 0 22 eTz@MoPG?JXDf^Ld[hz9K3
-Z188 DEx4 work 7 uart_tx 0 22 Ub5YjBfi@VM29XWY5EiZW3
+Z184 DEx4 work 7 uart_rx 0 22 eTz@MoPG?JXDf^Ld[hz9K3
+Z185 DEx4 work 7 uart_tx 0 22 Ub5YjBfi@VM29XWY5EiZW3
 R1
 R2
 R3
 R4
-R158
-!i122 2675
+R154
+!i122 2701
 l42
 L40 39
 VM1j?ImJz<HPZU9mT^_57`2
 !s100 R8cUYE5VIebjh2KbP3E5W1
 R8
 32
-R184
+R31
 !i10b 1
-R33
-R185
-R186
+R176
+R182
+R183
 !i113 1
 R11
 R12
 Euart_rx
-Z189 w1728221756
+Z186 w1728221756
 R1
 R2
 R3
 R4
-!i122 2673
+!i122 2699
 R6
-Z190 8../../uart/rtl/uart_rx_ea.vhd
-Z191 F../../uart/rtl/uart_rx_ea.vhd
+Z187 8../../uart/rtl/uart_rx_ea.vhd
+Z188 F../../uart/rtl/uart_rx_ea.vhd
 l0
 R7
 VeTz@MoPG?JXDf^Ld[hz9K3
 !s100 9547E;`;8>`f=ARnS>5@o2
 R8
 32
-R184
+R175
 !i10b 1
-R138
-Z192 !s90 -reportprogress|300|-work|work|../../uart/rtl/uart_rx_ea.vhd|
-Z193 !s107 ../../uart/rtl/uart_rx_ea.vhd|
+R176
+Z189 !s90 -reportprogress|300|-work|work|../../uart/rtl/uart_rx_ea.vhd|
+Z190 !s107 ../../uart/rtl/uart_rx_ea.vhd|
 !i113 1
 R11
 R12
@@ -1166,43 +1166,43 @@ R1
 R2
 R3
 R4
-R187
-!i122 2673
+R184
+!i122 2699
 l56
 L28 124
 VA@nb]CDbnm<47OV1UMQBE0
 !s100 bJ>Za=M@0Xi`6c41kaYlX3
 R8
 32
-R184
+R175
 !i10b 1
-R138
-R192
-R193
+R176
+R189
+R190
 !i113 1
 R11
 R12
 Euart_tx
-Z194 w1742472418
+Z191 w1742472418
 R1
 R2
 R3
 R4
-!i122 2674
+!i122 2700
 R6
-Z195 8../../uart/rtl/uart_tx_ea.vhd
-Z196 F../../uart/rtl/uart_tx_ea.vhd
+Z192 8../../uart/rtl/uart_tx_ea.vhd
+Z193 F../../uart/rtl/uart_tx_ea.vhd
 l0
 R7
 VUb5YjBfi@VM29XWY5EiZW3
 !s100 ?dD<2C7d`0O8]Blj2U8SZ3
 R8
 32
-R184
+R175
 !i10b 1
-R33
-Z197 !s90 -reportprogress|300|-work|work|../../uart/rtl/uart_tx_ea.vhd|
-Z198 !s107 ../../uart/rtl/uart_tx_ea.vhd|
+R176
+Z194 !s90 -reportprogress|300|-work|work|../../uart/rtl/uart_tx_ea.vhd|
+Z195 !s107 ../../uart/rtl/uart_tx_ea.vhd|
 !i113 1
 R11
 R12
@@ -1211,33 +1211,33 @@ R1
 R2
 R3
 R4
-R188
-!i122 2674
+R185
+!i122 2700
 l54
 L29 137
 V7AAZ[EmGFHRdcB`h]NCzH1
 !s100 43dbUVHQgT;lTV8WTPHB;2
 R8
 32
-R184
+R175
 !i10b 1
-R33
-R197
-R198
+R176
+R194
+R195
 !i113 1
 R11
 R12
 Eweyls_discrepancy
-Z199 w1729511496
+Z196 w1729511496
 R14
 R1
 R2
 R3
 R4
-!i122 2663
+!i122 2689
 R6
-Z200 8../../adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd
-Z201 F../../adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd
+Z197 8../../adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd
+Z198 F../../adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd
 l0
 L29 1
 V@RjV:m_LSObeXYHUz`K1U2
@@ -1246,22 +1246,22 @@ R8
 32
 R19
 !i10b 1
-R96
-Z202 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd|
-Z203 !s107 ../../adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd|
+R20
+Z199 !s90 -reportprogress|300|-work|work|../../adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd|
+Z200 !s107 ../../adaptive_threshold_control/Weyls-Discrepancy/rtl/weyls_discrepancy_ea.vhd|
 !i113 1
 R11
 R12
 Artl
-R99
-R119
+R97
+R116
 R14
 R1
 R2
 R3
 R4
 R23
-!i122 2663
+!i122 2689
 l81
 L46 156
 VGSP4Z4n[DGE7KmaRYfX[k0
@@ -1270,9 +1270,9 @@ R8
 32
 R19
 !i10b 1
-R96
-R202
-R203
+R20
+R199
+R200
 !i113 1
 R11
 R12

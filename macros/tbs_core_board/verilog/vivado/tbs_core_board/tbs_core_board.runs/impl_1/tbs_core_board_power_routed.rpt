@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Wed Dec 17 12:34:25 2025
+| Date             : Wed Dec 17 17:30:12 2025
 | Host             : SimiBook running 64-bit major release  (build 9200)
 | Command          : report_power -file tbs_core_board_power_routed.rpt -pb tbs_core_board_power_summary_routed.pb -rpx tbs_core_board_power_routed.rpx
 | Design           : tbs_core_board
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 12.493       |
+| Total On-Chip Power (W)  | 8.271        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 12.409       |
-| Device Static (W)        | 0.084        |
+| Dynamic (W)              | 8.199        |
+| Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 3.3          |
-| Max Ambient (C)          | 43.3         |
-| Junction Temperature (C) | 66.7         |
+| Max Ambient (C)          | 57.4         |
+| Junction Temperature (C) | 52.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     4.240 |     6173 |       --- |             --- |
-|   LUT as Logic |     3.950 |     1819 |     14600 |           12.46 |
-|   CARRY4       |     0.194 |      194 |      3650 |            5.32 |
-|   Register     |     0.090 |     3285 |     29200 |           11.25 |
+| Slice Logic    |     2.866 |     6185 |       --- |             --- |
+|   LUT as Logic |     2.573 |     1825 |     14600 |           12.50 |
+|   CARRY4       |     0.191 |      194 |      3650 |            5.32 |
+|   Register     |     0.096 |     3286 |     29200 |           11.25 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes  |    <0.001 |      476 |     14600 |            3.26 |
 |   Others       |     0.000 |       51 |       --- |             --- |
-| Signals        |     4.988 |     4297 |       --- |             --- |
-| I/O            |     3.182 |       45 |       100 |           45.00 |
-| Static Power   |     0.084 |          |           |                 |
-| Total          |    12.493 |          |           |                 |
+| Signals        |     2.133 |     4312 |       --- |             --- |
+| I/O            |     3.200 |       45 |       100 |           45.00 |
+| Static Power   |     0.072 |          |           |                 |
+| Total          |     8.271 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     9.296 |       9.272 |      0.024 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.126 |       0.115 |      0.011 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.889 |       0.888 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     5.057 |       5.043 |      0.014 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.126 |       0.116 |      0.010 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.894 |       0.893 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 
@@ -137,37 +137,38 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| tbs_core_board            |    12.409 |
-|   tbs_core_0              |     9.027 |
-|     adaptive_ctrl_0       |     0.948 |
-|       spike_shift_reg_0   |     0.518 |
-|       weyls_discrepancy_0 |     0.089 |
-|     analog_trigger_0      |     0.095 |
-|     dac_control_0         |     0.294 |
-|     dac_control_1         |     0.264 |
-|       sync_chain_0        |     0.047 |
-|     debouncer_0           |     0.131 |
-|       sync_chain_0        |     0.078 |
-|     debouncer_1           |     0.128 |
-|       sync_chain_0        |     0.078 |
-|     debouncer_2           |     0.147 |
-|       sync_chain_0        |     0.079 |
-|     debouncer_3           |     0.091 |
-|     debouncer_4           |     0.095 |
-|       sync_chain_0        |     0.045 |
-|     debouncer_5           |     0.125 |
-|       sync_chain_0        |     0.075 |
-|     memory2uart_0         |     0.017 |
-|     pwm_0                 |     0.095 |
-|     pwm_1                 |     0.080 |
-|     sc_noc_generator_0    |     0.145 |
-|     spike_memory_0        |     4.662 |
-|     sync_chain_1          |     0.009 |
-|     sync_chain_2          |     0.004 |
-|     time_measurement_0    |     1.089 |
-|     uart_0                |     0.403 |
-|       uart_rx_0           |     0.280 |
-|       uart_tx_0           |     0.123 |
+| tbs_core_board            |     8.199 |
+|   tbs_core_0              |     4.797 |
+|     adaptive_ctrl_0       |     0.934 |
+|       spike_shift_reg_0   |     0.454 |
+|       weyls_discrepancy_0 |     0.093 |
+|     analog_trigger_0      |     0.083 |
+|     dac_control_0         |     0.287 |
+|     dac_control_1         |     0.240 |
+|       sync_chain_0        |     0.050 |
+|     debouncer_0           |     0.133 |
+|       sync_chain_0        |     0.080 |
+|     debouncer_1           |     0.139 |
+|       sync_chain_0        |     0.082 |
+|     debouncer_2           |     0.288 |
+|       sync_chain_0        |     0.082 |
+|     debouncer_3           |     0.099 |
+|     debouncer_4           |     0.101 |
+|       sync_chain_0        |     0.048 |
+|     debouncer_5           |     0.141 |
+|       sync_chain_0        |     0.082 |
+|     memory2uart_0         |     0.016 |
+|     pwm_0                 |     0.084 |
+|     pwm_1                 |     0.077 |
+|     sc_noc_generator_0    |     0.159 |
+|     spike_memory_0        |     0.379 |
+|     sync_chain_0          |     0.002 |
+|     sync_chain_1          |     0.008 |
+|     sync_chain_2          |     0.006 |
+|     time_measurement_0    |     0.997 |
+|     uart_0                |     0.325 |
+|       uart_rx_0           |     0.209 |
+|       uart_tx_0           |     0.116 |
 +---------------------------+-----------+
 
 
