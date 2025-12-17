@@ -1,30 +1,36 @@
-94. Printing statistics.
+97. Printing statistics.
 
 === chip_top ===
 
    Number of wires:                 27
-   Number of wire bits:            139
+   Number of wire bits:            127
    Number of public wires:          27
-   Number of public wire bits:     139
+   Number of public wire bits:     127
    Number of ports:                  4
-   Number of port bits:             51
+   Number of port bits:             47
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 76
-     gf180mcu_fd_io__bi_24t         37
+   Number of cells:                 79
+     gf180mcu_fd_io__bi_24t         33
      gf180mcu_fd_io__in_c           13
      gf180mcu_fd_io__in_s            1
-     gf180mcu_ws_io__dvdd           10
-     gf180mcu_ws_io__dvss           11
+     gf180mcu_ws_io__dvdd           12
+     gf180mcu_ws_io__dvss           13
+     gf180mcu_ws_ip__credits         1
      gf180mcu_ws_ip__id              1
+     gf180mcu_ws_ip__iicqc           1
      gf180mcu_ws_ip__jku             1
      gf180mcu_ws_ip__logo            1
+     gf180mcu_ws_ip__names           1
      tbs_core_board                  1
 
+   Area for cell type \gf180mcu_ws_ip__credits is unknown!
    Area for cell type \gf180mcu_ws_ip__id is unknown!
-   Area for cell type \gf180mcu_ws_ip__logo is unknown!
+   Area for cell type \gf180mcu_ws_ip__iicqc is unknown!
    Area for cell type \gf180mcu_ws_ip__jku is unknown!
+   Area for cell type \gf180mcu_ws_ip__logo is unknown!
+   Area for cell type \gf180mcu_ws_ip__names is unknown!
    Area for cell type \tbs_core_board is unknown!
 
    Chip area for module '\chip_top': 1890000.000000

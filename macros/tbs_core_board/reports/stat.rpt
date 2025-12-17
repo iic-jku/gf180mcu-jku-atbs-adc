@@ -1,0 +1,108 @@
+161. Printing statistics.
+
+=== tbs_core_board ===
+
+   Number of wires:              18965
+   Number of wire bits:          18979
+   Number of public wires:        3544
+   Number of public wire bits:    3558
+   Number of ports:                 33
+   Number of port bits:             47
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              18965
+     gf180mcu_fd_sc_mcu9t5v0__and2_1   3174
+     gf180mcu_fd_sc_mcu9t5v0__and2_2      7
+     gf180mcu_fd_sc_mcu9t5v0__and2_4      1
+     gf180mcu_fd_sc_mcu9t5v0__and3_1     40
+     gf180mcu_fd_sc_mcu9t5v0__and3_2      3
+     gf180mcu_fd_sc_mcu9t5v0__and4_1     11
+     gf180mcu_fd_sc_mcu9t5v0__and4_2      3
+     gf180mcu_fd_sc_mcu9t5v0__and4_4      1
+     gf180mcu_fd_sc_mcu9t5v0__aoi211_1    106
+     gf180mcu_fd_sc_mcu9t5v0__aoi211_2     16
+     gf180mcu_fd_sc_mcu9t5v0__aoi211_4      6
+     gf180mcu_fd_sc_mcu9t5v0__aoi21_1    331
+     gf180mcu_fd_sc_mcu9t5v0__aoi21_2     14
+     gf180mcu_fd_sc_mcu9t5v0__aoi21_4      2
+     gf180mcu_fd_sc_mcu9t5v0__aoi221_1     64
+     gf180mcu_fd_sc_mcu9t5v0__aoi221_2     13
+     gf180mcu_fd_sc_mcu9t5v0__aoi221_4      4
+     gf180mcu_fd_sc_mcu9t5v0__aoi222_1     13
+     gf180mcu_fd_sc_mcu9t5v0__aoi222_2      3
+     gf180mcu_fd_sc_mcu9t5v0__aoi22_1     98
+     gf180mcu_fd_sc_mcu9t5v0__aoi22_2      3
+     gf180mcu_fd_sc_mcu9t5v0__buf_1   4003
+     gf180mcu_fd_sc_mcu9t5v0__buf_12      1
+     gf180mcu_fd_sc_mcu9t5v0__buf_2     18
+     gf180mcu_fd_sc_mcu9t5v0__buf_3      1
+     gf180mcu_fd_sc_mcu9t5v0__buf_4      6
+     gf180mcu_fd_sc_mcu9t5v0__buf_8      2
+     gf180mcu_fd_sc_mcu9t5v0__clkbuf_1    296
+     gf180mcu_fd_sc_mcu9t5v0__clkbuf_2      3
+     gf180mcu_fd_sc_mcu9t5v0__clkinv_1    349
+     gf180mcu_fd_sc_mcu9t5v0__clkinv_2      1
+     gf180mcu_fd_sc_mcu9t5v0__clkinv_3      1
+     gf180mcu_fd_sc_mcu9t5v0__dffrnq_1   3253
+     gf180mcu_fd_sc_mcu9t5v0__dffsnq_1     39
+     gf180mcu_fd_sc_mcu9t5v0__inv_1     31
+     gf180mcu_fd_sc_mcu9t5v0__inv_2      4
+     gf180mcu_fd_sc_mcu9t5v0__inv_3      7
+     gf180mcu_fd_sc_mcu9t5v0__inv_4      1
+     gf180mcu_fd_sc_mcu9t5v0__mux2_1   2948
+     gf180mcu_fd_sc_mcu9t5v0__mux2_2     10
+     gf180mcu_fd_sc_mcu9t5v0__mux4_1    782
+     gf180mcu_fd_sc_mcu9t5v0__nand2_1    791
+     gf180mcu_fd_sc_mcu9t5v0__nand2_2      5
+     gf180mcu_fd_sc_mcu9t5v0__nand2_4      1
+     gf180mcu_fd_sc_mcu9t5v0__nand3_1    197
+     gf180mcu_fd_sc_mcu9t5v0__nand3_2      4
+     gf180mcu_fd_sc_mcu9t5v0__nand4_1     49
+     gf180mcu_fd_sc_mcu9t5v0__nand4_2      2
+     gf180mcu_fd_sc_mcu9t5v0__nand4_4      1
+     gf180mcu_fd_sc_mcu9t5v0__nor2_1    631
+     gf180mcu_fd_sc_mcu9t5v0__nor2_2     12
+     gf180mcu_fd_sc_mcu9t5v0__nor2_4      5
+     gf180mcu_fd_sc_mcu9t5v0__nor3_1     89
+     gf180mcu_fd_sc_mcu9t5v0__nor3_2      2
+     gf180mcu_fd_sc_mcu9t5v0__nor3_4      2
+     gf180mcu_fd_sc_mcu9t5v0__nor4_1     45
+     gf180mcu_fd_sc_mcu9t5v0__nor4_2      4
+     gf180mcu_fd_sc_mcu9t5v0__nor4_4      2
+     gf180mcu_fd_sc_mcu9t5v0__oai211_1    101
+     gf180mcu_fd_sc_mcu9t5v0__oai211_2      3
+     gf180mcu_fd_sc_mcu9t5v0__oai21_1    334
+     gf180mcu_fd_sc_mcu9t5v0__oai21_2      8
+     gf180mcu_fd_sc_mcu9t5v0__oai21_4      5
+     gf180mcu_fd_sc_mcu9t5v0__oai221_1     73
+     gf180mcu_fd_sc_mcu9t5v0__oai221_2      4
+     gf180mcu_fd_sc_mcu9t5v0__oai221_4      1
+     gf180mcu_fd_sc_mcu9t5v0__oai222_1      3
+     gf180mcu_fd_sc_mcu9t5v0__oai22_1     71
+     gf180mcu_fd_sc_mcu9t5v0__oai22_2      3
+     gf180mcu_fd_sc_mcu9t5v0__oai31_1    107
+     gf180mcu_fd_sc_mcu9t5v0__oai31_2     12
+     gf180mcu_fd_sc_mcu9t5v0__oai31_4     10
+     gf180mcu_fd_sc_mcu9t5v0__oai32_1     12
+     gf180mcu_fd_sc_mcu9t5v0__oai32_4      6
+     gf180mcu_fd_sc_mcu9t5v0__oai33_1      1
+     gf180mcu_fd_sc_mcu9t5v0__oai33_2      1
+     gf180mcu_fd_sc_mcu9t5v0__or2_1    122
+     gf180mcu_fd_sc_mcu9t5v0__or2_2      3
+     gf180mcu_fd_sc_mcu9t5v0__or3_1     11
+     gf180mcu_fd_sc_mcu9t5v0__or3_2      4
+     gf180mcu_fd_sc_mcu9t5v0__or3_4      2
+     gf180mcu_fd_sc_mcu9t5v0__or4_1      7
+     gf180mcu_fd_sc_mcu9t5v0__or4_2      3
+     gf180mcu_fd_sc_mcu9t5v0__tieh      1
+     gf180mcu_fd_sc_mcu9t5v0__xnor2_1    286
+     gf180mcu_fd_sc_mcu9t5v0__xnor2_2      1
+     gf180mcu_fd_sc_mcu9t5v0__xnor3_1    131
+     gf180mcu_fd_sc_mcu9t5v0__xor2_1    124
+     gf180mcu_fd_sc_mcu9t5v0__xor2_2      2
+     gf180mcu_fd_sc_mcu9t5v0__xor3_1      2
+
+   Chip area for module '\tbs_core_board': 726533.740800
+     of which used for sequential elements: 297763.200000 (40.98%)
+

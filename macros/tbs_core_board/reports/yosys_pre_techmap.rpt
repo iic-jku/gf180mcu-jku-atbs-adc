@@ -1,33 +1,35 @@
-158. Printing statistics.
+151. Printing statistics.
 
 === tbs_core_board ===
 
-   Number of wires:               8721
-   Number of wire bits:          15013
-   Number of public wires:         493
-   Number of public wire bits:    6785
+   Number of wires:               8462
+   Number of wire bits:          14702
+   Number of public wires:         490
+   Number of public wire bits:    6730
    Number of ports:                 33
-   Number of port bits:             51
+   Number of port bits:             47
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:              12055
-     $_ANDNOT_                    2315
-     $_AND_                        132
-     $_DFFE_PP0N_                  281
-     $_DFFE_PP0P_                 2721
-     $_DFFE_PP1P_                   40
-     $_DFF_PN0_                      3
-     $_DFF_PP0_                    263
-     $_DFF_PP1_                      3
-     $_MUX_                       2733
-     $_NAND_                       600
-     $_NOR_                        439
-     $_NOT_                        263
-     $_ORNOT_                      363
-     $_OR_                         780
-     $_XNOR_                       405
-     $_XOR_                        714
+   Number of cells:              11760
+     $_ANDNOT_                    2246
+     $_AND_                        129
+     $_DFFE_PN0P_                   72
+     $_DFFE_PN1P_                   21
+     $_DFFE_PP0N_                  279
+     $_DFFE_PP0P_                 2637
+     $_DFFE_PP1P_                   15
+     $_DFF_PN0_                    157
+     $_DFF_PN1_                      3
+     $_DFF_PP0_                    108
+     $_MUX_                       2701
+     $_NAND_                       588
+     $_NOR_                        413
+     $_NOT_                        246
+     $_ORNOT_                      335
+     $_OR_                         734
+     $_XNOR_                       399
+     $_XOR_                        677
 
    Area for cell type $_NOT_ is unknown!
    Area for cell type $_AND_ is unknown!
@@ -40,8 +42,10 @@
    Area for cell type $_ORNOT_ is unknown!
    Area for cell type $_MUX_ is unknown!
    Area for cell type $_DFF_PN0_ is unknown!
+   Area for cell type $_DFF_PN1_ is unknown!
    Area for cell type $_DFF_PP0_ is unknown!
-   Area for cell type $_DFF_PP1_ is unknown!
+   Area for cell type $_DFFE_PN0P_ is unknown!
+   Area for cell type $_DFFE_PN1P_ is unknown!
    Area for cell type $_DFFE_PP0N_ is unknown!
    Area for cell type $_DFFE_PP0P_ is unknown!
    Area for cell type $_DFFE_PP1P_ is unknown!
