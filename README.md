@@ -2,10 +2,10 @@
 
 Project `JKU2` for wafer.space MPW runs using the `gf180mcuD` PDK.
 
-- [ ] GDS Submission: https://platform.wafer.space/
-- [ ] Precheck: https://github.com/wafer-space/gf180mcu-precheck
-- [ ] Top-Level: ToDo
-- [ ] ATBS ADC: yosys error
+- [x] **GDS Submission:** https://platform.wafer.space/
+- [x] **Precheck:** https://github.com/wafer-space/gf180mcu-precheck
+- [x] **Top-Level:** pass; no violations
+- [x] **ATBS ADC:** pass; no violations
 
 ![chip_top_white](img/chip_top_white.png)
 
