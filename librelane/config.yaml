@@ -235,7 +235,7 @@ MACROS:
         - dir::../ip/gf180mcu_ws_ip__iicqc/lib/gf180mcu_ws_ip__iicqc.lib
     instances:
       iicqc_logo:
-        location: ["expr::442 + 24 + 1184", "expr::442 + 19 + 1490"]
+        location: ["expr::442 + 24 + 1150", "expr::442 + 19 + 1490"]
         orientation: N
 
   gf180mcu_ws_ip__jku:
