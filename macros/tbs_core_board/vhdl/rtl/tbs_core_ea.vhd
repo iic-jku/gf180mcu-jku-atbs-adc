@@ -441,7 +441,8 @@ begin
 	-- =====================================================
   
   -- Reset (Button or UART or Input Changed Reset)
-  reset_i <= not reset_sync or uart_reset; -- highest priority reset
+  -- reset_i <= not reset_sync or uart_reset; -- highest priority reset
+  reset_i <= not reset_sync;
   reset_entity <= reset_i or input_changed_reset_strb or uart_changed_reset_strb; -- entity reset of signal path
   -- =====================================================
   
