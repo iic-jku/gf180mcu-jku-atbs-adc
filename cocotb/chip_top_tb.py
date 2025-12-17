@@ -16,7 +16,7 @@ from cocotb_tools.runner import get_runner
 sim = os.getenv("SIM", "icarus")
 pdk_root = os.getenv("PDK_ROOT", Path("~/.ciel").expanduser())
 pdk = os.getenv("PDK", "gf180mcuD")
-scl = os.getenv("SCL", "gf180mcu_fd_sc_mcu7t5v0")
+scl = os.getenv("SCL", "gf180mcu_fd_sc_mcu9t5v0")
 gl = os.getenv("GL", False)
 slot = os.getenv("SLOT", "1x1")
 
@@ -711,6 +711,9 @@ def chip_top_runner():
         # SCL models
         sources.append(Path(pdk_root) / pdk / "libs.ref" / scl / "verilog" / f"{scl}.v")
         sources.append(Path(pdk_root) / pdk / "libs.ref" / scl / "verilog" / "primitives.v")
+
+        sources.append(Path(pdk_root) / pdk / "libs.ref" / "gf180mcu_fd_sc_mcu7t5v0" / "verilog" / "gf180mcu_fd_sc_mcu7t5v0.v")
+        sources.append(Path(pdk_root) / pdk / "libs.ref" / "gf180mcu_fd_sc_mcu7t5v0" / "verilog" / "primitives.v")
 
         # We use the powered netlist
         sources.append(proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v")

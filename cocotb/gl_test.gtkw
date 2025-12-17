@@ -1,0 +1,70 @@
+[*]
+[*] GTKWave Analyzer v3.3.121 (w)1999-2024 BSI
+[*] Wed Dec 17 14:51:29 2025
+[*]
+[dumpfile] "sim_build/chip_top.fst"
+[dumpfile_mtime] "Wed Dec 17 14:45:45 2025"
+[dumpfile_size] 21253985
+[savefile] "gl_test.gtkw"
+[timestart] 0
+[size] 2556 1265
+[pos] -4 4
+*-33.798397 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 295
+[signals_width] 278
+[sst_expanded] 1
+[sst_vpaned_height] 393
+@28
+chip_top.\i_chip_core.signal_select_en_o
+chip_top.\i_chip_core.signal_select_in_o
+chip_top.\i_chip_core.amp_sdn_o
+chip_top.\i_chip_core.dac_pd_o
+chip_top.\i_chip_core.dac_clr_o
+chip_top.\i_chip_core.dac_wr_upper_o
+chip_top.\i_chip_core.dac_wr_lower_o
+chip_top.\i_chip_core.dac_pwm_lower_o
+chip_top.\i_chip_core.dac_pwm_upper_o
+@c08024
+#{chip_top.\i_chip_core.dac_upper_o[7:0]} chip_top.\i_chip_core.dac_upper_o[7] chip_top.\i_chip_core.dac_upper_o[6] chip_top.\i_chip_core.dac_upper_o[5] chip_top.\i_chip_core.dac_upper_o[4] chip_top.\i_chip_core.dac_upper_o[3] chip_top.\i_chip_core.dac_upper_o[2] chip_top.\i_chip_core.dac_upper_o[1] chip_top.\i_chip_core.dac_upper_o[0]
+@28
+chip_top.\i_chip_core.dac_upper_o[0]
+chip_top.\i_chip_core.dac_upper_o[1]
+chip_top.\i_chip_core.dac_upper_o[2]
+chip_top.\i_chip_core.dac_upper_o[3]
+chip_top.\i_chip_core.dac_upper_o[4]
+chip_top.\i_chip_core.dac_upper_o[5]
+chip_top.\i_chip_core.dac_upper_o[6]
+chip_top.\i_chip_core.dac_upper_o[7]
+@1409204
+-group_end
+@20000
+-
+-
+@c08024
+#{chip_top.\i_chip_core.dac_lower_o[7:0]} chip_top.\i_chip_core.dac_lower_o[7] chip_top.\i_chip_core.dac_lower_o[6] chip_top.\i_chip_core.dac_lower_o[5] chip_top.\i_chip_core.dac_lower_o[4] chip_top.\i_chip_core.dac_lower_o[3] chip_top.\i_chip_core.dac_lower_o[2] chip_top.\i_chip_core.dac_lower_o[1] chip_top.\i_chip_core.dac_lower_o[0]
+@28
+chip_top.\i_chip_core.dac_lower_o[0]
+chip_top.\i_chip_core.dac_lower_o[1]
+chip_top.\i_chip_core.dac_lower_o[2]
+chip_top.\i_chip_core.dac_lower_o[3]
+chip_top.\i_chip_core.dac_lower_o[4]
+chip_top.\i_chip_core.dac_lower_o[5]
+chip_top.\i_chip_core.dac_lower_o[6]
+chip_top.\i_chip_core.dac_lower_o[7]
+@1409204
+-group_end
+@20000
+-
+-
+@28
+chip_top.\i_chip_core.idle_led_o
+chip_top.\i_chip_core.overflow_led_o
+chip_top.\i_chip_core.underflow_led_o
+chip_top.\i_chip_core.ecg_led_o
+chip_top.\i_chip_core.analog_trigger_o
+chip_top.\i_chip_core.sc_noc_1_o
+chip_top.\i_chip_core.sc_noc_2_o
+@29
+chip_top.\i_chip_core.uart_tx_o
+[pattern_trace] 1
+[pattern_trace] 0
