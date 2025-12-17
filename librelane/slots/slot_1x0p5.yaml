@@ -27,26 +27,26 @@ PAD_SOUTH: [
     "bidir\\[9\\].pad",
     "bidir\\[10\\].pad",
     "bidir\\[11\\].pad",
-    "bidir\\[12\\].pad",
-    "bidir\\[13\\].pad",
-
+    
     "dvss_pads\\[2\\].pad",
     "dvdd_pads\\[2\\].pad",
+    "dvss_pads\\[3\\].pad",
+    "dvdd_pads\\[3\\].pad",
     
+    "bidir\\[12\\].pad",
+    "bidir\\[13\\].pad",
     "bidir\\[14\\].pad",
-    "bidir\\[15\\].pad",
-    "bidir\\[16\\].pad",
-    "bidir\\[17\\].pad"
+    "bidir\\[15\\].pad"
 ]
 
 # bottom to top
 PAD_EAST: [
-    "dvss_pads\\[3\\].pad",
-    "dvdd_pads\\[3\\].pad",
     "dvss_pads\\[4\\].pad",
     "dvdd_pads\\[4\\].pad",
+    "dvss_pads\\[5\\].pad",
+    "dvdd_pads\\[5\\].pad",
     
-    "bidir\\[18\\].pad",
+    "bidir\\[16\\].pad",
     
     "inputs\\[0\\].pad",
     
@@ -56,24 +56,20 @@ PAD_EAST: [
     "inputs\\[1\\].pad",
     "inputs\\[2\\].pad",
 
-    "dvss_pads\\[5\\].pad",
-    "dvdd_pads\\[5\\].pad"
+    "dvss_pads\\[6\\].pad",
+    "dvdd_pads\\[6\\].pad"
 ]
 
 # left to right
 PAD_NORTH: [
-    "bidir\\[31\\].pad",
+    "bidir\\[27\\].pad",
     "inputs\\[9\\].pad",
     "inputs\\[8\\].pad",
     "inputs\\[7\\].pad",
     
-    "dvss_pads\\[7\\].pad",
-    "dvdd_pads\\[7\\].pad",
+    "dvss_pads\\[9\\].pad",
+    "dvdd_pads\\[9\\].pad",
 
-    "bidir\\[30\\].pad",
-    "bidir\\[29\\].pad",
-    "bidir\\[28\\].pad",
-    "bidir\\[27\\].pad",
     "bidir\\[26\\].pad",
     "bidir\\[25\\].pad",
     "bidir\\[24\\].pad",
@@ -82,9 +78,13 @@ PAD_NORTH: [
     "bidir\\[21\\].pad",
     "bidir\\[20\\].pad",
     "bidir\\[19\\].pad",
-
-    "dvss_pads\\[6\\].pad",
-    "dvdd_pads\\[6\\].pad",
+    "bidir\\[18\\].pad",
+    "bidir\\[17\\].pad",
+    
+    "dvss_pads\\[8\\].pad",
+    "dvdd_pads\\[8\\].pad",
+    "dvss_pads\\[7\\].pad",
+    "dvdd_pads\\[7\\].pad",
     
     "inputs\\[6\\].pad",
     "inputs\\[5\\].pad",
@@ -94,20 +94,20 @@ PAD_NORTH: [
 
 # bottom to top
 PAD_WEST: [
-    "dvss_pads\\[9\\].pad",
-    "dvdd_pads\\[9\\].pad",
+    "dvss_pads\\[11\\].pad",
+    "dvdd_pads\\[11\\].pad",
     
-    "bidir\\[36\\].pad",
-    "bidir\\[35\\].pad",
-    "bidir\\[34\\].pad",
+    "bidir\\[32\\].pad",
+    "bidir\\[31\\].pad",
+    "bidir\\[30\\].pad",
     
     "inputs\\[11\\].pad",
     "inputs\\[10\\].pad",
     
-    "bidir\\[33\\].pad",
-    "bidir\\[32\\].pad",
+    "bidir\\[29\\].pad",
+    "bidir\\[28\\].pad",
     
+    "dvss_pads\\[12\\].pad",
     "dvss_pads\\[10\\].pad",
-    "dvss_pads\\[8\\].pad",
-    "dvdd_pads\\[8\\].pad"
+    "dvdd_pads\\[10\\].pad"
 ]
