@@ -112,8 +112,23 @@ async def do_uart_tx(dut):
     dut.input_PAD.set(Immediate(tmp))
 
 
+port_map = {
+    "comp_upper": 10,
+    "comp_lower": 11,
+    "trigger_start_sampling": 7,
+    "trigger_start_mode": 6,
+    "adaptive_mode": 5,
+    "control_mode": 4,
+    "signal_select": 3,
+    "enable": 2,
+    "select_tbs_delta_steps": 1,
+    "ecg_lod_p": 9,
+    "ecg_lod_n": 8
+}
+
+
 @cocotb.test()
-async def test_atbs_adc(dut):
+async def test_tbs_delta1(dut):
     global DEBOUNCER_MAX
     global CLK_FREQ
     global DAC_SETTLING_CLKS
@@ -123,23 +138,9 @@ async def test_atbs_adc(dut):
     global uart_tx_state
     global uart_tx_current_data
     global uart_tx_enable
+    global port_map
 
     """Run the counter test"""
-
-    port_map = {
-        "comp_upper": 10,
-        "comp_lower": 11,
-        "trigger_start_sampling": 7,
-        "trigger_start_mode": 6,
-        "adaptive_mode": 5,
-        "control_mode": 4,
-        "signal_select": 3,
-        "enable": 2,
-        "select_tbs_delta_steps": 1,
-        "ecg_lod_p": 9,
-        "ecg_lod_n": 8
-    }
-
     # Create a logger for this testbench
     logger = logging.getLogger("atbs_adc test")
 
@@ -155,11 +156,11 @@ async def test_atbs_adc(dut):
     await do_uart_tx(dut)  # Doing UART to set rx to high initially
     # Start the counter by setting all inputs to 1
     tmp = dut.input_PAD.value
-    tmp[port_map["trigger_start_mode"]] = 0
-    tmp[port_map["adaptive_mode"]] = 0
-    tmp[port_map["control_mode"]] = 0
-    tmp[port_map["signal_select"]] = 0
-    tmp[port_map["enable"]] = 1
+    tmp[port_map["trigger_start_mode"]] = 1
+    tmp[port_map["adaptive_mode"]] = 1
+    tmp[port_map["control_mode"]] = 1
+    tmp[port_map["signal_select"]] = 1
+    tmp[port_map["enable"]] = 0
     tmp[port_map["select_tbs_delta_steps"]] = 0
     tmp[port_map["ecg_lod_p"]] = 0
     tmp[port_map["ecg_lod_n"]] = 0
@@ -178,28 +179,28 @@ async def test_atbs_adc(dut):
         await ClockCycles(dut.clk_PAD, 1)
 
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 0
+    tmp[port_map["enable"]] = 1
     dut.input_PAD.set(tmp)
 
     for i in range(5):  # ??
         await ClockCycles(dut.clk_PAD, 1)
 
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 1
+    tmp[port_map["enable"]] = 0
     dut.input_PAD.set(tmp)
 
     for i in range(int(1.5*DAC_SETTLING_CLKS)):
         await ClockCycles(dut.clk_PAD, 1)
 
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 0
+    tmp[port_map["enable"]] = 1
     dut.input_PAD.set(tmp)
 
     for i in range(5):  # ??
         await ClockCycles(dut.clk_PAD, 1)
 
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 1
+    tmp[port_map["enable"]] = 0
     dut.input_PAD.set(tmp)
 
     # =====================================================
@@ -222,16 +223,46 @@ async def test_atbs_adc(dut):
     for i in range(450*DAC_SETTLING_CLKS):
         await ClockCycles(dut.clk_PAD, 1)
 
+    logger.info("Done!")
+
+
+@cocotb.test()
+async def test_tbs_delta_virtual_n3(dut):
+    global DEBOUNCER_MAX
+    global CLK_FREQ
+    global DAC_SETTLING_CLKS
+    global UART_TX_WAIT_CYCLES
+    global uart_tx_clk_counter
+    global uart_tx_bit_counter
+    global uart_tx_state
+    global uart_tx_current_data
+    global uart_tx_enable
+    global port_map
+
+    """Run the counter test"""
+    # Create a logger for this testbench
+    logger = logging.getLogger("atbs_adc test")
+
+    logger.info("Startup sequence...")
+
+    # Start up
+    await start_up(dut)
+
+    logger.info("Running the test...")
+
+    # Wait for some time...
+
+    await do_uart_tx(dut)  # Doing UART to set rx to high initially
     # =====================================================
     # TBS SIMULATION with delta_steps ..... N-3
     # DEFINE SETTINGS
     tmp = dut.input_PAD.value
-    tmp[port_map["trigger_start_mode"]] = 0
-    tmp[port_map["adaptive_mode"]] = 0
-    tmp[port_map["control_mode"]] = 0
-    tmp[port_map["signal_select"]] = 0
-    tmp[port_map["enable"]] = 1
-    tmp[port_map["select_tbs_delta_steps"]] = 1
+    tmp[port_map["trigger_start_mode"]] = 1
+    tmp[port_map["adaptive_mode"]] = 1
+    tmp[port_map["control_mode"]] = 1
+    tmp[port_map["signal_select"]] = 1
+    tmp[port_map["enable"]] = 0
+    tmp[port_map["select_tbs_delta_steps"]] = 0
     tmp[port_map["ecg_lod_p"]] = 0
     tmp[port_map["ecg_lod_n"]] = 0
     dut.input_PAD.set(tmp)
@@ -244,20 +275,20 @@ async def test_atbs_adc(dut):
 
     await ClockCycles(dut.clk_PAD, int(1.5*DAC_SETTLING_CLKS))
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 0
+    tmp[port_map["enable"]] = 1
     dut.input_PAD.set(tmp)
     await ClockCycles(dut.clk_PAD, 5)
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 1
+    tmp[port_map["enable"]] = 0
     dut.input_PAD.set(tmp)
 
     await ClockCycles(dut.clk_PAD, int(1.5*DAC_SETTLING_CLKS))
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 0
+    tmp[port_map["enable"]] = 1
     dut.input_PAD.set(tmp)
     await ClockCycles(dut.clk_PAD, 5)
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 1
+    tmp[port_map["enable"]] = 0
     dut.input_PAD.set(tmp)
 
     await ClockCycles(dut.clk_PAD, int(1.5*DAC_SETTLING_CLKS))
@@ -278,15 +309,43 @@ async def test_atbs_adc(dut):
     tmp[port_map["comp_lower"]] = 1
     dut.input_PAD.set(tmp)
 
+
+@cocotb.test()
+async def test_tbs_delta_virtual_n1(dut):
+    global DEBOUNCER_MAX
+    global CLK_FREQ
+    global DAC_SETTLING_CLKS
+    global UART_TX_WAIT_CYCLES
+    global uart_tx_clk_counter
+    global uart_tx_bit_counter
+    global uart_tx_state
+    global uart_tx_current_data
+    global uart_tx_enable
+    global port_map
+
+    """Run the counter test"""
+    # Create a logger for this testbench
+    logger = logging.getLogger("atbs_adc test")
+
+    logger.info("Startup sequence...")
+
+    # Start up
+    await start_up(dut)
+
+    logger.info("Running the test...")
+
+    # Wait for some time...
+
+    await do_uart_tx(dut)  # Doing UART to set rx to high initially
     # =====================================================
     # TBS SIMULATION with delta_steps .....
     # DEFINE SETTINGS
     tmp = dut.input_PAD.value
-    tmp[port_map["trigger_start_mode"]] = 0
-    tmp[port_map["adaptive_mode"]] = 0
-    tmp[port_map["control_mode"]] = 0
-    tmp[port_map["signal_select"]] = 0
-    tmp[port_map["enable"]] = 1
+    tmp[port_map["trigger_start_mode"]] = 1
+    tmp[port_map["adaptive_mode"]] = 1
+    tmp[port_map["control_mode"]] = 1
+    tmp[port_map["signal_select"]] = 1
+    tmp[port_map["enable"]] = 0
     tmp[port_map["select_tbs_delta_steps"]] = 1
     tmp[port_map["ecg_lod_p"]] = 0
     tmp[port_map["ecg_lod_n"]] = 0
@@ -306,22 +365,22 @@ async def test_atbs_adc(dut):
 
     await ClockCycles(dut.clk_PAD, 3*DAC_SETTLING_CLKS)
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 0
+    tmp[port_map["enable"]] = 1
     dut.input_PAD.set(tmp)
 
     await ClockCycles(dut.clk_PAD, 5)
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 1
+    tmp[port_map["enable"]] = 0
     dut.input_PAD.set(tmp)
 
     await ClockCycles(dut.clk_PAD, 3*DAC_SETTLING_CLKS)
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 0
+    tmp[port_map["enable"]] = 1
     dut.input_PAD.set(tmp)
 
     await ClockCycles(dut.clk_PAD, 5)
     tmp = dut.input_PAD.value
-    tmp[port_map["enable"]] = 1
+    tmp[port_map["enable"]] = 0
     dut.input_PAD.set(tmp)
 
     await ClockCycles(dut.clk_PAD, 3*DAC_SETTLING_CLKS)
@@ -336,6 +395,306 @@ async def test_atbs_adc(dut):
     dut.input_PAD.set(tmp)
 
     await ClockCycles(dut.clk_PAD, 450*DAC_SETTLING_CLKS)
+
+    logger.info("Done!")
+
+
+@cocotb.test()
+async def test_atbs(dut):
+    global DEBOUNCER_MAX
+    global CLK_FREQ
+    global DAC_SETTLING_CLKS
+    global UART_TX_WAIT_CYCLES
+    global uart_tx_clk_counter
+    global uart_tx_bit_counter
+    global uart_tx_state
+    global uart_tx_current_data
+    global uart_tx_enable
+    global port_map
+
+    """Run the counter test"""
+    # Create a logger for this testbench
+    logger = logging.getLogger("atbs_adc test")
+
+    logger.info("Startup sequence...")
+
+    # Start up
+    await start_up(dut)
+
+    logger.info("Running the test...")
+
+    # Wait for some time...
+
+    await do_uart_tx(dut)  # Doing UART to set rx to high initially
+    # =====================================================
+    # TBS SIMULATION with delta_steps .....
+    # DEFINE SETTINGS
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_mode"]] = 1
+    tmp[port_map["adaptive_mode"]] = 0
+    tmp[port_map["control_mode"]] = 1
+    tmp[port_map["signal_select"]] = 1
+    tmp[port_map["enable"]] = 0
+    tmp[port_map["select_tbs_delta_steps"]] = 1
+    tmp[port_map["ecg_lod_p"]] = 0
+    tmp[port_map["ecg_lod_n"]] = 0
+    dut.input_PAD.set(tmp)
+
+    for i in range(2*DEBOUNCER_MAX):
+        await ClockCycles(dut.clk_PAD, 1)
+
+    # Input signal within thresholds (do nothing)
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 0
+    tmp[port_map["comp_lower"]] = 1
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 3*DAC_SETTLING_CLKS)
+    tmp = dut.input_PAD.value
+    tmp[port_map["enable"]] = 1
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 5)
+    tmp = dut.input_PAD.value
+    tmp[port_map["enable"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 3*DAC_SETTLING_CLKS)
+    tmp = dut.input_PAD.value
+    tmp[port_map["enable"]] = 1
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 5)
+    tmp = dut.input_PAD.value
+    tmp[port_map["enable"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 3*DAC_SETTLING_CLKS)
+
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_lower"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 100*DAC_SETTLING_CLKS)
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 1
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 11*DAC_SETTLING_CLKS)
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 0
+    tmp[port_map["comp_lower"]] = 1
+    dut.input_PAD.set(tmp)
+
+    # Sampling after trigger
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_mode"]] = 0
+    tmp[port_map["adaptive_mode"]] = 1
+    tmp[port_map["control_mode"]] = 1
+    tmp[port_map["signal_select"]] = 1
+    tmp[port_map["enable"]] = 0
+    tmp[port_map["select_tbs_delta_steps"]] = 0
+    tmp[port_map["ecg_lod_p"]] = 0
+    tmp[port_map["ecg_lod_n"]] = 0
+    dut.input_PAD.set(tmp)
+
+    for ascii in "VcU":
+        await send_uart(dut, ord(ascii))
+
+    await ClockCycles(dut.clk_PAD, 50*DAC_SETTLING_CLKS)
+    await ClockCycles(dut.clk_PAD, 2*DEBOUNCER_MAX)
+
+    # Trigger not detected
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_sampling"]] = 1
+    dut.input_PAD.set(tmp)
+    await ClockCycles(dut.clk_PAD, 5)
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_sampling"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 20)
+
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_sampling"]] = 1
+    dut.input_PAD.set(tmp)
+    await ClockCycles(dut.clk_PAD, 5)
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_sampling"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 20)
+
+    # Trigger detected
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_sampling"]] = 1
+    dut.input_PAD.set(tmp)
+    await ClockCycles(dut.clk_PAD, 5)
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_sampling"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, int(DEBOUNCER_MAX/32))
+
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_sampling"]] = 1
+    dut.input_PAD.set(tmp)
+    await ClockCycles(dut.clk_PAD, 5)
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_sampling"]] = 0
+    dut.input_PAD.set(tmp)
+
+    # Decrease voltage
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_lower"]] = 0
+    dut.input_PAD.set(tmp)
+    await ClockCycles(dut.clk_PAD, 125*DAC_SETTLING_CLKS)
+
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 1
+    dut.input_PAD.set(tmp)
+    await ClockCycles(dut.clk_PAD, 125*DAC_SETTLING_CLKS)
+
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 0
+    tmp[port_map["comp_lower"]] = 1
+    dut.input_PAD.set(tmp)
+    await ClockCycles(dut.clk_PAD, 100*DAC_SETTLING_CLKS)
+
+    logger.info("Done!")
+
+
+@cocotb.test()
+async def test_uart_debugging(dut):
+    global DEBOUNCER_MAX
+    global CLK_FREQ
+    global DAC_SETTLING_CLKS
+    global UART_TX_WAIT_CYCLES
+    global uart_tx_clk_counter
+    global uart_tx_bit_counter
+    global uart_tx_state
+    global uart_tx_current_data
+    global uart_tx_enable
+    global port_map
+
+    """Run the counter test"""
+    # Create a logger for this testbench
+    logger = logging.getLogger("atbs_adc test")
+
+    logger.info("Startup sequence...")
+
+    # Start up
+    await start_up(dut)
+
+    logger.info("Running the test...")
+
+    # Wait for some time...
+
+    await do_uart_tx(dut)  # Doing UART to set rx to high initially
+    # =====================================================
+    # TBS SIMULATION with delta_steps .....
+    # DEFINE SETTINGS
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_mode"]] = 1
+    tmp[port_map["adaptive_mode"]] = 1
+    tmp[port_map["control_mode"]] = 0
+    tmp[port_map["signal_select"]] = 1
+    tmp[port_map["enable"]] = 0
+    tmp[port_map["select_tbs_delta_steps"]] = 1
+    tmp[port_map["ecg_lod_p"]] = 0
+    tmp[port_map["ecg_lod_n"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 2*DEBOUNCER_MAX)
+    await ClockCycles(dut.clk_PAD, 300)
+
+    for ascii in ["0", "3", "U"]:
+        await send_uart(dut, ord(ascii))
+
+    # Input signal within thresholds (do nothing)
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_lower"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 100*DAC_SETTLING_CLKS)
+
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 1
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 100*DAC_SETTLING_CLKS)
+
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 0
+    tmp[port_map["comp_lower"]] = 1
+    dut.input_PAD.set(tmp)
+
+    # Changing analog trigger
+    for ascii in "Ta":
+        await send_uart(dut, ord(ascii))
+
+    await ClockCycles(dut.clk_PAD, 125*DAC_SETTLING_CLKS)
+
+    # Changing to TBS again
+    for ascii in "2U":
+        await send_uart(dut, ord(ascii))
+
+    # Decrease voltage
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_lower"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 100*DAC_SETTLING_CLKS)
+
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 1
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 100*DAC_SETTLING_CLKS)
+
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 0
+    tmp[port_map["comp_lower"]] = 1
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 100*DAC_SETTLING_CLKS)
+
+    # RESET
+    await reset(dut.rst_n_PAD)
+
+    # DEFINE SETTINGS
+    tmp = dut.input_PAD.value
+    tmp[port_map["trigger_start_mode"]] = 1
+    tmp[port_map["adaptive_mode"]] = 1
+    tmp[port_map["control_mode"]] = 1
+    tmp[port_map["signal_select"]] = 1
+    tmp[port_map["enable"]] = 0
+    tmp[port_map["select_tbs_delta_steps"]] = 0
+    tmp[port_map["ecg_lod_p"]] = 0
+    tmp[port_map["ecg_lod_n"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 2*DEBOUNCER_MAX)
+
+    # Decrease voltage
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_lower"]] = 0
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 100*DAC_SETTLING_CLKS)
+
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 1
+    dut.input_PAD.set(tmp)
+
+    await ClockCycles(dut.clk_PAD, 100*DAC_SETTLING_CLKS)
+
+    # Input signal within thresholds (do nothing)
+    tmp = dut.input_PAD.value
+    tmp[port_map["comp_upper"]] = 0
+    tmp[port_map["comp_lower"]] = 1
+    dut.input_PAD.set(tmp)
+    await ClockCycles(dut.clk_PAD, 100*DAC_SETTLING_CLKS)
 
     logger.info("Done!")
 
@@ -375,6 +734,9 @@ def chip_top_runner():
         proj_path / "../ip/gf180mcu_ws_ip__id/vh/gf180mcu_ws_ip__id.v",
         proj_path / "../ip/gf180mcu_ws_ip__logo/vh/gf180mcu_ws_ip__logo.v",
         proj_path / "../ip/gf180mcu_ws_ip__jku/vh/gf180mcu_ws_ip__jku.v",
+        proj_path / "../ip/gf180mcu_ws_ip__credits/vh/gf180mcu_ws_ip__credits.v",
+        proj_path / "../ip/gf180mcu_ws_ip__iicqc/vh/gf180mcu_ws_ip__iicqc.v",
+        proj_path / "../ip/gf180mcu_ws_ip__names/vh/gf180mcu_ws_ip__names.v",
     ]
 
     build_args = []
