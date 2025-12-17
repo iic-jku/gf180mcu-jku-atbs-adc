@@ -10,7 +10,7 @@ module tbs_core_tb;
 
   // Constants
   parameter CLK_FREQ = 8e6;
-  parameter DAC_BITWIDTH = 10;
+  parameter DAC_BITWIDTH = 8;
   parameter DAC_SETTLING_CLKS = 80; // 10us @ 8MHz
   parameter DEBOUNCER_MAX = 65536;
   

@@ -3376,7 +3376,7 @@ module analog_trig_8
       n1812 <= n1811;
 endmodule
 
-module dac_control_10_10_0_80
+module dac_control_8_8_0_80
   (input  clock_i,
    input  reset_i,
    input  enable_dac_i,
@@ -3385,21 +3385,21 @@ module dac_control_10_10_0_80
    input  select_tbs_delta_steps_i,
    input  direction_i,
    input  update_dac_strb_i,
-   input  [9:0] delta_steps_i,
-   output [9:0] dac_counter_value_o,
+   input  [7:0] delta_steps_i,
+   output [7:0] dac_counter_value_o,
    output dac_finished_strb_o,
    output dac_pd_o,
    output dac_wr_o,
    output dac_clr_o,
-   output [9:0] dac_o);
+   output [7:0] dac_o);
   wire state;
   wire next_state;
   wire select_dac_value;
   wire next_select_dac_value;
-  wire [10:0] dac_init_value;
-  wire [10:0] next_dac_init_value;
-  wire [10:0] dac_counter_value;
-  wire [10:0] next_dac_counter_value;
+  wire [8:0] dac_init_value;
+  wire [8:0] next_dac_init_value;
+  wire [8:0] dac_counter_value;
+  wire [8:0] next_dac_counter_value;
   wire dac_counter_strb;
   wire delayed_dac_counter_strb;
   wire dac_change_in_progress;
@@ -3415,37 +3415,37 @@ module dac_control_10_10_0_80
   wire [1:0] n1696;
   reg n1698;
   reg n1701;
-  reg [10:0] n1703;
+  reg [8:0] n1703;
   wire n1706;
-  wire [10:0] n1707;
-  wire [10:0] n1708;
+  wire [8:0] n1707;
+  wire [8:0] n1708;
   wire n1710;
-  wire [10:0] n1711;
-  wire [10:0] n1712;
+  wire [8:0] n1711;
+  wire [8:0] n1712;
   wire n1714;
-  wire [10:0] n1715;
-  wire [10:0] n1716;
-  wire [10:0] n1717;
-  wire [10:0] n1719;
+  wire [8:0] n1715;
+  wire [8:0] n1716;
+  wire [8:0] n1717;
+  wire [8:0] n1719;
   wire n1720;
   wire n1721;
-  wire [10:0] n1722;
+  wire [8:0] n1722;
   wire n1723;
-  wire [10:0] n1724;
+  wire [8:0] n1724;
   wire n1725;
-  wire [10:0] n1726;
-  wire [10:0] n1727;
-  wire [10:0] n1728;
-  wire [10:0] n1730;
-  wire [10:0] n1731;
+  wire [8:0] n1726;
+  wire [8:0] n1727;
+  wire [8:0] n1728;
+  wire [8:0] n1730;
+  wire [8:0] n1731;
   wire n1734;
-  wire [10:0] n1735;
+  wire [8:0] n1735;
   wire n1737;
   wire n1739;
   wire n1741;
   wire n1742;
   wire n1745;
-  wire [10:0] n1746;
+  wire [8:0] n1746;
   wire n1747;
   wire n1752;
   wire n1753;
@@ -3461,12 +3461,12 @@ module dac_control_10_10_0_80
   wire n1773;
   wire \sync_chain_0.sync_o ;
   wire n1776;
-  wire [9:0] n1777;
-  wire [9:0] n1778;
+  wire [7:0] n1777;
+  wire [7:0] n1778;
   reg n1779;
   reg n1780;
-  reg [10:0] n1781;
-  reg [10:0] n1782;
+  reg [8:0] n1781;
+  reg [8:0] n1782;
   reg n1783;
   reg [6:0] n1784;
   assign dac_counter_value_o = n1777; //(module output)
@@ -3534,7 +3534,7 @@ module dac_control_10_10_0_80
   always @*
     case (n1696)
       2'b10: n1703 = dac_init_value;
-      2'b01: n1703 = 11'b01000000000;
+      2'b01: n1703 = 9'b010000000;
       default: n1703 = dac_init_value;
     endcase
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:166:28  */
@@ -3544,13 +3544,13 @@ module dac_control_10_10_0_80
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:167:31  */
   assign n1708 = dac_counter_value + n1707;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:167:48  */
-  assign n1710 = n1708 == 11'b01111111111;
+  assign n1710 = n1708 == 9'b011111111;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:169:34  */
   assign n1711 = {1'b0, delta_steps_i};  //  uext
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:169:34  */
   assign n1712 = dac_counter_value + n1711;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:169:51  */
-  assign n1714 = $unsigned(n1712) < $unsigned(11'b01111111111);
+  assign n1714 = $unsigned(n1712) < $unsigned(9'b011111111);
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:170:55  */
   assign n1715 = {1'b0, delta_steps_i};  //  uext
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:170:55  */
@@ -3558,7 +3558,7 @@ module dac_control_10_10_0_80
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:169:9  */
   assign n1717 = n1714 ? n1716 : dac_counter_value;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:167:9  */
-  assign n1719 = n1710 ? 11'b01111111111 : n1717;
+  assign n1719 = n1710 ? 9'b011111111 : n1717;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:173:25  */
   assign n1720 = ~direction_i;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:173:31  */
@@ -3578,7 +3578,7 @@ module dac_control_10_10_0_80
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:176:9  */
   assign n1728 = n1725 ? n1727 : dac_counter_value;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:174:9  */
-  assign n1730 = n1723 ? 11'b00000000000 : n1728;
+  assign n1730 = n1723 ? 9'b000000000 : n1728;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:173:7  */
   assign n1731 = n1721 ? n1730 : dac_counter_value;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:173:7  */
@@ -3631,9 +3631,9 @@ module dac_control_10_10_0_80
     .sync_o(\sync_chain_0.sync_o ));
   assign n1776 = \sync_chain_0.sync_o ; // extract
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:241:26  */
-  assign n1777 = dac_counter_value[9:0];  // trunc
+  assign n1777 = dac_counter_value[7:0];  // trunc
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:246:30  */
-  assign n1778 = dac_counter_value[9:0];  // trunc
+  assign n1778 = dac_counter_value[7:0];  // trunc
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:95:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
@@ -3649,13 +3649,13 @@ module dac_control_10_10_0_80
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:95:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1781 <= 11'b00000000000;
+      n1781 <= 9'b000000000;
     else
       n1781 <= next_dac_init_value;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:95:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1782 <= 11'b00000000000;
+      n1782 <= 9'b000000000;
     else
       n1782 <= next_dac_counter_value;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:95:17  */
@@ -3672,38 +3672,38 @@ module dac_control_10_10_0_80
       n1784 <= next_settling_counter_value;
 endmodule
 
-module pwm_modulator_10_1024
+module pwm_modulator_8_256
   (input  clock_i,
    input  reset_i,
    input  enable_i,
-   input  [9:0] on_cnt_val_i,
+   input  [7:0] on_cnt_val_i,
    output pwm_o);
-  wire [9:0] counter_value;
-  wire [9:0] next_counter_value;
+  wire [7:0] counter_value;
+  wire [7:0] next_counter_value;
   wire n1644;
-  wire [9:0] n1646;
-  wire [9:0] n1648;
+  wire [7:0] n1646;
+  wire [7:0] n1648;
   wire n1651;
   wire n1653;
   wire n1654;
   wire n1655;
-  wire [9:0] n1657;
-  reg [9:0] n1658;
+  wire [7:0] n1657;
+  reg [7:0] n1658;
   assign pwm_o = n1655; //(module output)
   /* ../../vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd:31:8  */
   assign counter_value = n1658; // (signal)
   /* ../../vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd:32:8  */
   assign next_counter_value = n1648; // (signal)
   /* ../../vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd:53:34  */
-  assign n1644 = counter_value == 10'b1111111111;
+  assign n1644 = counter_value == 8'b11111111;
   /* ../../vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd:56:61  */
-  assign n1646 = counter_value + 10'b0000000001;
+  assign n1646 = counter_value + 8'b00000001;
   /* ../../vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd:53:17  */
-  assign n1648 = n1644 ? 10'b0000000000 : n1646;
+  assign n1648 = n1644 ? 8'b00000000 : n1646;
   /* ../../vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd:62:42  */
   assign n1651 = $unsigned(counter_value) <= $unsigned(on_cnt_val_i);
   /* ../../vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd:62:75  */
-  assign n1653 = on_cnt_val_i != 10'b0000000000;
+  assign n1653 = on_cnt_val_i != 8'b00000000;
   /* ../../vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd:62:58  */
   assign n1654 = n1653 & n1651;
   /* ../../vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd:62:22  */
@@ -3713,12 +3713,12 @@ module pwm_modulator_10_1024
   /* ../../vhdl/pwm_modulator/rtl/pwm_modulator_ea.vhd:40:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1658 <= 10'b0000000000;
+      n1658 <= 8'b00000000;
     else
       n1658 <= n1657;
 endmodule
 
-module dac_control_10_10_1_80
+module dac_control_8_8_1_80
   (input  clock_i,
    input  reset_i,
    input  enable_dac_i,
@@ -3727,21 +3727,21 @@ module dac_control_10_10_1_80
    input  select_tbs_delta_steps_i,
    input  direction_i,
    input  update_dac_strb_i,
-   input  [9:0] delta_steps_i,
-   output [9:0] dac_counter_value_o,
+   input  [7:0] delta_steps_i,
+   output [7:0] dac_counter_value_o,
    output dac_finished_strb_o,
    output dac_pd_o,
    output dac_wr_o,
    output dac_clr_o,
-   output [9:0] dac_o);
+   output [7:0] dac_o);
   wire state;
   wire next_state;
   wire select_dac_value;
   wire next_select_dac_value;
-  wire [10:0] dac_init_value;
-  wire [10:0] next_dac_init_value;
-  wire [10:0] dac_counter_value;
-  wire [10:0] next_dac_counter_value;
+  wire [8:0] dac_init_value;
+  wire [8:0] next_dac_init_value;
+  wire [8:0] dac_counter_value;
+  wire [8:0] next_dac_counter_value;
   wire dac_counter_strb;
   wire delayed_dac_counter_strb;
   wire dac_change_in_progress;
@@ -3749,11 +3749,11 @@ module dac_control_10_10_1_80
   wire [6:0] settling_counter_value;
   wire [6:0] next_settling_counter_value;
   wire dac_finished_strb;
-  wire [9:0] n1529;
-  wire [10:0] n1531;
-  wire [10:0] n1532;
-  wire [10:0] n1534;
-  wire [10:0] n1536;
+  wire [7:0] n1529;
+  wire [8:0] n1531;
+  wire [8:0] n1532;
+  wire [8:0] n1534;
+  wire [8:0] n1536;
   wire n1538;
   wire n1540;
   wire n1541;
@@ -3762,37 +3762,37 @@ module dac_control_10_10_1_80
   wire [1:0] n1546;
   reg n1548;
   reg n1551;
-  reg [10:0] n1552;
+  reg [8:0] n1552;
   wire n1555;
-  wire [10:0] n1556;
-  wire [10:0] n1557;
+  wire [8:0] n1556;
+  wire [8:0] n1557;
   wire n1559;
-  wire [10:0] n1560;
-  wire [10:0] n1561;
+  wire [8:0] n1560;
+  wire [8:0] n1561;
   wire n1563;
-  wire [10:0] n1564;
-  wire [10:0] n1565;
-  wire [10:0] n1566;
-  wire [10:0] n1568;
+  wire [8:0] n1564;
+  wire [8:0] n1565;
+  wire [8:0] n1566;
+  wire [8:0] n1568;
   wire n1569;
   wire n1570;
-  wire [10:0] n1571;
+  wire [8:0] n1571;
   wire n1572;
-  wire [10:0] n1573;
+  wire [8:0] n1573;
   wire n1574;
-  wire [10:0] n1575;
-  wire [10:0] n1576;
-  wire [10:0] n1577;
-  wire [10:0] n1579;
-  wire [10:0] n1580;
+  wire [8:0] n1575;
+  wire [8:0] n1576;
+  wire [8:0] n1577;
+  wire [8:0] n1579;
+  wire [8:0] n1580;
   wire n1583;
-  wire [10:0] n1584;
+  wire [8:0] n1584;
   wire n1586;
   wire n1588;
   wire n1590;
   wire n1591;
   wire n1594;
-  wire [10:0] n1595;
+  wire [8:0] n1595;
   wire n1596;
   wire n1601;
   wire n1602;
@@ -3808,12 +3808,12 @@ module dac_control_10_10_1_80
   wire n1622;
   wire \sync_chain_0.sync_o ;
   wire n1625;
-  wire [9:0] n1626;
-  wire [9:0] n1627;
+  wire [7:0] n1626;
+  wire [7:0] n1627;
   reg n1628;
   reg n1629;
-  reg [10:0] n1630;
-  reg [10:0] n1631;
+  reg [8:0] n1630;
+  reg [8:0] n1631;
   reg n1632;
   reg [6:0] n1633;
   assign dac_counter_value_o = n1626; //(module output)
@@ -3857,11 +3857,11 @@ module dac_control_10_10_1_80
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:125:90  */
   assign n1531 = {1'b0, n1529};  //  uext
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:125:90  */
-  assign n1532 = 11'b01000000000 + n1531;
+  assign n1532 = 9'b010000000 + n1531;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:124:13  */
-  assign n1534 = select_tbs_delta_steps_i ? n1532 : 11'b01000000010;
+  assign n1534 = select_tbs_delta_steps_i ? n1532 : 9'b010000010;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:121:11  */
-  assign n1536 = adaptive_mode_i ? 11'b01000000010 : n1534;
+  assign n1536 = adaptive_mode_i ? 9'b010000010 : n1534;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:138:9  */
   assign n1538 = update_dac_strb_i ? 1'b1 : state;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:115:7  */
@@ -3901,13 +3901,13 @@ module dac_control_10_10_1_80
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:167:31  */
   assign n1557 = dac_counter_value + n1556;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:167:48  */
-  assign n1559 = n1557 == 11'b01111111111;
+  assign n1559 = n1557 == 9'b011111111;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:169:34  */
   assign n1560 = {1'b0, delta_steps_i};  //  uext
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:169:34  */
   assign n1561 = dac_counter_value + n1560;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:169:51  */
-  assign n1563 = $unsigned(n1561) < $unsigned(11'b01111111111);
+  assign n1563 = $unsigned(n1561) < $unsigned(9'b011111111);
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:170:55  */
   assign n1564 = {1'b0, delta_steps_i};  //  uext
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:170:55  */
@@ -3915,7 +3915,7 @@ module dac_control_10_10_1_80
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:169:9  */
   assign n1566 = n1563 ? n1565 : dac_counter_value;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:167:9  */
-  assign n1568 = n1559 ? 11'b01111111111 : n1566;
+  assign n1568 = n1559 ? 9'b011111111 : n1566;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:173:25  */
   assign n1569 = ~direction_i;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:173:31  */
@@ -3935,7 +3935,7 @@ module dac_control_10_10_1_80
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:176:9  */
   assign n1577 = n1574 ? n1576 : dac_counter_value;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:174:9  */
-  assign n1579 = n1572 ? 11'b00000000000 : n1577;
+  assign n1579 = n1572 ? 9'b000000000 : n1577;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:173:7  */
   assign n1580 = n1570 ? n1579 : dac_counter_value;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:173:7  */
@@ -3988,9 +3988,9 @@ module dac_control_10_10_1_80
     .sync_o(\sync_chain_0.sync_o ));
   assign n1625 = \sync_chain_0.sync_o ; // extract
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:241:26  */
-  assign n1626 = dac_counter_value[9:0];  // trunc
+  assign n1626 = dac_counter_value[7:0];  // trunc
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:246:30  */
-  assign n1627 = dac_counter_value[9:0];  // trunc
+  assign n1627 = dac_counter_value[7:0];  // trunc
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:95:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
@@ -4006,13 +4006,13 @@ module dac_control_10_10_1_80
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:95:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1630 <= 11'b00000000000;
+      n1630 <= 9'b000000000;
     else
       n1630 <= next_dac_init_value;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:95:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1631 <= 11'b00000000000;
+      n1631 <= 9'b000000000;
     else
       n1631 <= next_dac_counter_value;
   /* ../../vhdl/dac_control/rtl/dac_control_ea.vhd:95:17  */
@@ -4029,7 +4029,7 @@ module dac_control_10_10_1_80
       n1633 <= next_settling_counter_value;
 endmodule
 
-module adaptive_threshold_control_19_18_10_10_1023_0_3_2
+module adaptive_threshold_control_19_18_8_8_255_0_3_2
   (input  clock_i,
    input  reset_i,
    input  sync_reset_i,
@@ -4040,15 +4040,15 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
    input  [2:0] d_max_i,
    input  [2:0] d_min_i,
    input  [18:0] win_length_i,
-   input  [9:0] max_delta_steps_i,
+   input  [7:0] max_delta_steps_i,
    output increasing_en_o,
    output decreasing_en_o,
    output direction_upper_o,
    output direction_lower_o,
    output delta_steps_upper_strb_o,
    output delta_steps_lower_strb_o,
-   output [9:0] delta_steps_upper_o,
-   output [9:0] delta_steps_lower_o,
+   output [7:0] delta_steps_upper_o,
+   output [7:0] delta_steps_lower_o,
    output adapt_on_overflow_strb_o);
   wire [29:0] spikes;
   wire spikes_strb;
@@ -4067,22 +4067,22 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   wire direction_lower;
   wire delta_steps_upper_strb;
   wire delta_steps_lower_strb;
-  wire [9:0] delta_steps;
-  wire [9:0] prev_delta_steps;
-  wire [9:0] delta_steps_limited;
-  wire [9:0] delta_steps_sum;
-  wire [9:0] delta_steps_upper;
-  wire [9:0] delta_steps_lower;
-  wire [10:0] steps_to_upper_v;
-  wire [10:0] steps_to_lower_v;
+  wire [7:0] delta_steps;
+  wire [7:0] prev_delta_steps;
+  wire [7:0] delta_steps_limited;
+  wire [7:0] delta_steps_sum;
+  wire [7:0] delta_steps_upper;
+  wire [7:0] delta_steps_lower;
+  wire [8:0] steps_to_upper_v;
+  wire [8:0] steps_to_lower_v;
   wire [2:0] weylsd;
   wire next_adaptive_strb;
   wire next_widen_threshold_strb;
   wire next_delta_steps_strb;
-  wire [10:0] next_steps_to_upper_v;
-  wire [10:0] next_steps_to_lower_v;
-  wire [9:0] next_delta_steps;
-  wire [9:0] next_prev_delta_steps;
+  wire [8:0] next_steps_to_upper_v;
+  wire [8:0] next_steps_to_lower_v;
+  wire [7:0] next_delta_steps;
+  wire [7:0] next_prev_delta_steps;
   wire next_is_empty_interval;
   wire n1356;
   wire n1358;
@@ -4095,57 +4095,57 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   wire n1373;
   wire n1374;
   wire n1375;
-  wire [9:0] n1377;
+  wire [7:0] n1377;
   wire n1378;
   wire n1380;
   wire n1381;
-  wire [9:0] n1383;
+  wire [7:0] n1383;
   wire n1386;
-  wire [9:0] n1387;
+  wire [7:0] n1387;
   wire n1389;
   wire n1392;
-  wire [9:0] n1393;
+  wire [7:0] n1393;
   wire n1395;
   wire n1398;
   wire n1402;
-  wire [9:0] n1404;
-  wire [9:0] n1405;
-  wire [9:0] n1407;
-  wire [9:0] n1409;
-  wire [9:0] n1410;
-  wire [9:0] n1412;
+  wire [7:0] n1404;
+  wire [7:0] n1405;
+  wire [7:0] n1407;
+  wire [7:0] n1409;
+  wire [7:0] n1410;
+  wire [7:0] n1412;
   wire n1414;
-  wire [10:0] n1415;
+  wire [8:0] n1415;
   wire n1416;
   wire n1417;
-  wire [9:0] n1418;
-  wire [10:0] n1419;
+  wire [7:0] n1418;
+  wire [8:0] n1419;
   wire n1420;
   wire n1421;
   wire n1422;
-  wire [9:0] n1423;
+  wire [7:0] n1423;
   wire n1425;
   wire n1427;
-  wire [9:0] n1428;
+  wire [7:0] n1428;
   wire n1429;
   wire n1431;
-  wire [9:0] n1432;
+  wire [7:0] n1432;
   wire n1434;
   wire n1436;
-  wire [9:0] n1437;
+  wire [7:0] n1437;
   wire n1440;
   wire n1442;
   wire n1444;
-  wire [9:0] n1445;
-  wire [9:0] n1446;
+  wire [7:0] n1445;
+  wire [7:0] n1446;
   wire n1447;
   wire n1448;
-  wire [9:0] n1449;
-  wire [9:0] n1450;
+  wire [7:0] n1449;
+  wire [7:0] n1450;
   wire n1451;
   wire n1452;
-  wire [9:0] n1453;
-  wire [9:0] n1454;
+  wire [7:0] n1453;
+  wire [7:0] n1454;
   wire n1455;
   wire n1456;
   wire n1457;
@@ -4153,20 +4153,20 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   wire n1460;
   wire n1461;
   wire n1462;
-  wire [10:0] n1464;
-  wire [10:0] n1465;
-  wire [10:0] n1466;
-  wire [10:0] n1467;
-  wire [10:0] n1468;
-  wire [10:0] n1469;
-  wire [10:0] n1470;
-  wire [10:0] n1471;
-  wire [10:0] n1472;
-  wire [10:0] n1473;
-  wire [10:0] n1474;
-  wire [10:0] n1475;
-  wire [10:0] n1477;
-  wire [10:0] n1479;
+  wire [8:0] n1464;
+  wire [8:0] n1465;
+  wire [8:0] n1466;
+  wire [8:0] n1467;
+  wire [8:0] n1468;
+  wire [8:0] n1469;
+  wire [8:0] n1470;
+  wire [8:0] n1471;
+  wire [8:0] n1472;
+  wire [8:0] n1473;
+  wire [8:0] n1474;
+  wire [8:0] n1475;
+  wire [8:0] n1477;
+  wire [8:0] n1479;
   wire n1483;
   wire n1484;
   wire n1488;
@@ -4176,10 +4176,10 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   reg n1493;
   reg n1494;
   reg n1495;
-  reg [9:0] n1496;
-  reg [9:0] n1497;
-  reg [10:0] n1498;
-  reg [10:0] n1499;
+  reg [7:0] n1496;
+  reg [7:0] n1497;
+  reg [8:0] n1498;
+  reg [8:0] n1499;
   assign increasing_en_o = n1484; //(module output)
   assign decreasing_en_o = n1489; //(module output)
   assign direction_upper_o = direction_upper; //(module output)
@@ -4277,7 +4277,7 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:189:5  */
   assign n1364 = adapt_on_overflow_strb ? 1'b1 : n1362;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:198:50  */
-  assign n1368 = delta_steps == 10'b0000000001;
+  assign n1368 = delta_steps == 8'b00000001;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:198:33  */
   assign n1369 = n1368 ? 1'b0 : n1370;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:198:76  */
@@ -4295,7 +4295,7 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:221:21  */
   assign n1378 = $unsigned(weylsd) < $unsigned(d_min_i);
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:221:49  */
-  assign n1380 = $unsigned(delta_steps) > $unsigned(10'b0000000001);
+  assign n1380 = $unsigned(delta_steps) > $unsigned(8'b00000001);
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:221:32  */
   assign n1381 = n1380 & n1378;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:223:36  */
@@ -4321,9 +4321,9 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:213:5  */
   assign n1405 = weylsd_strb ? delta_steps : prev_delta_steps;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:227:5  */
-  assign n1407 = sync_reset_i ? 10'b0000000001 : n1404;
+  assign n1407 = sync_reset_i ? 8'b00000001 : n1404;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:227:5  */
-  assign n1409 = sync_reset_i ? 10'b0000000000 : n1405;
+  assign n1409 = sync_reset_i ? 8'b00000000 : n1405;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:234:5  */
   assign n1410 = reset_delta ? prev_delta_steps : n1407;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:240:41  */
@@ -4337,7 +4337,7 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:251:72  */
   assign n1417 = spike_i & n1416;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:252:32  */
-  assign n1418 = steps_to_upper_v[9:0];  // trunc
+  assign n1418 = steps_to_upper_v[7:0];  // trunc
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:256:33  */
   assign n1419 = {1'b0, delta_steps};  //  uext
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:256:31  */
@@ -4347,7 +4347,7 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:256:75  */
   assign n1422 = n1421 & n1420;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:257:32  */
-  assign n1423 = steps_to_lower_v[9:0];  // trunc
+  assign n1423 = steps_to_lower_v[7:0];  // trunc
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:256:7  */
   assign n1425 = n1422 ? adaptive_strb : 1'b0;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:256:7  */
@@ -4431,15 +4431,15 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:321:5  */
   assign n1475 = delta_steps_upper_strb ? n1474 : steps_to_upper_v;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:330:5  */
-  assign n1477 = sync_reset_i ? 11'b00111111101 : n1475;
+  assign n1477 = sync_reset_i ? 9'b001111101 : n1475;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:330:5  */
-  assign n1479 = sync_reset_i ? 11'b00111111111 : n1469;
+  assign n1479 = sync_reset_i ? 9'b001111111 : n1469;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:339:48  */
-  assign n1483 = steps_to_upper_v == 11'b00000000000;
+  assign n1483 = steps_to_upper_v == 9'b000000000;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:339:26  */
   assign n1484 = n1483 ? 1'b0 : 1'b1;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:340:48  */
-  assign n1488 = steps_to_lower_v == 11'b00000000000;
+  assign n1488 = steps_to_lower_v == 9'b000000000;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:340:26  */
   assign n1489 = n1488 ? 1'b0 : 1'b1;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:118:17  */
@@ -4475,25 +4475,25 @@ module adaptive_threshold_control_19_18_10_10_1023_0_3_2
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:118:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1496 <= 10'b0000000001;
+      n1496 <= 8'b00000001;
     else
       n1496 <= next_delta_steps;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:118:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1497 <= 10'b0000000001;
+      n1497 <= 8'b00000001;
     else
       n1497 <= next_prev_delta_steps;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:118:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1498 <= 11'b00111111101;
+      n1498 <= 9'b001111101;
     else
       n1498 <= next_steps_to_upper_v;
   /* ../../vhdl/adaptive_threshold_control/rtl/adaptive_threshold_control_ea.vhd:118:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1499 <= 11'b00111111111;
+      n1499 <= 9'b001111111;
     else
       n1499 <= next_steps_to_lower_v;
 endmodule
@@ -4895,7 +4895,7 @@ module sync_chain_2_1
       n1145 <= n1139;
 endmodule
 
-module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_10_1024_8_160_11_2048_7_19_9_417_8
+module tbs_core_8000000_20_800000_16_65536_2_2_255_0_2_2_3_8_18_262144_80_8_8_256_8_160_11_2048_7_19_9_417_8
   (input  clock_i,
    input  reset_btn_i,
    input  comp_upper_i,
@@ -4916,9 +4916,9 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
    output dac_clr_o,
    output dac_wr_upper_o,
    output dac_wr_lower_o,
-   output [9:0] dac_upper_o,
+   output [7:0] dac_upper_o,
    output dac_pwm_upper_o,
-   output [9:0] dac_lower_o,
+   output [7:0] dac_lower_o,
    output dac_pwm_lower_o,
    output idle_led_o,
    output overflow_led_o,
@@ -4974,40 +4974,40 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire tbs_decreasing_en;
   wire atbs_increasing_en;
   wire atbs_decreasing_en;
-  wire [9:0] tbs_delta_steps_upper;
-  wire [9:0] tbs_delta_steps_lower;
+  wire [7:0] tbs_delta_steps_upper;
+  wire [7:0] tbs_delta_steps_lower;
   wire reset_delta_steps_strb;
   wire atbs_direction_upper;
   wire atbs_direction_lower;
   wire atbs_delta_steps_upper_strb;
   wire atbs_delta_steps_lower_strb;
-  wire [9:0] atbs_delta_steps_upper;
-  wire [9:0] atbs_delta_steps_lower;
+  wire [7:0] atbs_delta_steps_upper;
+  wire [7:0] atbs_delta_steps_lower;
   wire adapt_on_overflow_strb;
   wire clear_dac;
   wire dac_init_strb;
   wire direction_upper;
   wire update_dac_upper_strb;
-  wire [9:0] dac_counter_value_upper;
+  wire [7:0] dac_counter_value_upper;
   wire dac_finished_upper_strb;
   wire dac_pd_upper;
   wire dac_wr_upper;
   wire dac_clr_upper;
-  wire [9:0] dac_upper;
+  wire [7:0] dac_upper;
   wire dac_pwm_upper;
   wire direction_lower;
   wire update_dac_lower_strb;
-  wire [9:0] dac_counter_value_lower;
+  wire [7:0] dac_counter_value_lower;
   wire dac_finished_lower_strb;
   wire dac_pd_lower;
   wire dac_wr_lower;
   wire dac_clr_lower;
-  wire [9:0] dac_lower;
+  wire [7:0] dac_lower;
   wire dac_pwm_lower;
   wire delta_steps_upper_strb;
   wire delta_steps_lower_strb;
-  wire [9:0] delta_steps_upper;
-  wire [9:0] delta_steps_lower;
+  wire [7:0] delta_steps_upper;
+  wire [7:0] delta_steps_lower;
   wire reset_time_measurement;
   wire reset_time_measurement_strb;
   wire overflow_strb;
@@ -5047,16 +5047,16 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire [8:0] next_baudrate_adj_uart;
   wire tbs_virtual_delta_steps_uart;
   wire next_tbs_virtual_delta_steps_uart;
-  wire [9:0] next_tbs_virtual_delta_steps_adj_uart;
-  wire [9:0] tbs_virtual_delta_steps_adj_uart;
+  wire [7:0] next_tbs_virtual_delta_steps_adj_uart;
+  wire [7:0] tbs_virtual_delta_steps_adj_uart;
   wire atbs_win_length_uart;
   wire next_atbs_win_length_uart;
   wire [18:0] atbs_win_length_adj_uart;
   wire [18:0] next_atbs_win_length_adj_uart;
   wire atbs_max_delta_steps_uart;
   wire next_atbs_max_delta_steps_uart;
-  wire [9:0] atbs_max_delta_steps_adj_uart;
-  wire [9:0] next_atbs_max_delta_steps_adj_uart;
+  wire [7:0] atbs_max_delta_steps_adj_uart;
+  wire [7:0] next_atbs_max_delta_steps_adj_uart;
   wire [19:0] main_counter_value;
   wire [19:0] next_main_counter_value;
   wire reset_main_counter_strb;
@@ -5139,7 +5139,7 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   localparam [2:0] n140 = 3'b010;
   wire n156;
   wire n164;
-  wire [9:0] n177;
+  wire [7:0] n177;
   wire n178;
   wire n180;
   wire n181;
@@ -5147,10 +5147,10 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire n187;
   wire n189;
   wire n192;
-  wire [9:0] n194;
-  wire [9:0] n196;
-  wire [9:0] n198;
-  wire [9:0] n199;
+  wire [7:0] n194;
+  wire [7:0] n196;
+  wire [7:0] n198;
+  wire [7:0] n199;
   wire n200;
   wire n201;
   wire n202;
@@ -5286,11 +5286,11 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire n595;
   wire n597;
   wire n599;
-  wire [9:0] n601;
-  wire [9:0] n603;
-  wire [9:0] n605;
-  wire [9:0] n607;
-  wire [9:0] n609;
+  wire [7:0] n601;
+  wire [7:0] n603;
+  wire [7:0] n605;
+  wire [7:0] n607;
+  wire [7:0] n609;
   wire n611;
   wire n613;
   wire n615;
@@ -5308,11 +5308,11 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire n639;
   wire n641;
   wire n643;
-  wire [9:0] n645;
-  wire [9:0] n647;
-  wire [9:0] n649;
-  wire [9:0] n651;
-  wire [9:0] n653;
+  wire [7:0] n645;
+  wire [7:0] n647;
+  wire [7:0] n649;
+  wire [7:0] n651;
+  wire [7:0] n653;
   wire n655;
   wire n657;
   wire n659;
@@ -5491,7 +5491,7 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire n919;
   wire n920;
   wire n922;
-  wire [9:0] n923;
+  wire [7:0] n923;
   wire n924;
   wire n925;
   wire n926;
@@ -5506,7 +5506,7 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire n940;
   wire [18:0] n941;
   wire n942;
-  wire [9:0] n943;
+  wire [7:0] n943;
   wire n944;
   wire n945;
   wire n946;
@@ -5518,11 +5518,11 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire n956;
   wire n957;
   wire n959;
-  wire [9:0] n960;
+  wire [7:0] n960;
   wire n961;
   wire [18:0] n962;
   wire n963;
-  wire [9:0] n964;
+  wire [7:0] n964;
   wire n965;
   wire n966;
   wire n967;
@@ -5535,11 +5535,11 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire n979;
   wire [8:0] n980;
   wire n981;
-  wire [9:0] n982;
+  wire [7:0] n982;
   wire n983;
   wire [18:0] n984;
   wire n985;
-  wire [9:0] n986;
+  wire [7:0] n986;
   wire n987;
   wire n988;
   wire n989;
@@ -5555,11 +5555,11 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire n1004;
   wire [8:0] n1005;
   wire n1006;
-  wire [9:0] n1007;
+  wire [7:0] n1007;
   wire n1008;
   wire [18:0] n1009;
   wire n1010;
-  wire [9:0] n1011;
+  wire [7:0] n1011;
   wire n1012;
   wire n1013;
   wire n1014;
@@ -5577,11 +5577,11 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire n1031;
   wire [8:0] n1032;
   wire n1033;
-  wire [9:0] n1034;
+  wire [7:0] n1034;
   wire n1035;
   wire [18:0] n1036;
   wire n1037;
-  wire [9:0] n1038;
+  wire [7:0] n1038;
   wire n1039;
   wire n1040;
   wire n1041;
@@ -5599,11 +5599,11 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   wire n1059;
   wire [8:0] n1060;
   wire n1061;
-  wire [9:0] n1062;
+  wire [7:0] n1062;
   wire n1063;
   wire [18:0] n1064;
   wire n1065;
-  wire [9:0] n1066;
+  wire [7:0] n1066;
   wire n1067;
   wire n1068;
   wire n1069;
@@ -5650,11 +5650,11 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   reg n1115;
   reg [8:0] n1116;
   reg n1117;
-  reg [9:0] n1118;
+  reg [7:0] n1118;
   reg n1119;
   reg [18:0] n1120;
   reg n1121;
-  reg [9:0] n1122;
+  reg [7:0] n1122;
   reg [19:0] n1123;
   reg [2:0] n1124;
   reg n1125;
@@ -6058,7 +6058,7 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
     .spike_o(spike),
     .spike_strb_o(spike_strb));
   /* ../../vhdl/rtl/tbs_core_ea.vhd:630:3  */
-  adaptive_threshold_control_19_18_10_10_1023_0_3_2 adaptive_ctrl_0 (
+  adaptive_threshold_control_19_18_8_8_255_0_3_2 adaptive_ctrl_0 (
     .clock_i(clock_i),
     .reset_i(reset_entity),
     .sync_reset_i(reset_delta_steps_strb),
@@ -6080,7 +6080,7 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
     .delta_steps_lower_o(atbs_delta_steps_lower),
     .adapt_on_overflow_strb_o(adapt_on_overflow_strb));
   /* ../../vhdl/rtl/tbs_core_ea.vhd:667:9  */
-  dac_control_10_10_1_80 dac_control_0 (
+  dac_control_8_8_1_80 dac_control_0 (
     .clock_i(clock_i),
     .reset_i(reset_entity),
     .enable_dac_i(enable_analog),
@@ -6099,14 +6099,14 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   /* ../../vhdl/rtl/tbs_core_ea.vhd:698:51  */
   assign n156 = delta_steps_upper_strb | dac_init_strb;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:702:9  */
-  pwm_modulator_10_1024 pwm_0 (
+  pwm_modulator_8_256 pwm_0 (
     .clock_i(clock_i),
     .reset_i(reset_entity),
     .enable_i(enable_analog),
     .on_cnt_val_i(dac_counter_value_upper),
     .pwm_o(dac_pwm_upper));
   /* ../../vhdl/rtl/tbs_core_ea.vhd:718:9  */
-  dac_control_10_10_0_80 dac_control_1 (
+  dac_control_8_8_0_80 dac_control_1 (
     .clock_i(clock_i),
     .reset_i(reset_entity),
     .enable_dac_i(enable_analog),
@@ -6125,32 +6125,32 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   /* ../../vhdl/rtl/tbs_core_ea.vhd:749:51  */
   assign n164 = delta_steps_lower_strb | dac_init_strb;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:753:9  */
-  pwm_modulator_10_1024 pwm_1 (
+  pwm_modulator_8_256 pwm_1 (
     .clock_i(clock_i),
     .reset_i(reset_entity),
     .enable_i(enable_analog),
     .on_cnt_val_i(dac_counter_value_lower),
     .pwm_o(dac_pwm_lower));
   /* ../../vhdl/rtl/tbs_core_ea.vhd:793:54  */
-  assign n177 = 10'b1111111111 - tbs_delta_steps_upper;
+  assign n177 = 8'b11111111 - tbs_delta_steps_upper;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:793:33  */
   assign n178 = $unsigned(dac_counter_value_upper) > $unsigned(n177);
   /* ../../vhdl/rtl/tbs_core_ea.vhd:793:107  */
-  assign n180 = dac_counter_value_upper == 10'b1111111111;
+  assign n180 = dac_counter_value_upper == 8'b11111111;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:793:79  */
   assign n181 = n178 | n180;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:793:5  */
   assign n184 = n181 ? 1'b0 : 1'b1;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:800:109  */
-  assign n187 = dac_counter_value_lower == 10'b0000000000;
+  assign n187 = dac_counter_value_lower == 8'b00000000;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:800:81  */
   assign n189 = 1'b0 | n187;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:800:5  */
   assign n192 = n189 ? 1'b0 : 1'b1;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:811:61  */
-  assign n194 = select_tbs_delta_steps ? tbs_virtual_delta_steps_adj_uart : 10'b0000000001;
+  assign n194 = select_tbs_delta_steps ? tbs_virtual_delta_steps_adj_uart : 8'b00000001;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:812:61  */
-  assign n196 = select_tbs_delta_steps ? tbs_virtual_delta_steps_adj_uart : 10'b0000000001;
+  assign n196 = select_tbs_delta_steps ? tbs_virtual_delta_steps_adj_uart : 8'b00000001;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:822:47  */
   assign n198 = adaptive_mode ? atbs_delta_steps_upper : tbs_delta_steps_upper;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:823:47  */
@@ -6646,15 +6646,15 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1409:28  */
   assign n599 = uart_rx_data == 8'b01100101;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1409:9  */
-  assign n601 = n599 ? 10'b0000100000 : tbs_virtual_delta_steps_adj_uart;
+  assign n601 = n599 ? 8'b00100000 : tbs_virtual_delta_steps_adj_uart;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1407:9  */
-  assign n603 = n597 ? 10'b0000010000 : n601;
+  assign n603 = n597 ? 8'b00010000 : n601;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1405:9  */
-  assign n605 = n595 ? 10'b0000001000 : n603;
+  assign n605 = n595 ? 8'b00001000 : n603;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1403:9  */
-  assign n607 = n593 ? 10'b0000000100 : n605;
+  assign n607 = n593 ? 8'b00000100 : n605;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1401:9  */
-  assign n609 = n591 ? 10'b0000000010 : n607;
+  assign n609 = n591 ? 8'b00000010 : n607;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1414:25  */
   assign n611 = uart_rx_data == 8'b01100001;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1416:28  */
@@ -6690,15 +6690,15 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1437:28  */
   assign n643 = uart_rx_data == 8'b01100101;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1437:9  */
-  assign n645 = n643 ? 10'b0001000000 : atbs_max_delta_steps_adj_uart;
+  assign n645 = n643 ? 8'b01000000 : atbs_max_delta_steps_adj_uart;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1435:9  */
-  assign n647 = n641 ? 10'b0000100000 : n645;
+  assign n647 = n641 ? 8'b00100000 : n645;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1433:9  */
-  assign n649 = n639 ? 10'b0000010000 : n647;
+  assign n649 = n639 ? 8'b00010000 : n647;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1431:9  */
-  assign n651 = n637 ? 10'b0000001000 : n649;
+  assign n651 = n637 ? 8'b00001000 : n649;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1429:9  */
-  assign n653 = n635 ? 10'b0000000100 : n651;
+  assign n653 = n635 ? 8'b00000100 : n651;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1441:25  */
   assign n655 = uart_rx_data == 8'b00110000;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1443:28  */
@@ -7464,7 +7464,7 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1279:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1118 <= 10'b0000001000;
+      n1118 <= 8'b00001000;
     else
       n1118 <= next_tbs_virtual_delta_steps_adj_uart;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1279:17  */
@@ -7488,7 +7488,7 @@ module tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_1
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1279:17  */
   always @(posedge clock_i or posedge reset_i)
     if (reset_i)
-      n1122 <= 10'b0000100000;
+      n1122 <= 8'b00100000;
     else
       n1122 <= next_atbs_max_delta_steps_adj_uart;
   /* ../../vhdl/rtl/tbs_core_ea.vhd:1007:17  */
@@ -7575,9 +7575,9 @@ module tbs_core_board(
 	output dac_clr_o,
 	output dac_wr_upper_o,
 	output dac_wr_lower_o,
-	output [9:0] dac_upper_o,
+	output [7:0] dac_upper_o,
 	output dac_pwm_upper_o,
-	output [9:0] dac_lower_o,
+	output [7:0] dac_lower_o,
 	output dac_pwm_lower_o,
 	output idle_led_o,
 	output overflow_led_o,
@@ -7606,9 +7606,9 @@ module tbs_core_board(
   wire \tbs_core_0.dac_clr_o ;
   wire \tbs_core_0.dac_wr_upper_o ;
   wire \tbs_core_0.dac_wr_lower_o ;
-  wire [9:0] \tbs_core_0.dac_upper_o ;
+  wire [7:0] \tbs_core_0.dac_upper_o ;
   wire \tbs_core_0.dac_pwm_upper_o ;
-  wire [9:0] \tbs_core_0.dac_lower_o ;
+  wire [7:0] \tbs_core_0.dac_lower_o ;
   wire \tbs_core_0.dac_pwm_lower_o ;
   wire \tbs_core_0.idle_led_o ;
   wire \tbs_core_0.overflow_led_o ;
@@ -7670,7 +7670,7 @@ module tbs_core_board(
   // =====================================================
   
   /* ../../vhdl/rtl/tbs_core_board.vhd:103:9  */
-  tbs_core_8000000_20_800000_16_65536_2_2_1023_0_2_2_3_10_18_262144_80_10_10_1024_8_160_11_2048_7_19_9_417_8 tbs_core_0 (
+  tbs_core_8000000_20_800000_16_65536_2_2_255_0_2_2_3_8_18_262144_80_8_8_256_8_160_11_2048_7_19_9_417_8 tbs_core_0 (
     .clock_i(clock_i),
     .reset_btn_i(reset),
     .comp_upper_i(comp_upper_i),
