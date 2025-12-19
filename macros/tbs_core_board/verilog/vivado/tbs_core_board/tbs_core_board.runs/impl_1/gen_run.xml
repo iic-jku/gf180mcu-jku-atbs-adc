@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s25ftgb196-1" LaunchTime="1766009346">
+<GenRun Id="impl_1" LaunchPart="xc7s25ftgb196-1" LaunchTime="1766153053">
   <File Type="ROUTE-PWR" Name="tbs_core_board_power_routed.rpt"/>
   <File Type="PA-TCL" Name="tbs_core_board.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="tbs_core_board_power_summary_routed.pb"/>
@@ -86,7 +86,7 @@
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../../rtl/tbs_core_board_pll.v">
+    <File Path="$PPRDIR/../../rtl/tbs_core_board_pll_vivado.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

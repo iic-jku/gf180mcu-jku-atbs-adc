@@ -56,7 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s25ftgb196-1
 
@@ -73,7 +73,7 @@ set_property ip_output_repo c:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/mac
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/rtl/tbs_core_board_pll.v
+read_verilog -library xil_defaultlib C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/rtl/tbs_core_board_pll_vivado.v
 read_ip -quiet C:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board/tbs_core_board.srcs/sources_1/ip/pll_8MHz/pll_8MHz.xci
 set_property used_in_implementation false [get_files -all c:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board/tbs_core_board.gen/sources_1/ip/pll_8MHz/pll_8MHz_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/si150/eda/designs/gf180mcu-jku-atbs-adc/macros/tbs_core_board/verilog/vivado/tbs_core_board/tbs_core_board.gen/sources_1/ip/pll_8MHz/pll_8MHz.xdc]
