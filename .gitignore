@@ -7,3 +7,4 @@ final/
 # img/
 *.lyrdb
 gds/chip_top.gds
+macros/tbs_core_board/measurements/generate_ecg/How to Easily Create an Arbitrary Waveform Without Programming.pdf
