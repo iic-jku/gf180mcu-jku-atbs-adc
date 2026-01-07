@@ -42,7 +42,7 @@ bpm = 60;
 % =====================================================
 
 %% Load TBS SimVals variables
-tbs_vals = load('..\FPGA-Design\tbs_core\sim\matlab\tbs.mat');
+tbs_vals = load('..\vhdl\sim\matlab\tbs.mat');
 % =====================================================
 
 %% Load figures and workspace
