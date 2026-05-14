@@ -7,9 +7,21 @@ Project `JKU2` for wafer.space MPW runs using the `gf180mcuD` PDK.
 - [x] **Top-Level:** pass; no violations
 - [x] **ATBS ADC:** pass; no violations
 
-![chip_top_white](img/chip_top_white.png)
+<p align="center">
+  <a href="release/v.1.0.0/img/chip_top_white.png">
+    <img src="release/v.1.0.0/img/chip_top_white.png" alt="Render of the layout of the wafer.space gf180mcuD chip (4mm x 2.5mm)" width=90%>
+  </a>
+  <br>
+  <em>Render of the layout of the wafer.space gf180mcuD chip (4mm x 2.5mm).</em>
+</p>
 
-![chip_top_layout_gui](img/chip_top_layout_gui.png)
+<p align="center">
+  <a href="release/v.1.0.0/img/die_keyence.png">
+    <img src="release/v.1.0.0/img/die_keyence.png" alt="Micrograph of the bare die of the wafer.space gf180mcuD chip (4mm x 2.5mm)" width=90%>
+  </a>
+  <br>
+  <em>Micrograph of the bare die of the wafer.space gf180mcuD chip (4mm x 2.5mm).</em>
+</p>
 
 ## Prerequisites
 
