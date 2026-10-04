@@ -50,7 +50,7 @@ module chip_core #(
     assign _unused = &bidir_in;
 	// ======================================================
 
-  // ======================================================
+  	// ======================================================
 	// MAIN PROJECT (ATBS ADC - Simon Dorrer)
 	// ======================================================
 	logic signal_select_en_o;
@@ -148,7 +148,7 @@ module chip_core #(
 	assign bidir_out[10] = dac_lower_o[6];
 	assign bidir_out[9] = dac_lower_o[5];
 	assign bidir_out[8] = dac_lower_o[4];
-  assign bidir_out[7] = dac_lower_o[3];
+  	assign bidir_out[7] = dac_lower_o[3];
 	assign bidir_out[6] = dac_lower_o[2];
 	assign bidir_out[5] = dac_lower_o[1];
 	assign bidir_out[4] = dac_lower_o[0];
